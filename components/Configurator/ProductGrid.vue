@@ -2,9 +2,12 @@
 const props = defineProps(['products', 'stage'])
 const goToStage = inject('goToStage'); 
 const visitedStore = useVisitedStore();
-console.log(visitedStore.visited)
-console.log(props.stage)
-function nextStage(){
+const currentStageStore = useCurrentStageStore();
+const productsSetStore = useProductsSet();
+const {updateProductsSet} = productsSetStore
+function nextStage(product){
+	updateProductsSet(product, currentStageStore.currentStage);
+	console.log(productsSetStore.productsSet);
 	if(!visitedStore.visited.includes(props.stage))
 		visitedStore.visited.push(props.stage)
 	goToStage(props.stage);
@@ -15,7 +18,7 @@ function nextStage(){
 	<ul class="flex flex-wrap">
 		<li v-for="product in products" :key="product.id">
 			<ProductCard :product="product">
-				<button @click="nextStage(stage)"
+				<button @click="nextStage(product)"
 					class="flex items-center justify-center rounded-md bg-blue-950 px-5 py-2.5 text-center text-sm font-medium text-teal-200 hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300">
 					<svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
 						stroke="currentColor" stroke-width="2">

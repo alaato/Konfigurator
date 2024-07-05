@@ -20,7 +20,11 @@ export default defineNuxtConfig({
     endpoint: "https://save-air.de/store-api/",
     accessToken: "SWSCUTJJOVFPZ1UXOUTQEVDVBG",
   },
-  modules: ["@shopware-pwa/nuxt3-module", "@nuxt/ui", '@pinia/nuxt',  ],
+  modules: ["@shopware-pwa/nuxt3-module", "@nuxt/ui", '@pinia/nuxt', "shadcn-nuxt", '@formkit/nuxt'],
+  formkit: {
+    // Experimental support for auto loading (see note):
+    autoImport: true
+  },
   /**
    * Commented because of the StackBlitz error
    * Issue: https://github.com/shopware/frontends/issues/88

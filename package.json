@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/ui": "^2.17.0",
+    "@nuxtjs/tailwindcss": "^6.12.0",
     "@shopware-pwa/cms-base": "latest",
     "@shopware-pwa/composables-next": "latest",
     "@shopware-pwa/nuxt3-module": "latest",
@@ -17,6 +18,7 @@
     "@types/node": "20.14.2",
     "@vueuse/nuxt": "10.11.0",
     "nuxt": "3.11.2",
+    "shadcn-nuxt": "^0.10.4",
     "typescript": "5.4.5",
     "vue": "3.4.27",
     "vue-tsc": "2.0.21"
@@ -25,7 +27,15 @@
     "node": "^18.17.x || ^20.x"
   },
   "dependencies": {
+    "@formkit/nuxt": "^1.6.5",
     "@pinia/nuxt": "^0.5.1",
-    "pinia": "^2.1.7"
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "geist": "^1.3.0",
+    "lucide-vue-next": "^0.400.0",
+    "pinia": "^2.1.7",
+    "radix-vue": "^1.8.5",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

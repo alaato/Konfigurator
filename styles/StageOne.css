@@ -32,7 +32,7 @@
 }
 
 .button-80:focus {
-    outline: 0 solid transparent;
+    outline: 1 solid transparent;
 }
 
 .button-80:focus:before {

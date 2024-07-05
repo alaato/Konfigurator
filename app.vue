@@ -1,26 +1,14 @@
 <script setup lang="ts">
-const { refreshSessionContext, sessionContext } = useSessionContext();
-
-onMounted(() => {
-  refreshSessionContext();
-});
 
 </script>
 
 <template>
-  <div id="app">
-    <!-- <div>
-      Items in the cart: {{ count }}<br />
-      Total price: {{ totalPrice }}<br />
-      <ol>
-        <li v-for="cartItem in cartItems">
-          {{ cartItem.label }} - ${{ cartItem.price.totalPrice }} - quantity {{ cartItem.quantity }}
-        </li>
-      </ol>
-    </div> -->
-    <!-- <Navabar></Navabar> -->
-    <MainPage></MainPage>
-     <!-- <TestProducts></TestProducts> -->
+  <div id="app" class="max-h-screen flex flex-col">
+    <Navbar></Navbar>
+    <h1 class="mx-auto mt-5" >title</h1>
+    <div class="main-page m-auto">
+      <NuxtPage />
+    </div>
   </div>
 </template>
 <style>

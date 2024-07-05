@@ -7,6 +7,5 @@
 
 <script setup>
 import ProductGrid from './ProductGrid.vue'
-const props = defineProps(['products'])
 const {data:products} = await fetchProducts();
 </script>
