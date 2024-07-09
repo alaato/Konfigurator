@@ -8,10 +8,15 @@ const useFloorsStore = defineStore('floors', {
     addFloor() {
       this.floors.push({
         apartments: [{
-          id: 1,
           stationImage: '',
         }]
       });
+    },
+    deleteApartment(floorNumber, apartmentIndex) {
+      this.floors[floorNumber - 1].apartments.splice(apartmentIndex, 1);
+    },
+    deleteFloor(floorNumber) {
+      this.floors.splice(floorNumber - 1, 1);
     },
     addFloors(count) {
       for (let i = 0; i < count; i++) {
@@ -21,7 +26,6 @@ const useFloorsStore = defineStore('floors', {
     },
     addApartment(floorNumber) {
       this.floors[floorNumber - 1].apartments.push({
-        id: this.floors[floorNumber - 1].apartments.length + 1,
         stationImage: '',
       });
     },
@@ -38,6 +42,9 @@ const useFloorsStore = defineStore('floors', {
           this.addApartments(numberApartments - 1, i);
         }
       }
+    },
+    reset() {
+      this.floors.length = 0;
     },
     selectStation(floorNumber, apartmentId, station) {
       const apartment = this.floors[floorNumber - 1].apartments.find(

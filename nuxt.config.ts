@@ -20,7 +20,17 @@ export default defineNuxtConfig({
     endpoint: "https://save-air.de/store-api/",
     accessToken: "SWSCUTJJOVFPZ1UXOUTQEVDVBG",
   },
-  modules: ["@shopware-pwa/nuxt3-module", "@nuxt/ui", '@pinia/nuxt', "shadcn-nuxt", '@formkit/nuxt'],
+  modules: [
+    "@shopware-pwa/nuxt3-module",
+    "@nuxt/ui",
+    '@pinia/nuxt',
+    "shadcn-nuxt",
+    '@formkit/nuxt',
+    "@nuxt/image"
+  ],
+  pinia: {
+    storesDirs: ['./stores/**', './custom-folder/stores/**'],
+  },
   formkit: {
     // Experimental support for auto loading (see note):
     autoImport: true

@@ -9,6 +9,7 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
+    "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.17.0",
     "@nuxtjs/tailwindcss": "^6.12.0",
     "@shopware-pwa/cms-base": "latest",
