@@ -26,8 +26,16 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     "shadcn-nuxt",
     '@formkit/nuxt',
-    "@nuxt/image"
+    "@nuxt/image",
+    '@nuxtjs/apollo'
   ],
+  apollo: {
+    clients: {
+      default: {
+        httpEndpoint: 'https://devpim.tcs-apps.de/pimcore-graphql-webservices/outdoor?apikey=c179b60860474aa335a9d82c8c985f84'
+      }
+    },
+  },
   pinia: {
     storesDirs: ['./stores/**', './custom-folder/stores/**'],
   },
@@ -41,7 +49,7 @@ export default defineNuxtConfig({
    */
   typescript: {
     // typeCheck: true,
-    strict: true,
+    strict: false,
   },
   telemetry: false,
 });

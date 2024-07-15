@@ -1,0 +1,457 @@
+type Query {
+  getAsset(id: Int, fullpath: String, defaultLanguage: String): asset
+  getProductListing(
+    ids: String
+
+    # Comma separated list of fullpath
+    fullpaths: String
+
+    # Comma separated list of tag names
+    tags: String
+    defaultLanguage: String
+    first: Int
+    after: Int
+    sortBy: [String]
+
+    # Sort by ASC or DESC, use the same position as the sortBy argument for each column to sort by
+    sortOrder: [String]
+    filter: String
+    published: Boolean
+  ): ProductConnection
+  getProduct(id: Int, fullpath: String, defaultLanguage: String): object_Product
+  getAssetListing(
+    ids: String
+
+    # Comma separated list of fullpath
+    fullpaths: String
+    defaultLanguage: String
+    first: Int
+    after: Int
+    sortBy: [String]
+
+    # Sort by ASC or DESC, use the same position as the sortBy argument for each column to sort by
+    sortOrder: [String]
+    filter: String
+    published: Boolean
+  ): AssetConnection
+}
+
+type asset implements element {
+  creationDate: Int
+  id: ID
+  filename: String
+  fullpath(thumbnail: String, format: String): String
+  resolutions(
+    thumbnail: String!
+    format: String
+
+    # List of resolution types [2, 5, ...]
+    types: [Float] = [2]
+  ): [resolutions]
+  dimensions(thumbnail: String, format: String): dimensions
+  duration: Float
+  srcset(thumbnail: String!, format: String): [srcset]
+  mimetype: String
+  modificationDate: Int
+  type: String
+  filesize: Int
+  data(thumbnail: String, format: String): String
+  tags(name: String): [element_tag]
+  metadata(language: String, ignore_language: Boolean): [asset_metadata_item]
+  embeddedMetaInfo: [asset_embeddedMetaInfo_item]
+  properties(
+    # comma separated list of key names
+    keys: [String]
+  ): [ElementProperty]
+  parent: asset_tree
+  children: [asset_tree]
+  _siblings: [asset_tree]
+}
+
+interface element {
+  id: ID
+}
+
+type resolutions {
+  url: String
+  resolution: Float
+}
+
+type dimensions {
+  width: Int
+  height: Int
+}
+
+type srcset {
+  descriptor: String
+  url: String
+  resolutions(
+    # List of resolution types [2, 5, ...]
+    types: [Float] = [2]
+  ): [resolutions]
+}
+
+type element_tag {
+  id: ID
+  name: String
+  path: String
+}
+
+type asset_metadata_item {
+  name: String
+  type: String
+  data: String
+  language: String
+}
+
+type asset_embeddedMetaInfo_item {
+  name: String
+  value: String
+}
+
+union ElementProperty =
+    property_checkbox
+  | property_text
+  | property_select
+  | property_asset
+  | property_object
+
+type property_checkbox {
+  name: String
+  type: String
+  checked: Boolean
+}
+
+type property_text {
+  name: String
+  type: String
+  text: String
+}
+
+type property_select {
+  name: String
+  type: String
+  text: String
+}
+
+type property_asset {
+  name: String
+  type: String
+  asset: asset
+}
+
+type property_object {
+  name: String
+  type: String
+  object: hotspot_metadata_object
+}
+
+union hotspot_metadata_object = object_Product | asset
+
+type object_Product implements element {
+  # returns a list of group containers
+  Audio(language: String): [csGroup]
+  Audio1: Boolean
+  Geraeteart4077: String
+  Hersteller3867: String
+
+  # returns a list of group containers
+  IP(language: String): [csGroup]
+  IP1: Boolean
+  KTXT(language: String): String
+  Kommunikationstechnologie4164: String
+  MNR: String
+  Schlagwoerter4924: String
+  TCSBUS: Boolean
+
+  # returns a list of group containers
+  TexteTK(language: String): [csGroup]
+  V2D: Boolean
+
+  # returns a list of group containers
+  Video(language: String): [csGroup]
+  Video2: Boolean
+  _siblings(
+    # list of object types (object, variant, folder)
+    objectTypes: [String]
+  ): [object_tree]
+  children(
+    # list of object types (object, variant, folder)
+    objectTypes: [String]
+  ): [object_tree]
+  childrenSortBy: String
+  classname: String
+  creationDate: Int
+  filename: String
+  fullpath: String
+  id: ID
+  index: Int
+  modificationDate: Int
+  objectType: String
+  parent: object_tree
+  properties(
+    # comma separated list of key names
+    keys: [String]
+  ): [ElementProperty]
+  tags(name: String): [element_tag]
+}
+
+type csGroup {
+  id: Int
+  name: String
+  description: String
+  features: [csFeature]
+}
+
+union csFeature =
+    csFeatureBooleanSelect
+  | csFeatureCalculatedValue
+  | csFeatureCheckbox
+  | csFeatureCountry
+  | csFeatureCountryMultiselect
+  | csFeatureDate
+  | csFeatureDatetime
+  | csFeatureInput
+  | csFeatureInputQuantityValue
+  | csFeatureLanguage
+  | csFeatureLangugeMultiselect
+  | csFeatureMultiselect
+  | csFeatureNumeric
+  | csFeatureRgbaColor
+  | csFeatureSelect
+  | csFeatureSlider
+  | csFeatureTextarea
+  | csFeatureTime
+  | csFeatureQuantityValue
+  | csFeatureWysiwyg
+
+type csFeatureBooleanSelect implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  checked: Boolean
+}
+
+interface csFeatureInterface {
+  id: Int
+  name: String
+  type: String
+  description: String
+}
+
+type csFeatureCalculatedValue implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  calculatedvalue: String
+}
+
+type csFeatureCheckbox implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  checked: Boolean
+}
+
+type csFeatureCountry implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  country: String
+}
+
+type csFeatureCountryMultiselect implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  countries: [String]
+}
+
+type csFeatureDate implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  date(
+    # see Carbon::format
+    format: String
+  ): String
+}
+
+type csFeatureDatetime implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  datetime: String
+}
+
+type csFeatureInput implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  text: String
+}
+
+type csFeatureInputQuantityValue implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  inputquantityvalue: InputQuantityValue
+}
+
+type InputQuantityValue {
+  unit: QuantityValueUnit
+  value: String
+  toString(language: String): String
+}
+
+type QuantityValueUnit {
+  id: ID
+  abbreviation: String
+  longname: String
+}
+
+type csFeatureLanguage implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  language: String
+}
+
+type csFeatureLangugeMultiselect implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  languages: [String]
+}
+
+type csFeatureMultiselect implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  selections: [String]
+}
+
+type csFeatureNumeric implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  number: String
+}
+
+type csFeatureRgbaColor implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  color: String
+}
+
+type csFeatureSelect implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  selection: String
+}
+
+type csFeatureSlider implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  slidervalue: String
+}
+
+type csFeatureTextarea implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  text: String
+}
+
+type csFeatureTime implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  time: String
+}
+
+type csFeatureQuantityValue implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  quantityvalue: QuantityValue
+}
+
+type QuantityValue {
+  unit: QuantityValueUnit
+  value: Float
+  toString(language: String): String
+}
+
+type csFeatureWysiwyg implements csFeatureInterface {
+  id: Int
+  name: String
+  description: String
+  type: String
+  text: String
+}
+
+union object_tree = object_Product
+
+union asset_tree = asset | asset_folder
+
+type asset_folder {
+  id: ID
+  filename: String
+  fullpath(thumbnail: String): String
+  creationDate: Int
+  modificationDate: Int
+  properties(
+    # comma seperated list of key names
+    keys: [String]
+  ): [ElementProperty]
+  parent: asset_folder
+  children: [asset_tree]
+  _siblings: [asset_tree]
+}
+
+type ProductConnection {
+  edges: [ProductEdge]
+
+  # The total count of all queryable objects for this schema listing
+  totalCount: Int
+}
+
+type ProductEdge {
+  cursor: String
+  node: object_Product
+}
+
+type AssetConnection {
+  edges: [AssetEdge]
+
+  # The total count of all queryable assets for this schema listing
+  totalCount: Int
+}
+
+type AssetEdge {
+  cursor: String
+  node: asset_tree
+}

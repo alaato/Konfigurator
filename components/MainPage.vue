@@ -1,21 +1,20 @@
 <template>
-  <div class="configurator min-h-svh">
+  <div class="configurator">
     <h1>Sprechanlagen Konfigurator</h1>
-    <ConfiguratorStageTracker :visited="visited" :stages="stages" :currentStage="currentStage" @goToStage="goToStage">
-    </ConfiguratorStageTracker>
-    <div>
+    <SimpleConfiguratorStageTracker :visited="visited" :stages="stages" :currentStage="currentStage" @goToStage="goToStage">
+    </SimpleConfiguratorStageTracker>
+    <SideBar />
+    <div class="main-section ">
       <div v-if="currentStage === 'Anforderungen'">
-        <ConfiguratorStageOne :stages="stages" @nextStage="goToStageTwo" />
+        <SimpleConfiguratorStageOne :stages="stages" @nextStage="goToStageTwo" />
       </div>
-      <div v-if="currentStage === 'Ausenstation'">
-        <ConfiguratorStageTwo :products="outdoorProducts" />
-      </div>
+        <SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'"/>
       <div v-if="currentStage === 'Innenstation'">
-        <ConfiguratorStageThree :products="indoorProducts" :compatibleProducts="compatibleProducts"
+        <SimpleConfiguratorStageThree :products="indoorProducts" :compatibleProducts="compatibleProducts"
           @next-stage="goToStageFour" />
       </div>
       <div v-if="currentStage === 'Übersicht'">
-        <ConfiguratorStageFour :selectedProducts="selectedProducts" />
+        <SimpleConfiguratorStageFour :selectedProducts="selectedProducts" />
       </div>
     </div>
   </div>
@@ -23,42 +22,19 @@
 
 <script setup>
 
-const stages = ref(["Anforderungen", "Ausenstation", "Innenstation", "Übersicht"]);
+const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const {currentStage} = storeToRefs(currentStageStore)
-const outdoorProducts = ref([]);
-const indoorProducts = ref([]);
-
-const goToStageThree = async(product) => {
-  selectedProducts.value.outdoorProduct = product;
-  const {data:products} = await fetchProducts()
-  indoorProducts.value = products.value.elements;
-  console.log(selectedProducts.value.outdoorProduct);
-  visited.value.push(stages.value[2])
-  goToStage(stages.value[2]); // Transition to Stage Three
-};
-
-const goToStageFour = (product) => {
-  selectedProducts.value.indoorProduct = product;
-  console.log(selectedProducts.value)
-  visited.value.push(stages.value[3])
-  goToStage(stages.value[3])
-};
 
 const goToStage = (targetStage) => {
-  // if (targetStage < 1 || targetStage > 4) {
-  //   console.warn("Invalid stage:", targetStage);
-  //   return;
-  // }
+  if (!stages.value.includes(targetStage)) {
+    console.log("Invalid stage:", targetStage);
+    return;
+  }
   currentStage.value = targetStage;
 }
 provide("goToStage", goToStage);
 
-onMounted(async() => {
-  const { refreshCart } = useCart();
-
-  await refreshCart();
-})
 </script>
 
 
@@ -67,9 +43,8 @@ onMounted(async() => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 960px;
+  max-width: 1200px;
   gap: 16px;
-  min-height: 100vh;
   justify-content: center;
   margin: 10px 0;
 }

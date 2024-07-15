@@ -25,7 +25,6 @@ import useFloorsStore from '~/stores/floors';
 const props = defineProps(['floorNumber', 'apartments'])
 const emit = defineEmits(['addApartment', 'selectStation'])
 const cardContent = ref(null);
-console.log(props.apartments)
 const floorsStore = useFloorsStore();
 const {deleteFloor} = floorsStore;
 
