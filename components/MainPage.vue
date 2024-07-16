@@ -25,7 +25,6 @@
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const {currentStage} = storeToRefs(currentStageStore)
-
 const goToStage = (targetStage) => {
   if (!stages.value.includes(targetStage)) {
     console.log("Invalid stage:", targetStage);

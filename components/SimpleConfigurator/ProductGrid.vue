@@ -15,8 +15,6 @@
 
 <script setup>
 const props = defineProps(['products','currentStage'])
-console.log(props['products']['currentStage'])
-const visitedStore = useVisitedStore();
 </script>
 
 <style></style>

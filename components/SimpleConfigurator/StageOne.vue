@@ -117,12 +117,19 @@ watchEffect(() => {
 const visitedStore = useVisitedStore();
 const selectedProductsStore = useSelectedProductsStore()
 const { setNeededProductsQuantity, resetAllProducts } = selectedProductsStore
-
+const {filter} = storeToRefs(selectedProductsStore)
 // functions
 const goToStage: Function = inject('goToStage')
 const submitConfig = async () => {
   const totalApartments = numberApartments.value * numberFloors.value
   setNeededProductsQuantity(totalApartments, 1)
+  if(funktion.value == "Video")
+    filter.value.Video = true;
+  if(technologie.value == "Video-6-Draht")
+    filter.value.technologie = "TCS:BUS"
+  else
+  filter.value.technologie = "Video-2-Draht"
+
   resetAllProducts();
   goToStage(stages[1])
   if (!visitedStore.visited.includes(stages[1]))

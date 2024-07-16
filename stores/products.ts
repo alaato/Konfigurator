@@ -3,6 +3,11 @@ import { defineStore } from 'pinia'
 export const useSelectedProductsStore = defineStore({
   id: 'SelectedProductsStore',
   state: () => ({
+    filter:{
+      funktion: "",
+      technologie: "",
+      Video: false
+    },
     selectedProducts: {
       indoorProducts: {
         neededQuantity: 0,
