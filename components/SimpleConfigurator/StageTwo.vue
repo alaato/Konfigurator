@@ -10,7 +10,7 @@
 		<div v-if="pending">
 			...loading
 		</div>
-		<ProductGrid v-else :currentStage="'Aussenstation'" :products="data?.getProductListing.edges" />
+		<ProductGrid v-else :currentStage="'Aussenstation'" :products="products" />
 	</div>
 </template>
 
@@ -37,7 +37,6 @@ const query = gql`
 				MNR
 				Geraeteart4077
 				Kommunikationstechnologie4164
-				KTXT
 				Audio1
 				Video2
 				IP1
@@ -61,31 +60,38 @@ const query = gql`
 		  }
 		}
 	  `;
-const variables = {		
-	filter: JSON.stringify({
-		Aussenstation: true,
-		Kommunikationstechnologie4164: filter.value.technologie,
-		Video2: filter.value.Video,
-	}),
-	first :30,
-};
 
+const FilterOptions = {
+	Aussenstation: true,
+}
+if(filter.value.funktion == "Video")
+	FilterOptions.Kommunikationstechnologie4164 =  filter.value.technologie
+if(filter.value.Video)
+	FilterOptions.Video2 = true
+
+const variables = {		
+	filter: JSON.stringify(FilterOptions),
+	first: 100
+};
+console.log(variables)
 // functions
-const { data, pending } = await useLazyAsyncQuery(query, variables)
+const { data, pending, error } = await useLazyAsyncQuery(query, variables)
+console.log(error.value, data.value)
+let filteredProducts = [];
+let products = null
 watchEffect(() => {
-	const products = data.value?.getProductListing?.edges?.map(edge => edge.node);
+	products = data.value?.getProductListing?.edges?.map(edge => edge.node);
 	if (products) {
-	const filteredProducts = products.filter(product => {
+	filteredProducts = products.filter(product => {
 		return product.Audio.some(audio => {
 			return audio.features.some(feature =>
-				feature.name === 'AnzahlKlingeltasten3938' && feature.text == '1'
+				feature.name === 'AnzahlKlingeltasten3938' && feature.text == '8'
 			);
 		});
 	});
 	console.log(filteredProducts);
 }
 console.log(products);
-
 })
 
 function reset() {

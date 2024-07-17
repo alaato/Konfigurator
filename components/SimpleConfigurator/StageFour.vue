@@ -98,7 +98,7 @@
             <div class="bg-gray-50 rounded-xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
                 <div class="flex items-center justify-between w-full py-6">
                     <p class="font-manrope font-medium text-2xl leading-9 text-gray-900">Total</p>
-                    <h6 class="font-manrope font-medium text-2xl leading-9 text-indigo-500">$405.00</h6>
+                    <h6 class="font-manrope font-medium text-2xl leading-9 text-indigo-500"></h6>
                 </div>
             </div>
             <div class="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">

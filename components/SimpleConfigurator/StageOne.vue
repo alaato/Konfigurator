@@ -123,12 +123,12 @@ const goToStage: Function = inject('goToStage')
 const submitConfig = async () => {
   const totalApartments = numberApartments.value * numberFloors.value
   setNeededProductsQuantity(totalApartments, 1)
-  if(funktion.value == "Video")
-    filter.value.Video = true;
-  if(technologie.value == "Video-6-Draht")
-    filter.value.technologie = "TCS:BUS"
+  filter.value.funktion = funktion.value
+  funktion.value == "Video"? filter.value.Video = true : filter.value.Video = false;
+  if(technologie.value == "Video-6-Draht" && funktion.value == "Video")
+    filter.value.technologie = "TCS:BUS"  
   else
-  filter.value.technologie = "Video-2-Draht"
+    filter.value.technologie = "Video-2-Draht"
 
   resetAllProducts();
   goToStage(stages[1])

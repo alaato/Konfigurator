@@ -34,7 +34,6 @@ const query = gql`
 				MNR
 				Geraeteart4077
 				Kommunikationstechnologie4164
-				KTXT
         parent{
           ... on object_Product{
             MNR
@@ -55,6 +54,7 @@ const variables = {
 
 // functions
 const { result: data, loading } =  useQuery(query, variables)
+console.log(data.value)
 function reset(){
 	selectedProductsStore.resetIndoorProducts();
 }
