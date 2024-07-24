@@ -2,7 +2,11 @@ import { defineStore } from 'pinia';
 
 const useFloorsStore = defineStore('floors', {
   state: () => ({
-    floors: [],
+    floors: [{
+      apartments: [{
+        stationImage: '',
+      }]
+    }],
   }),
   actions: {
     addFloor() {

@@ -10,7 +10,7 @@
       <a class="mx-2 my-1 flex items-center lg:mb-0 lg:mt-0" href="#">
         <img
           class="me-2"
-          src="../public/logo.gif"
+          src="public/logo.gif"
           alt="TE Logo"
           loading="lazy" />
       </a>

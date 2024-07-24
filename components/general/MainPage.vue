@@ -3,14 +3,13 @@
     <h1>Sprechanlagen Konfigurator</h1>
     <SimpleConfiguratorStageTracker :visited="visited" :stages="stages" :currentStage="currentStage" @goToStage="goToStage">
     </SimpleConfiguratorStageTracker>
-    <SideBar />
     <div class="main-section ">
       <div v-if="currentStage === 'Anforderungen'">
         <SimpleConfiguratorStageOne :stages="stages" @nextStage="goToStageTwo" />
       </div>
         <SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'"/>
       <div v-if="currentStage === 'Innenstation'">
-        <SimpleConfiguratorStageThree :products="indoorProducts" :compatibleProducts="compatibleProducts"
+        <SimpleConfiguratorStageThree
           @next-stage="goToStageFour" />
       </div>
       <div v-if="currentStage === 'Übersicht'">
@@ -18,10 +17,10 @@
       </div>
     </div>
   </div>
+
 </template>
 
 <script setup>
-
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const {currentStage} = storeToRefs(currentStageStore)
@@ -45,6 +44,6 @@ provide("goToStage", goToStage);
   max-width: 1200px;
   gap: 16px;
   justify-content: center;
-  margin: 10px 0;
+  margin: 16px auto;
 }
 </style>

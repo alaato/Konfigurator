@@ -1,7 +1,6 @@
 <template>
-  <div class="text-center">
-    <h2 >Select Compatible Product</h2>
-    <p>selected : {{ selectedProducts.indoorProducts.SelectedQuantity }} / {{ selectedProducts.indoorProducts.neededQuantity }}</p>
+  <div class="text-center relative top-0">
+    <p class="text-xl mb-3 top-0 sticky">Ausgewählte : {{ selectedProducts.indoorProducts.SelectedQuantity }} / {{ selectedProducts.indoorProducts.neededQuantity }}</p>
     <button v-if="remainingIndoorProducts==0" @click="reset"
           class="inline-flex w-15 h-15 rounded-full text-white focus:outline-none  hover:bg-arapawa-900">
           <RotateCcw class="w-6 h-6" />
@@ -17,6 +16,7 @@
 //imports
 import ProductGrid from './ProductGrid.vue'
 import { RotateCcw } from 'lucide-vue-next';
+import gql from 'graphql-tag';
 
 //variables
 const selectedProductsStore = useSelectedProductsStore();
@@ -34,6 +34,7 @@ const query = gql`
 				MNR
 				Geraeteart4077
 				Kommunikationstechnologie4164
+        PERIODE1
         parent{
           ... on object_Product{
             MNR
@@ -54,7 +55,6 @@ const variables = {
 
 // functions
 const { result: data, loading } =  useQuery(query, variables)
-console.log(data.value)
 function reset(){
 	selectedProductsStore.resetIndoorProducts();
 }

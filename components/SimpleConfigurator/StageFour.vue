@@ -1,9 +1,6 @@
 <template>
     <section class="py-2 relative">
         <div class="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
-            <h2 class="title font-manrope font-bold text-4xl leading-10 mb-8 text-center text-black">
-                Übersicht
-            </h2>
             <div class="hidden lg:grid grid-cols-2 py-6">
                 <div class="font-normal text-xl leading-8 text-gray-500">Product</div>
                 <p class="font-normal text-xl leading-8 text-gray-500 flex items-center justify-between">
@@ -35,7 +32,7 @@
                         <p type="number"
                             class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
                             placeholder="1">
-                            {{ product?.quantity }}
+                            {{ product?.product.PERIODE1 }}€
                         </p>
                     </div>
                     <div class="flex items-center w-full mx-auto justify-center">
@@ -49,7 +46,7 @@
                         <p type="number"
                             class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
                             placeholder="1">
-                            {{ product?.quantity }}
+                            {{ product?.product.PERIODE1 * product?.quantity }}€
                         </p>
                     </div>
                 </div>
@@ -76,7 +73,7 @@
                         <p type="number"
                             class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
                             placeholder="1">
-                            {{ selectedProducts.outdoorProducts.SelectedQuantity }}
+                            {{  Outdoorproduct.PERIODE1  }}€
                         </p>
                     </div>
                     <div class="flex items-center w-full mx-auto justify-center">
@@ -90,7 +87,7 @@
                         <p type="number"
                             class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
                             placeholder="1">
-                            {{ product?.quantity }}
+                            {{ Outdoorproduct.PERIODE1 * selectedProducts.outdoorProducts.SelectedQuantity }}€
                         </p>
                     </div>
                 </div>
@@ -98,7 +95,7 @@
             <div class="bg-gray-50 rounded-xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
                 <div class="flex items-center justify-between w-full py-6">
                     <p class="font-manrope font-medium text-2xl leading-9 text-gray-900">Total</p>
-                    <h6 class="font-manrope font-medium text-2xl leading-9 text-indigo-500"></h6>
+                    <h6 class="font-manrope font-medium text-2xl leading-9 text-indigo-500"> </h6>
                 </div>
             </div>
             <div class="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
@@ -120,5 +117,13 @@
 <script setup>
 const selectedProductsStore = useSelectedProductsStore();
 const { selectedProducts } = storeToRefs(selectedProductsStore)
-console.log(selectedProducts.value.outdoorProducts)
+
+const total = computed(() => {
+    let sum = 0
+    selectedProducts.value.outdoorProducts.products.forEach((product) => {
+        sum += product.PERIODE1 * selectedProducts.value.outdoorProducts.SelectedQuantity
+    })
+    return sum
+})
+console.log(total.value)
 </script>

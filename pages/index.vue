@@ -4,7 +4,7 @@
 </template>
 
 <script lang="ts" setup>
-import StageOne from '~/components/stageOne/StageOne.vue';
+import StageOne from '~/components/SimpleConfigurator/StageOne.vue';
 </script>
 
 <style>

@@ -1,7 +1,7 @@
 <template>
   <div class="bg-background text-left rounded-lg shadow-lg overflow-hidden min-w-[360px] max-w-sm">
     <img src="public/2517.jpg" alt="Product Image" width="300" height="300" class="w-full h-64 object-scale-down" />
-    <div class="p-6">
+    <div class="p-6 flex flex-col">
       <h3 class="text-xl font-bold mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
       <h3 class=" MNR text-l font-bold mb-2">Article : {{ product.MNR }}</h3>
       <p class="text-muted-foreground mb-4">{{ product.Geraeteart4077 }}</p>
@@ -19,7 +19,7 @@
           </NumberField>
         </CardContent>
       </Card>
-      <button class=" disabled:bg-slate-500 my-2" :disabled="remainingIndoorProducts==0" @click="addProduct(product,productQuantity )">
+      <button class=" disabled:bg-slate-500 my-2 justify-self-center" :disabled="remainingIndoorProducts==0" @click="addProduct(product,productQuantity )">
         hinzufügen
       </button>
       <p v-if="productQuantity >remainingIndoorProducts" class="text-red-900" > max : {{ remainingIndoorProducts }}</p>
@@ -46,7 +46,6 @@ const addProduct = (product, quantity) => {
     selectedProducts.value.indoorProducts.products.push({product, quantity})
     selectedProducts.value.indoorProducts.SelectedQuantity += quantity
     productQuantity.value = 0;
-    console.log(selectedProducts.value.indoorProducts)
   }
   if(selectedProducts.value.indoorProducts.SelectedQuantity == selectedProducts.value.indoorProducts.neededQuantity){
     goToStage("Übersicht")

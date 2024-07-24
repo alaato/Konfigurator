@@ -5,10 +5,25 @@
       <h3 class="text-xl font-bold mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
       <h3 class=" MNR text-l font-bold mb-2">Article : {{product.MNR}}</h3>
       <p class="text-muted-foreground mb-4">{{ product.Geraeteart4077 }}</p>
-      <div class="">
-        <button @click="addProduct(product)">
-          select
+      <div class="flex flex-col">
+        <Card class="h-32">
+        <CardHeader>
+          <CardDescription>Wählen Sie aus, wie viele Innenstationen</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <NumberField   v-model="productQuantity" :default-value="0"  :min="0" :max="remainingOutdoorProducts">
+            <NumberFieldContent class="h-10">
+              <NumberFieldDecrement />
+              <NumberFieldInput class="h-10"/>
+              <NumberFieldIncrement />
+            </NumberFieldContent>
+          </NumberField>
+        </CardContent>
+      </Card>
+        <button class=" disabled:bg-slate-500 my-2 justify-self-center" :disabled="remainingOutdoorProducts==0" @click="addProduct(product, productQuantity)">
+          hinzufügen
         </button>
+        <p v-if="productQuantity >remainingOutdoorProducts" class="text-red-900" > max : {{ remainingOutdoorProducts }}</p>
       </div>
     </div>
   </div>
@@ -17,6 +32,7 @@
 <script lang="ts" setup>
 // variables
 const props = defineProps(['product'])
+const productQuantity = ref(0);
 const currentStageStore = useCurrentStageStore();
 const {currentStage} = storeToRefs(currentStageStore)
 const visitedStore = useVisitedStore();
@@ -27,13 +43,13 @@ return selectedProducts.value.outdoorProducts.neededQuantity - selectedProducts.
 })
 const goToStage: Function = inject(`goToStage`)
 //function
-function addProduct(product) {
+function addProduct(product, quantity) {
 if (currentStage.value === "Aussenstation") {
-  selectedProductsStore.addOneOutdoorProduct(product);
-  console.log(selectedProducts.value.outdoorProducts.products)
+  selectedProductsStore.addOutdoorProducts({...product, quantity: quantity}, quantity);
   if (!visitedStore.visited.includes('Innenstation'))
   visitedStore.visited.push('Innenstation')
-  goToStage('Innenstation')
+  if(remainingOutdoorProducts.value == 0)
+    goToStage('Innenstation')
 }
 }
 </script>

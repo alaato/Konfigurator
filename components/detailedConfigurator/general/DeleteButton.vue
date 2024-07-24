@@ -9,17 +9,8 @@
 <script setup lang="ts">
 import { Trash2 } from 'lucide-vue-next';
 const emit = defineEmits(['click'])
-const props = defineProps({
-	floorNumber: { type: Number, required: true },
-	apartmentIndex: { type: Number, required: false },
-})
-const emitDelete = () => {
-	if(props.apartmentIndex)
-		emit('click', props.floorNumber, props.apartmentIndex)
-	else
-		emit('click', props.floorNumber)
 
+function emitDelete() {
+  emit('click')
 }
 </script>
-
-
