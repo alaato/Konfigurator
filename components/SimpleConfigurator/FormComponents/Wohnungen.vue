@@ -17,5 +17,5 @@
 </template>
 
 <script setup lang="ts">
-const numberApartments = defineModel()
+const numberApartments = defineModel({type: Number, default: 1})
 </script>

@@ -2,7 +2,7 @@ import gql from "graphql-tag";
 import { useQuery } from "@vue/apollo-composable";
 
 
-const fetchOutdoorStations = (filter) => {
+const fetchOutdoorStations = (variables) => {
 const query = gql`
 query getProductListing($filter: String!, $first: Int) {
   getProductListing(first: $first, filter: $filter) {
@@ -37,19 +37,6 @@ query getProductListing($filter: String!, $first: Int) {
   }
 }
 `;
-
-const FilterOptions = {
-Aussenstation: true,
-}
-if(filter.value.funktion == "Video")
-FilterOptions.Kommunikationstechnologie4164 =  filter.value.technologie
-if(filter.value.Video)
-FilterOptions.Video2 = true
-
-const variables = {		
-filter: JSON.stringify(FilterOptions),
-after: 10
-};
 
  const { result: outdoorStations, loading } =  useQuery(query, variables)
  return { result: outdoorStations, loading }
