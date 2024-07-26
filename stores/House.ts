@@ -20,6 +20,20 @@ export const useHousesStore = defineStore({
         outdoorStations: [{}],
       })
     },
+    initilizeAll(numberFloors:number, numberApartments: number, numberOutdoorStations : number){
+      this.resetAllHouses()
+      this.addHouse()
+      this.resetHouse(0)
+      for(let i = 0; i <numberFloors; i++){
+        this.addFloor(0)
+        for (let j = 0 ; j < numberApartments ; j++ )
+          this.addApartment(0, i)
+      }
+      for(let i = 0; i < numberOutdoorStations; i++)
+      {
+        this.addOutdoorStation(0, {})
+      }
+    },
     addFloor(houseIndex: number) {
       this.houses[houseIndex].floors.push({
         apartments: [{
@@ -37,6 +51,22 @@ export const useHousesStore = defineStore({
     },
     addOutdoorStation(houseIndex: number, product: any) {
       this.houses[houseIndex].outdoorStations.push(product)
+    },
+    duplicateFloor(houseIndex: number, floorIndex: number) {
+      console.log(houseIndex, floorIndex)
+      this.houses[houseIndex].floors.splice(floorIndex, 0, {
+        apartments: [...this.houses[houseIndex].floors[floorIndex].apartments]
+      })
+    },
+    duplicateApartment(houseIndex: number, floorIndex: number, apartmentIndex: number){
+      this.houses[houseIndex].floors[floorIndex].apartments.splice(apartmentIndex, 0,
+         {...this.houses[houseIndex].floors[floorIndex].apartments[apartmentIndex]}
+        )
+    },
+    duplicateOutdoorStation(houseIndex: number, stationIndex: number) {
+      this.houses[houseIndex].outdoorStations.splice(stationIndex, 0, {
+        ...this.houses[houseIndex].outdoorStations[stationIndex]
+      })
     },
     deleteHouse(houseIndex: number) {
       this.houses.splice(houseIndex, 1)
@@ -66,6 +96,5 @@ export const useHousesStore = defineStore({
     resetAllHouses() {
       this.houses = []
     },
-
   }
 })

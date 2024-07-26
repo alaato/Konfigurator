@@ -4,8 +4,9 @@
       <CardTitle>Aussenstation {{ index + 1 }}</CardTitle>
     </CardHeader>
     <CardContent class="apartment-actions flex justify-center items-center">
-      <button class="bg-transparent text-black hover:bg-slate-100" @click="selectStation">Aussenstation auswählen</button>
-      <DeleteButton @click="handleDeleteOutdoorStation"  />
+      <ProductsModal title="Aussenstation auswählen" trigger-text="Aussenstation auswählen"></ProductsModal>
+      <DeleteButton @click="handleDeleteOutdoorStation" />
+      <DuplicateButton @click="handleDuplicateOutdoorStation" />
     </CardContent>
   </Card>
 
@@ -16,18 +17,28 @@
 </template>
 
 <script lang="ts" setup>
-import DeleteButton from '../indoor/DeleteButton.vue';
+//imports
+import DeleteButton from '../general/DeleteButton.vue';
+import ProductsModal from '../general/ProductsModal.vue';
+import DuplicateButton from '@/components/detailedConfigurator/general/DuplicateButton.vue'
+
+//consts
 const ProductStore = useSelectedProductsStore()
-const {decrementOutdoorNeededQuantity} = ProductStore
+const { decrementOutdoorNeededQuantity, incrementOutdoorNeededQuantity } = ProductStore
 const props = defineProps<{
-index : number
+  index: number
 }>()
 const houseStore = useHousesStore();
-const {deleteOutdoorStation} = houseStore
-const houseIndex : number = inject('houseIndex')
+const { deleteOutdoorStation, duplicateOutdoorStation} = houseStore
+const houseIndex: number = inject('houseIndex')
 
+//funktions
 function handleDeleteOutdoorStation() {
   decrementOutdoorNeededQuantity(1)
   deleteOutdoorStation(houseIndex, props.index)
+}
+function handleDuplicateOutdoorStation() {
+  incrementOutdoorNeededQuantity(1)
+  duplicateOutdoorStation(houseIndex, props.index)
 }
 </script>

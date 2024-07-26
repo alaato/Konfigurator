@@ -19,32 +19,85 @@
   </Card>
 </template>
 
-<script lang="ts" setup>
+<script  setup>
+//imports
 import { RotateCcw } from 'lucide-vue-next';
 import OutdoorStation from './OutdoorStation.vue';
+
 // consts
 const props = defineProps({
   outdoorStations: Array,
-  index: Number,
 })
 
 const productStore = useSelectedProductsStore()
-const { selectedProducts } = storeToRefs(productStore);
-const { outdoorProducts } = selectedProducts.value
-
 const HousesStore = useHousesStore()
 const { addOutdoorStation, resetOutdoors} = HousesStore
-const {houses} = storeToRefs(HousesStore)
+const {incrementOutdoorNeededQuantity, resetOutdoorNeededQuantity} = productStore
+const houseIndex  = inject('houseIndex');
+const selectedProductsStore = useSelectedProductsStore();
+const { selectedProducts, filter } = storeToRefs(selectedProductsStore)
+const query = gql`
+		query getProductListing($filter: String!, $first: Int) {
+		  getProductListing(first: $first, filter: $filter) {
+			totalCount
+			edges {
+			  node {
+				id
+				MNR
+				Geraeteart4077
+				Kommunikationstechnologie4164
+				Audio1
+				Video2
+				IP1
+				PERIODE1
+				parent{
+          			... on object_Product{
+            		MNR
+          		  }
+        		}
+				Audio{
+          		... on csGroup{
+            		features{
+              		... on csFeatureInput{
+                		name
+                		text
+              			}	
+            		}
+          		  }
+        		}
+			  }
+			}
+		  }
+		}
+	  `;
+
+let AnzahlTasten = selectedProducts.value.indoorProducts.neededQuantity <10 ? `0${selectedProducts.value.indoorProducts.neededQuantity}` : `_____${selectedProducts.value.indoorProducts.neededQuantity}`
+
+const FilterOptions = {
+	Aussenstation: true,
+	MNR :  {"$like" :`%${AnzahlTasten}%`}
+}
+if(filter.value.funktion == "Video")
+	FilterOptions.Kommunikationstechnologie4164 =  filter.value.technologie
+if(filter.value.Video)
+	FilterOptions.Video2 = true
+
+const variables = {
+	filter: JSON.stringify(FilterOptions),
+	first: 30,
+};
+const { data, pending, error } = await useLazyAsyncQuery(query, variables)
+
 
 //funktions
 function add() {
-  addOutdoorStation(props.index, {})
-  productStore.incrementOutdoorNeededQuantity(1)
+  addOutdoorStation(houseIndex, {})
+  incrementOutdoorNeededQuantity(1)
 }
 
 function reset() {
-  productStore.resetOutdoorNeededQuantity()
-  resetOutdoors(props.index)
+  resetOutdoorNeededQuantity()
+  resetOutdoors(houseIndex)
 }
 </script>
 

@@ -20,7 +20,7 @@
           </NumberField>
         </CardContent>
       </Card>
-        <button class=" disabled:bg-slate-500 my-2 justify-self-center" :disabled="remainingOutdoorProducts==0" @click="addProduct(product, productQuantity)">
+        <button class=" disabled:bg-slate-500 my-2 justify-self-center" :disabled="remainingOutdoorProducts==0" @click="addProduct(product)">
           hinzufügen
         </button>
         <p v-if="productQuantity >remainingOutdoorProducts" class="text-red-900" > max : {{ remainingOutdoorProducts }}</p>
@@ -43,9 +43,10 @@ return selectedProducts.value.outdoorProducts.neededQuantity - selectedProducts.
 })
 const goToStage: Function = inject(`goToStage`)
 //function
-function addProduct(product, quantity) {
+function addProduct(product) {
 if (currentStage.value === "Aussenstation") {
-  selectedProductsStore.addOutdoorProducts({...product, quantity: quantity}, quantity);
+  selectedProductsStore.addOutdoorProducts({...product, quantity: productQuantity.value}, productQuantity.value);
+  productQuantity.value = 0;
   if (!visitedStore.visited.includes('Innenstation'))
   visitedStore.visited.push('Innenstation')
   if(remainingOutdoorProducts.value == 0)

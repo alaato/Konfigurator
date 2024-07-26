@@ -1,31 +1,33 @@
 <script setup lang="ts">
+//imports
 import Navbar from './components/general/Navbar.vue';
-// import fetchIndoorStations from './qraphql/indoorQuery';
-// import fetchOutdoorStations from './qraphql/outdoorQuery';
-const selectedProductsStore = useSelectedProductsStore();
-const { selectedProducts, filter } = storeToRefs(selectedProductsStore)
+
+//consts
+
+document.documentElement.classList.remove('dark')
 
 const useIdFunction = () => useId()
+useHead({
+  title: 'Konfigurator',
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ],
+  htmlAttrs: {
+    class: 'light'
+  },  
+})
 
-// const { result: indoorstations } = fetchIndoorStations(filter)
-// const { result: outdoorStations } = fetchOutdoorStations(filter)
-
-// watchEffect(() => {
-//   console.log("indoor:", indoorstations.value)
-// })
-// watchEffect(() => {
-//   console.log("outdoor:", outdoorStations.value)
-// })
 </script>
+
 
 <template>
   <ConfigProvider :use-id="useIdFunction">
     <div id="app" class="max-h-screen flex flex-col">
       <Navbar></Navbar>
-      <div class="main-page m-auto" >
+      <div class="main-page m-auto">
         <NuxtPage />
       </div>
-      </div>
+    </div>
   </ConfigProvider>
 </template>
 <style>

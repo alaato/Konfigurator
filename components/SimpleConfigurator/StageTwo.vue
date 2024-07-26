@@ -61,8 +61,10 @@ const query = gql`
 		}
 	  `;
 
+let AnzahlTasten = selectedProducts.value.indoorProducts.neededQuantity <10 ? `0${selectedProducts.value.indoorProducts.neededQuantity}` : `_____${selectedProducts.value.indoorProducts.neededQuantity}`
 const FilterOptions = {
 	Aussenstation: true,
+	MNR :  {"$like" :`%${AnzahlTasten}%`}
 }
 if(filter.value.funktion == "Video")
 	FilterOptions.Kommunikationstechnologie4164 =  filter.value.technologie
@@ -88,9 +90,11 @@ watchEffect(() => {
 			);
 		});
 	});
-	
 }
+console.log("filter: ", filteredProducts)
+console.log("unfilterd", products)
 })
+
 
 function reset() {
 	selectedProductsStore.resetOutdoorProducts();

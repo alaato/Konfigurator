@@ -1,11 +1,11 @@
 <template>
   <div>
-    <Haus></Haus>
+    <HausContainer></HausContainer>
   </div>
 </template>
 
 <script lang="ts" setup>
-import Haus from '~/components/detailedConfigurator/Haus/HausContainer.vue';
+import HausContainer from '@/components/detailedConfigurator/Haus/HausContainer.vue';
 
 
 </script>

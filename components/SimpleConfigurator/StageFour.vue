@@ -16,11 +16,11 @@
                     class="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
                     <div class="pro-data w-full max-w-sm ">
                         <h5 class="font-semibold text-lg leading-8 text-black max-[550px]:text-center">
-                            {{ product?.product?.parent?.MNR || "control system" }}
+                            {{ product?.parent?.MNR || "control system" }}
                         </h5>
                         <p
                             class="font-normal text-lg leading-8 text-gray-500 my-2 min-[550px]:my-3 max-[550px]:text-center">
-                            Art.-Nummer: {{ product?.product?.MNR }}
+                            Art.-Nummer: {{ product?.MNR }}
                         </p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <p type="number"
                             class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
                             placeholder="1">
-                            {{ product?.product.PERIODE1 }}€
+                            {{ product?.PERIODE1 }}€
                         </p>
                     </div>
                     <div class="flex items-center w-full mx-auto justify-center">
@@ -46,7 +46,7 @@
                         <p type="number"
                             class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
                             placeholder="1">
-                            {{ product?.product.PERIODE1 * product?.quantity }}€
+                            {{ product?.PERIODE1 * product?.quantity }}€
                         </p>
                     </div>
                 </div>
@@ -80,14 +80,14 @@
                         <p type="number"
                             class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
                             placeholder="1">
-                            {{ selectedProducts.outdoorProducts.SelectedQuantity }}
+                            {{ Outdoorproduct.quantity }}
                         </p>
                     </div>
                     <div class="flex items-center w-full mx-auto justify-center">
                         <p type="number"
                             class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
                             placeholder="1">
-                            {{ Outdoorproduct.PERIODE1 * selectedProducts.outdoorProducts.SelectedQuantity }}€
+                            {{ Outdoorproduct.PERIODE1 * Outdoorproduct.quantity }}€
                         </p>
                     </div>
                 </div>
@@ -95,7 +95,7 @@
             <div class="bg-gray-50 rounded-xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
                 <div class="flex items-center justify-between w-full py-6">
                     <p class="font-manrope font-medium text-2xl leading-9 text-gray-900">Total</p>
-                    <h6 class="font-manrope font-medium text-2xl leading-9 text-indigo-500"> </h6>
+                    <h6 class="font-manrope font-medium text-2xl leading-9 text-indigo-500">{{ total }} </h6>
                 </div>
             </div>
             <div class="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
@@ -117,11 +117,13 @@
 <script setup>
 const selectedProductsStore = useSelectedProductsStore();
 const { selectedProducts } = storeToRefs(selectedProductsStore)
-
 const total = computed(() => {
     let sum = 0
     selectedProducts.value.outdoorProducts.products.forEach((product) => {
         sum += product.PERIODE1 * selectedProducts.value.outdoorProducts.SelectedQuantity
+    })
+    selectedProducts.value.indoorProducts.products.forEach((product) => {
+        sum+= product.quantity * product?.PERIODE1
     })
     return sum
 })

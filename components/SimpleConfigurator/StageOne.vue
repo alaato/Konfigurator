@@ -9,9 +9,7 @@
       </Card>
       <div class="funktion-and-technologie-container">
         <Funktion v-model="funktion" />
-
         <Technologie :funktion="funktion" v-model="technologie" />
-
       </div>
       <button class=" bg-arapawa-950 text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
         bestätigen
@@ -25,13 +23,7 @@
 
 //imports and props
 const { stages } = defineProps(['stages'])
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card'
+import {Card} from '@/components/ui/card'
 import { useSelectedProductsStore } from '~/stores/products';
 import IndoorStationInput from './FormComponents/IndoorStationInput.vue';
 import OutdoorStationInput from './FormComponents/OutdoorStationInput.vue';
@@ -39,9 +31,10 @@ import Etagen from './FormComponents/Etagen.vue'
 import Wohnungen from './FormComponents/Wohnungen.vue'
 import Funktion from './FormComponents/Funktion.vue'
 import Technologie from './FormComponents/Technologie.vue'
+
 // variables
-const numberApartments = useState("numberApartments", () => 1);
-const numberFloors = useState("numberFloors", () => 1);
+// const numberApartments = useState("numberApartments", () => 1);
+// const numberFloors = useState("numberFloors", () => 1);
 const funktion = ref("");
 const technologie = ref("");
 const funktionRef = ref<InstanceType<typeof HTMLDivElement> | null>(null);
@@ -59,7 +52,7 @@ const {filter} = storeToRefs(selectedProductsStore)
 const goToStage: Function = inject('goToStage')
 const submitConfig = async () => {
   // alert(`${numberOutdoorStation.value} + ${numberIndoorStation.value} + ${funktion.value} + ${technologie.value} `)
-  const totalApartments = numberApartments.value * numberFloors.value
+  // const totalApartments = numberApartments.value * numberFloors.value
   setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
   filter.value.funktion = funktion.value
   funktion.value == "Video"? filter.value.Video = true : filter.value.Video = false;

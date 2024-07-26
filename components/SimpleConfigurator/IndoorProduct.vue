@@ -43,7 +43,7 @@ const goToStage: Function = inject(`goToStage`)
 //function
 const addProduct = (product, quantity) => {
   if (selectedProducts.value.indoorProducts.SelectedQuantity < selectedProducts.value.indoorProducts.neededQuantity && quantity > 0 && quantity <= remainingIndoorProducts.value) {
-    selectedProducts.value.indoorProducts.products.push({product, quantity})
+    selectedProducts.value.indoorProducts.products.push({...product, quantity})
     selectedProducts.value.indoorProducts.SelectedQuantity += quantity
     productQuantity.value = 0;
   }

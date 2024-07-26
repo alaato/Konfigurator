@@ -52,9 +52,9 @@ const variables = {
   }),
   first: 30
 };
+const { result: data, loading } = useQuery(query, variables)
 
 // functions
-const { result: data, loading } =  await useLazyAsyncQuery(query, variables)
 function reset(){
 	selectedProductsStore.resetIndoorProducts();
 }

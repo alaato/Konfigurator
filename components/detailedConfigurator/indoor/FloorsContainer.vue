@@ -14,8 +14,7 @@
       </div>
       <div class="top-0 overflow-scroll h-[400px] 2xl:h-[500px] p-2">
         <div class="flex flex-col-reverse">
-          <Floor v-for="(floor, index) in floors" :key="index" :floorIndex="index" :apartments="floor.apartments"
-            @addApartment="handleAddAparmtent" @deleteFloor="handleFloorDelete" />
+          <Floor v-for="(floor, index) in floors" :key="index" :floorIndex="index" :apartments="floor.apartments"/>
         </div>
       </div>
     </CardContent>
@@ -23,19 +22,50 @@
 </template>
 
 <script lang="ts" setup>
+//imports
 import { RotateCcw } from 'lucide-vue-next';
 import type { Floor as FloorType } from '@/utils/interfaces';
 import Floor from './Floor.vue';
+
+//consts
+const productStore = useSelectedProductsStore()
 const props = defineProps<{
   floors: FloorType[]
 }>()
-const productStore = useSelectedProductsStore()
-
 const houseStore = useHousesStore()
 const router = useRouter()
-const { addFloor, resetFloors, addApartment, deleteFloor } = houseStore
+const { addFloor, resetFloors } = houseStore
 const houseIndex : number = inject('houseIndex')
-
+const query = gql`
+		query getProductListing($filter: String!, $first: Int) {
+		  getProductListing(first: $first, filter: $filter) {
+			totalCount
+			edges {
+			  node {
+				id
+				MNR
+				Geraeteart4077
+				Kommunikationstechnologie4164
+        PERIODE1
+        parent{
+          ... on object_Product{
+            MNR
+          }
+        }
+      }
+    }
+  }
+}
+`;
+const variables = {
+  filter: JSON.stringify({
+    Innenstation: true,
+    Kommunikationstechnologie4164: "TCS:BUS"
+  }),
+  first: 30
+};
+const { result: data, loading } = useQuery(query, variables)
+//functions
 function reset() {
   resetFloors(houseIndex)
   productStore.resetIndoorNeededQuantity()
@@ -44,6 +74,7 @@ function reset() {
 
 function add() {
   addFloor(houseIndex)
+  productStore.incrementIndoorNeededQuantity(1)
 }
 </script>
 
