@@ -1,0 +1,818 @@
+{
+    "data": {
+        "getProductListing": {
+            "totalCount": 20,
+            "edges": [
+                {
+                    "node": {
+                        "id": "53",
+                        "MNR": "0038794",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": null,
+                        "Video2": true,
+                        "IP1": null,
+                        "PERIODE1": null,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör V2D"
+                        }
+                    }
+                },
+                {
+                    "node": {
+                        "id": "2238",
+                        "MNR": "MCARD01",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": null,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 14.5,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "2240",
+                        "MNR": "MKEY01",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": null,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 14,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "2427",
+                        "MNR": "PAKDA-EN",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 76,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {},
+                            {
+                                "features": [
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
+                                        "text": null
+                                    }
+                                ]
+                            },
+                            {
+                                "features": [
+                                    {
+                                        "name": "AnzahlKlingeltasten3938",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "Mikrofonabsetzbarin4292",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "LautstaerkeGespraech4008",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "AkustischeRufunterscheidungen",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "2703",
+                        "MNR": "PRODA-EN",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 73,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {},
+                            {
+                                "features": [
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
+                                        "text": null
+                                    }
+                                ]
+                            },
+                            {
+                                "features": [
+                                    {
+                                        "name": "AnzahlKlingeltasten3938",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "Mikrofonabsetzbarin4292",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "LautstaerkeGespraech4008",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "AkustischeRufunterscheidungen",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3510",
+                        "MNR": "ZAM1101-0010",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 121,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {},
+                            {
+                                "features": [
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
+                                        "text": null
+                                    }
+                                ]
+                            },
+                            {
+                                "features": [
+                                    {
+                                        "name": "AnzahlKlingeltasten3938",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "Mikrofonabsetzbarin4292",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "LautstaerkeGespraech4008",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "AkustischeRufunterscheidungen",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3515",
+                        "MNR": "ZAS1312-0010",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 76,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3516",
+                        "MNR": "ZAS1334-0010",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 76,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3517",
+                        "MNR": "ZAS1356-0010",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 76,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3552",
+                        "MNR": "ZAU4001-0002",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": null,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 75,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {},
+                            {
+                                "features": [
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
+                                        "text": null
+                                    }
+                                ]
+                            },
+                            {
+                                "features": [
+                                    {
+                                        "name": "AnzahlKlingeltasten3938",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "Mikrofonabsetzbarin4292",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "LautstaerkeGespraech4008",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "AkustischeRufunterscheidungen",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3555",
+                        "MNR": "ZIA5001-0145",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": false,
+                        "PERIODE1": 14,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {},
+                            {
+                                "features": [
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
+                                        "text": null
+                                    }
+                                ]
+                            },
+                            {
+                                "features": [
+                                    {
+                                        "name": "AnzahlKlingeltasten3938",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "Mikrofonabsetzbarin4292",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "LautstaerkeGespraech4008",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "AkustischeRufunterscheidungen",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3557",
+                        "MNR": "ZIA5003-0145",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": false,
+                        "PERIODE1": 9.58,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3559",
+                        "MNR": "ZIA5005-0145",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": true,
+                        "PERIODE1": 14,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3560",
+                        "MNR": "ZIA5006-0145",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": true,
+                        "IP1": true,
+                        "PERIODE1": 13.87,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3572",
+                        "MNR": "ZIT24340",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": true,
+                        "IP1": true,
+                        "PERIODE1": 44,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3573",
+                        "MNR": "ZIT3030-0010",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 66,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3574",
+                        "MNR": "ZIT3222-0030",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 150,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {},
+                            {
+                                "features": [
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
+                                        "text": null
+                                    }
+                                ]
+                            },
+                            {
+                                "features": [
+                                    {
+                                        "name": "AnzahlKlingeltasten3938",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "Mikrofonabsetzbarin4292",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "LautstaerkeGespraech4008",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    {
+                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
+                                        "text": null
+                                    },
+                                    {
+                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
+                                        "text": null
+                                    },
+                                    null,
+                                    {
+                                        "name": "AkustischeRufunterscheidungen",
+                                        "text": null
+                                    },
+                                    null,
+                                    null,
+                                    null,
+                                    null,
+                                    null
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "3575",
+                        "MNR": "ZIT5000-0030",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": true,
+                        "Video2": true,
+                        "IP1": true,
+                        "PERIODE1": 161,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "7225",
+                        "MNR": "ZAA2009-0030",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": null,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 133,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                },
+                {
+                    "node": {
+                        "id": "7226",
+                        "MNR": "ZAA2010-0010",
+                        "Geraeteart4077": "",
+                        "Kommunikationstechnologie4164": "",
+                        "Audio1": null,
+                        "Video2": null,
+                        "IP1": null,
+                        "PERIODE1": 179,
+                        "TEXT": null,
+                        "parent": {
+                            "MNR": "Zubehör TCS:BUS"
+                        },
+                        "Audio": [
+                            {}
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}

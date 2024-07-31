@@ -1,0 +1,229 @@
+{
+    "data": {
+        "getProductListing": {
+            "totalCount": 22,
+            "edges": [
+                {
+                    "node": {
+                        "MNR": "BVS100-SG",
+                        "Geraeteart4077": "Versorgungs- und Steuerkarte zur Versorgung von Anlagen mit 3 Strängen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 350,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "BVS20-SG",
+                        "Geraeteart4077": "Versorgungs- und Steuergerät für Audio-Kleinanlagen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 225,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "BVS20-SG/02",
+                        "Geraeteart4077": "Versorgungs- und Steuergerät für Audio-Kleinanlagen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 225,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "BVS30-SG",
+                        "Geraeteart4077": "Versorgungs- und Steuergerät für die Verbindung von Unteranlagen zu Großanlagen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 615,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "NBV1000",
+                        "Geraeteart4077": "Versorgungs- und Steuergerätekombination für Audioanlagen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 245,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "NBV2600-0400",
+                        "Geraeteart4077": "Versorgungs- und Steuergerät für Audio- und Videoanlagen mit erhöhten Ausgangsströmen an P und a",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 460,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "NBV3200-0500",
+                        "Geraeteart4077": "Versorgungs- und Steuerkarte zur Versorgung der AuÃŸenstationen in 2 StrÃ¤ngen mit je 50 mA (an a-Ader) ",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 333,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "NBV3210-0500",
+                        "Geraeteart4077": "Versorgungs- und Steuerkarte zur Versorgung von Anlagen mit 3 StrÃ¤ngen mit je 40 mA (an a-Ader) ",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 437,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "NGV1011-0400",
+                        "Geraeteart4077": "Schaltnetzteil mit hohem Wirkungsgrad zur Spannungsversorgung einer TCS-Anlage",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 445,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "NVV1000-0400",
+                        "Geraeteart4077": "Versorgungs- und Steuergerät für kleine und mittlere Video-2-Draht:BUS-Anlagen",
+                        "Netzgeraet": true,
+                        "Steuergeraet": true,
+                        "PERIODE1": 445,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "NWV1000-0400",
+                        "Geraeteart4077": "Wechselstromtransformator",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 50,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "PSG01-SG",
+                        "Geraeteart4077": "Versorgungs- und SteuergerÃ¤t fÃ¼r GroÃŸ- und Sonderanlagen mit langen Leitungen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 485,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "PSG02-SG",
+                        "Geraeteart4077": "Versorgungs- und SteuergerÃ¤t fÃ¼r kleine Sonderanlagen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": null,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "SF360",
+                        "Geraeteart4077": "Versorgungs- und Steuerkarte zur Versorgung von Anlagen mit 3 StrÃ¤ngen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": null,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "SF600",
+                        "Geraeteart4077": "Versorgungs- und SteuergerÃ¤t fÃ¼r grÃ¶ÃŸere Audio- oder kleinere Videoanlagen mit bis zu 2 StrÃ¤ngen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": null,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "VBVS05-SG/02",
+                        "Geraeteart4077": "Versorgungs- und Steuergerät für größere Audio- oder kleinere Videoanlagen mit bis zu 2 Strängen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 445,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "VBVS30-SG",
+                        "Geraeteart4077": "Versorgungs- und Steuergerät zur dezentralen Versorgung von Video-Unteranlagen",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 715,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "Steuergerät TCS:BUS",
+                        "Geraeteart4077": "",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": null,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "VBVS05-SG",
+                        "Geraeteart4077": "",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": 360,
+                        "TEXT": "TCS Versorgungs- und Steuergerät VBVS05-SG<br/>für Audio- und Videoanlagen an 1 Strang<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: VBVS05-SG<br/><br/>GERÄTEEIGENSCHAFTEN<br/>Versorgungs- und Steuergerät: für kleine und<br/>mittlere Audio- und Videoanlagen<br/>Ausstattung:  Lichtschalt- und Türöffnerrelais, <br/>Programmiertaste<br/>LED-Anzeige<br/>Türöffnerfunktion mit integrierter Spannungsversorgung<br/>Lichtschaltfunktion mit potentialfreien Relaiskontakt<br/>Türöffnerzeit manuell  einstellbar<br/>Lichtschaltzeit manuell  einstellbar<br/>Gehäuseform: Reiheneinbaugehäuse 6 TE für Hutschiene<br/><br/>TECHNISCHE DATEN<br/>Eingangsspannung: 230 V (188 bis 260 V), 50/60 Hz<br/>externe Netzsicherung: 16 A<br/>Reiheneinbaugehäuse HxBxT mm: 90x105x70<br/>zulässige Umgebungstemperatur: 0 bis +40 °C<br/><br/>"
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "0029764",
+                        "Geraeteart4077": "",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": null,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "NBV2600-3400",
+                        "Geraeteart4077": "",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": null,
+                        "TEXT": null
+                    }
+                },
+                {
+                    "node": {
+                        "MNR": "TZT1000",
+                        "Geraeteart4077": "",
+                        "Netzgeraet": null,
+                        "Steuergeraet": true,
+                        "PERIODE1": null,
+                        "TEXT": "- Reiheneinbaugehäuse 2 TE für Hutschiene DIN EN 50022 <br/>- Abmessungen:  45 x 35 x 55 mm (2 TE)<br/><br/>Primärspannung: <br/>- Klemme 7-9 (230V)<br/>Sekundärspannung: <br/>- Klemme 1-2 (4 V)<br/>- Klemme 2-3 (8 V)<br/>- Klemme 1-3 (12 V)<br/><br/>"
+                    }
+                }
+            ]
+        }
+    }
+}

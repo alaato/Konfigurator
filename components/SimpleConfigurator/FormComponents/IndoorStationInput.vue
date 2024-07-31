@@ -18,6 +18,6 @@
 
 <script setup lang="ts">
 
-const numberIndoorStaions = defineModel()
+const numberIndoorStaions = defineModel({type: Number, default: 1})
 
 </script>

@@ -76,12 +76,8 @@ export const useSelectedProductsStore = defineStore({
         this.selectedProducts.outdoorProducts.SelectedQuantity += quantity;
       },
       addOneOutdoorProduct(product) {
-        if (this.selectedProducts.outdoorProducts.SelectedQuantity === 1) {
-          this.selectedProducts.outdoorProducts.products = [product];
-        } else {
-          this.selectedProducts.outdoorProducts.products.push(product);
-        }
-        this.selectedProducts.outdoorProducts.SelectedQuantity = 1;
+        this.selectedProducts.outdoorProducts.products.push(product);
+        this.selectedProducts.outdoorProducts.SelectedQuantity += product.quantity;
       },
       addAccessories(product, quantity) {
         for (let i = 0; i < quantity; i++) {

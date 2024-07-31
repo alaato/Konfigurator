@@ -1,16 +1,16 @@
 <template>
     <div class="bg-background text-left rounded-lg shadow-lg overflow-hidden min-w-[360px] max-w-sm">
-      <img src="public/2517.jpg" alt="Product Image" width="300" height="300" class="w-full h-64 object-scale-down" />
-      <div class="p-6">
+      <img :src="`https://devpim.tcs-apps.de/admin/asset/get-image-thumbnail?id=${product?.FrontalAnsichtFrei?.id}&treepreview=1&_dc=1722247817`" alt="Product Image" width="150" height="150" class="w-full h-64 object-scale-down" />
+      <div class="p-6 flex flex-col">
         <h3 class="text-xl font-bold mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
         <h3 class=" MNR text-l font-bold mb-2">Article : {{product.MNR}}</h3>
         <p class="text-muted-foreground mb-4">{{ product.Geraeteart4077 }}</p>
-        <Card class="grow w-96">
+        <Card class="">
           <CardHeader>
             <CardDescription>Wählen Sie aus, wie viele Etagen</CardDescription>
           </CardHeader>
-          <CardContent>
-            <NumberField :default-value="0" :min="0" :max="remainingIndoorProducts">
+          <CardContent >
+            <NumberField :default-value="1" :min="1">
               <NumberFieldContent>
                 <NumberFieldDecrement />
                 <NumberFieldInput />
@@ -19,11 +19,6 @@
             </NumberField>
           </CardContent>
         </Card>
-        <div class="">
-          <button @click="addProduct(product)">
-            select
-          </button>
-        </div>
       </div>
     </div>
 </template>
@@ -36,9 +31,7 @@ const {currentStage} = storeToRefs(currentStageStore)
 const visitedStore = useVisitedStore();
 const selectedProductsStore = useSelectedProductsStore();
 const {selectedProducts} = storeToRefs(selectedProductsStore)
-const remainingIndoorProducts = computed(() => {
-  return selectedProducts.value.indoorProducts.neededQuantity - selectedProducts.value.indoorProducts.SelectedQuantity
-})
+
 const goToStage: Function = inject(`goToStage`)
 //function
 function addProduct(product) {

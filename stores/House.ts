@@ -12,7 +12,7 @@ export const useHousesStore = defineStore({
           {
             apartments: [
               {
-                indoorStation: {},
+                indoorStations: [],
               }
             ]
           }
@@ -26,7 +26,7 @@ export const useHousesStore = defineStore({
       this.resetHouse(0)
       for(let i = 0; i <numberFloors; i++){
         this.addFloor(0)
-        for (let j = 0 ; j < numberApartments ; j++ )
+        for (let j = 1 ; j < numberApartments ; j++ )
           this.addApartment(0, i)
       }
       for(let i = 0; i < numberOutdoorStations; i++)
@@ -37,17 +37,17 @@ export const useHousesStore = defineStore({
     addFloor(houseIndex: number) {
       this.houses[houseIndex].floors.push({
         apartments: [{
-          indoorStation: {},
+          indoorStations: [{}],
         }],
       })
     },
     addApartment(houseIndex: number, floorIndex: number) {
       this.houses[houseIndex].floors[floorIndex].apartments.push({
-        indoorStation: {},
+        indoorStations: [{}],
       })
     },
     addIndoorStation(houseIndex: number, floorIndex: number, apartmentIndex: number, product: any) {
-      this.houses[houseIndex].floors[floorIndex].apartments[apartmentIndex].indoorStation = product;
+      this.houses[houseIndex].floors[floorIndex].apartments[apartmentIndex].indoorStations.push(product)
     },
     addOutdoorStation(houseIndex: number, product: any) {
       this.houses[houseIndex].outdoorStations.push(product)
@@ -78,7 +78,7 @@ export const useHousesStore = defineStore({
       this.houses[houseIndex].floors[floorIndex].apartments.splice(apartmentIndex, 1)
     },
     deleteIndoorStation(houseIndex: number, floorIndex: number, apartmentIndex: number, stationIndex: number) {
-      this.houses[houseIndex].floors[floorIndex].apartments[apartmentIndex].indoorStation.splice(stationIndex, 1)
+      this.houses[houseIndex].floors[floorIndex].apartments[apartmentIndex].indoorStations.splice(stationIndex, 1)
     },
     deleteOutdoorStation(houseIndex: number, stationIndex: number) {
       this.houses[houseIndex].outdoorStations.splice(stationIndex, 1)

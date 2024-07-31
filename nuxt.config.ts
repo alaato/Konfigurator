@@ -32,7 +32,7 @@ export default defineNuxtConfig({
   apollo: {
     clients: {
       default: {
-        httpEndpoint: 'https://devpim.tcs-apps.de/pimcore-graphql-webservices/outdoor?apikey=c179b60860474aa335a9d82c8c985f84'
+        httpEndpoint: 'https://devpim.tcs-apps.de/pimcore-graphql-webservices/konfigurator?apikey=90b00841d18f9f914d5584ae8d0e7793'
       }
     },
   },

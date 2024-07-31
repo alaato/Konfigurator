@@ -1,31 +1,41 @@
 <template>
-<ProductsModal title="Aussenstation auswählen" trigger-text="Aussenstation auswählen">
-  <form class="flex flex-col gap-2"0  @submit.prevent="submitForm">
-    <NumberField v-model="numberButtons" id="anzahl-tasten" :default-value="1" :min="1">
-    <Label for="anzahl-tasten">Anzahl Tasten :</Label>
-    <NumberFieldContent>
-      <NumberFieldDecrement />
-      <NumberFieldInput/>
-      <NumberFieldIncrement />
-    </NumberFieldContent>
-  </NumberField>
-  <selectInput v-model="funktion" :place-holder="'Funktion auswählen'" class="funktion" :options="['Audio', 'Video']" />
-  <selectInput v-model="technologie" class="technologie" :place-holder="'Technologie auswählen'" :options="['TCS:BUS', 'Video-2-Draht']" />
-  <button>sumbit</button>
-  </form>
+<ProductsModal :numberButtons="numberButtons" :products="products" title="Aussenstation auswählen" trigger-text="Aussenstation auswählen">
+  <OutdoorForm :handleSubmit="handleSubmit" :funktion="funktion" :technologie="technologie" :numberButtons="numberButtons" :submitForm="submitForm" />
 </ProductsModal>
 </template>
 
 <script lang="ts" setup>
 import ProductsModal from '../general/ProductsModal.vue';
-import selectInput from './selectInput.vue'
+import OutdoorForm from './OutdoorForm.vue'
+import fetchOutdoorStations from '~/qraphql/outdoorQuery';
 //consts
 const numberButtons = defineModel("numberBUttons", {default: 1})
 const funktion = defineModel("funktion")
 const technologie = defineModel("technologie")
-function submitForm(){
-  console.log(numberButtons.value, funktion.value, technologie.value)
+interface FilterOptions {
+  [key: string]: any
 }
+
+let anzahlTasten = numberButtons.value < 10 ? `_0${numberButtons.value}` : `_____${numberButtons.value}`
+const FilterOptions: FilterOptions = {
+	Aussenstation: true,
+	MNR :  {"$like" :`%${anzahlTasten}%`}
+}
+if(funktion.value == "Video"){
+	FilterOptions.Kommunikationstechnologie4164 = technologie.value
+  FilterOptions.Video2 = true
+}
+
+const variables = {
+	filter: JSON.stringify(FilterOptions),
+	first: 30,
+};
+let products
+const {result: data, loading} = fetchOutdoorStations(variables)
+
+watchEffect(() => {
+  console.log(products)
+})
 </script>
 
 <style>

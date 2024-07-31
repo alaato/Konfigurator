@@ -7,5 +7,5 @@ export interface House {
  }
 
  export interface Apartment{
-  indoorStation : any
+  indoorStations : any[]
  }

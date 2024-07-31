@@ -48,12 +48,7 @@ function handleAddAparmtent() {
     }
   })
 }
-watchEffect(()=>{
-    const newApartment = cardContent.value?.lastElementChild;
-    if (newApartment) {
-      newApartment.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-})
+
 function handleFloorDelete() {
   deleteFloor(houseIndex, props.floorIndex)
   productStore.decrementIndoorNeededQuantity(1)

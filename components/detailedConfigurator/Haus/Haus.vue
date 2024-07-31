@@ -1,7 +1,7 @@
 <template>
-  <div :class="'haus' + houseindex">
+  <div class="embla__slide">
   <div class="haus-header flex justify-center my-2">
-    <h2 class="text-2xl font-bold">Haus {{ houseindex + 1 }}</h2>
+  <h2 class="text-2xl font-bold">Haus {{ houseindex + 1 }}</h2>
     <DeleteButton @click="handleDeleteHouse"></DeleteButton>
   </div>
 

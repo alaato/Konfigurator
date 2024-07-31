@@ -4,7 +4,7 @@
       <CardTitle>Aussenstation {{ index + 1 }}</CardTitle>
     </CardHeader>
     <CardContent class="apartment-actions flex justify-center items-center">
-      <outdoorSelectModal :numberButtons="numberButtons" :funktion="funktion" :technologie="technologie" title="Aussenstation auswählen" trigger-text="Aussenstation auswählen"></outdoorSelectModal>
+      <outdoorSelectModal  title="Aussenstation auswählen" trigger-text="Aussenstation auswählen"></outdoorSelectModal>
       <DeleteButton @click="handleDeleteOutdoorStation" />
       <DuplicateButton @click="handleDuplicateOutdoorStation" />
     </CardContent>
@@ -31,9 +31,7 @@ const props = defineProps<{
 const houseStore = useHousesStore();
 const { deleteOutdoorStation, duplicateOutdoorStation} = houseStore
 const houseIndex: number = inject('houseIndex')
-const numberButtons = useState("numberButtons", () => 1);
-const funktion = useState("funktion", () => "");
-const technologie = useState("technologie", () => "");
+
 //funktions
 function handleDeleteOutdoorStation() {
   decrementOutdoorNeededQuantity(1)

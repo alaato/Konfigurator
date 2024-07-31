@@ -9,9 +9,9 @@
       </div>
         <SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'"/>
       <div v-if="currentStage === 'Innenstation'">
-        <SimpleConfiguratorStageThree
-          @next-stage="goToStageFour" />
+        <SimpleConfiguratorStageThree />
       </div>
+      <Zubehör :goToStage="goToStage" v-if="currentStage === 'Zubehör'" :currentStage="currentStage" />
       <div v-if="currentStage === 'Übersicht'">
         <SimpleConfiguratorStageFour :selectedProducts="selectedProducts" />
       </div>
@@ -21,7 +21,8 @@
 </template>
 
 <script setup>
-const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Übersicht"]);
+import Zubehör from '../SimpleConfigurator/Zubehör.vue'
+const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const {currentStage} = storeToRefs(currentStageStore)
 const goToStage = (targetStage) => {

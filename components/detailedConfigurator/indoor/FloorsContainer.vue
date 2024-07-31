@@ -36,35 +36,7 @@ const houseStore = useHousesStore()
 const router = useRouter()
 const { addFloor, resetFloors } = houseStore
 const houseIndex : number = inject('houseIndex')
-const query = gql`
-		query getProductListing($filter: String!, $first: Int) {
-		  getProductListing(first: $first, filter: $filter) {
-			totalCount
-			edges {
-			  node {
-				id
-				MNR
-				Geraeteart4077
-				Kommunikationstechnologie4164
-        PERIODE1
-        parent{
-          ... on object_Product{
-            MNR
-          }
-        }
-      }
-    }
-  }
-}
-`;
-const variables = {
-  filter: JSON.stringify({
-    Innenstation: true,
-    Kommunikationstechnologie4164: "TCS:BUS"
-  }),
-  first: 30
-};
-const { result: data, loading } = useQuery(query, variables)
+
 //functions
 function reset() {
   resetFloors(houseIndex)
