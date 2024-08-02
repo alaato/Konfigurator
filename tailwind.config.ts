@@ -1,4 +1,3 @@
-import { darkMode } from "#tailwind-config"
 
 const animate = require("tailwindcss-animate")
 

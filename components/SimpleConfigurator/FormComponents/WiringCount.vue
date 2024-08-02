@@ -2,7 +2,7 @@
 	<Card class="">
 		<CardHeader class="m-0 pb-3">
 			<CardTitle>Anzahl Adern</CardTitle>
-			<CardDescription>Wählen Sie aus, wie veile Adern </CardDescription>
+			<CardDescription>Wählen Sie aus, wie viele Adern Ihr  </CardDescription>
 		</CardHeader>
 		<CardContent class="flex justify-center">
 			<div class="w-max ">
@@ -10,6 +10,12 @@
 				<label
 					class="button-80 w-full text-center peer-checked:bg-arapawa-950  peer-checked:font-bold peer-checked:text-white"
 					for="2">2</label>
+			</div>
+			<div class="w-max">
+				<input class="peer opacity-0 w-0 h-0" type="radio" id="4" name="Adern" v-model="wiringCount" value=4 />
+				<label
+					class="button-80 w-full text-center peer-checked:bg-arapawa-950 peer-checked:font-bold peer-checked:text-white"
+					for="4">4</label>
 			</div>
 			<div class="w-max">
 				<input class="peer opacity-0 w-0 h-0" type="radio" id="6" name="Adern" v-model="wiringCount" value=6 />

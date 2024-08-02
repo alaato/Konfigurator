@@ -1,20 +1,15 @@
 <template>
   <div class="configurator">
     <h1>Sprechanlagen Konfigurator</h1>
-    <SimpleConfiguratorStageTracker :visited="visited" :stages="stages" :currentStage="currentStage" @goToStage="goToStage">
+    <SimpleConfiguratorStageTracker :visited="visited" :stages="stages" :currentStage="currentStage"
+      @goToStage="goToStage">
     </SimpleConfiguratorStageTracker>
-    <div class="main-section ">
-      <div v-if="currentStage === 'Anforderungen'">
-        <SimpleConfiguratorStageOne :stages="stages" @nextStage="goToStageTwo" />
-      </div>
-        <SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'"/>
-      <div v-if="currentStage === 'Innenstation'">
-        <SimpleConfiguratorStageThree />
-      </div>
+    <div class="main-section w-full">
+      <SimpleConfiguratorStageOne v-if="currentStage === 'Anforderungen'" :stages="stages" @nextStage="goToStageTwo" />
+      <SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'" />
+      <SimpleConfiguratorStageThree v-if="currentStage === 'Innenstation'" />
       <Zubehör :goToStage="goToStage" v-if="currentStage === 'Zubehör'" :currentStage="currentStage" />
-      <div v-if="currentStage === 'Übersicht'">
-        <SimpleConfiguratorStageFour :selectedProducts="selectedProducts" />
-      </div>
+      <SimpleConfiguratorStageFour v-if="currentStage === 'Übersicht'" :selectedProducts="selectedProducts" />
     </div>
   </div>
 
@@ -24,7 +19,7 @@
 import Zubehör from '../SimpleConfigurator/Zubehör.vue'
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
-const {currentStage} = storeToRefs(currentStageStore)
+const { currentStage } = storeToRefs(currentStageStore)
 const goToStage = (targetStage) => {
   if (!stages.value.includes(targetStage)) {
     console.log("Invalid stage:", targetStage);

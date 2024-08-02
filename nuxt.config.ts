@@ -12,23 +12,24 @@ export default defineNuxtConfig({
         },
     }
   },
-  extends: [
-    "@shopware-pwa/composables-next/nuxt-layer",
-    "@shopware-pwa/cms-base",
-  ],
-  shopware: {
-    endpoint: "https://save-air.de/store-api/",
-    accessToken: "SWSCUTJJOVFPZ1UXOUTQEVDVBG",
+  css: ['@/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
   modules: [
-    "@shopware-pwa/nuxt3-module",
-    "@nuxt/ui",
     '@pinia/nuxt',
     "shadcn-nuxt",
-    '@formkit/nuxt',
     "@nuxt/image",
-    '@nuxtjs/apollo'
+    '@nuxtjs/apollo',
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode'
   ],
+  colorMode: {
+    classSuffix: ''
+  },
   apollo: {
     clients: {
       default: {
@@ -39,10 +40,7 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ['./stores/**', './custom-folder/stores/**'],
   },
-  formkit: {
-    // Experimental support for auto loading (see note):
-    autoImport: true
-  },
+
   /**
    * Commented because of the StackBlitz error
    * Issue: https://github.com/shopware/frontends/issues/88

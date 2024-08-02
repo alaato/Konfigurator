@@ -1,174 +1,148 @@
 <template>
-    <section class="py-2 relative">
-        <div class="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
-            <div class="hidden lg:grid grid-cols-2 py-6">
-                <div class="font-normal text-xl leading-8 text-gray-500">Product</div>
-                <p class="font-normal text-xl leading-8 text-gray-500 flex items-center justify-between">
-                    <span class="w-full max-w-[200px] text-center">Einzelpreis</span>
-                    <span class="w-full max-w-[260px] text-center">Menge</span>
-                    <span class="w-full max-w-[200px] text-center">Total</span>
-                </p>
-            </div>
+  <div class="w-full flex  flex-col justify-end items-end gap-1">
+    <Table  id="stückliste" class="bg-white">
+      <TableCaption>Ihre Stückliste</TableCaption>
+      <TableHeader>
+        <TableRow >
+          <TableHead>
+            Article
+          </TableHead>
+          <TableHead>Menge</TableHead>
+          <TableHead>Preis</TableHead>
+          <TableHead class="text-right">
+            Total
+          </TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
 
-            <div v-for="product in selectedProducts.indoorProducts.products" :key="product"
-                class="grid grid-cols-1 lg:grid-cols-2 min-[550px]:gap-6 border-t border-gray-200 py-6">
-                <div
-                    class="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
-                    <div class="pro-data w-full max-w-sm ">
-                        <h5 class="font-semibold text-lg leading-8 text-black max-[550px]:text-center">
-                            {{ product?.parent?.MNR || "control system" }}
-                        </h5>
-                        <p
-                            class="font-normal text-lg leading-8 text-gray-500 my-2 min-[550px]:my-3 max-[550px]:text-center">
-                            Art.-Nummer: {{ product?.MNR }}
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="flex items-center flex-col min-[550px]:flex-row w-full max-xl:max-w-xl max-xl:mx-auto gap-2">
-                    <h6 class="font-manrope font-bold text-2xl leading-9 text-black w-full max-w-[176px] text-center">
-                    </h6>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{ product?.PERIODE1 }}€
-                        </p>
-                    </div>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{ product?.quantity }}
-                        </p>
-                    </div>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{ product?.PERIODE1 * product?.quantity }}€
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div v-for="outdoorProduct in selectedProducts.outdoorProducts.products" :key="product"
-                class="grid grid-cols-1 lg:grid-cols-2 min-[550px]:gap-6 border-t border-gray-200 py-6">
-                <div
-                    class="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
-                    <div class="pro-data w-full max-w-sm ">
-                        <h5 class="font-semibold text-lg leading-8 text-black max-[550px]:text-center">
-                            {{ outdoorProduct?.parent?.MNR || "control system" }}
-                        </h5>
-                        <p
-                            class="font-normal text-lg leading-8 text-gray-500 my-2 min-[550px]:my-3 max-[550px]:text-center">
-                            Art.-Nummer: {{ outdoorProduct?.MNR }}
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="flex items-center flex-col min-[550px]:flex-row w-full max-xl:max-w-xl max-xl:mx-auto gap-2">
-                    <h6 class="font-manrope font-bold text-2xl leading-9 text-black w-full max-w-[176px] text-center">
-                    </h6>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{  outdoorProduct.PERIODE1  }}€
-                        </p>
-                    </div>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{ outdoorProduct.quantity }}
-                        </p>
-                    </div>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{ outdoorProduct.PERIODE1 * outdoorProduct.quantity }}€
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="grid grid-cols-1 lg:grid-cols-2 min-[550px]:gap-6 border-t border-gray-200 py-6">
-                <div
-                    class="flex items-center flex-col min-[550px]:flex-row gap-3 min-[550px]:gap-6 w-full max-xl:justify-center max-xl:max-w-xl max-xl:mx-auto">
-                    <div class="pro-data w-full max-w-sm ">
-                        <h5 class="font-semibold text-lg leading-8 text-black max-[550px]:text-center">
-                            {{ controlUnit?.parent?.MNR || "control system" }}
-                        </h5>
-                        <p
-                            class="font-normal text-lg leading-8 text-gray-500 my-2 min-[550px]:my-3 max-[550px]:text-center">
-                            Art.-Nummer: {{ controlUnit?.MNR }}
-                        </p>
-                    </div>
-                </div>
-                <div
-                    class="flex items-center flex-col min-[550px]:flex-row w-full max-xl:max-w-xl max-xl:mx-auto gap-2">
-                    <h6 class="font-manrope font-bold text-2xl leading-9 text-black w-full max-w-[176px] text-center">
-                    </h6>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{  controlUnit.PERIODE1  }}€
-                        </p>
-                    </div>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{ controlUnit.quantity? controlUnit.quantity : 1 }}
-                        </p>
-                    </div>
-                    <div class="flex items-center w-full mx-auto justify-center">
-                        <p type="number"
-                            class="border-y border-gray-200 outline-none text-gray-900 font-semibold text-lg w-full max-w-[118px] min-w-[80px] placeholder:text-gray-900 py-[15px] text-center bg-transparent"
-                            placeholder="1">
-                            {{ controlUnit.PERIODE1 }}€
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-gray-50 rounded-xl p-6 w-full mb-8 max-lg:max-w-xl max-lg:mx-auto">
-                <div class="flex items-center justify-between w-full py-6">
-                    <p class="font-manrope font-medium text-2xl leading-9 text-gray-900">Total</p>
-                    <h6 class="font-manrope font-medium text-2xl leading-9 text-arapawa-950">{{ total }}€ </h6>
-                </div>
-            </div>
-            <div class="flex items-center flex-col sm:flex-row justify-center gap-3 mt-8">
-                <button
-                    class="rounded-full w-full max-w-[280px] py-4 text-center justify-center items-center font-semibold text-lg text-white flex transition-all duration-300 hover:bg-black">Größhandler
-                    <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" width="23" height="22" viewBox="0 0 23 22"
-                        fill="none">
-                        <path d="M8.75324 5.49609L14.2535 10.9963L8.75 16.4998" stroke="white" stroke-width="1.6"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </section>
+        <ProductRow :products="selectedProducts.indoorProducts.products" />
+        <ProductRow :products="selectedProducts.outdoorProducts.products" />
+        <ProductRow :products="selectedProducts.accessories.products" />
+        <ProductRow :products="[controlUnit]" />
+      </TableBody>
+    </Table>
+
+    <div class=" bg-white  px-4 py-6 h-max shadow-sm">
+      <table id="total" class="text-gray-800 space-y-4">
+        <hr>
+        <tr class="flex flex-wrap gap-4 text-sm font-bold">
+          <td>Gesamtpreis :</td>
+          <td class="ml-auto">{{ total }}€</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="cart-actions flex gap-1 mt-2">
+    <button @click="generatePDFHTML">Stückliste als PDF</button>
+    <button @click="htmlToExcel">Stückliste als Excel</button>
+  </div>
 
 </template>
 
 <script setup>
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@/components/ui/table'
+import jsPDF from 'jspdf'
+import ProductRow from './ProductRow.vue';
+import { utils, writeFileXLSX } from "xlsx";
+
+const { data: base64 } = await useFetch('/api/base64')
+const dataURI = base64.value
+
+function generatePDFHTML() {
+  const doc = new jsPDF()
+  doc.setProperties({
+    title: "Stückliste"
+  })
+  doc.text('Ihre Stückliste', 90, 30)
+  const tableStyles = {
+    margin: 100,
+    fontSize: 14,
+    headStyles: {
+      fontSize: 12,
+      fontStyle: 'bold',
+      fillColor: [18, 11, 160],
+      textColor: [255, 255, 255],
+      lineColor: [0, 0, 0],
+      valign: 'middle',
+    },
+  };
+  doc.autoTable({
+    startY: 40,
+    html: '#stückliste',
+    theme: 'grid',
+    headStyles: tableStyles.headStyles
+  })
+  const finalY = doc.lastAutoTable.finalY += 10
+  console.log(finalY)
+  doc.autoTable({
+    startY: finalY,
+    StartX: 15,
+    html: '#total',
+    theme: 'grid',
+    tableWidth: 'wrap',
+    usecss: true,
+    margin: { left: 157, right: 0 },
+  })
+  doc.addImage(dataURI, "JPEG", 15, 10, 20, 20);
+  doc.output('dataurlnewwindow');
+}
+
+function htmlToExcel() {
+  const table_elt = document.getElementById("stückliste");
+  const total = document.getElementById("total");
+
+  const listsheet = utils.table_to_sheet(table_elt);
+  const totalSheet = utils.table_to_sheet(total);
+  
+  const listJson = utils.sheet_to_json(listsheet, { header: 1 })
+  const totalJson = utils.sheet_to_json(totalSheet, { header: 1 })
+  const completeJson = listJson.concat(['']).concat(totalJson)
+
+  const completeSheet = utils.json_to_sheet(completeJson, { skipHeader: true })
+
+  const workbook = utils.book_new()
+  utils.sheet_add_aoa(completeSheet, [["Created " + new Date().toISOString()]], { origin: -1 });
+  utils.sheet_add_aoa(completeSheet, [["TCS Ag"]], { origin: -1 });
+
+  utils.book_append_sheet(workbook, completeSheet, "Stückliste")
+  if (!workbook.Props) workbook.Props = {};
+  workbook.Props.Title = "Stückliste";
+  workbook.Props.Company = "TCS";
+
+
+
+  writeFileXLSX(workbook, "stückliste.xlsx");
+}
+
 const selectedProductsStore = useSelectedProductsStore();
 const { selectedProducts } = storeToRefs(selectedProductsStore)
 const controlUnit = selectedProducts.value.controlUnit
-console.log(selectedProducts.value.controlUnit)
+console.log(selectedProducts.value)
 const total = computed(() => {
-    let sum = 0
-    selectedProducts.value.outdoorProducts.products.forEach((product) => {
-        sum += product.PERIODE1 * selectedProducts.value.outdoorProducts.SelectedQuantity
-    })
-    selectedProducts.value.indoorProducts.products.forEach((product) => {
-        sum+= product.quantity * product?.PERIODE1
-    })
-    sum += selectedProducts.value.controlUnit?.PERIODE1
-    return sum
+  let sum = 0
+  selectedProducts.value.outdoorProducts.products.forEach((product) => {
+    sum += product.PERIODE1 * selectedProducts.value.outdoorProducts.SelectedQuantity
+  })
+  selectedProducts.value.indoorProducts.products.forEach((product) => {
+    sum += product.quantity * product?.PERIODE1
+  })
+  sum += selectedProducts.value.controlUnit?.PERIODE1
+  return sum
 })
 console.log(total.value)
+
+// onMounted(() => {
+//   const tableSelect = document.getElementById("stückliste");
+//   const tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
+//   console.log(tableHTML)
+// }  )
 </script>

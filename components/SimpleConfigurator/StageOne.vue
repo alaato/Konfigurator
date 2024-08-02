@@ -10,7 +10,7 @@
       
       <div class="funktion-and-technologie-container">
         <Funktion v-model="funktion" />
-        <Technologie v-if="funktion == 'Video' && numberIndoorStation <= 24 && wiringCount > 2" v-model="technologie" />
+        <Technologie v-if="funktion == 'Video' && numberIndoorStation <= 24 && wiringCount > 4" v-model="technologie" />
       </div>
       
       <button class=" bg-arapawa-950 text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
@@ -53,6 +53,7 @@ const { filter, selectedProducts } = storeToRefs(selectedProductsStore)
 const goToStage: Function = inject('goToStage')
 
 function setFilter() {
+
   filter.value.funktion = funktion.value
   funktion.value == "Video" ? filter.value.Video = true : filter.value.Video = null;
   
@@ -62,32 +63,22 @@ function setFilter() {
   }
   else
     filter.value.technologie = "Video-2-Draht"
-
-    console.log(filter.value)
 }
 
 function setControlUnit() {
-  if (filter.value.funktion == "Audio") {
-    const {node} = steuer.data.getProductListing.edges.find(product => product.node.MNR == "BVS20-SG")
-    console.log(node)
-    selectedProductsStore.addControlUnit(node)
-  }
-  else if (filter.value.technologie == "Video-2-Draht") {
-    const {node} = steuer.data.getProductListing.edges.find(product => product.node.MNR == "NVV1000-0400")
-    console.log(node)
-    selectedProductsStore.addControlUnit(node)
-  }
-  else if (filter.value.technologie == "Video-6-Draht") {
-    const {node} = steuer.data.getProductListing.edges.find(product => product.node.MNR == "NBV2600-0400")
-    console.log(node)
-    selectedProductsStore.addControlUnit(node)
-  }
+  let mnr: string;
+  if (filter.value.funktion == "Audio") mnr = "BVS20-SG"
+  else if (filter.value.technologie == "Video-2-Draht") mnr = "NVV1000-0400"
+  else if (filter.value.technologie == "TCS:BUS") mnr =  "NBV2600-0400"
+
+  const {node} = steuer.data.getProductListing.edges.find(product => product.node.MNR == mnr)
+  console.log(node)
+  selectedProductsStore.addControlUnit(node)
 }
 
 const submitConfig = async () => {
   setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
   setFilter()
-  console.log(selectedProducts.value.controlUnit.product)
   resetAllProducts();
   setControlUnit()
   goToStage(stages[1])

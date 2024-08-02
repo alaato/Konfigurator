@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background text-left rounded-lg shadow-sm bg-white overflow-hidden min-w-[360px] max-w-sm">
+  <div  :class="props.class" class=" border-black bg-background text-left rounded-lg shadow-sm bg-white overflow-hidden min-w-[360px] max-w-sm">
     <img src="public/2517.jpg" alt="Product Image" width="150" height="150" class="w-full h-64 object-scale-down border-b pb-2" />
     <div class="p-6 flex flex-col">
       <h3 class="text-xl font-bold mb-2 border-b pb-2"> Serie: {{ product?.parent?.MNR }}</h3>
@@ -13,7 +13,7 @@
 
 <script lang="ts" setup>
 // variables
-const props = defineProps(['product'])
+const props = defineProps(['product', 'class'])
 const currentStageStore = useCurrentStageStore();
 const {currentStage} = storeToRefs(currentStageStore)
 const visitedStore = useVisitedStore();
