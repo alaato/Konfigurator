@@ -93,7 +93,7 @@ function generatePDFHTML() {
     margin: { left: 157, right: 0 },
   })
   doc.addImage(dataURI, "JPEG", 15, 10, 20, 20);
-  doc.output('dataurlnewwindow');
+  doc.save('Stückliste');
 }
 
 function htmlToExcel() {
