@@ -1,7 +1,8 @@
 <template>
-  <div class="w-full flex  flex-col justify-end items-end gap-1">
+  <div class="w-full flex flex-col justify-end items-end gap-1 overflow-y-scroll max-h-[400px]">
+    <TableCaption class="self-start">Ihre Stückliste</TableCaption>
+
     <Table  id="stückliste" class="bg-white">
-      <TableCaption>Ihre Stückliste</TableCaption>
       <TableHeader>
         <TableRow >
           <TableHead>
@@ -15,7 +16,6 @@
         </TableRow>
       </TableHeader>
       <TableBody>
-
         <ProductRow :products="selectedProducts.indoorProducts.products" />
         <ProductRow :products="selectedProducts.outdoorProducts.products" />
         <ProductRow :products="selectedProducts.accessories.products" />
@@ -23,10 +23,12 @@
       </TableBody>
     </Table>
 
-    <div class=" bg-white  px-4 py-6 h-max shadow-sm">
-      <table id="total" class="text-gray-800 space-y-4">
-        <hr>
+    <div class=" bg-white  px-4 py-3 h-max shadow-sm">
+      <hr>
+      <table id="total" class="text-gray-800 space-y-4 my-1">
         <tr class="flex flex-wrap gap-4 text-sm font-bold">
+          <td></td>
+          <td></td>
           <td>Gesamtpreis :</td>
           <td class="ml-auto">{{ total }}€</td>
         </tr>
@@ -35,8 +37,8 @@
   </div>
 
   <div class="cart-actions flex gap-1 mt-2">
-    <button @click="generatePDFHTML">Stückliste als PDF</button>
-    <button @click="htmlToExcel">Stückliste als Excel</button>
+    <Button class="bg-arapawa-950 hover:bg-arapawa-900" @click="generatePDFHTML">Stückliste als PDF</Button>
+    <Button class="bg-arapawa-950 hover:bg-arapawa-900" @click="htmlToExcel">Stückliste als Excel</Button>
   </div>
 
 </template>
@@ -50,12 +52,15 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import Button from '@/components/ui/button/button';
 import jsPDF from 'jspdf'
+import autoTable from 'jspdf-autotable';
 import ProductRow from './ProductRow.vue';
 import { utils, writeFileXLSX } from "xlsx";
 
 const { data: base64 } = await useFetch('/api/base64')
 const dataURI = base64.value
+console.log(dataURI)
 
 function generatePDFHTML() {
   const doc = new jsPDF()
@@ -66,21 +71,23 @@ function generatePDFHTML() {
   const tableStyles = {
     margin: 100,
     fontSize: 14,
-    headStyles: {
+  };
+  const headStyles = {
       fontSize: 12,
       fontStyle: 'bold',
       fillColor: [18, 11, 160],
       textColor: [255, 255, 255],
       lineColor: [0, 0, 0],
       valign: 'middle',
-    },
-  };
+  }
+
   doc.autoTable({
     startY: 40,
     html: '#stückliste',
     theme: 'grid',
-    headStyles: tableStyles.headStyles
+    headStyles: headStyles
   })
+  
   const finalY = doc.lastAutoTable.finalY += 10
   console.log(finalY)
   doc.autoTable({

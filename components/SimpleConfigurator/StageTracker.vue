@@ -26,7 +26,7 @@ transition: 0;
   width: 16px;
   height: 2px;
   background-color: black;
-  transform: translateY(12px) translateX(22px)
+  transform: translateY(12px) translateX(19px)
 }
 .stage-item:last-of-type::after{
   width: 0;
