@@ -52,7 +52,6 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
-import Button from '@/components/ui/button/button';
 import jsPDF from 'jspdf'
 import { applyPlugin } from 'jspdf-autotable'
 import ProductRow from './ProductRow.vue';
