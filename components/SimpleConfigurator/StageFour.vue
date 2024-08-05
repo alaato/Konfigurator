@@ -59,7 +59,7 @@ applyPlugin(jsPDF)
 
 const { data: base64 } = await useFetch('/api/base64')
 const dataURI = base64.value
-
+console.log(dataURI)
 function generatePDFHTML() {
   const doc = new jsPDF()
   const headStyles = {
@@ -91,7 +91,9 @@ function generatePDFHTML() {
     usecss: true,
     margin: { left: 157, right: 0 },
   })
-  doc.addImage(dataURI, "JPEG", 15, 10, 20, 20);
+  console.log(doc)
+  if(dataURI)
+    doc.addImage(dataURI, "JPEG", 15, 10, 20, 20);
   doc.save('Stückliste');
 }
 

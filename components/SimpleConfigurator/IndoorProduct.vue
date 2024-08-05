@@ -51,7 +51,6 @@ const addProduct = (product, quantity) => {
     isAddedProduct.quantity += quantity
     selectedProducts.value.indoorProducts.SelectedQuantity += quantity
     productQuantity.value = 0;
-    console.log(isAddedProduct)
   }
   if (!isAddedProduct && quantity > 0 && quantity <= remainingIndoorProducts.value)
   {

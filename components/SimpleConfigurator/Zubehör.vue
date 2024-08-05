@@ -28,7 +28,6 @@ if(Umtauscher && selectedProducts.value.accessories.products.length == 0)
 	selectedProductsStore.addAccessories(Umtauscher.node, 1)
 if(doorOpener && selectedProducts.value.accessories.products.length < 2)
 	selectedProductsStore.addAccessories(doorOpener.node, 1)
-console.log(selectedProducts.value.outdoorProducts.neededQuantity > 1 ? true : false)
 
 //functions
 const gotoStage = inject(`goToStage`)
