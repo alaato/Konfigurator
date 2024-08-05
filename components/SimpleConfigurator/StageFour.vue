@@ -27,8 +27,6 @@
       <hr>
       <table id="total" class="text-gray-800 space-y-4 my-1">
         <tr class="flex flex-wrap gap-4 text-sm font-bold">
-          <td></td>
-          <td></td>
           <td>Gesamtpreis :</td>
           <td class="ml-auto">{{ total }}€</td>
         </tr>
@@ -57,20 +55,13 @@ import { applyPlugin } from 'jspdf-autotable'
 import ProductRow from './ProductRow.vue';
 import { utils, writeFileXLSX } from "xlsx";
 
+applyPlugin(jsPDF)
+
 const { data: base64 } = await useFetch('/api/base64')
 const dataURI = base64.value
-applyPlugin(jsPDF)
 
 function generatePDFHTML() {
   const doc = new jsPDF()
-  doc.setProperties({
-    title: "Stückliste"
-  })
-  doc.text('Ihre Stückliste', 90, 30)
-  const tableStyles = {
-    margin: 100,
-    fontSize: 14,
-  };
   const headStyles = {
       fontSize: 12,
       fontStyle: 'bold',
@@ -79,7 +70,10 @@ function generatePDFHTML() {
       lineColor: [0, 0, 0],
       valign: 'middle',
   }
-
+  doc.setProperties({
+    title: "Stückliste"
+  })
+  doc.text('Ihre Stückliste', 90, 30)
   doc.autoTable({
     startY: 40,
     html: '#stückliste',
@@ -87,8 +81,7 @@ function generatePDFHTML() {
     headStyles: headStyles
   })
   
-  const finalY = doc.lastAutoTable.finalY += 10
-  console.log(finalY)
+  let finalY = doc.lastAutoTable.finalY += 10
   doc.autoTable({
     startY: finalY,
     StartX: 15,
@@ -98,7 +91,7 @@ function generatePDFHTML() {
     usecss: true,
     margin: { left: 157, right: 0 },
   })
-  doc.addImage(dataURI, "JPEG", 15, 10, 20, 20);
+  // doc.addImage(dataURI, "JPEG", 15, 10, 20, 20);
   doc.save('Stückliste');
 }
 
@@ -108,11 +101,9 @@ function htmlToExcel() {
 
   const listsheet = utils.table_to_sheet(table_elt);
   const totalSheet = utils.table_to_sheet(total);
-  
   const listJson = utils.sheet_to_json(listsheet, { header: 1 })
   const totalJson = utils.sheet_to_json(totalSheet, { header: 1 })
   const completeJson = listJson.concat(['']).concat(totalJson)
-
   const completeSheet = utils.json_to_sheet(completeJson, { skipHeader: true })
 
   const workbook = utils.book_new()
@@ -124,15 +115,12 @@ function htmlToExcel() {
   workbook.Props.Title = "Stückliste";
   workbook.Props.Company = "TCS";
 
-
-
   writeFileXLSX(workbook, "stückliste.xlsx");
 }
 
 const selectedProductsStore = useSelectedProductsStore();
 const { selectedProducts } = storeToRefs(selectedProductsStore)
 const controlUnit = selectedProducts.value.controlUnit
-console.log(selectedProducts.value)
 const total = computed(() => {
   let sum = 0
   selectedProducts.value.outdoorProducts.products.forEach((product) => {
@@ -144,7 +132,6 @@ const total = computed(() => {
   sum += selectedProducts.value.controlUnit?.PERIODE1
   return sum
 })
-console.log(total.value)
 
 // onMounted(() => {
 //   const tableSelect = document.getElementById("stückliste");
