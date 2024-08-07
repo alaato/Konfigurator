@@ -1,12 +1,23 @@
 import base64Img from 'base64-img';
+import fs from 'fs';
+import { resolve } from 'path';
 
 export default defineEventHandler(async (event) => {
-  try {
-    const base64 = base64Img.base64Sync('public/TCS_Logo_RGB.jpg')
-    return base64
-
-  } catch (error) {
-    return {message: error}
+  const filePath = resolve(`public/TCS_Logo_RGB.jpg`);
+  if(filePath)
+    console.log(filePath)
+  try {  
+    const file =  fs.readFileSync(filePath);
+    const base64 = file.toString('base64');
+    const mimeType = 'image/jpg'
+    return {
+      base64: `data:${mimeType};base64,${base64}`
+    };
+  } catch (err) {
+    return {
+      statusCode: 404,
+      body: 'File not found',
+    };
   }
 
 })

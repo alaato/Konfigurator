@@ -54,11 +54,9 @@ import jsPDF from 'jspdf'
 import { applyPlugin } from 'jspdf-autotable'
 import ProductRow from './ProductRow.vue';
 import { utils, writeFileXLSX } from "xlsx";
-
 applyPlugin(jsPDF)
-
-const { data: base64 } = await useFetch('/api/base64')
-const dataURI = base64.value
+const { data } = await useFetch('/api/base64')
+const dataURI = data.value.base64
 console.log(dataURI)
 function generatePDFHTML() {
   const doc = new jsPDF()
