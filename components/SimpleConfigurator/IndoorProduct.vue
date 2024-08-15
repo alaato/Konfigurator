@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white text-left rounded-lg shadow-sm overflow-hidden min-w-[360px] max-w-sm">
+  <Card class=" min-w-[360px] max-w-sm">
     <img :src="product?.FrontalAnsichtFrei?.id? 
     `https://devpim.tcs-apps.de/admin/asset/get-image-thumbnail?id=${product?.FrontalAnsichtFrei?.id}&treepreview=1&_dc=1722247817` : 'https://devpim.tcs-apps.de/admin/asset/get-image-thumbnail?id=8425&treepreview=1'"
      alt="Product Image" width="300" height="300" class="w-full h-64 object-cover" />
@@ -28,7 +28,7 @@
       </button>
       <p v-if="productQuantity >remainingIndoorProducts" class="text-red-900" > max : {{ remainingIndoorProducts }}</p>
     </div>
-  </div>
+  </Card>
 </template>
 
 <script lang="ts" setup>

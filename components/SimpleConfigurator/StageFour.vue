@@ -1,37 +1,41 @@
 <template>
   <div class="w-full flex flex-col justify-end items-end gap-1 overflow-y-scroll max-h-[400px]">
-    <TableCaption class="self-start">Ihre Stückliste</TableCaption>
 
-    <Table  id="stückliste" class="bg-white">
-      <TableHeader>
-        <TableRow >
-          <TableHead>
-            Article
-          </TableHead>
-          <TableHead>Menge</TableHead>
-          <TableHead>Preis</TableHead>
-          <TableHead class="text-right">
-            Total
-          </TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        <ProductRow :products="selectedProducts.indoorProducts.products" />
-        <ProductRow :products="selectedProducts.outdoorProducts.products" />
-        <ProductRow :products="selectedProducts.accessories.products" />
-        <ProductRow :products="[controlUnit]" />
-      </TableBody>
-    </Table>
+    <Card class="px-4 py-3 h-max shadow-sm w-full">
 
-    <div class=" bg-white  px-4 py-3 h-max shadow-sm">
+      <Table id="stückliste">
+        <TableCaption class="self-start">Ihre Stückliste</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHead>
+              Article
+            </TableHead>
+            <TableHead>Menge</TableHead>
+            <TableHead>Preis</TableHead>
+            <TableHead class="text-right">
+              Total
+            </TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <ProductRow :products="selectedProducts.indoorProducts.products" />
+          <ProductRow :products="selectedProducts.outdoorProducts.products" />
+          <ProductRow :products="selectedProducts.accessories.products" />
+          <ProductRow :products="[controlUnit]" />
+        </TableBody>
+      </Table>
+    </Card>
+
+
+    <Card class="px-4 py-3 h-max shadow-sm">
       <hr>
-      <table id="total" class="text-gray-800 space-y-4 my-1">
+      <table id="total" class="space-y-4 my-1">
         <tr class="flex flex-wrap gap-4 text-sm font-bold">
           <td>Gesamtpreis :</td>
           <td class="ml-auto">{{ total }}€</td>
         </tr>
       </table>
-    </div>
+    </Card>
   </div>
 
   <div class="cart-actions flex gap-1 mt-2">
@@ -61,12 +65,12 @@ console.log(dataURI)
 function generatePDFHTML() {
   const doc = new jsPDF()
   const headStyles = {
-      fontSize: 12,
-      fontStyle: 'bold',
-      fillColor: [18, 11, 160],
-      textColor: [255, 255, 255],
-      lineColor: [0, 0, 0],
-      valign: 'middle',
+    fontSize: 12,
+    fontStyle: 'bold',
+    fillColor: [18, 11, 160],
+    textColor: [255, 255, 255],
+    lineColor: [0, 0, 0],
+    valign: 'middle',
   }
   doc.setProperties({
     title: "Stückliste"
@@ -78,7 +82,7 @@ function generatePDFHTML() {
     theme: 'grid',
     headStyles: headStyles
   })
-  
+
   let finalY = doc.lastAutoTable.finalY += 10
   doc.autoTable({
     startY: finalY,
@@ -90,7 +94,7 @@ function generatePDFHTML() {
     margin: { left: 157, right: 0 },
   })
   console.log(doc)
-  if(dataURI)
+  if (dataURI)
     doc.addImage(dataURI, "JPEG", 15, 10, 20, 20);
   doc.save('Stückliste');
 }

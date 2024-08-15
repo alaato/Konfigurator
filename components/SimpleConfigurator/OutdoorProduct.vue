@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white text-left rounded-lg shadow-sm overflow-hidden min-w-[360px] max-w-sm">
+  <Card class="bg-white text-left rounded-lg drop-shadow-sm overflow-hidden min-w-[360px] max-w-sm">
     <img src="public/2517.jpg" alt="Product Image" width="300" height="300" class="w-full h-64 object-scale-down" />
     <div class="p-6">
       <h3 class="text-xl font-bold border-b pb-2 mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
@@ -28,7 +28,7 @@
         <p v-if="productQuantity >remainingOutdoorProducts" class="text-red-900" > max : {{ remainingOutdoorProducts }}</p>
       </div>
     </div>
-  </div>
+  </Card>
 </template>
 
 <script lang="ts" setup>
