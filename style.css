@@ -100,18 +100,3 @@ button:focus-visible {
   display: flex;
   justify-content: center;
 }
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #1b1b1b;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
-}
