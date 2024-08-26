@@ -1,8 +1,8 @@
 <template>
   <div class="stage-tracker flex gap-5">
-    <button v-for="stage in stages" :key="stage" class="stage-item bg-dark-blue-950" :disabled="!visitedStore.visited.includes(stage)" @click="$emit('goToStage', stage)">
+    <Button v-for="stage in stages" :key="stage" class="stage-item" :disabled="!visitedStore.visited.includes(stage)" @click="$emit('goToStage', stage)">
       {{stage}}
-    </button>
+    </Button>
   </div>
 </template>
 
@@ -21,12 +21,12 @@ background-color: gray;
 transition: 0;
 }
 .stage-item::after{
+  content: " ";
   position: absolute;
-  content: "";
   width: 16px;
   height: 2px;
-  background-color: black;
-  transform: translateY(12px) translateX(22px)
+  background-color: whitesmoke;
+  transform: translateX(19px) translateY(10px)
 }
 .stage-item:last-of-type::after{
   width: 0;

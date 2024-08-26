@@ -6,7 +6,7 @@ import { Moon } from 'lucide-vue-next';
 </script>
 
 <template>
-  <nav class="w-screen flex items-center justify-around  py-2 shadow-dark-mild bg-white lg:py-4">
+  <nav class="w-screen flex items-center justify-around  py-2 shadow-dark-mild bg-white  lg:py-4">
     
       <div>
         <a class="mx-2 my-1 flex items-center lg:mb-0 lg:mt-0" href="#">
@@ -16,9 +16,9 @@ import { Moon } from 'lucide-vue-next';
 
     <DropdownMenu>
     <DropdownMenuTrigger as-child>
-      <Button variant="outline">
-        <Moon  color="#000000" class=" h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-        <Sun class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+      <Button variant="outline" class="">
+        <Moon  color="#000000" class=" h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:hidden" />
+        <Sun class="h-[1.2rem] w-[1.2rem] transition-all hidden dark:block" />
         <span class="sr-only">Toggle theme</span>
       </Button>
     </DropdownMenuTrigger>

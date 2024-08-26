@@ -41,7 +41,6 @@ const houseIndex : number = inject('houseIndex')
 function reset() {
   resetFloors(houseIndex)
   productStore.resetIndoorNeededQuantity()
-  console.log(productStore.selectedProducts)
 }
 
 function add() {

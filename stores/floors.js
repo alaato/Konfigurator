@@ -26,7 +26,6 @@ const useFloorsStore = defineStore('floors', {
       for (let i = 0; i < count; i++) {
         this.addFloor();
       }
-      console.log(count)
     },
     addApartment(floorNumber) {
       this.floors[floorNumber - 1].apartments.push({

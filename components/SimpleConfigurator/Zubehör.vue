@@ -24,11 +24,10 @@ const doorOpenerNeeded = umSchalterNeeded;
 
 const Umtauscher = umSchalterNeeded ? funktionErweiterungen.data.getProductListing.edges.find(product => product.node.MNR.includes("FVU1401-0400")) : null
 const doorOpener = doorOpenerNeeded ? funktionErweiterungen.data.getProductListing.edges.find(product => product.node.MNR.includes("FAA1200-0400")) : null
-if(Umtauscher)
+if(Umtauscher && selectedProducts.value.accessories.products.length == 0)
 	selectedProductsStore.addAccessories(Umtauscher.node, 1)
-if(doorOpener)
+if(doorOpener && selectedProducts.value.accessories.products.length < 2)
 	selectedProductsStore.addAccessories(doorOpener.node, 1)
-console.log(selectedProducts.value.outdoorProducts.neededQuantity > 1 ? true : false)
 
 //functions
 const gotoStage = inject(`goToStage`)

@@ -59,7 +59,6 @@ function setFilter() {
   
   if ((technologie.value == "Video-6-Draht" && funktion.value == "Video") || numberIndoorStation.value > 24 ){
     filter.value.technologie = "TCS:BUS"
-    console.log("bus")
   }
   else
     filter.value.technologie = "Video-2-Draht"
@@ -72,7 +71,6 @@ function setControlUnit() {
   else if (filter.value.technologie == "TCS:BUS") mnr =  "NBV2600-0400"
 
   const {node} = steuer.data.getProductListing.edges.find(product => product.node.MNR == mnr)
-  console.log(node)
   selectedProductsStore.addControlUnit(node)
 }
 

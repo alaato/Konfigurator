@@ -34,7 +34,6 @@ export const useSelectedProductsStore = defineStore({
     allSelectedProducts: (state) => {
       const products = []
       for (let category in state.selectedProducts) {
-        console.log(state.selectedProducts[category].products, category)
         products.concat(state.selectedProducts[category].products)
       }
       return products;

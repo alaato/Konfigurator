@@ -10,6 +10,8 @@
 			...loading
 		</div>
 		<ProductGrid v-else :currentStage="'Aussenstation'" :products="products" />
+		<p v-if="products.length == 0">Keine Aussenstation verfügbar. versuchen Sie eine mit {{selectedProducts?.indoorProducts?.SelectedQuantity + 1}} tasten anstatt</p>
+
 	</div>
 </template>
 
@@ -34,7 +36,7 @@ const productsFilter = {
 if(filter.value.funktion == "Video")
 productsFilter.technologie = filter.value.technologie
 
-const products = outdoorsStations.data?.getProductListing.edges.filter(product =>{
+let products = outdoorsStations.data?.getProductListing.edges.filter(product =>{
   if(filter.value.funktion == "Video" &&  product.node.Kommunikationstechnologie4164 == productsFilter.technologie &&
    	product.node.AnzhalTatsen == productsFilter.AnzhalTatsen &&
 	product.node.Geraeteart4077 ==  productsFilter.funktion )
@@ -42,6 +44,16 @@ const products = outdoorsStations.data?.getProductListing.edges.filter(product =
   else if (filter.value.funktion == "Audio" && product.node.AnzhalTatsen == productsFilter.AnzhalTatsen && product.node.Geraeteart4077 ==  productsFilter.funktion)
   	return true
 })
+if(products.length == 0)
+products = outdoorsStations.data?.getProductListing.edges.filter(product =>{
+  if(filter.value.funktion == "Video" &&  product.node.Kommunikationstechnologie4164 == productsFilter.technologie &&
+   	product.node.AnzhalTatsen == productsFilter.AnzhalTatsen  + 1 &&
+	product.node.Geraeteart4077 ==  productsFilter.funktion )
+  	return true
+  else if (filter.value.funktion == "Audio" && product.node.AnzhalTatsen == productsFilter.AnzhalTatsen && product.node.Geraeteart4077 ==  productsFilter.funktion)
+  	return true
+})
+
 
 
 // functions
