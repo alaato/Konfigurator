@@ -1,25 +1,31 @@
 <template>
   <div class="configurator">
     <h1>Sprechanlagen Konfigurator</h1>
-    <SimpleConfiguratorStageTracker :visited="visited" :stages="stages" :currentStage="currentStage"
-      @goToStage="goToStage">
-    </SimpleConfiguratorStageTracker>
+    <Stepper ref="stageTracker" v-slot="{ isNextDisabled, isPrevDisabled, nextStep, prevStep, goToStep }" 
+      class="flex w-9/12 items-start gap-2 ">
+      <SimpleConfiguratorStageTracker ref= "trackerRef"  :stages="stages"
+        @goToStage="goToStage">
+      </SimpleConfiguratorStageTracker>
+    </Stepper>
     <div class="main-section w-full">
-      <SimpleConfiguratorStageOne v-if="currentStage === 'Anforderungen'" :stages="stages" @nextStage="goToStageTwo" />
+      <SimpleConfiguratorStageOne v-if="currentStage === 'Anforderungen'" :stages="stages" />
       <SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'" />
       <SimpleConfiguratorStageThree v-if="currentStage === 'Innenstation'" />
       <Zubehör :goToStage="goToStage" v-if="currentStage === 'Zubehör'" :currentStage="currentStage" />
-      <SimpleConfiguratorStageFour v-if="currentStage === 'Übersicht'" :selectedProducts="selectedProducts" />
+      <SimpleConfiguratorStageFour v-if="currentStage === 'Übersicht'" />
     </div>
   </div>
 
 </template>
 
 <script setup>
+import Stepper from '../ui/stepper/Stepper.vue';
 import Zubehör from '../SimpleConfigurator/Zubehör.vue'
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const { currentStage } = storeToRefs(currentStageStore)
+const trackerRef = ref()
+//functions
 const goToStage = (targetStage) => {
   if (!stages.value.includes(targetStage)) {
     console.log("Invalid stage:", targetStage);
@@ -30,7 +36,6 @@ const goToStage = (targetStage) => {
 provide("goToStage", goToStage);
 
 </script>
-
 
 <style>
 .configurator {

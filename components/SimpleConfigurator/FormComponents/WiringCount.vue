@@ -4,7 +4,7 @@
 			<CardTitle>Anzahl Adern</CardTitle>
 			<CardDescription>Wählen Sie aus, wie viele Adern Ihr  </CardDescription>
 		</CardHeader>
-		<CardContent class="flex justify-center">
+		<CardContent class="flex justify-center gap-1">
 			<div class="w-max ">
 				<input required class="w-0 h-0 peer opacity-0" type="radio" id="2" name="Adern" v-model="wiringCount" value=2 />
 				<label

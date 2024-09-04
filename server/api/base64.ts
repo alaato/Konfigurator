@@ -1,4 +1,3 @@
-import base64Img from 'base64-img';
 import fs from 'fs';
 import { resolve } from 'path';
 

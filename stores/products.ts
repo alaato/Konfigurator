@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 
+
 export const useSelectedProductsStore = defineStore({
   id: 'SelectedProductsStore',
   state: () => ({

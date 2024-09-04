@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   ssr: false,
   devtools: { enabled: true },
+
   vite: {
     server: {
       hmr: {
@@ -12,13 +13,16 @@ export default defineNuxtConfig({
         },
     }
   },
+
   css: ['@/assets/css/main.css'],
+
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
+
   modules: [
     '@pinia/nuxt',
     "shadcn-nuxt",
@@ -27,9 +31,11 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@nuxtjs/color-mode'
   ],
+
   colorMode: {
     classSuffix: ''
   },
+
   apollo: {
     clients: {
       default: {
@@ -37,6 +43,7 @@ export default defineNuxtConfig({
       }
     },
   },
+
   pinia: {
     storesDirs: ['./stores/**', './custom-folder/stores/**'],
   },
@@ -49,5 +56,7 @@ export default defineNuxtConfig({
     // typeCheck: true,
     strict: false,
   },
+
   telemetry: false,
+  compatibilityDate: '2024-09-02',
 });
