@@ -13,9 +13,9 @@
         <Technologie v-if="funktion == 'Video' && numberIndoorStation <= 24 && wiringCount > 4" v-model="technologie" />
       </div>
       
-      <button class=" bg-arapawa-950 rounded-none text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
+      <Button class=" bg-arapawa-950 text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
         bestätigen
-      </button>
+      </Button>
     
     </form>
   </div>
@@ -35,8 +35,8 @@ import steuer from '@/data/steuer.json'
 import WiringCount from './FormComponents/WiringCount.vue';
 
 // variables
-const funktion = ref("");
-const technologie = ref("");
+const funktion = defineModel<string>("funktion")
+const technologie = defineModel<string>("technologie")
 const funktionRef = ref<InstanceType<typeof HTMLDivElement> | null>(null);
 const form = ref<InstanceType<typeof HTMLFormElement> | null>(null);
 const numberIndoorStation = useState("numberIndoorStation", () => 1);
@@ -47,7 +47,7 @@ const wiringCount = ref(2);
 const visitedStore = useVisitedStore();
 const selectedProductsStore = useSelectedProductsStore()
 const { setNeededProductsQuantity, resetAllProducts } = selectedProductsStore
-const { filter, selectedProducts } = storeToRefs(selectedProductsStore)
+const { filter} = storeToRefs(selectedProductsStore)
 
 // functions
 const goToStage: Function = inject('goToStage')

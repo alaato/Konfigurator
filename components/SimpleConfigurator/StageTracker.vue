@@ -1,5 +1,10 @@
 <template>
   <div class="stage-tracker flex gap-5">
+    <Button v-for="stage in stages" :key="stage" class="stage-item" :disabled="!visitedStore.visited.includes(stage)" @click="$emit('goToStage', stage)">
+      {{stage}}
+    </Button>
+  </div>
+  <div class="stage-tracker flex gap-5">
     <Button
       v-for="stage in stages"
       :key="stage"
@@ -15,34 +20,12 @@
 <script setup>
 const props = defineProps(["currentStage", "stages"]);
 const visitedStore = useVisitedStore();
-const goToStage = inject(`goToStage`)
-const steps = [
-  {
-    step: 1,
-    title: props.stages[0],
-    description: 'Objektdetails angeben',
-  },
-  {
-    step: 2,
-    title: props.stages[1],
-    description: 'Aussenstation auswählen',
-  },
-  {
-    step: 3,
-    title: props.stages[2],
-    description: 'Innenstation auswählen',
-
-  },
-  {
-    step: 4,
-    title: props.stages[3],
-    description: 'Bestellung Bestätigen',
-  }
-]
-
+console.log(visitedStore.visited);
 </script>
 
+
 <style>
+.stage-item {
 .stage-item {
   position: relative;
 }
@@ -56,7 +39,7 @@ const steps = [
   width: 16px;
   height: 2px;
   background-color: black;
-  transform: translateX(19px) translateY(10px);
+  transform: translateX(18px) translateY(10px);
 }
 .dark .stage-item::after{
 	background-color: white;
@@ -70,5 +53,6 @@ const steps = [
 .stage-item:disabled:focus-visible {
   cursor: default;
   border: solid 1px gray;
-} */
+}
 </style>
+

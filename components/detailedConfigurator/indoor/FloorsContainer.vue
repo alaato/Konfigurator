@@ -2,15 +2,15 @@
   <Card class="floors-container w-1/2 h-[500px] 2xl:h-[600px]">
     <CardContent>
       <div class="floors-action flex justify-start baseline w-full">
-        <button class="my-5 mx-1" @click="router.push('/')">back</button>
-        <button id="increment-btn" @click="add"
+        <Button class="my-5 mx-1" @click="router.push('/')">back</Button>
+        <Button id="increment-btn" @click="add"
           class="flex justify-center my-5 mx-1 items-center  w-12 h-12 rounded-full text-white focus:outline-none  hover:bg-arapawa-900 text-xl">
           +
-        </button>
-        <button id="increment-btn" @click="reset"
+        </Button>
+        <Button id="increment-btn" @click="reset"
           class="flex justify-center items-center my-5 mx-1 w-15 h-15 rounded-full text-white focus:outline-none  hover:bg-arapawa-900">
           <RotateCcw class="w-5 h-5" />
-        </button>
+        </Button>
       </div>
       <div class="top-0 overflow-scroll h-[400px] 2xl:h-[500px] p-2">
         <div class="flex flex-col-reverse">

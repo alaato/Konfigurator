@@ -1,6 +1,6 @@
 <template>
 	<div class="zubehör flex justify-center items-center flex-col">
-		<div><button class="mb-3 grow-0" @click="weiter"> weiter</button></div>
+		<div><Button class="mb-3 grow-0" @click="weiter"> weiter</Button></div>
 		<div class=" flex gap-1">
 			<p v-if="!(umSchalterNeeded && doorOpener)">Keine Zubehör verfügbar</p>
 			<ZubehörCard v-if="Umtauscher" :product="Umtauscher.node"></ZubehörCard>
