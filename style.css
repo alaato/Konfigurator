@@ -96,7 +96,13 @@ button:focus-visible {
 .main-page {
   margin-top: 12px;
   max-width: 1366px;
-  min-width: 1280px;
   display: flex;
   justify-content: center;
+}
+
+
+@media  (max-width: 1024px) {
+.main-page{
+	min-width: 100vw;
+}
 }

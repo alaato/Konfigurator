@@ -13,7 +13,7 @@
         <Technologie v-if="funktion == 'Video' && numberIndoorStation <= 24 && wiringCount > 4" v-model="technologie" />
       </div>
       
-      <button class=" bg-arapawa-950 text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
+      <button class=" bg-arapawa-950 rounded-none text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
         bestätigen
       </button>
     

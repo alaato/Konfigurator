@@ -25,7 +25,9 @@ export default defineNuxtConfig({
     "@nuxt/image",
     '@nuxtjs/apollo',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+	'@nuxt/test-utils/module'
+
   ],
   colorMode: {
     classSuffix: ''
