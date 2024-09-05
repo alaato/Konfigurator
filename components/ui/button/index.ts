@@ -7,7 +7,7 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: '"bg-arapawa-950 hover:bg-arapawa-900 text-neutral-50 dark:bg-black dark:text-blue-50 dark:hover:bg-neutral-100 dark:hover:text-neutral-900',
+        default: 'bg-arapawa-950 hover:bg-arapawa-900 text-neutral-50 dark:bg-black dark:text-blue-50 dark:hover:bg-neutral-100 dark:hover:text-neutral-900',
         destructive:
           'bg-red-500 text-neutral-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-neutral-50 dark:hover:bg-red-900/90',
         outline:

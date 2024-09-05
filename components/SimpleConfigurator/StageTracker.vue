@@ -15,7 +15,31 @@
 <script setup>
 const props = defineProps(["currentStage", "stages"]);
 const visitedStore = useVisitedStore();
-console.log(visitedStore.visited);
+const goToStage = inject(`goToStage`)
+const steps = [
+  {
+    step: 1,
+    title: props.stages[0],
+    description: 'Objektdetails angeben',
+  },
+  {
+    step: 2,
+    title: props.stages[1],
+    description: 'Aussenstation auswählen',
+  },
+  {
+    step: 3,
+    title: props.stages[2],
+    description: 'Innenstation auswählen',
+
+  },
+  {
+    step: 4,
+    title: props.stages[3],
+    description: 'Bestellung Bestätigen',
+  }
+]
+
 </script>
 
 <style>
@@ -46,5 +70,5 @@ console.log(visitedStore.visited);
 .stage-item:disabled:focus-visible {
   cursor: default;
   border: solid 1px gray;
-}
+} */
 </style>

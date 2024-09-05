@@ -1,22 +1,11 @@
 <script setup lang="ts">
 //imports
 import Navbar from './components/general/Navbar.vue';
+import { ConfigProvider } from 'radix-vue'
 
 //consts
 
-document.documentElement.classList.remove('dark')
-
 const useIdFunction = () => useId()
-useHead({
-  title: 'Konfigurator',
-  meta: [
-    { name: 'description', content: 'My amazing site.' }
-  ],
-  htmlAttrs: {
-    class: 'light'
-  },  
-})
-
 </script>
 
 

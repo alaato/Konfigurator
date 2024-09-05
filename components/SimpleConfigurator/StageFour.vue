@@ -41,11 +41,13 @@
   <div class="cart-actions flex gap-1 mt-2">
     <Button class="bg-arapawa-950 hover:bg-arapawa-900" @click="generatePDFHTML">Stückliste als PDF</Button>
     <Button class="bg-arapawa-950 hover:bg-arapawa-900" @click="htmlToExcel">Stückliste als Excel</Button>
+    <Toaster />
   </div>
 
 </template>
 
 <script setup>
+//import
 import {
   Table,
   TableBody,
@@ -54,14 +56,33 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import { toast } from 'vue-sonner'
+import { Toaster } from '@/components/ui/sonner'
 import jsPDF from 'jspdf'
 import { applyPlugin } from 'jspdf-autotable'
 import ProductRow from './ProductRow.vue';
 import { utils, writeFileXLSX } from "xlsx";
 applyPlugin(jsPDF)
+
+//consts
 const { data } = await useFetch('/api/base64')
 const dataURI = data.value.base64
-console.log(dataURI)
+const selectedProductsStore = useSelectedProductsStore();
+const { selectedProducts } = storeToRefs(selectedProductsStore)
+const controlUnit = selectedProducts.value.controlUnit
+const total = computed(() => {
+  let sum = 0
+  selectedProducts.value.outdoorProducts.products.forEach((product) => {
+    sum += product.PERIODE1 * selectedProducts.value.outdoorProducts.SelectedQuantity
+  })
+  selectedProducts.value.indoorProducts.products.forEach((product) => {
+    sum += product.quantity * product?.PERIODE1
+  })
+  sum += selectedProducts.value.controlUnit?.PERIODE1
+  return sum
+})
+
+//functions
 function generatePDFHTML() {
   const doc = new jsPDF()
   const headStyles = {
@@ -99,7 +120,8 @@ function generatePDFHTML() {
   doc.save('Stückliste');
 }
 
-function htmlToExcel() {
+async function htmlToExcel() {
+
   const table_elt = document.getElementById("stückliste");
   const total = document.getElementById("total");
 
@@ -107,39 +129,40 @@ function htmlToExcel() {
   const totalSheet = utils.table_to_sheet(total);
   const listJson = utils.sheet_to_json(listsheet, { header: 1 })
   const totalJson = utils.sheet_to_json(totalSheet, { header: 1 })
-  const completeJson = listJson.concat(['']).concat(totalJson)
-  const completeSheet = utils.json_to_sheet(completeJson, { skipHeader: true })
+  const completeJson = listJson.concat([[]]).concat(totalJson)
 
-  const workbook = utils.book_new()
-  utils.sheet_add_aoa(completeSheet, [["Created " + new Date().toISOString()]], { origin: -1 });
-  utils.sheet_add_aoa(completeSheet, [["TCS Ag"]], { origin: -1 });
+  const response = await $fetch('/api/excel', {
+    method: 'POST',
+    body: completeJson
+  })
 
-  utils.book_append_sheet(workbook, completeSheet, "Stückliste")
-  if (!workbook.Props) workbook.Props = {};
-  workbook.Props.Title = "Stückliste";
-  workbook.Props.Company = "TCS";
-
-  writeFileXLSX(workbook, "stückliste.xlsx");
+  if (response.status !=500) {
+    console.log(response)
+    const url = window.URL.createObjectURL(response);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'stückliste.xlsx'; 
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    window.URL.revokeObjectURL(url);
+    toast('Datei wurde heruntergeladen', {
+        description: new Date().toLocaleString(),
+        action: {
+          label: 'Ok',
+          onClick: () => null,
+        },
+      })
+  }
+  else
+  {
+    toast('Fehler', {
+        description: new Date().toLocaleString(),
+        action: {
+          label: response.message,
+          onClick: () => null,
+        },
+      })
+  }
 }
-
-const selectedProductsStore = useSelectedProductsStore();
-const { selectedProducts } = storeToRefs(selectedProductsStore)
-const controlUnit = selectedProducts.value.controlUnit
-const total = computed(() => {
-  let sum = 0
-  selectedProducts.value.outdoorProducts.products.forEach((product) => {
-    sum += product.PERIODE1 * selectedProducts.value.outdoorProducts.SelectedQuantity
-  })
-  selectedProducts.value.indoorProducts.products.forEach((product) => {
-    sum += product.quantity * product?.PERIODE1
-  })
-  sum += selectedProducts.value.controlUnit?.PERIODE1
-  return sum
-})
-
-// onMounted(() => {
-//   const tableSelect = document.getElementById("stückliste");
-//   const tableHTML = tableSelect.outerHTML.replace(/ /g, '%20');
-//   console.log(tableHTML)
-// }  )
 </script>
