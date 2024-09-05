@@ -25,7 +25,7 @@ console.log(visitedStore.visited);
 
 
 <style>
-.stage-item {
+
 .stage-item {
   position: relative;
 }
