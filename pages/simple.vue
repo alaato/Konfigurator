@@ -1,12 +1,10 @@
 <template>
-  <MainPage></MainPage>
+	<MainPage></MainPage>
 </template>
 
 <script lang="ts" setup>
-import MainPage from '~/components/general/MainPage.vue';
+import MainPage from '~/components/SimpleConfigurator/MainPage.vue';
 
 </script>
 
-<style>
-
-</style>
+<style></style>

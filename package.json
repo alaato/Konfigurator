@@ -29,7 +29,7 @@
     "typescript": "5.5.4",
     "vue": "3.4.38",
     "vue-tsc": "^2.1.4",
-    "vitest": "^2.0.5",
+    "vitest": "^2.0.5"
   },
   "engines": {
     "node": "^18.17.x || ^20.x"
