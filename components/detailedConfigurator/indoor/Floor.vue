@@ -3,10 +3,10 @@
     <CardHeader>
       <CardTitle class="text-center"> Etage {{ floorIndex + 1 }}</CardTitle>
       <div class="card-action flex gap-1 justify-center items-center">
-        <button :disabled="enoughApartments == true"
+        <Button :disabled="enoughApartments == true"
           class="flex justify-center items-center w-10 h-10 rounded-full text-white focus:outline-none  hover:bg-arapawa-900"
           @click="handleAddAparmtent">+
-        </button>
+        </Button>
         <DuplicateButton @click="handleDuplicateFloor"></DuplicateButton>
         <DeleteButton class="m-auto" @click="handleFloorDelete"></DeleteButton>
       </div>

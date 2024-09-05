@@ -11,7 +11,7 @@
   </Card>
 
   <!-- <img :src="apartment.stationImage" alt="Selected Station" v-if="apartment.stationImage" /> -->
-  <!-- <button @click="selectStation">Innenstation auswählen</button>
+  <!-- <Button @click="selectStation">Innenstation auswählen</Button>
     <IndoorStationSelector v-if="showSelector" @stationSelected="stationSelected" /> -->
 
 </template>
@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 //imports
 import DeleteButton from '../general/DeleteButton.vue';
-import outdoorSelectModal from './outdoorSelectModal.vue';
+import outdoorSelectModal from './OutdoorSelect.vue';
 import DuplicateButton from '@/components/detailedConfigurator/general/DuplicateButton.vue'
 
 //consts

@@ -23,9 +23,9 @@
         </CardContent>
         
       </Card>
-      <button class=" disabled:bg-slate-500 my-2 justify-self-center" :disabled="remainingIndoorProducts==0" @click="addProduct(product,productQuantity )">
+      <Button class=" disabled:bg-slate-500 my-2 justify-self-center" :disabled="remainingIndoorProducts==0" @click="addProduct(product,productQuantity )">
         hinzufügen
-      </button>
+      </Button>
       <p v-if="productQuantity >remainingIndoorProducts" class="text-red-900" > max : {{ remainingIndoorProducts }}</p>
     </div>
   </Card>

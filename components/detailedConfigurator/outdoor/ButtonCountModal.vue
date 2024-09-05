@@ -1,10 +1,10 @@
 <template>
   <Dialog>
     <DialogTrigger as-child>
-      <button id="increment-btn"
+      <Button id="increment-btn"
         class="flex justify-center my-5 mx-1 items-center  w-12 h-12 rounded-full text-white focus:outline-none  hover:bg-arapawa-900 text-xl">
         +
-      </button>
+      </Button>
     </DialogTrigger>
     <DialogContent class="sm:max-w-[425px]">
 

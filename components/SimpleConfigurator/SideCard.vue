@@ -29,8 +29,8 @@
                             <p class="text-gray-500">Qty {{ product?.quantity }}</p>
 
                             <div class="flex">
-                              <button type="button"
-                                class="font-medium text-indigo-600 hover:text-indigo-500">Remove</button>
+                              <Button type="Button"
+                                class="font-medium text-indigo-600 hover:text-indigo-500">Remove</Button>
                             </div>
                           </div>
                         </div>

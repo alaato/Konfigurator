@@ -11,9 +11,9 @@
         <Funktion v-model="funktion" />
         <Technologie :funktion="funktion" v-model="technologie" />
       </div>
-      <button class=" bg-arapawa-950 text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
+      <Button class=" bg-arapawa-950 text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
         bestätigen
-      </button>
+      </Button>
     </form>
   </div>
 </template>
@@ -24,12 +24,12 @@
 //imports and props
 import {Card} from '@/components/ui/card'
 import { useSelectedProductsStore } from '~/stores/products';
-import IndoorStationInput from '@/components/SimpleConfigurator/FormComponents/IndoorStationInput.vue';
 import OutdoorStationInput from '@/components/SimpleConfigurator/FormComponents/OutdoorStationInput.vue';
 import Etagen from '@/components/SimpleConfigurator/FormComponents/Etagen.vue'
 import Wohnungen from '@/components/SimpleConfigurator/FormComponents/Wohnungen.vue'
 import Funktion from '@/components/SimpleConfigurator/FormComponents/Funktion.vue'
 import Technologie from '@/components/SimpleConfigurator/FormComponents/Technologie.vue'
+import steuer from '@/data/steuer.json'
 
 // variables
 const numberApartments = useState("numberApartments", () => 1);
@@ -45,16 +45,38 @@ const selectedProductsStore = useSelectedProductsStore()
 const { setNeededProductsQuantity, resetAllProducts } = selectedProductsStore
 const houseStore = useHousesStore()
 const {initilizeAll} = houseStore
+const { filter} = storeToRefs(selectedProductsStore)
 
 // functions
-const goToStage: Function = inject('goToStage')
+function setFilter() {
+
+filter.value.funktion = funktion.value
+funktion.value == "Video" ? filter.value.Video = true : filter.value.Video = null;
+
+if ((technologie.value == "Video-6-Draht" && funktion.value == "Video") || numberIndoorStation.value > 24 ){
+  filter.value.technologie = "TCS:BUS"
+}
+else
+  filter.value.technologie = "Video-2-Draht"
+}
+
+function setControlUnit() {
+  let mnr: string;
+  if (filter.value.funktion == "Audio") mnr = "BVS20-SG"
+  else if (filter.value.technologie == "Video-2-Draht") mnr = "NVV1000-0400"
+  else if (filter.value.technologie == "TCS:BUS") mnr =  "NBV2600-0400"
+
+  const {node} = steuer.data.getProductListing.edges.find(product => product.node.MNR == mnr)
+  selectedProductsStore.addControlUnit(node)
+}
+
 const submitConfig = async () => {
-  // alert(`${numberOutdoorStation.value} + ${numberIndoorStation.value} + ${funktion.value} + ${technologie.value} `)
-  // const totalApartments = numberApartments.value * numberFloors.value
   setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
   initilizeAll(numberFloors.value, numberApartments.value, numberOutdoorStation.value);
   selectedProductsStore.incrementIndoorNeededQuantity((numberApartments.value * numberFloors.value))
   selectedProductsStore.incrementIndoorNeededQuantity(numberOutdoorStation.value)
+  setFilter()
+  setControlUnit()
   resetAllProducts();
   router.push('/test')
 };

@@ -12,7 +12,7 @@
   </Card>
 
   <!-- <img :src="apartment.stationImage" alt="Selected Station" v-if="apartment.stationImage" /> -->
-  <!-- <button @click="selectStation">Innenstation auswählen</button>
+  <!-- <Button @click="selectStation">Innenstation auswählen</Button>
     <IndoorStationSelector v-if="showSelector" @stationSelected="stationSelected" /> -->
 
 </template>

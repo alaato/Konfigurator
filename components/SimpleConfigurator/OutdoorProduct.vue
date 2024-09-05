@@ -22,9 +22,9 @@
           </NumberField>
         </CardContent>
       </Card>
-        <button class=" disabled:bg-slate-500 my-2 justify-self-center" :disabled="remainingOutdoorProducts==0" @click="addProduct(product)">
+        <Button class=" disabled:bg-slate-500 my-2 justify-self-center" :disabled="remainingOutdoorProducts==0" @click="addProduct(product)">
           hinzufügen
-        </button>
+        </Button>
         <p v-if="productQuantity >remainingOutdoorProducts" class="text-red-900" > max : {{ remainingOutdoorProducts }}</p>
       </div>
     </div>

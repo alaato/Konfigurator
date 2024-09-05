@@ -49,10 +49,10 @@ function handleAddHuas() {
       <CarouselNext class="text-black" />
     </Carousel>
     <div class="haus-container-actions gap-1 flex my-2 justify-self-end">
-      <button :disabled="!EnoughProductsSelected" class=" hover:bg-arapawa-900">next</button>
-      <button class="flex justify-center items-center text-white focus:outline-none hover:bg-arapawa-900"
+      <Button :disabled="!EnoughProductsSelected" class=" hover:bg-arapawa-900">next</Button>
+      <Button class="flex justify-center items-center text-white focus:outline-none hover:bg-arapawa-900"
         @click="handleAddHuas">+ Haus
-      </button>
+      </Button>
     </div>
 
   </div>

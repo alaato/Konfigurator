@@ -2,10 +2,10 @@
 	<div class="text-center">
 		<p class="text-xl mb-3">Ausgewählte : {{ selectedProducts?.outdoorProducts?.SelectedQuantity }} / {{
 			selectedProducts?.outdoorProducts?.neededQuantity }}</p>
-		<button v-if="remainingoutdoorProducts == 0" @click="reset"
+		<Button v-if="remainingoutdoorProducts == 0" @click="reset"
 			class="mb-3 inline-flex w-15 h-15 rounded-full text-white focus:outline-none  hover:bg-arapawa-900">
 			<RotateCcw class="w-6 h-6" />
-		</button>
+		</Button>
 		<div v-if="pending">
 			...loading
 		</div>
@@ -17,6 +17,7 @@
 
 
 <script setup>
+//imports
 import ProductGrid from './ProductGrid.vue'
 import { RotateCcw } from 'lucide-vue-next';
 import outdoorsStations from '@/data/aussenstationen.json'
@@ -24,7 +25,6 @@ import outdoorsStations from '@/data/aussenstationen.json'
 //variables
 const selectedProductsStore = useSelectedProductsStore();
 const {selectedProducts, filter} = storeToRefs(selectedProductsStore)
-console.log(filter.value)
 const remainingoutdoorProducts = computed(() => {
   return selectedProducts.value.outdoorProducts.neededQuantity - selectedProducts.value.outdoorProducts.SelectedQuantity
 })
@@ -36,7 +36,7 @@ const productsFilter = {
 if(filter.value.funktion == "Video")
 productsFilter.technologie = filter.value.technologie
 
-let products = outdoorsStations.data?.getProductListing.edges.filter(product =>{
+let products = outdoorsStations?.edges.filter(product =>{
   if(filter.value.funktion == "Video" &&  product.node.Kommunikationstechnologie4164 == productsFilter.technologie &&
    	product.node.AnzhalTatsen == productsFilter.AnzhalTatsen &&
 	product.node.Geraeteart4077 ==  productsFilter.funktion )
