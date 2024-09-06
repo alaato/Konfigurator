@@ -11,7 +11,7 @@ const useIdFunction = () => useId()
 
 <template>
   <ConfigProvider :use-id="useIdFunction">
-    <div id="app" class="max-h-screen flex flex-col">
+    <div id="app" class="h-screen flex flex-col">
       <Navbar></Navbar>
       <div class="main-page m-auto">
         <NuxtPage />

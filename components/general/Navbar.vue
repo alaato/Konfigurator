@@ -6,7 +6,7 @@ import { Moon } from 'lucide-vue-next';
 </script>
 
 <template>
-  <nav class="w-screen flex items-center justify-around  py-2 shadow-dark-mild bg-white  lg:py-4">
+  <nav class="w-screen flex items-center justify-around py-4 shadow-dark-mild bg-white  lg:py-4">
     
       <div>
         <a class="mx-2 my-1 flex items-center lg:mb-0 lg:mt-0" href="#">

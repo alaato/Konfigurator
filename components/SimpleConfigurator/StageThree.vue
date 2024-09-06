@@ -1,6 +1,6 @@
 <template>
   <div class="text-center relative top-0">
-    <p class="text-xl mb-3 top-0 sticky">Ausgewählte : {{ selectedProducts.indoorProducts.SelectedQuantity }} / {{ selectedProducts.indoorProducts.neededQuantity }}</p>
+    <p class="text-xl mb-3">Ausgewählte : {{ selectedProducts.indoorProducts.SelectedQuantity }} / {{ selectedProducts.indoorProducts.neededQuantity }}</p>
     <Button v-if="remainingIndoorProducts==0" @click="reset"
           class="mb-2 inline-flex w-15 h-15 rounded-full text-white focus:outline-none  hover:bg-arapawa-900">
           <RotateCcw class="w-6 h-6" />

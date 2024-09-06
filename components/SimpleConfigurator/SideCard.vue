@@ -3,13 +3,13 @@
             <div class="flex h-full flex-col overflow-y-auto border border-black">
               <div class="flex-1 overflow-auto px-4 py-6 sm:px-6">
                 <div class="flex items-start justify-between">
-                  <DialogTitle class="text-lg font-medium text-gray-900">Ihre Auswahl</DialogTitle>
+                  <h3 class="text-lg font-medium text-gray-900">Ihre Auswahl</h3>
                 </div>
 
                 <div class="mt-8">
                   <div class="flow-root">
                     <ul role="list" class="-my-6 divide-y divide-gray-200">
-                      <li v-for="product in products" :key="product.id" class="flex py-6">
+                      <li v-for="product in allSelectedProducts" :key="product.id" class="flex py-6">
                         <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
                           <img :src="product?.imageSrc" :alt="product?.imageAlt"
                             class="h-full w-full object-cover object-center" />

@@ -1,12 +1,7 @@
 <template>
   <div class="configurator">
-    <h1>Sprechanlagen Konfigurator</h1>
-    <Stepper ref="stageTracker" v-slot="{ isNextDisabled, isPrevDisabled, nextStep, prevStep, goToStep }" 
-      class="flex w-9/12 items-start gap-2 ">
-      <SimpleConfiguratorStageTracker ref= "trackerRef"  :stages="stages"
-        @goToStage="goToStage">
-      </SimpleConfiguratorStageTracker>
-    </Stepper>
+      <SimpleConfiguratorStageTracker :stages="stages"@goToStage="goToStage" />
+      <SideCard/>
     <div class="main-section w-full">
       <SimpleConfiguratorStageOne v-if="currentStage === 'Anforderungen'" :stages="stages" />
       <SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'" />
@@ -19,8 +14,8 @@
 </template>
 
 <script setup>
-import Stepper from '../ui/stepper/Stepper.vue';
 import Zubehör from '../SimpleConfigurator/Zubehör.vue'
+import SideCard from '../SimpleConfigurator/SideCard.vue';
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const { currentStage } = storeToRefs(currentStageStore)
