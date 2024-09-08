@@ -41,12 +41,12 @@ body {
   padding-left: 2rem;
 }
 .dark{
-  background-color: #1b1b1b;
+  background-color: #181818;
   color: aliceblue;
 }
 .light
 {
-  background-color: white;
+  background-color: rgb(248 250 252);
   color: black;
 }
 
@@ -75,7 +75,10 @@ h1 {
   height: 100%;
 }
 
-
+.dark .logo{
+  filter: brightness(0) saturate(100%) invert(51%) sepia(90%) saturate(586%) hue-rotate(163deg) brightness(91%) contrast(86%);
+}
+.light{}
 @media  (max-width: 1024px) {
 .main-page{
 	min-width: 100vw;

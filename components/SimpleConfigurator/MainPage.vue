@@ -1,19 +1,24 @@
 <template>
 	<div class="configurator">
-		<h1>Sprechanlagen Konfigurator</h1>
-		<SimpleConfiguratorStageTracker :current-stage="currentStage" :stages="stages" @goToStage="goToStage" />
+		<StageTracker :current-stage="currentStage" :stages="stages" @goToStage="goToStage" />
 		<div class="main-section w-full">
-			<SimpleConfiguratorStageOne v-if="currentStage === 'Anforderungen'" :stages="stages" />
-			<SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'" />
-			<SimpleConfiguratorStageThree v-if="currentStage === 'Innenstation'" />
+			<StageOne v-if="currentStage === 'Anforderungen'" :stages="stages" />
+			<StageTwo v-if="currentStage === 'Aussenstation'" />
+			<StageThree v-if="currentStage === 'Innenstation'" />
 			<Zubehör :goToStage="goToStage" v-if="currentStage === 'Zubehör'" :currentStage="currentStage" />
-			<SimpleConfiguratorStageFour v-if="currentStage === 'Übersicht'" />
+			<StageFour v-if="currentStage === 'Übersicht'" />
 		</div>
 	</div>
 </template>
 
 <script setup>
-import Zubehör from '../SimpleConfigurator/Zubehör.vue'
+import StageFour from './StageFour/StageFour.vue';
+import StageOne from './StageOne/StageOne.vue';
+import StageThree from './StageThree/StageThree.vue';
+import StageTwo from './StageTwo/StageTwo.vue';
+import Zubehör from './Zubehör/Zubehör.vue'
+import SideCard from './general/SideCard.vue';
+import StageTracker from './general/StageTracker.vue';
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const { currentStage } = storeToRefs(currentStageStore)

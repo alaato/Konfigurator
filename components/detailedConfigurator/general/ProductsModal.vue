@@ -1,5 +1,5 @@
 <template>
-  <div className="mx-auto p-4">
+
     <Dialog class="">
       <DialogTrigger as-child>
         <Button class="bg-transparent text-black hover:bg-slate-100">{{ triggerText }}</Button>
@@ -16,7 +16,6 @@
 
       </DialogContent>
     </Dialog>
-  </div>
 </template>
 
 <script lang="ts" setup>

@@ -15,7 +15,7 @@
 
 <script setup>
 import Zubehör from '../SimpleConfigurator/Zubehör.vue'
-import SideCard from '../SimpleConfigurator/SideCard.vue';
+import SideCard from '../SimpleConfigurator/general/SideCard.vue';
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const { currentStage } = storeToRefs(currentStageStore)

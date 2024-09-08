@@ -8,16 +8,12 @@
 	            <div ref="funktionRef" class="w-max">
 	              <input class="peer opacity-0 w-0 h-0" required type="radio" id="Video-6-Draht" name="Technologie" v-model="technologie"
 	                value="Video-6-Draht" />
-	              <label
-	                class="button-80 w-full text-center peer-checked:bg-arapawa-950 peer-checked:font-bold peer-checked:text-white"
-	                for="Video-6-Draht">Video-6-Draht</label>
+					<RadioInput text="Video-6-Draht" />
 	            </div>
 	            <div class="w-max">
 	              <input class="peer opacity-0 w-0 h-0 " type="radio" id="Video-2-Draht" name="Technologie" v-model="technologie"
 	                value="Video-2-Draht" />
-	              <label
-	                class="button-80 w-full text-center peer-checked:bg-arapawa-950 peer-checked:font-bold peer-checked:text-white "
-	                for="Video-2-Draht">Video-2-Draht</label>
+					<RadioInput text="Video-2-Draht" />
 	            </div>
 	          </CardContent>
 			  <CardFooter>
@@ -27,6 +23,7 @@
 </template>
 
 <script setup lang="ts">
+import RadioInput from './RadioInput.vue'
 
 const technologie = defineModel({ type: String })
 </script>

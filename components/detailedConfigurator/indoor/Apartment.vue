@@ -6,8 +6,8 @@
     </CardHeader>
     <CardContent class="apartment-actions flex justify-center items-center">
       <ProductsModal title="Innenstation auswählen" trigger-text="Innenstation auswählen"></ProductsModal>
-      <DeleteButton @click="handleDeleteApartment" :floorIndex="floorIndex" :apartmentIndex="apartmentIndex" />
       <DuplicateButton @click="handleDuplicateApartment" ></DuplicateButton>
+      <DeleteButton @click="handleDeleteApartment" :floorIndex="floorIndex" :apartmentIndex="apartmentIndex" />
     </CardContent>
   </Card>
 

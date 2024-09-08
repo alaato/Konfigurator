@@ -92,6 +92,6 @@ watchEffect(() => {
 })
 </script>
 
-<style src="../../styles/StageOne.css">
+<style >
 /* CSS */
 </style>

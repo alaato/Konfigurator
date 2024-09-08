@@ -1,5 +1,5 @@
 <template>
-  <div class="my-10 max-w-[960px] bg-slate-50">
+  <div class="my-10 max-w-[960px]">
     <form  ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center">
       <Card class="number-of-apartments flex justify-center">
         <Etagen v-model="numberFloors" />

@@ -5,8 +5,8 @@
     </CardHeader>
     <CardContent class="apartment-actions flex justify-center items-center">
       <outdoorSelectModal  title="Aussenstation auswählen" trigger-text="Aussenstation auswählen"></outdoorSelectModal>
-      <DeleteButton @click="handleDeleteOutdoorStation" />
       <DuplicateButton @click="handleDuplicateOutdoorStation" />
+      <DeleteButton @click="handleDeleteOutdoorStation" />
     </CardContent>
   </Card>
 

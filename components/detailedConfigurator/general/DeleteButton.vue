@@ -1,6 +1,6 @@
 <template>
-	<Button class="p-1 h-max rounded-full w-max focus:outline-none hover:bg-transparent bg-transparent" @click="emitDelete">
-		<Trash2 color="red" />
+	<Button class="p-1 h-max rounded-full w-max focus:outline-none bg-transparent hover:bg-transparent dark:hover:bg-transparent " @click="emitDelete">
+		<Trash2 color="red" class="hover:text-blue-500"/>
 	</Button>
 </template>
 
