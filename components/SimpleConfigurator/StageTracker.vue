@@ -1,5 +1,5 @@
 <template>
-	<ol class="stage-tracker w-full max-w-[768px] flex gap-5 ">
+	<ol class="stage-tracker sm:w-[600px] lg::w-[768px] flex gap-5 ">
 		<li class="gap-1 stage-item flex flex-col items-center" v-for="stage in stages" :key="stage">
 			<div class="button rounded-full flex justify-center items-center w-9 h-9 bg-white border ">
 				<button
@@ -45,6 +45,10 @@ const completed = (stage) => visited(stage) && (visitedStore.visited.indexOf(pro
 	order: -1;
 	left: calc(50% + 10px);
 	top: 35%;
+}
+
+.dark .stage-item::after {
+	background-color: white;
 }
 
 .stage-item:last-of-type::after {

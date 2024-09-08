@@ -20,8 +20,6 @@ html {
 }
 body {
   margin: 0;
-  min-width: 320px;
-  max-width: 100vw;
   min-height: 100vh;
   font-family: "inter", serif;
 }
@@ -41,7 +39,7 @@ body {
   padding-left: 2rem;
 }
 .dark{
-  background-color: #1b1b1b;
+  background-color: #181818;
   color: aliceblue;
 }
 .light
@@ -72,11 +70,4 @@ h1 {
   max-width: 1366px;
   display: flex;
   justify-content: center;
-}
-
-
-@media  (max-width: 1024px) {
-.main-page{
-	min-width: 100vw;
-}
 }

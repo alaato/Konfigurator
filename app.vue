@@ -10,14 +10,14 @@ const useIdFunction = () => useId()
 
 
 <template>
-  <ConfigProvider :use-id="useIdFunction">
-    <div id="app" class="max-h-screen flex flex-col">
-      <Navbar></Navbar>
-      <div class="main-page m-auto">
-        <NuxtPage />
-      </div>
-    </div>
-  </ConfigProvider>
+	<ConfigProvider :use-id="useIdFunction">
+		<div id="app" class="flex flex-col">
+			<Navbar></Navbar>
+			<div class="main-page m-auto">
+				<NuxtPage />
+			</div>
+		</div>
+	</ConfigProvider>
 </template>
 <style>
 @import "./style.css";

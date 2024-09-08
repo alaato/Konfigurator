@@ -1,7 +1,7 @@
 <template>
 	<Card class="bg-white text-left rounded-lg drop-shadow-sm overflow-hidden min-w-[360px] max-w-sm">
 		<img src="https://g-0f4zqqgpsyi.vusercontent.net/placeholder.svg?height=200&width=200" alt="Product Image"
-			width="300" height="300" class="w-full h-64 object-scale-down" />
+			width="300" height="300" class="w-full h-64 object-cover" />
 		<div class="p-6">
 			<h3 class="text-xl font-bold border-b pb-2 mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
 			{{ product.Text ? product.Text : '' }}
