@@ -3,18 +3,18 @@
 		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center">
 			<WiringCount v-model="wiringCount"></WiringCount>
 
-			<Card class="number-of-apartments flex justify-center">
+			<div class="number-of-apartments flex justify-center my-1 gap-1">
 				<IndoorStationInput v-model="numberIndoorStation" />
 				<OutdoorStationInput v-model="numberOutdoorStation" />
-			</Card>
+			</div>
 
-			<div class="funktion-and-technologie-container">
+			<div class="funktion-and-technologie-container gap-1">
 				<Funktion v-model="funktion" />
 				<Technologie v-if="funktion == 'Video' && numberIndoorStation <= 24 && wiringCount > 4"
 					v-model="technologie" />
 			</div>
 
-			<Button class="bg-arapawa-950 justify-center text-white hover:bg-arapawa-900 min-w-1/2" type="submit">
+			<Button class="bg-arapawa-950 justify-center text-white hover:bg-arapawa-800 min-w-1/2 my-1" type="submit">
 				bestätigen
 			</Button>
 
@@ -26,7 +26,6 @@
 <script lang="ts" setup>
 //imports and props
 const { stages } = defineProps(['stages'])
-import { Card } from '@/components/ui/card'
 import { useSelectedProductsStore } from '~/stores/products';
 import IndoorStationInput from './FormComponents/IndoorStationInput.vue';
 import OutdoorStationInput from './FormComponents/OutdoorStationInput.vue';

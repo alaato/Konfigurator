@@ -1,7 +1,7 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   ssr: false,
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   vite: {
     server: {
@@ -60,5 +60,5 @@ export default defineNuxtConfig({
   },
 
   telemetry: false,
-  compatibilityDate: '2024-09-02',
+
 });
