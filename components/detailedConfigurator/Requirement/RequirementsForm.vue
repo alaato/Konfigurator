@@ -22,7 +22,7 @@
 <script lang="ts" setup>
 
 //imports and props
-import {Card} from '@/components/ui/card'
+import { Card } from '@/components/ui/card'
 import { useSelectedProductsStore } from '~/stores/products';
 import OutdoorStationInput from '@/components/SimpleConfigurator/StageOne/FormComponents/OutdoorStationInput.vue';
 import Etagen from '@/components/SimpleConfigurator/StageOne/FormComponents/Etagen.vue'
@@ -30,6 +30,11 @@ import Wohnungen from '@/components/SimpleConfigurator/StageOne/FormComponents/W
 import Funktion from '@/components/SimpleConfigurator/StageOne/FormComponents/Funktion.vue'
 import Technologie from '@/components/SimpleConfigurator/StageOne/FormComponents/Technologie.vue'
 import steuer from '@/data/steuer.json'
+import Etagen from '~/components/SimpleConfigurator/StageOne/FormComponents/Etagen.vue';
+import Wohnungen from '~/components/SimpleConfigurator/StageOne/FormComponents/Wohnungen.vue';
+import OutdoorStationInput from '~/components/SimpleConfigurator/StageOne/FormComponents/OutdoorStationInput.vue';
+import Funktion from '~/components/SimpleConfigurator/StageOne/FormComponents/Funktion.vue';
+import Technologie from '~/components/SimpleConfigurator/StageOne/FormComponents/Technologie.vue';
 
 // variables
 const numberApartments = useState("numberApartments", () => 1);
@@ -44,41 +49,41 @@ const router = useRouter()
 const selectedProductsStore = useSelectedProductsStore()
 const { setNeededProductsQuantity, resetAllProducts } = selectedProductsStore
 const houseStore = useHousesStore()
-const {initilizeAll} = houseStore
-const { filter} = storeToRefs(selectedProductsStore)
+const { initilizeAll } = houseStore
+const { filter } = storeToRefs(selectedProductsStore)
 
 // functions
 function setFilter() {
 
-filter.value.funktion = funktion.value
-funktion.value == "Video" ? filter.value.Video = true : filter.value.Video = null;
+	filter.value.funktion = funktion.value
+	funktion.value == "Video" ? filter.value.Video = true : filter.value.Video = null;
 
-if ((technologie.value == "Video-6-Draht" && funktion.value == "Video") || numberIndoorStation.value > 24 ){
-  filter.value.technologie = "TCS:BUS"
-}
-else
-  filter.value.technologie = "Video-2-Draht"
+	if ((technologie.value == "Video-6-Draht" && funktion.value == "Video") || numberIndoorStation.value > 24) {
+		filter.value.technologie = "TCS:BUS"
+	}
+	else
+		filter.value.technologie = "Video-2-Draht"
 }
 
 function setControlUnit() {
-  let mnr: string;
-  if (filter.value.funktion == "Audio") mnr = "BVS20-SG"
-  else if (filter.value.technologie == "Video-2-Draht") mnr = "NVV1000-0400"
-  else if (filter.value.technologie == "TCS:BUS") mnr =  "NBV2600-0400"
+	let mnr: string;
+	if (filter.value.funktion == "Audio") mnr = "BVS20-SG"
+	else if (filter.value.technologie == "Video-2-Draht") mnr = "NVV1000-0400"
+	else if (filter.value.technologie == "TCS:BUS") mnr = "NBV2600-0400"
 
-  const {node} = steuer.data.getProductListing.edges.find(product => product.node.MNR == mnr)
-  selectedProductsStore.addControlUnit(node)
+	const { node } = steuer.data.getProductListing.edges.find(product => product.node.MNR == mnr)
+	selectedProductsStore.addControlUnit(node)
 }
 
 const submitConfig = async () => {
-  setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
-  initilizeAll(numberFloors.value, numberApartments.value, numberOutdoorStation.value);
-  selectedProductsStore.incrementIndoorNeededQuantity((numberApartments.value * numberFloors.value))
-  selectedProductsStore.incrementIndoorNeededQuantity(numberOutdoorStation.value)
-  setFilter()
-  setControlUnit()
-  resetAllProducts();
-  router.push('/test')
+	setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
+	initilizeAll(numberFloors.value, numberApartments.value, numberOutdoorStation.value);
+	selectedProductsStore.incrementIndoorNeededQuantity((numberApartments.value * numberFloors.value))
+	selectedProductsStore.incrementIndoorNeededQuantity(numberOutdoorStation.value)
+	setFilter()
+	setControlUnit()
+	resetAllProducts();
+	router.push('/test')
 };
 
 </script>
