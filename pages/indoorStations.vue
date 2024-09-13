@@ -11,7 +11,7 @@
 </template>
 <script setup>
 import FloorsContainer from '~/components/detailedConfigurator/indoor/FloorsContainer.vue';
-import outdoorContainer from '~/components/detailedConfigurator/outdoor/outdoorContainer.vue';
+import outdoorContainer from '~/components/detailedConfigurator/outdoor/OutdoorContainer.vue';
 import {
     ResizableHandle,
     ResizablePanel,

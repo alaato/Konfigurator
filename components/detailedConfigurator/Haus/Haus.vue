@@ -17,7 +17,7 @@
 import DeleteButton from '../general/DeleteButton.vue';
 
 import FloorsContainer from '@/components/detailedConfigurator/indoor/FloorsContainer.vue';
-import outdoorContainer from '@/components/detailedConfigurator/outdoor/outdoorContainer.vue';
+import outdoorContainer from '~/components/detailedConfigurator/outdoor/OutdoorContainer.vue';
 
 const props = defineProps(['houseindex', 'house'])
 provide('houseIndex', props.houseindex)

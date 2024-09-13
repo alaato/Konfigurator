@@ -2,7 +2,7 @@
   <Card class="floors-container w-1/2 h-[500px] 2xl:h-[600px]">
     <CardContent>
       <div class="floors-action flex justify-start baseline w-full">
-        <Button class="my-5 mx-1 h-12" @click="router.push('/')">back</Button>
+        <Button class="my-5 mx-1 h-12" @click="router.push('/requirements')">back</Button>
         <Button id="increment-btn" @click="add"
           class="flex justify-center my-5 mx-1 items-center  w-12 h-12 rounded-full text-white focus:outline-none  hover:bg-arapawa-900 text-xl">
           +

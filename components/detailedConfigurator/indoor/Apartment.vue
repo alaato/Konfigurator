@@ -5,16 +5,11 @@
       <CardDescription></CardDescription>
     </CardHeader>
     <CardContent class="apartment-actions flex justify-center items-center">
-      <ProductsModal title="Innenstation auswählen" trigger-text="Innenstation auswählen"></ProductsModal>
+      <ProductsModal title="Innenstation auswählen" text="Innenstation auswählen"></ProductsModal>
       <DuplicateButton @click="handleDuplicateApartment" ></DuplicateButton>
       <DeleteButton @click="handleDeleteApartment" :floorIndex="floorIndex" :apartmentIndex="apartmentIndex" />
     </CardContent>
   </Card>
-
-  <!-- <img :src="apartment.stationImage" alt="Selected Station" v-if="apartment.stationImage" /> -->
-  <!-- <Button @click="selectStation">Innenstation auswählen</Button>
-    <IndoorStationSelector v-if="showSelector" @stationSelected="stationSelected" /> -->
-
 </template>
 
 <script lang="ts" setup>

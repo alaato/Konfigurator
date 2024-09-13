@@ -1,3 +1,4 @@
+import { Body } from "#build/components"
 
 const animate = require("tailwindcss-animate")
 
@@ -11,6 +12,11 @@ module.exports = {
   ],
   prefix: "",
   theme: {
+    fontFamily: {
+      body: ['"PT Sans"', "sans-serif"],
+      button: ['"Inter"', "sans-serif"],
+      heading: ['"Domine"', "serif"],
+    },
     container: {
       center: true,
       padding: "2rem",

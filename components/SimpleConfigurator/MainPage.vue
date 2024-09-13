@@ -6,13 +6,13 @@
 			<StageTwo v-if="currentStage === 'Aussenstation'" />
 			<StageThree v-if="currentStage === 'Innenstation'" />
 			<Zubehör :goToStage="goToStage" v-if="currentStage === 'Zubehör'" :currentStage="currentStage" />
-			<StageFour v-if="currentStage === 'Übersicht'" />
+			<Overview v-if="currentStage === 'Übersicht'" />
 		</div>
 	</div>
 </template>
 
 <script setup>
-import StageFour from './StageFour/StageFour.vue';
+import Overview from './Overview/Overview.vue';
 import StageOne from './StageOne/StageOne.vue';
 import StageThree from './StageThree/StageThree.vue';
 import StageTwo from './StageTwo/StageTwo.vue';

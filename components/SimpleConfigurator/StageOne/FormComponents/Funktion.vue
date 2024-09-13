@@ -1,5 +1,5 @@
 <template>
-	<Card class="funktion-container ">
+	<Card class="funktion-container">
 		<CardHeader class="pb-0 mb-0">
 			<CardTitle>Funktion</CardTitle>
 			<CardDescription>Wählen Sie aus, Audio oder Video</CardDescription>

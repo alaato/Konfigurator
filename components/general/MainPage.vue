@@ -7,7 +7,7 @@
       <SimpleConfiguratorStageTwo v-if="currentStage === 'Aussenstation'" />
       <SimpleConfiguratorStageThree v-if="currentStage === 'Innenstation'" />
       <Zubehör :goToStage="goToStage" v-if="currentStage === 'Zubehör'" :currentStage="currentStage" />
-      <SimpleConfiguratorStageFour v-if="currentStage === 'Übersicht'" />
+      <SimpleConfiguratorOverview v-if="currentStage === 'Übersicht'" />
     </div>
   </div>
 

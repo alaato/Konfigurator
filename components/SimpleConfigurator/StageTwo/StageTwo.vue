@@ -1,25 +1,14 @@
 <template>
-	<div class="text-center">
-		<Card class="text-xl mb-3 p-2">
-			<CardTitle>Ausgewählte : {{ selectedProducts?.outdoorProducts?.SelectedQuantity }} / {{
-			selectedProducts?.outdoorProducts?.neededQuantity }}</CardTitle>
-		</Card>
-		<Button v-if="remainingoutdoorProducts == 0" @click="reset"
-			class="mb-3 inline-flex w-15 h-15 rounded-full text-white focus:outline-none  hover:bg-arapawa-900">
-			<RotateCcw class="w-6 h-6" />
-		</Button>
-		<ProductGrid v-else :currentStage="'Aussenstation'" :products="products" />
-		<p v-if="products.length == 0">Keine Aussenstation verfügbar. versuchen Sie eine mit
-			{{ selectedProducts?.indoorProducts?.SelectedQuantity + 1 }} tasten anstatt</p>
-
-	</div>
+	<ProductSelection :selectedProducts="selectedProducts.outdoorProducts" 
+	@resetSelection="reset" :products="products"
+	 v-model="remainingoutdoorProducts" />
 </template>
 
 
 <script setup>
 //imports
-import ProductGrid from '../general/ProductGrid.vue'
-import { RotateCcw } from 'lucide-vue-next';
+
+import ProductSelection from '../general/ProductSelection.vue'
 import outdoorsStations from '@/data/aussenstationen.json'
 
 //consts

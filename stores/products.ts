@@ -32,24 +32,17 @@ export const useSelectedProductsStore = defineStore({
     },
   }),
   getters: {
-    allSelectedProducts: (state) => {
-      const products = []
-      for (let category in state.selectedProducts) {
-        console.log(category)
-        products.concat(state.selectedProducts[category].products)
-      }
-      return products;
-    },
     getAllSelectedProducts: (state) => {
       const products: any = []
       Object.values(state.selectedProducts).forEach((category) => {
         if(category.products){
-          console.log(...category.products)
           products.push(...category.products)
         }
       })
       return products;
     },
+    getRemainingOutdoorNeeded: (state) => state.selectedProducts.outdoorProducts.neededQuantity - state.selectedProducts.outdoorProducts.SelectedQuantity,
+    getRemainingIndoorNeeded: (state) => state.selectedProducts.indoorProducts.neededQuantity - state.selectedProducts.indoorProducts.SelectedQuantity
   },
     actions: {
       incrementOutdoorNeededQuantity(quantity: number) {
@@ -99,32 +92,27 @@ export const useSelectedProductsStore = defineStore({
       addControlUnit(product) {
         this.selectedProducts.controlUnit = product
       },
-      removeIndoorProducts(product, quantity) {
-        for (let i = 0; i < quantity; i++) {
-          const index = this.selectedProducts.indoorProducts.products.indexOf(product);
-          if (index >= 0) {
-            this.selectedProducts.indoorProducts.products.splice(index, 1);
-          }
+      removeIndoorProducts(product) {
+        const index = this.selectedProducts.indoorProducts.products.indexOf(product);
+        if(index => 0){
+          this.selectedProducts.indoorProducts.products.splice(index, 1)
+          this.selectedProducts.indoorProducts.SelectedQuantity -= product.quantity
         }
-        this.selectedProducts.indoorProducts.SelectedQuantity -= quantity;
       },
-      removeOutdoorProducts(product, quantity) {
-        for (let i = 0; i < quantity; i++) {
-          const index = this.selectedProducts.outdoorProducts.products.indexOf(product);
-          if (index >= 0) {
-            this.selectedProducts.outdoorProducts.products.splice(index, 1);
-          }
+      removeOutdoorProducts(product) {
+        const index : number = this.selectedProducts.outdoorProducts.products.indexOf(product);
+        console.log(index, this.selectedProducts.outdoorProducts)
+        if(index => 0){
+          this.selectedProducts.outdoorProducts.products.splice(index, 1)
+          this.selectedProducts.outdoorProducts.SelectedQuantity -= product.quantity
         }
-        this.selectedProducts.outdoorProducts.SelectedQuantity -= quantity;
+        console.log(index, this.selectedProducts.outdoorProducts)
       },
-      removeAccessories(product, quantity) {
-        for (let i = 0; i < quantity; i++) {
-          const index = this.selectedProducts.accessories.products.indexOf(product);
-          if (index >= 0) {
-            this.selectedProducts.accessories.products.splice(index, 1);
-          }
+      removeAccessories(product) {
+        const index = this.selectedProducts.accessories.products.indexOf(product);
+        if(index => 0){
+          this.selectedProducts.accessories.products.splice(index, 1)
         }
-        this.selectedProducts.accessories.quantity -= quantity;
       },
       resetControlUnit() {
         this.selectedProducts.controlUnit.product = null;

@@ -1,11 +1,11 @@
 <template>
-	<div class="zubehör flex justify-center items-center flex-col">
-		<div><Button class="mb-3 grow-0" @click="weiter"> weiter</Button></div>
+	<div class="zubehör flex justify-center items-center flex-col gap-2 max-h-32">
 		<div class=" flex gap-1">
 			<p v-if="!(umSchalterNeeded && doorOpener)">Keine Zubehör verfügbar</p>
 			<ZubehörCard v-if="Umtauscher" :product="Umtauscher.node"></ZubehörCard>
 			<ZubehörCard v-if="doorOpener" :product="doorOpener.node"></ZubehörCard>
 		</div>
+		<div><Button class="mb-3 grow-0" @click="weiter"> weiter</Button></div>
 	</div>
 </template>
 
