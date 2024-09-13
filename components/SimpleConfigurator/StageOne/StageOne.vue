@@ -85,12 +85,11 @@ const submitConfig = async () => {
 };
 
 watchEffect(() => {
-	console.log(funktionRef.value)
 	if (funktionRef.value)
 		form.value.lastElementChild.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
 })
 </script>
 
-<style >
+<style>
 /* CSS */
 </style>
