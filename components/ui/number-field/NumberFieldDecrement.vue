@@ -18,7 +18,7 @@ const forwarded = useForwardProps(delegatedProps)
 
 <template>
 	<NumberFieldDecrement data-slot="decrement" v-bind="forwarded"
-		:class="cn('absolute top-1/2 -translate-y-1/2 left-0  p-3 disabled:cursor-not-allowed disabled:opacity-20 bg-transparent text-red-600 hover:text-white hover:bg-red-600 dark:text-red-500', props.class)">
+		:class="cn('absolute top-1/2 -translate-y-1/2 left-0  p-3 disabled:cursor-not-allowed disabled:opacity-20 bg-transparent rounded-lg text-red-600 hover:text-white hover:bg-red-600 dark:text-red-500', props.class)">
 		<slot>
 			<Minus class="h-4 w-4" />
 		</slot>

@@ -1,39 +1,40 @@
 <template>
 	<ProductCard :product="product" :productType="'Innenstation'" @addProduct="addProduct"
 		v-model:productQuantity="productQuantity"
-		v-model:remainingOutdoorProducts="remainingIndoorProducts" />
+		v-model:remainingProducts="remainingIndoorProducts" />
 </template>
 
 <script lang="ts" setup>
-///imports
+//imports
 import ProductCard from './ProductCard.vue'
 
-// variables
-const props = defineProps(['product'])
-const currentStageStore = useCurrentStageStore();
-const { currentStage } = storeToRefs(currentStageStore)
+//stores
 const visitedStore = useVisitedStore();
 const selectedProductsStore = useSelectedProductsStore();
-const { selectedProducts, allSelectedProducts } = storeToRefs(selectedProductsStore)
+const { selectedProducts } = storeToRefs(selectedProductsStore)
+
+// consts
+const props = defineProps(['product'])
 const productQuantity = ref(0);
-const remainingIndoorProducts = computed(() => {
-	return selectedProducts.value.indoorProducts.neededQuantity - selectedProducts.value.indoorProducts.SelectedQuantity
+const remainingIndoorProducts = computed<number>(() => {
+	const remainingIndoorProducts : number = selectedProducts.value.indoorProducts.neededQuantity - selectedProducts.value.indoorProducts.SelectedQuantity
+	return remainingIndoorProducts
 })
+
 const goToStage: Function = inject(`goToStage`)
 //function
 const addProduct = (product) => {
-	const isAddedProduct = selectedProducts.value.indoorProducts.products.find((p) => p.MNR === product.MNR)
-	if (isAddedProduct) {
-		isAddedProduct.quantity += productQuantity.value
+	const AddedProduct = selectedProducts.value.indoorProducts.products.find((p) => p.MNR === product.MNR)
+	if (AddedProduct) {
+		AddedProduct.quantity += productQuantity.value
 		selectedProducts.value.indoorProducts.SelectedQuantity += productQuantity.value
 		productQuantity.value = 0;
 	}
-	if (!isAddedProduct && productQuantity.value > 0 && productQuantity.value <= remainingIndoorProducts.value) {
+	if (!AddedProduct && productQuantity.value > 0 && productQuantity.value <= remainingIndoorProducts.value) {
 		selectedProducts.value.indoorProducts.products.push({ ...product, quantity: productQuantity.value })
 		selectedProducts.value.indoorProducts.SelectedQuantity += productQuantity.value
 		productQuantity.value = 0;
 	}
-	allSelectedProducts.value.push({ ...product, quantity: productQuantity.value })
 	if (selectedProducts.value.indoorProducts.SelectedQuantity == selectedProducts.value.indoorProducts.neededQuantity) {
 		goToStage("Zubehör")
 		if (!visitedStore.visited.includes("Zubehör"))

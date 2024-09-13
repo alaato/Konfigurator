@@ -1,7 +1,7 @@
 <template>
   <Card class="Outdoor-container w-1/2 h-[500px] 2xl:h-[600px]">
-    <CardContent>
-      <div class="floors-action flex justify-start">
+    <CardContent class="p-3 pt-0">
+      <div class="container-action flex justify-start">
         <Button id="increment-btn" @click="add"
           class="flex justify-center my-5 mx-1 items-center  w-12 h-12 rounded-full text-white focus:outline-none  hover:bg-arapawa-900 text-xl">
           +
@@ -11,7 +11,7 @@
           <RotateCcw class="w-5 h-5" />
         </Button>
       </div>
-      <div class="flex content-start overflow-y-auto w-full h-[400px] 2xl:h-[500px] flex-wrap">
+      <div class="flex m-auto gap-1 content-start overflow-y-auto w-full h-[400px] 2xl:h-[500px] flex-wrap">
         <OutdoorStation v-for="(station, index) in outdoorStations" :index="index" :key="index">
         </OutdoorStation>
       </div>

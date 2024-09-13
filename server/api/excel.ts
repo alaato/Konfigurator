@@ -1,5 +1,5 @@
 import ExcelJS from 'exceljs';
-import type { SelectedProducts } from '~/utils/interfaces';
+import fs from 'fs';
 
 export default defineEventHandler(async (event) => {
   try {
@@ -14,7 +14,7 @@ export default defineEventHandler(async (event) => {
   });
 
   const imageId1 = workbook.addImage({
-    filename: 'public/TCS_Logo_RGB.jpg',
+    buffer: fs.readFileSync('public/TCS_Logo_RGB.jpg'),
     extension: 'jpeg',
   });
   sheet.addImage(imageId1, 'A1:C6');
@@ -39,7 +39,7 @@ export default defineEventHandler(async (event) => {
   event.node.res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
   send(event, buffer)
   const string = JSON.stringify(buffer)
-  return {buffer: string, status: 200}
+  return {buffer: string, status: 200, message: 'ok'}
 }
   catch (error) {
     return {message: error, status: 500}

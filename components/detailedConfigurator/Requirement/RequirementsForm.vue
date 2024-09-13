@@ -1,21 +1,21 @@
 <template>
-	<div class="my-10 max-w-[960px]">
-		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center">
-			<Card class="number-of-apartments flex justify-center">
-				<Etagen v-model="numberFloors" />
-				<Wohnungen v-model="numberApartments" />
-				<!-- <IndoorStationInput v-model="numberIndoorStation" /> -->
-				<OutdoorStationInput v-model="numberOutdoorStation" />
-			</Card>
-			<div class="funktion-and-technologie-container">
-				<Funktion v-model="funktion" />
-				<Technologie :funktion="funktion" v-model="technologie" />
-			</div>
-			<Button class=" bg-arapawa-950 text-white text-center hover:bg-arapawa-900 min-w-1/2" type="submit">
-				bestätigen
-			</Button>
-		</form>
-	</div>
+  <div class="my-10 max-w-[960px]">
+    <form  ref="form" @submit.prevent="submitConfig"
+     class="gap-1 flex text-center flex-col content-center">
+      <div class="number-of-apartments flex justify-center gap-1 bg-transparent">
+        <Etagen v-model="numberFloors" />
+        <Wohnungen v-model="numberApartments" />
+        <OutdoorStationInput v-model="numberOutdoorStation" />
+      </div>
+      <div class="funktion-and-technologie-container flex flex-col gap-1 bg-transparent">
+        <Funktion v-model="funktion" />
+        <Technologie :funktion="funktion" v-model="technologie" />
+      </div>
+      <Button class="bg-arapawa-950 text-white text-center hover:bg-arapawa-900" type="submit">
+        bestätigen
+      </Button>
+    </form>
+  </div>
 </template>
 
 
@@ -24,7 +24,11 @@
 //imports and props
 import { Card } from '@/components/ui/card'
 import { useSelectedProductsStore } from '~/stores/products';
-
+import OutdoorStationInput from '@/components/SimpleConfigurator/StageOne/FormComponents/OutdoorStationInput.vue';
+import Etagen from '@/components/SimpleConfigurator/StageOne/FormComponents/Etagen.vue'
+import Wohnungen from '@/components/SimpleConfigurator/StageOne/FormComponents/Wohnungen.vue'
+import Funktion from '@/components/SimpleConfigurator/StageOne/FormComponents/Funktion.vue'
+import Technologie from '@/components/SimpleConfigurator/StageOne/FormComponents/Technologie.vue'
 import steuer from '@/data/steuer.json'
 import Etagen from '~/components/SimpleConfigurator/StageOne/FormComponents/Etagen.vue';
 import Wohnungen from '~/components/SimpleConfigurator/StageOne/FormComponents/Wohnungen.vue';

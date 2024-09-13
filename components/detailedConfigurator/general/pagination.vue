@@ -1,10 +1,10 @@
 <template>
 	<div className="flex justify-between items-center pt-2 border-t">
 	              <Button
-	                @click= "handlePageChange(currentPage - 1)"
-	                v-if="currentPage === 1"
+	                @click= "$emit('handlePageChange', currentPage - 1)"
 	                variant="outline"
 	                size="sm"
+					:disabled = "currentPage === 1"
 	              >
 	                <ChevronLeft class="h-4 w-4 mr-2" /> Previous
 	              </Button>
@@ -12,8 +12,8 @@
 	                Page {{currentPage}} of {{totalPages}}
 	              </span>
 	              <Button
-	                @click="handlePageChange(currentPage + 1)"
-	                v-if="currentPage === totalPages"
+	                @click="$emit('handlePageChange', currentPage + 1)"
+	                :disabled="currentPage === totalPages"
 	                variant="outline"
 	                size="sm"
 					class="flex items-center"
@@ -24,9 +24,9 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ 
-	handlePageChange: (newPage: number) => void;
-}>()
+import { ChevronLeft, ChevronRight } from 'lucide-vue-next';
+const emit = defineEmits(['handlePageChange'])
 const currentPage = defineModel<number>('currentPage', { required: true })
 const totalPages = defineModel<number>('totalPages', { required: true })
+
 </script>

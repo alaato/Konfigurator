@@ -1,7 +1,7 @@
 <template>
 	<Card class="bg-white text-left rounded-lg drop-shadow-sm overflow-hidden min-w-[360px] max-w-sm">
 			<img src="https://g-0f4zqqgpsyi.vusercontent.net/placeholder.svg?height=200&width=200" alt="Product Image"
-				width="300" height="300" class="w-full h-64 object-scale-down" />
+				width="300" height="300" class="w-full h-64 object-cover" />
 			<div class="p-6">
 				<h3 class="text-xl font-bold border-b pb-2 mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
 				{{ product.Text ? product.Text : '' }}
@@ -15,7 +15,7 @@
 						</CardHeader>
 						<CardContent>
 							<NumberField v-model="productQuantity" :default-value="0" :min="0"
-								:max="remainingOutdoorProducts">
+								:max="remainingProducts">
 								<NumberFieldContent class="h-10">
 									<NumberFieldDecrement />
 									<NumberFieldInput class="h-10" />
@@ -25,11 +25,11 @@
 						</CardContent>
 					</Card>
 					<Button class=" disabled:bg-slate-500 my-2 dark:bg-neutral-950  dark:hover:bg-neutral-300"
-						:disabled="remainingOutdoorProducts == 0" @click="$emit('addProduct', product)">
+						:disabled="remainingProducts == 0" @click="$emit('addProduct', product)">
 						hinzufügen
 					</Button>
-					<p v-if="productQuantity > remainingOutdoorProducts" class="text-red-900"> max : {{
-						remainingOutdoorProducts }}</p>
+					<p v-if="productQuantity > remainingProducts" class="text-red-900"> max : {{
+						remainingProducts }}</p>
 				</div>
 			</div>
 		</Card>
@@ -42,5 +42,5 @@ defineProps<{
 	productType: string;
 }>()
 const productQuantity = defineModel<number>('productQuantity', { required: true })
-const remainingOutdoorProducts = defineModel<number>('remainingOutdoorProducts', { required: true })
+const remainingProducts = defineModel<number>('remainingProducts',{ required: true })
 </script>

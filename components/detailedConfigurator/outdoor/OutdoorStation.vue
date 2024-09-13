@@ -1,19 +1,17 @@
 <template>
-  <Card class="apartment-card shadow-transparent w-72 h-44 text-center">
+  <Card class="apartment-card shadow-transparent w-[302px] px-6 h-44 text-center">
+    
     <CardHeader>
       <CardTitle>Aussenstation {{ index + 1 }}</CardTitle>
     </CardHeader>
+
     <CardContent class="apartment-actions flex justify-center items-center">
-      <outdoorSelectModal  title="Aussenstation auswählen" trigger-text="Aussenstation auswählen"></outdoorSelectModal>
+      <outdoorSelectModal/>
       <DuplicateButton @click="handleDuplicateOutdoorStation" />
       <DeleteButton @click="handleDeleteOutdoorStation" />
     </CardContent>
+    
   </Card>
-
-  <!-- <img :src="apartment.stationImage" alt="Selected Station" v-if="apartment.stationImage" /> -->
-  <!-- <Button @click="selectStation">Innenstation auswählen</Button>
-    <IndoorStationSelector v-if="showSelector" @stationSelected="stationSelected" /> -->
-
 </template>
 
 <script lang="ts" setup>
