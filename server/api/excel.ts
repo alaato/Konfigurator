@@ -1,5 +1,6 @@
 import ExcelJS from 'exceljs';
 import fs from 'fs';
+import { resolve } from 'path';
 
 export default defineEventHandler(async (event) => {
   try {
@@ -12,12 +13,15 @@ export default defineEventHandler(async (event) => {
     headerFooter:{firstHeader: "Stückliste", firstFooter: "TCS TürControlSysteme AG"},
     pageSetup:{paperSize: 9, orientation:'portrait'}
   });
+  const filePath = resolve(`public/TCS_Logo_RGB.jpg`);
+  if(filePath){
+    const imageId1 = workbook.addImage({
+      buffer: fs.readFileSync(filePath),
+      extension: 'jpeg',
+    });
+    sheet.addImage(imageId1, 'A1:C6');
+  }
 
-  const imageId1 = workbook.addImage({
-    buffer: fs.readFileSync('public/TCS_Logo_RGB.jpg'),
-    extension: 'jpeg',
-  });
-  sheet.addImage(imageId1, 'A1:C6');
   const Stückliste = sheet.addTable({
     name: 'Stückliste',
     ref: 'F7',
