@@ -1,9 +1,8 @@
 <template>
-	<div class="w-full flex flex-col justify-end items-end gap-1 overflow-y-scroll max-h-[400px]">
+	<div class="w-full flex flex-col justify-end items-end gap-1 overflow-y-scroll">
 
-		<Card  class="px-4 py-3 h-max shadow-sm w-full">
-
-			<Table  id="stückliste">
+		<Card  class="px-4 py-3 h-max shadow-sm overflow-y-scroll w-full max-h-[500px]">
+			<Table class="" id="stückliste">
 				<TableCaption class="self-start">Ihre Stückliste</TableCaption>
 				<TableHeader>
 					<TableRow>
@@ -216,7 +215,8 @@ async function generateEXCEL() {
 
 	if (response.status != 500) {
 		console.log(response)
-		const url = window.URL.createObjectURL(response.buffer);
+		const mediaStream = new MediaStream();
+		const url = window.URL.createObjectURL(response);
 		const a = document.createElement('a');
 		a.href = url;
 		a.download = 'stückliste.xlsx';

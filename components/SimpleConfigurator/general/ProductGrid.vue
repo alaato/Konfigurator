@@ -1,10 +1,10 @@
 <template>
 	<section>
 		<div v-if="currentStage == 'Aussenstation'" class="flex flex-wrap justify-center gap-2">
-			<OutdoorProduct v-for="product in products" :product="product.node" :key="product.id" />
+			<OutdoorProduct v-for="product in products" :product="product" :key="product.id" />
 		</div>
 		<div v-if="currentStage == 'Innenstation'" class="flex flex-wrap justify-center gap-2">
-			<IndoorProduct v-for="product in products" :product="product.node" :key="product.node.id" />
+			<IndoorProduct v-for="product in products" :product="product" :key="product.id" />
 		</div>
 	</section>
 </template>

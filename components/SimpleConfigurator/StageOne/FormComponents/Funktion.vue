@@ -2,7 +2,7 @@
 	<Card class="funktion-container">
 		<CardHeader class="pb-0 mb-0">
 			<CardTitle>Funktion</CardTitle>
-			<CardDescription>Wählen Sie aus, Audio oder Video</CardDescription>
+			<CardDescription>Wählen Sie aus, Audio, Video oder beide</CardDescription>
 		</CardHeader>
 		<CardContent class="flex justify-center">
 			<div class="w-max">
@@ -11,9 +11,14 @@
 				<RadioInput text="Audio" />
 			</div>
 			<div class="w-max">
-				<input class="peer opacity-0 w-1 h-1 p-0 m-0" n type="radio" id="Video" name="Funktion"
+				<input class="peer opacity-0 w-1 h-1 p-0 m-0" type="radio" id="Video" name="Funktion"
 					v-model="funktion" value="Video" />
 					<RadioInput text="Video" />
+			</div>
+			<div class="w-max">
+				<input class="peer opacity-0 w-1 h-1 p-0 m-0" type="radio" id="beide" name="Funktion"
+					v-model="funktion" value="beide" />
+					<RadioInput text="beide" />
 			</div>
 		</CardContent>
 	</Card>

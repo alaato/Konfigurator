@@ -19,11 +19,15 @@ const productsFilter = {
   technologie: filter.value.technologie,
   video: filter.value.Video
 }
-const products = indoorStations.data?.getProductListing.edges.filter(product => {
-  if (productsFilter.video && product.node.Video2 && product.node.PERIODE1)
+
+const products = indoorStations.filter(product => {
+  if (productsFilter.video && product.Video2 && product.Kommunikationstechnologie4164.includes(productsFilter.technologie))
     return true
-  else if (!productsFilter.video && !product.node.Video2 && product.node.PERIODE1)
+  else if (!productsFilter.video && !product.Video2 && product.Kommunikationstechnologie4164.includes(productsFilter.technologie))
     return true
+})
+onMounted(() => {
+  console.log(productsFilter)
 })
 // functions
 function reset() {

@@ -1,6 +1,7 @@
 <template>
-	<div class="zubehör flex justify-center items-center flex-col gap-2 max-h-32">
-		<div class=" flex gap-1">
+	<div class="zubehör flex justify-center items-center flex-col gap-2">
+		<SelectedProductsSideBarContainer/>
+		<div class="flex gap-1">
 			<p v-if="!(umSchalterNeeded && doorOpener)">Keine Zubehör verfügbar</p>
 			<ZubehörCard v-if="Umtauscher" :product="Umtauscher.node"></ZubehörCard>
 			<ZubehörCard v-if="doorOpener" :product="doorOpener.node"></ZubehörCard>
@@ -12,6 +13,7 @@
 <script setup>
 import ZubehörCard from './ZubehörCard.vue';
 import zubehör from '@/data/Zubehoer.json'
+import SelectedProductsSideBarContainer from '../general/SelectedProductsSideBarContainer.vue';
 import funktionErweiterungen from '@/data/Funktionserweiterung.json'
 
 //const

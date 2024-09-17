@@ -1,7 +1,7 @@
 <template>
 	<div class="my-10 max-w-[960px]">
 		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center">
-			<WiringCount v-model="wiringCount"></WiringCount>
+			<!-- <WiringCount v-model="wiringCount"></WiringCount> -->
 
 			<div class="number-of-apartments flex justify-center my-1 gap-1">
 				<IndoorStationInput v-model="numberIndoorStation" />
@@ -10,8 +10,8 @@
 
 			<div class="funktion-and-technologie-container gap-1">
 				<Funktion v-model="funktion" />
-				<Technologie v-if="funktion == 'Video' && numberIndoorStation <= 24 && wiringCount > 4"
-					v-model="technologie" />
+				<Technologie v-if="funktion == 'Video' || funktion == 'beide'"
+					v-model="technologie" :number-outdoor-stations="numberOutdoorStation" :numeber-indoor-stations="numberIndoorStation" />
 			</div>
 
 			<Button class="bg-arapawa-950 justify-center text-white hover:bg-arapawa-800 min-w-1/2 my-1" type="submit">
@@ -42,6 +42,9 @@ const form = ref<InstanceType<typeof HTMLFormElement> | null>(null);
 const numberIndoorStation = useState("numberIndoorStation", () => 1);
 const numberOutdoorStation = useState("numberOutdoorStation", () => 1);
 const wiringCount = ref(2);
+const showTech = computed(()=> (funktion.value == 'Video' || funktion.value == "beide" ) 
+&& numberIndoorStation.value <= 24 && 
+numberOutdoorStation.value == 1 )
 
 // stores
 const visitedStore = useVisitedStore();
@@ -57,7 +60,7 @@ function setFilter() {
 	filter.value.funktion = funktion.value
 	funktion.value == "Video" ? filter.value.Video = true : filter.value.Video = null;
 
-	if ((technologie.value == "Video-6-Draht" && funktion.value == "Video") || numberIndoorStation.value > 24) {
+	if ((technologie.value == "Video-6-Draht" && funktion.value == "Video" || funktion.value == "beide") || numberIndoorStation.value > 24) {
 		filter.value.technologie = "TCS:BUS"
 	}
 	else

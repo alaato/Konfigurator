@@ -17,7 +17,7 @@ function cleanEmptyObjects(obj) {
 }
 async function getOutdoor() {
     const data = JSON.stringify({
-        query: `query getProductListing($filter: String!) {
+        query: `query getProductListing($filter: String! defaultLanguage: "de") {
       getProductListing(filter: $filter) {
         totalCount
         edges

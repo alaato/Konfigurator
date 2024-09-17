@@ -1,47 +1,59 @@
 <template>
-	<ProductSelection :selectedProducts="selectedProducts.outdoorProducts" 
-	@resetSelection="reset" :products="products"
-	 v-model="remainingoutdoorProducts" />
+	<ProductSelection :selectedProducts="selectedProducts.outdoorProducts" @resetSelection="reset" :products="products"
+		v-model="remainingoutdoorProducts" />
 </template>
-
 
 <script setup>
 //imports
 
-import ProductSelection from '../general/ProductSelection.vue'
-import outdoorsStations from '@/data/aussenstationen.json'
+import ProductSelection from "../general/ProductSelection.vue";
+import outdoorsStations from "@/data/aussenstationen.json";
 
 //consts
 const selectedProductsStore = useSelectedProductsStore();
-const { selectedProducts, filter } = storeToRefs(selectedProductsStore)
+const { selectedProducts, filter } = storeToRefs(selectedProductsStore);
 const remainingoutdoorProducts = computed(() => {
-	return selectedProducts.value.outdoorProducts.neededQuantity - selectedProducts.value.outdoorProducts.SelectedQuantity
-})
-const productsFilter = {
-	AnzhalTatsen: selectedProducts.value.indoorProducts.neededQuantity,
-	funktion: filter.value.funktion == "Video" ? "Video-Außenstation" : "Audio-Außenstation",
+	return (
+		selectedProducts.value.outdoorProducts.neededQuantity -
+		selectedProducts.value.outdoorProducts.SelectedQuantity
+	);
+});
+
+const productsFilter = SetSearchFilters();
+const products = FindOutdoorProducts();
+
+function FindOutdoorProducts() {
+	let products = outdoorsStations?.filter((product) => {
+		if (filter.value.funktion == "Video" &&
+			product.Kommunikationstechnologie4164 == productsFilter.technologie &&
+			product.AnzhalTatsen == productsFilter.AnzhalTatsen &&
+			product.Geraeteart4077 == productsFilter.funktion)
+			return true;
+		else if (filter.value.funktion == "Audio" &&
+			product.AnzhalTatsen == productsFilter.AnzhalTatsen &&
+			product.Geraeteart4077 == productsFilter.funktion)
+			return true;
+		else if (filter.value.funktion == "beide" &&
+			product.AnzhalTatsen == productsFilter.AnzhalTatsen &&
+			product.Kommunikationstechnologie4164 == productsFilter.technologie &&
+			(product.Geraeteart4077 == "Audio-Außenstation" || product.Geraeteart4077 == "Video-Außenstation")
+		)
+			return true;
+	});
+	return products;
 }
-if (filter.value.funktion == "Video")
-	productsFilter.technologie = filter.value.technologie
-
-let products = outdoorsStations?.edges.filter(product => {
-	if (filter.value.funktion == "Video" && product.node.Kommunikationstechnologie4164 == productsFilter.technologie &&
-		product.node.AnzhalTatsen == productsFilter.AnzhalTatsen &&
-		product.node.Geraeteart4077 == productsFilter.funktion)
-		return true
-	else if (filter.value.funktion == "Audio" && product.node.AnzhalTatsen == productsFilter.AnzhalTatsen && product.node.Geraeteart4077 == productsFilter.funktion)
-		return true
-})
-
-if (products.length == 0){
-	products = outdoorsStations.data?.getProductListing.edges.filter(product => {
-		if (filter.value.funktion == "Video" && product.node.Kommunikationstechnologie4164 == productsFilter.technologie &&
-			product.node.AnzhalTatsen == productsFilter.AnzhalTatsen + 1 &&
-			product.node.Geraeteart4077 == productsFilter.funktion)
-			return true
-		else if (filter.value.funktion == "Audio" && product.node.AnzhalTatsen == productsFilter.AnzhalTatsen && product.node.Geraeteart4077 == productsFilter.funktion)
-			return true
-	})
+function SetSearchFilters() {
+	const productsFilter = {
+		AnzhalTatsen: selectedProducts.value.indoorProducts.neededQuantity,
+		funktion: filter.value.funktion == "Video"
+			? "Video-Außenstation"
+			: filter.value.funktion == "Audio"
+				? "Audio-Außenstation"
+				: "",
+	};
+	if (filter.value.funktion != "Audio")
+		productsFilter.technologie = filter.value.technologie;
+	return productsFilter;
 }
 
 // functions

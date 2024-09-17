@@ -32,7 +32,6 @@ body {
   height: 0.3rem;
 
 }
-/* Optional: show position indicator in red */
 ::-webkit-scrollbar-thumb {
   background: black;
   background-color: #949393;

@@ -18,8 +18,8 @@ function cleanEmptyObjects(obj) {
 }
 async function getOutdoor() {
   const data = JSON.stringify({
-    query: `query getProductListing($filter: String!) {
-      getProductListing(filter: $filter) {
+    query: `query getProductListing($defaultLanguage: String! $filter: String!) {
+      getProductListing(defaultLanguage : $defaultLanguage filter: $filter) {
         totalCount
         edges {
           node {
@@ -54,7 +54,8 @@ async function getOutdoor() {
       }
     }`,
     variables: {
-      filter: JSON.stringify(FilterOptions)
+      filter: JSON.stringify(FilterOptions),
+      defaultLanguage: 'de'
     }
   });
 
@@ -71,12 +72,15 @@ async function getOutdoor() {
 
   const json = await response.json();
   const clean = cleanEmptyObjects(json)
+  console.log(clean)
+
   clean.data.getProductListing.edges.map(edge => {
     edge.node.Audio[0].features = edge.node.Audio[0].features?.filter(feature => feature)
   })
   addAnzahlTastenToObject(clean)
-  const jsonData = JSON.stringify(clean)
-  fs.writeFileSync('./data/aussenstationen.json', jsonData);
+  const products = clean.data.getProductListing.edges.map(edge => edge.node)
+  const jsonProducts = JSON.stringify(products)
+  fs.writeFileSync('./data/aussenstationen.json', jsonProducts);
 }
 
 getOutdoor()

@@ -21,7 +21,7 @@ function removeEmpty(arr) {
 async function getInnenstation(id) {
   const data = JSON.stringify({
     query:  `query getProductListing($filter: String!) {
-      getProductListing(filter: $filter) {
+      getProductListing(filter: $filter defaultLanguage: "de") {
         totalCount
         edges {
           node {
@@ -57,7 +57,8 @@ async function getInnenstation(id) {
       }
     }`,
     variables: {
-      filter: JSON.stringify(FilterOptions)
+      filter: JSON.stringify(FilterOptions),
+defaultLanguage: "de"
     }
   });
 
@@ -77,8 +78,9 @@ async function getInnenstation(id) {
   clean.data.getProductListing.edges.map(edge => {
     edge.node.Audio[0].features = edge.node.Audio[0].features.filter(feature => feature)
   })
-  const jsonData = JSON.stringify(clean)
- fs.writeFileSync('./data/innenestationen.json', jsonData);
+  const products = clean.data.getProductListing.edges.map(edge => edge.node)
+  const jsonProducts = JSON.stringify(products)
+ fs.writeFileSync('./data/innenestationen.json', jsonProducts);
 }
 
 

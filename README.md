@@ -65,3 +65,20 @@
 ### working on the Sugar angebot template
 - added a table of the products and formatted the template and now it looks better
 
+### 13.09.2024 
+### finished The template
+
+
+### 16.09.2024
+### Sugar Api Produkte
+
+### resaerching the Sugar Api
+- how to interact
+- what are the possiblties
+- what data do we need
+
+### 17.09
+### changing the logic according to the Program Flow of Ralf
+- V2D when only One Station
+- both Audio and Video
+- changed the filter for searching the products
