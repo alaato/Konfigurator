@@ -6,7 +6,7 @@
     </CardHeader>
 
     <CardContent class="apartment-actions flex justify-center items-center">
-      <outdoorSelectModal/>
+      <OutdoorSelectModal/>
       <DuplicateButton @click="handleDuplicateOutdoorStation" />
       <DeleteButton @click="handleDeleteOutdoorStation" />
     </CardContent>
@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 //imports
 import DeleteButton from '../general/DeleteButton.vue';
-import outdoorSelectModal from './OutdoorSelect.vue';
+import OutdoorSelectModal from './OutdoorSelect.vue';
 import DuplicateButton from '@/components/detailedConfigurator/general/DuplicateButton.vue'
 
 //consts

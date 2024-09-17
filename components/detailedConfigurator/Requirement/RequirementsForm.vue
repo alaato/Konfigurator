@@ -30,11 +30,7 @@ import Wohnungen from '@/components/SimpleConfigurator/StageOne/FormComponents/W
 import Funktion from '@/components/SimpleConfigurator/StageOne/FormComponents/Funktion.vue'
 import Technologie from '@/components/SimpleConfigurator/StageOne/FormComponents/Technologie.vue'
 import steuer from '@/data/steuer.json'
-import Etagen from '~/components/SimpleConfigurator/StageOne/FormComponents/Etagen.vue';
-import Wohnungen from '~/components/SimpleConfigurator/StageOne/FormComponents/Wohnungen.vue';
-import OutdoorStationInput from '~/components/SimpleConfigurator/StageOne/FormComponents/OutdoorStationInput.vue';
-import Funktion from '~/components/SimpleConfigurator/StageOne/FormComponents/Funktion.vue';
-import Technologie from '~/components/SimpleConfigurator/StageOne/FormComponents/Technologie.vue';
+
 
 // variables
 const numberApartments = useState("numberApartments", () => 1);

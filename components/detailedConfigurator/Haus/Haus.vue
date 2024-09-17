@@ -7,7 +7,7 @@
 
   <div class="flex">
     <FloorsContainer :floors="house.floors"></FloorsContainer>
-    <outdoorContainer :outdoor-stations="house.outdoorStations"></outdoorContainer>
+    <OutdoorContainer :outdoor-stations="house.outdoorStations"></OutdoorContainer>
   </div>
 </div>
 
@@ -17,7 +17,7 @@
 import DeleteButton from '../general/DeleteButton.vue';
 
 import FloorsContainer from '@/components/detailedConfigurator/indoor/FloorsContainer.vue';
-import outdoorContainer from '~/components/detailedConfigurator/outdoor/OutdoorContainer.vue';
+import OutdoorContainer from '@/components/detailedConfigurator/outdoor/OutdoorContainer.vue';
 
 const props = defineProps(['houseindex', 'house'])
 provide('houseIndex', props.houseindex)

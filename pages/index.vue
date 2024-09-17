@@ -4,7 +4,7 @@
 		<div class="versions flex gap-2">
 			<NuxtLink class="border p-3 rounded-md bg-arapawa-950 dark:bg-white text-white dark:text-black" to="simple">
 				Schnell</NuxtLink>
-			<NuxtLink class="border p-3 rounded-md bg-arapawa-950 dark:bg-white text-white dark:text-black" to="detail">
+			<NuxtLink class="border p-3 rounded-md bg-arapawa-950 dark:bg-white text-white dark:text-black" to="requirements">
 				Custom</NuxtLink>
 		</div>
 

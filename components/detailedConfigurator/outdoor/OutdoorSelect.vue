@@ -48,12 +48,12 @@ const productsFilter: FilterOptions = {
 }
 if (filter.value.funktion == "Video")
 	productsFilter.technologie = filter.value.technologie
-let products = outdoorStations?.edges.filter(product => {
-	if (filter.value.funktion == "Video" && product.node.Kommunikationstechnologie4164 == productsFilter.technologie &&
-		product.node.AnzhalTatsen == productsFilter.AnzhalTatsen &&
-		product.node.Geraeteart4077 == productsFilter.funktion)
+let products = outdoorStations?.filter(product => {
+	if (filter.value.funktion == "Video" && product.Kommunikationstechnologie4164 == productsFilter.technologie &&
+		product.AnzhalTatsen == productsFilter.AnzhalTatsen &&
+		product.Geraeteart4077 == productsFilter.funktion)
 		return true
-	else if (filter.value.funktion == "Audio" && product.node.AnzhalTatsen == productsFilter.AnzhalTatsen && product.node.Geraeteart4077 == productsFilter.funktion)
+	else if (filter.value.funktion == "Audio" && product.AnzhalTatsen == productsFilter.AnzhalTatsen && product.Geraeteart4077 == productsFilter.funktion)
 		return true
 })
 
