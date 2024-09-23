@@ -5,7 +5,7 @@
 				<CardDescription> {{description? description :  `Wählen Sie aus, wie viele ${title}` }}</CardDescription>
 			</CardHeader>
 			<CardContent>
-				<NumberField class="h-1/2" v-model="number" :required="true" :default-value="1" :min="1" :max="100">
+				<NumberField class="h-1/2" v-model="number" :required="true" :default-value="1" :min="1" :max="4">
 					<NumberFieldContent>
 						<NumberFieldDecrement />
 						<NumberFieldInput />

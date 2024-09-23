@@ -42,11 +42,11 @@ export default defineEventHandler(async (event) => {
   event.node.res.setHeader('Content-Disposition', 'attachment; filename="Stückliste.xlsx"');
   event.node.res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
   send(event, buffer)
-  const string = JSON.stringify(buffer)
-  return {buffer: string, status: 200, message: 'ok'}
+  return {message: buffer, status:200, buffer}
 }
   catch (error) {
-    return {message: error, status: 500}
+    console.log(error.message)
+    return {message: error.message, status: 500}
   }
 });
 

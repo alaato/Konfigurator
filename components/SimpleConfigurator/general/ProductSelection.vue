@@ -6,8 +6,6 @@
 			<RotateCcw class="w-6 h-6" />
 		</Button>
 		<ProductGrid v-else :products="products" />
-		<p v-if="products?.length == 0">Keine Aussenstation verfügbar. versuchen Sie eine mit
-			{{ selectedProducts?.SelectedQuantity + 1 }} tasten anstatt</p>
 	</div>
 </template>
 

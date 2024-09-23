@@ -82,3 +82,22 @@
 - V2D when only One Station
 - both Audio and Video
 - changed the filter for searching the products
+
+### 19.09
+### found out how to fetch images and display them correctly
+- fetch thumbnail from pimcore because images are too big
+- add images loccaly in case failed attempt to fetch from pimcore
+
+### 20.09
+### finshed sugar template
+
+
+### 23.09
+
+### Fecthed accsseories
+- check all the products and what accsssories they have
+- fetch them from pim core
+- map the feilds and extract Data
+- check if the selected products have accssories
+- if selected products have accssories, look for a matching Id and display A card
+- add function to acssories 

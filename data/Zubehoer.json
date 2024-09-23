@@ -1,818 +1,2415 @@
-{
-    "data": {
-        "getProductListing": {
-            "totalCount": 20,
-            "edges": [
-                {
-                    "node": {
-                        "id": "53",
-                        "MNR": "0038794",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": null,
-                        "Video2": true,
-                        "IP1": null,
-                        "PERIODE1": null,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör V2D"
-                        }
-                    }
-                },
-                {
-                    "node": {
-                        "id": "2238",
-                        "MNR": "MCARD01",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": null,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 14.5,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "2240",
-                        "MNR": "MKEY01",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": null,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 14,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "2427",
-                        "MNR": "PAKDA-EN",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 76,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {},
-                            {
-                                "features": [
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
-                                        "text": null
-                                    }
-                                ]
-                            },
-                            {
-                                "features": [
-                                    {
-                                        "name": "AnzahlKlingeltasten3938",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "Mikrofonabsetzbarin4292",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "LautstaerkeGespraech4008",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "AkustischeRufunterscheidungen",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null
-                                ]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "2703",
-                        "MNR": "PRODA-EN",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 73,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {},
-                            {
-                                "features": [
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
-                                        "text": null
-                                    }
-                                ]
-                            },
-                            {
-                                "features": [
-                                    {
-                                        "name": "AnzahlKlingeltasten3938",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "Mikrofonabsetzbarin4292",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "LautstaerkeGespraech4008",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "AkustischeRufunterscheidungen",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null
-                                ]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3510",
-                        "MNR": "ZAM1101-0010",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 121,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {},
-                            {
-                                "features": [
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
-                                        "text": null
-                                    }
-                                ]
-                            },
-                            {
-                                "features": [
-                                    {
-                                        "name": "AnzahlKlingeltasten3938",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "Mikrofonabsetzbarin4292",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "LautstaerkeGespraech4008",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "AkustischeRufunterscheidungen",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null
-                                ]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3515",
-                        "MNR": "ZAS1312-0010",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 76,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3516",
-                        "MNR": "ZAS1334-0010",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 76,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3517",
-                        "MNR": "ZAS1356-0010",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 76,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3552",
-                        "MNR": "ZAU4001-0002",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": null,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 75,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {},
-                            {
-                                "features": [
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
-                                        "text": null
-                                    }
-                                ]
-                            },
-                            {
-                                "features": [
-                                    {
-                                        "name": "AnzahlKlingeltasten3938",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "Mikrofonabsetzbarin4292",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "LautstaerkeGespraech4008",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "AkustischeRufunterscheidungen",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null
-                                ]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3555",
-                        "MNR": "ZIA5001-0145",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": false,
-                        "PERIODE1": 14,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {},
-                            {
-                                "features": [
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
-                                        "text": null
-                                    }
-                                ]
-                            },
-                            {
-                                "features": [
-                                    {
-                                        "name": "AnzahlKlingeltasten3938",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "Mikrofonabsetzbarin4292",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "LautstaerkeGespraech4008",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "AkustischeRufunterscheidungen",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null
-                                ]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3557",
-                        "MNR": "ZIA5003-0145",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": false,
-                        "PERIODE1": 9.58,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3559",
-                        "MNR": "ZIA5005-0145",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": true,
-                        "PERIODE1": 14,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3560",
-                        "MNR": "ZIA5006-0145",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": true,
-                        "IP1": true,
-                        "PERIODE1": 13.87,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3572",
-                        "MNR": "ZIT24340",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": true,
-                        "IP1": true,
-                        "PERIODE1": 44,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3573",
-                        "MNR": "ZIT3030-0010",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 66,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3574",
-                        "MNR": "ZIT3222-0030",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 150,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {},
-                            {
-                                "features": [
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "MAXmoeglicheLasteinheitenAUDIO",
-                                        "text": null
-                                    }
-                                ]
-                            },
-                            {
-                                "features": [
-                                    {
-                                        "name": "AnzahlKlingeltasten3938",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "Mikrofonabsetzbarin4292",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "LautstaerkeGespraech4008",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    {
-                                        "name": "VerwendungbeiAnzahl Wohneinheitenvon4938",
-                                        "text": null
-                                    },
-                                    {
-                                        "name": "VerwendungbeiAnzahlWohneinheitenbis4939",
-                                        "text": null
-                                    },
-                                    null,
-                                    {
-                                        "name": "AkustischeRufunterscheidungen",
-                                        "text": null
-                                    },
-                                    null,
-                                    null,
-                                    null,
-                                    null,
-                                    null
-                                ]
-                            }
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "3575",
-                        "MNR": "ZIT5000-0030",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": true,
-                        "Video2": true,
-                        "IP1": true,
-                        "PERIODE1": 161,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "7225",
-                        "MNR": "ZAA2009-0030",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": null,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 133,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                },
-                {
-                    "node": {
-                        "id": "7226",
-                        "MNR": "ZAA2010-0010",
-                        "Geraeteart4077": "",
-                        "Kommunikationstechnologie4164": "",
-                        "Audio1": null,
-                        "Video2": null,
-                        "IP1": null,
-                        "PERIODE1": 179,
-                        "TEXT": null,
-                        "parent": {
-                            "MNR": "Zubehör TCS:BUS"
-                        },
-                        "Audio": [
-                            {}
-                        ]
-                    }
-                }
-            ]
-        }
-    }
-}
+[
+  {
+    "MNR": "ZAU2001-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU2001-0030",
+    "id": "3518",
+    "TEXT": "TCS Unterputzmontageset für 1 AMI-Modul,<br/>einspaltig, ZAU2001-0030<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZAU2001-0030<br/><br/>PRODUKTMERKMALE<br/>Frontplatte und Unterputzkasten<br/>Anzahl integrierbarer Module: 1<br/>Modulintegration: Verschraubung auf Gewindebolzen<br/>Öffnungsprinzip: sichbare Verschraubung von vorn<br/>funktional erweiterbar: mit Außenstationsmodulen<br/>der Serie AMI<br/>Montageform: Unterputzmontage<br/>Material / Farbe Frontplatte: Edelstahl geschliffen<br/>und gebürstet<br/>Material / Farbe UP-Kasten: Edelstahl geschliffen<br/>und gebürstet<br/><br/>TECHNISCHE DATEN<br/>Materialstärke Frontplatte: 3 mm<br/>Frontplattenausschnitt HxB mm: 82x82<br/>Frontplatte HxBxT mm: 200x200x3<br/>UP-Kasten HxBxT mm: 180x180x50<br/>zulässige Umgebungstemperatur: -20 bis +50 °C<br/><br/>OPTIONALES ZUBEHÖR<br/>Funktionsmodule der Serie AMI<br/><br/>",
+    "Geraeteart4077": "Frontplatte und Unterputzkasten",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 225,
+    "PERIODE2": 180,
+    "PERIODE3": 195,
+    "PERIODE4": 203,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [{ "id": "11375" }],
+    "FrontalAnsichtFrei": {
+      "id": "8575",
+      "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8575/image-thumb__8575__Konfigurator/ZAU2001-0030_frontal_frei.1aa2a387.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAU2005-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU2005-0030",
+    "id": "3526",
+    "TEXT": "TCS Unterputzmontageset für 5 AMI-Module,<br/>einspaltig, ZAU2005-0030<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZAU2005-0030<br/><br/>PRODUKTMERKMALE<br/>Frontplatte und Unterputzkasten<br/>Anzahl integrierbarer Module: 5<br/>Modulintegration: Verschraubung auf Gewindebolzen<br/>Öffnungsprinzip: sichbare Verschraubung von vorn<br/>funktional erweiterbar: mit Außenstationsmodulen<br/>der Serie AMI<br/>Montageform: Unterputzmontage<br/>Material / Farbe Frontplatte: Edelstahl geschliffen<br/>und gebürstet<br/>Material / Farbe UP-Kasten: Edelstahl geschliffen<br/>und gebürstet<br/><br/>TECHNISCHE DATEN<br/>Materialstärke Frontplatte: 3 mm<br/>Frontplattenausschnitt HxB mm: 82x82<br/>Frontplatte HxBxT mm: 680x200x3<br/>UP-Kasten HxBxT mm: 660x180x50<br/>zulässige Umgebungstemperatur: -20 bis +50 °C<br/><br/>OPTIONALES ZUBEHÖR<br/>Funktionsmodule der Serie AMI<br/><br/>",
+    "Geraeteart4077": "Frontplatte und Unterputzkasten",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 345,
+    "PERIODE2": 300,
+    "PERIODE3": 315,
+    "PERIODE4": 323,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "8753",
+      "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8753/image-thumb__8753__Konfigurator/ZAU2005-0030_frontal_frei.aa5f9330.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAU2004-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU2004-0030",
+    "id": "3524",
+    "TEXT": "TCS Unterputzmontageset für 4 AMI-Module,<br/>einspaltig, ZAU2004-0030<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZAU2004-0030<br/><br/>PRODUKTMERKMALE<br/>Frontplatte und Unterputzkasten<br/>Anzahl integrierbarer Module: 4<br/>Modulintegration: Verschraubung auf Gewindebolzen<br/>Öffnungsprinzip: sichbare Verschraubung von vorn<br/>funktional erweiterbar: mit Außenstationsmodulen<br/>der Serie AMI<br/>Montageform: Unterputzmontage<br/>Material / Farbe Frontplatte: Edelstahl geschliffen<br/>und gebürstet<br/>Material / Farbe UP-Kasten: Edelstahl geschliffen<br/>und gebürstet<br/><br/>TECHNISCHE DATEN<br/>Materialstärke Frontplatte: 3 mm<br/>Frontplattenausschnitt HxB mm: 82x82<br/>Frontplatte HxBxT mm: 560x200x3<br/>UP-Kasten HxBxT mm: 540x180x50<br/>zulässige Umgebungstemperatur: -20 bis +50 °C<br/><br/>OPTIONALES ZUBEHÖR<br/>Funktionsmodule der Serie AMI<br/><br/>",
+    "Geraeteart4077": "Frontplatte und Unterputzkasten",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 315,
+    "PERIODE2": 270,
+    "PERIODE3": 285,
+    "PERIODE4": 293,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "8754",
+      "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8754/image-thumb__8754__Konfigurator/ZAU2004-0030_frontal_frei.ce885845.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAU2008-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU2008-0030",
+    "id": "3532",
+    "TEXT": "TCS Unterputzmontageset für 2x3 AMI-Module,<br/>zweispaltig, ZAU2008-0030<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZAU2008-0030<br/><br/>PRODUKTMERKMALE<br/>Frontplatte und Unterputzkasten<br/>Anzahl integrierbarer Module: 2x3<br/>Modulintegration: Verschraubung auf Gewindebolzen<br/>Öffnungsprinzip: sichbare Verschraubung von vorn<br/>funktional erweiterbar: mit Außenstationsmodulen<br/>der Serie AMI<br/>Montageform: Unterputzmontage<br/>Material / Farbe Frontplatte: Edelstahl geschliffen<br/>und gebürstet<br/>Material / Farbe UP-Kasten: Edelstahl geschliffen<br/>und gebürstet<br/><br/>TECHNISCHE DATEN<br/>Materialstärke Frontplatte: 3 mm<br/>Frontplattenausschnitt HxB mm: 82x82<br/>Frontplatte HxBxT mm: 440x320x3<br/>UP-Kasten HxBxT mm: 420x300x50<br/>zulässige Umgebungstemperatur: -20 bis +50 °C<br/><br/>OPTIONALES ZUBEHÖR<br/>Funktionsmodule der Serie AMI<br/><br/>",
+    "Geraeteart4077": "Frontplatte und Unterputzkasten",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 435,
+    "PERIODE2": 390,
+    "PERIODE3": 405,
+    "PERIODE4": 413,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "8752",
+      "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8752/image-thumb__8752__Konfigurator/ZAU2008-0030_frontal_frei.1f6a099a.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAU2003-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU2003-0030",
+    "id": "3522",
+    "TEXT": "TCS Unterputzmontageset für 3 AMI-Module,<br/>einspaltig, ZAU2003-0030<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZAU2003-0030<br/><br/>PRODUKTMERKMALE<br/>Frontplatte und Unterputzkasten<br/>Anzahl integrierbarer Module: 3<br/>Modulintegration: Verschraubung auf Gewindebolzen<br/>Öffnungsprinzip: sichbare Verschraubung von vorn<br/>funktional erweiterbar: mit Außenstationsmodulen<br/>der Serie AMI<br/>Montageform: Unterputzmontage<br/>Material / Farbe Frontplatte: Edelstahl geschliffen<br/>und gebürstet<br/>Material / Farbe UP-Kasten: Edelstahl geschliffen<br/>und gebürstet<br/><br/>TECHNISCHE DATEN<br/>Materialstärke Frontplatte: 3 mm<br/>Frontplattenausschnitt HxB mm: 82x82<br/>Frontplatte HxBxT mm: 440x200x3<br/>UP-Kasten HxBxT mm: 420x180x50<br/>zulässige Umgebungstemperatur: -20 bis +50 °C<br/><br/>OPTIONALES ZUBEHÖR<br/>Funktionsmodule der Serie AMI<br/><br/>",
+    "Geraeteart4077": "Frontplatte und Unterputzkasten",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 285,
+    "PERIODE2": 240,
+    "PERIODE3": 255,
+    "PERIODE4": 263,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "8577",
+      "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8577/image-thumb__8577__Konfigurator/ZAU2003-0030_frontal_frei.9fcde481.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAU2007-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU2007-0030",
+    "id": "3530",
+    "TEXT": "TCS Unterputzmontageset für 2x2 AMI-Module,<br/>zweispaltig, ZAU2007-0030<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZAU2007-0030<br/><br/>PRODUKTMERKMALE<br/>Frontplatte und Unterputzkasten<br/>Anzahl integrierbarer Module: 2x2<br/>Modulintegration: Verschraubung auf Gewindebolzen<br/>Öffnungsprinzip: sichbare Verschraubung von vorn<br/>funktional erweiterbar: mit Außenstationsmodulen<br/>der Serie AMI<br/>Montageform: Unterputzmontage<br/>Material / Farbe Frontplatte: Edelstahl geschliffen<br/>und gebürstet<br/>Material / Farbe UP-Kasten: Edelstahl geschliffen<br/>und gebürstet<br/><br/>TECHNISCHE DATEN<br/>Materialstärke Frontplatte: 3 mm<br/>Frontplattenausschnitt HxB mm: 82x82<br/>Frontplatte HxBxT mm: 320x320x3<br/>UP-Kasten HxBxT mm: 300x300x50<br/>zulässige Umgebungstemperatur: -20 bis +50 °C<br/><br/>OPTIONALES ZUBEHÖR<br/>Funktionsmodule der Serie AMI<br/><br/>",
+    "Geraeteart4077": "Frontplatte und Unterputzkasten",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 405,
+    "PERIODE2": 360,
+    "PERIODE3": 375,
+    "PERIODE4": 383,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "8558",
+      "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8558/image-thumb__8558__Konfigurator/ZAU2007-0030_frontal_frei.3fdf2fa1.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAU2002-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU2002-0030",
+    "id": "3520",
+    "TEXT": "TCS Unterputzmontageset für 2 AMI-Module,<br/>einspaltig, ZAU2002-0030<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZAU2002-0030<br/><br/>PRODUKTMERKMALE<br/>Frontplatte und Unterputzkasten<br/>Anzahl integrierbarer Module: 2<br/>Modulintegration: Verschraubung auf Gewindebolzen<br/>Öffnungsprinzip: sichbare Verschraubung von vorn<br/>funktional erweiterbar: mit Außenstationsmodulen<br/>der Serie AMI<br/>Montageform: Unterputzmontage<br/>Material / Farbe Frontplatte: Edelstahl geschliffen<br/>und gebürstet<br/>Material / Farbe UP-Kasten: Edelstahl geschliffen<br/>und gebürstet<br/><br/>TECHNISCHE DATEN<br/>Materialstärke Frontplatte: 3 mm<br/>Frontplattenausschnitt HxB mm: 82x82<br/>Frontplatte HxBxT mm: 320x200x3<br/>UP-Kasten HxBxT mm: 300x180x50<br/>zulässige Umgebungstemperatur: -20 bis +50 °C<br/><br/>OPTIONALES ZUBEHÖR<br/>Funktionsmodule der Serie AMI<br/><br/>",
+    "Geraeteart4077": "Frontplatte und Unterputzkasten",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 255,
+    "PERIODE2": 210,
+    "PERIODE3": 225,
+    "PERIODE4": 233,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "8586",
+      "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8586/image-thumb__8586__Konfigurator/ZAU2002-0030_frontal_frei.6fc62574.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAU2006-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU2006-0030",
+    "id": "3528",
+    "TEXT": "TCS Unterputzmontageset für 6 AMI-Module,<br/>einspaltig, ZAU2006-0030<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZAU2006-0030<br/><br/>PRODUKTMERKMALE<br/>Frontplatte und Unterputzkasten<br/>Anzahl integrierbarer Module: 6<br/>Modulintegration: Verschraubung auf Gewindebolzen<br/>Öffnungsprinzip: sichbare Verschraubung von vorn<br/>funktional erweiterbar: mit Außenstationsmodulen<br/>der Serie AMI<br/>Montageform: Unterputzmontage<br/>Material / Farbe Frontplatte: Edelstahl geschliffen<br/>und gebürstet<br/>Material / Farbe UP-Kasten: Edelstahl geschliffen<br/>und gebürstet<br/><br/>TECHNISCHE DATEN<br/>Materialstärke Frontplatte: 3 mm<br/>Frontplattenausschnitt HxB mm: 82x82<br/>Frontplatte HxBxT mm: 800x200x3<br/>UP-Kasten HxBxT mm: 780x180x50<br/>zulässige Umgebungstemperatur: -20 bis +50 °C<br/><br/>OPTIONALES ZUBEHÖR<br/>Funktionsmodule der Serie AMI<br/><br/>",
+    "Geraeteart4077": "Frontplatte und Unterputzkasten",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 375,
+    "PERIODE2": 330,
+    "PERIODE3": 345,
+    "PERIODE4": 353,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "8751",
+      "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8751/image-thumb__8751__Konfigurator/ZAU2006-0030_frontal_frei.9f00cde6.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAS1312-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör ASX/ZAS1312-0010",
+    "id": "3515",
+    "TEXT": ": zum Schutz gegen Witterungseinflüsse<br />: Aluminium eloxiert natur<br />: Abmessung HxBxT 102x51x45 mm<br />",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2025-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 76,
+    "PERIODE2": 60,
+    "PERIODE3": 65,
+    "PERIODE4": 68,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "102" },
+          { "name": "BreiteGehaeuse4717", "text": "51" },
+          { "name": "TiefeGehaeuse4718", "text": "45" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "silber" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6740",
+      "assetThumb": "/Marketing/Zubehoer/ZAS/Freisteller/Perspektive/6740/image-thumb__6740__Konfigurator/ZAS1312-0010_persp_frei.db5afa6b.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAS1334-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör ASX/ZAS1334-0010",
+    "id": "3516",
+    "TEXT": ": zum Schutz gegen Witterungseinflüsse<br/>: Aluminium eloxiert natur<br/>: Abmessung HxBxT 142x51x45 mm<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 76,
+    "PERIODE2": 60,
+    "PERIODE3": 65,
+    "PERIODE4": 68,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "142" },
+          { "name": "BreiteGehaeuse4717", "text": "51" },
+          { "name": "TiefeGehaeuse4718", "text": "45" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "silber" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6773",
+      "assetThumb": "/Marketing/Zubehoer/ZAS/Freisteller/Perspektive/6773/image-thumb__6773__Konfigurator/ZAS1334-0010_persp_frei.fadbfd18.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAS1356-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör ASX/ZAS1356-0010",
+    "id": "3517",
+    "TEXT": ": zum Schutz gegen Witterungseinflüsse<br />: Aluminium eloxiert natur<br />: Abmessung HxBxT 182x51x45<br />",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2025-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 76,
+    "PERIODE2": 60,
+    "PERIODE3": 65,
+    "PERIODE4": 68,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "182" },
+          { "name": "BreiteGehaeuse4717", "text": "51" },
+          { "name": "TiefeGehaeuse4718", "text": "45" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "silber" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6762",
+      "assetThumb": "/Marketing/Zubehoer/ZAS/Freisteller/Perspektive/6762/image-thumb__6762__Konfigurator/ZAS1356-0010_persp_frei.fadbfd18.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAA2009-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AVC/ZAA2009-0030",
+    "id": "7225",
+    "TEXT": "Montagewinkel Edelstahl 3 mm mit 35° Öffnungswinkel für die Außenstation AVC1x010<br/>Montage: beidseitig möglich<br/>Montageart: Aufputz<br/>Material: Edelstahl V2A, vertikal geschliffen, Dekor D3<br/>Abmaße: B x H x T ca. 110 x 175 x 78 mm<br/>Platte: Rückseite B x H ca. 110 x 175 mm / <br/>Montagefläche der Außenstation B x H ca. 127 x 175 mm<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": false,
+    "TCSBUS": false,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 133,
+    "PERIODE2": null,
+    "PERIODE3": null,
+    "PERIODE4": 115,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "175" },
+          { "name": "BreiteGehaeuse4717", "text": "110" },
+          { "name": "TiefeGehaeuse4718", "text": "78" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": "175" },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": "127" },
+          { "name": "MaterialGehaeuse4017", "selection": "Edelstahl" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "Edelstahl" },
+          {
+            "name": "AusfuehrungOberflaecheGehaeuse4802",
+            "selection": "Dekor D3"
+          },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "geschliffen"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": null,
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAA2010-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AVC/ZAA2010-0010",
+    "id": "7226",
+    "TEXT": "Montagewinkel Aluminium mit 45° Öffnungswinkel für die Außenstationsserie AVC<br/>Montage: Rechts- und Linksanschlag möglich<br/>Montageart: Aufputz<br/>Material: Aluminium eloxiert natur, Dekor B1<br/>Abmaße: B x H x T ca. 107 x 175 x 92 mm<br/>Platte: Rückseite B x H ca. 107 x 175 mm<br/>Montagefläche der Außenstation B x H ca. 124 x 175 mm<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 179,
+    "PERIODE2": null,
+    "PERIODE3": null,
+    "PERIODE4": 155,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "175" },
+          { "name": "BreiteGehaeuse4717", "text": "107" },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": "175" },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": "124" },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "silber" },
+          {
+            "name": "AusfuehrungOberflaecheGehaeuse4802",
+            "selection": "Dekor B1"
+          },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": null,
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "PAKDA-EN",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör PAK/PAKDA-EN",
+    "id": "2427",
+    "TEXT": "Wetterschutzdach für Außenstation der Serie PAK und PSK<br />Dachüberstand 50 mm<br />Abmessungen: 61 x 109 x 50 mm<br />Farbe: Aluminium eloxiert natur<br />",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2025-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 76,
+    "PERIODE2": 58,
+    "PERIODE3": 63,
+    "PERIODE4": 66,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "61" },
+          { "name": "BreiteGehaeuse4717", "text": "109" },
+          { "name": "TiefeGehaeuse4718", "text": "50 " },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "silber" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [
+      {
+        "features": [
+          { "name": "HoeheFrontplatte4756", "text": null },
+          { "name": "BreiteFrontplatte4757", "text": null },
+          { "name": "TiefeFrontplatte4758", "text": null },
+          { "name": "HoeheNamensschildFrontplatte4759", "text": null },
+          { "name": "BreiteNamensschildFrontplatte4760", "text": null },
+          { "name": "HoeheInfoschildFrontplatte4761", "text": null },
+          { "name": "BreiteInfoschildFrontplatte4762", "text": null },
+          { "name": "HoeheNamensschildtaster4763", "text": null },
+          { "name": "BreiteNamensschildtaster4764", "text": null },
+          { "name": "MaterialKlingeltasterFrontplatte4609", "selection": null },
+          { "name": "MaterialNamensschildFrontplatte4608", "selection": null },
+          { "name": "MaterialInfofeldFrontplatte4611", "selection": null },
+          { "name": "UVBestaendigkeitFrontplatte4612", "selection": null },
+          { "name": "SchutzartFrontplatte4034", "selection": null },
+          { "name": "HoeheFrontplattenausschnitt4765", "text": null },
+          { "name": "BreiteFrontplattenausschnitt4766", "text": null },
+          { "name": "AnzahlintegrierbarerModule3937", "text": null },
+          { "name": "MaterialFrontplatte4016", "selection": null },
+          { "name": "FarbeFrontplatte4688", "selection": null },
+          { "name": "FarbeInfofeldFrontplatte4689", "selection": null },
+          {
+            "name": "OberflaechenausfuehrungFrontplatte4801",
+            "selection": null
+          },
+          {
+            "name": "OberflaechenbehandlungFrontplatte4850",
+            "selection": null
+          },
+          { "name": "MINzulaessigeUmgebungstemperaturFP", "text": null },
+          { "name": "MAXzulaessigeUmgebungstemperaturFP", "text": null }
+        ]
+      }
+    ],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [
+      { "name": "AS Display Eigenschaften", "description": null }
+    ],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6696",
+      "assetThumb": "/Marketing/Zubehoer/PAKDA/Freisteller/Frontal/6696/image-thumb__6696__Konfigurator/PAKDA-EN_frontal_frei.9840d1f4.png"
+    },
+    "Audio": [
+      { "features": [] },
+      {
+        "features": [
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
+        ]
+      },
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          {},
+          {},
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          {},
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          {},
+          { "name": "AkustischeRufunterscheidungen", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "PI135-EB/04",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör PES PDT PET/PI135-EB-04",
+    "id": "2561",
+    "TEXT": ": langlebige Beleuchtung mittels Leuchtdioden<br/>: Anschluss über Verbindungsleitung an PDS/PDT bzw. PES/PET<br/>: Infofeldgröße: 72 x 74 mm<br/>: Farbe: Aluminium eloxiert bronze <br/>: Abmessungen: 90 x 135 x 20 mm<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 296,
+    "PERIODE2": 238,
+    "PERIODE3": 258,
+    "PERIODE4": 269,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "90" },
+          { "name": "BreiteGehaeuse4717", "text": "135" },
+          { "name": "TiefeGehaeuse4718", "text": "20" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "bronze" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [
+      {
+        "features": [
+          { "name": "HoeheFrontplatte4756", "text": null },
+          { "name": "BreiteFrontplatte4757", "text": null },
+          { "name": "TiefeFrontplatte4758", "text": null },
+          { "name": "HoeheNamensschildFrontplatte4759", "text": null },
+          { "name": "BreiteNamensschildFrontplatte4760", "text": null },
+          { "name": "HoeheInfoschildFrontplatte4761", "text": null },
+          { "name": "BreiteInfoschildFrontplatte4762", "text": null },
+          { "name": "HoeheNamensschildtaster4763", "text": null },
+          { "name": "BreiteNamensschildtaster4764", "text": null },
+          { "name": "MaterialKlingeltasterFrontplatte4609", "selection": null },
+          { "name": "MaterialNamensschildFrontplatte4608", "selection": null },
+          { "name": "MaterialInfofeldFrontplatte4611", "selection": null },
+          { "name": "UVBestaendigkeitFrontplatte4612", "selection": null },
+          { "name": "SchutzartFrontplatte4034", "selection": null },
+          { "name": "HoeheFrontplattenausschnitt4765", "text": null },
+          { "name": "BreiteFrontplattenausschnitt4766", "text": null },
+          { "name": "AnzahlintegrierbarerModule3937", "text": null },
+          { "name": "MaterialFrontplatte4016", "selection": null },
+          { "name": "FarbeFrontplatte4688", "selection": null },
+          { "name": "FarbeInfofeldFrontplatte4689", "selection": null },
+          {
+            "name": "OberflaechenausfuehrungFrontplatte4801",
+            "selection": null
+          },
+          {
+            "name": "OberflaechenbehandlungFrontplatte4850",
+            "selection": null
+          },
+          { "name": "MINzulaessigeUmgebungstemperaturFP", "text": null },
+          { "name": "MAXzulaessigeUmgebungstemperaturFP", "text": null }
+        ]
+      }
+    ],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [
+      { "name": "AS Display Eigenschaften", "description": null }
+    ],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": null,
+    "Audio": [
+      { "features": [] },
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          {},
+          {},
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          {},
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          {},
+          { "name": "AkustischeRufunterscheidungen", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "PI135-WS/04",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör PES PDT PET/PI135-WS-04",
+    "id": "2563",
+    "TEXT": ": langlebige Beleuchtung mittels Leuchtdioden<br/>: Anschluss über Verbindungsleitung an PDS/PDT bzw. PES/PET<br/>: Infofeldgröße: 72 x 74 mm<br/>: Farbe: weiß (WS)<br/>: Abmessungen: 90 x 135 x 20 mm<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 260,
+    "PERIODE2": 209,
+    "PERIODE3": 226,
+    "PERIODE4": 236,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "90" },
+          { "name": "BreiteGehaeuse4717", "text": "135" },
+          { "name": "TiefeGehaeuse4718", "text": "20" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "weiß" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "lackiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [
+      {
+        "features": [
+          { "name": "HoeheFrontplatte4756", "text": null },
+          { "name": "BreiteFrontplatte4757", "text": null },
+          { "name": "TiefeFrontplatte4758", "text": null },
+          { "name": "HoeheNamensschildFrontplatte4759", "text": null },
+          { "name": "BreiteNamensschildFrontplatte4760", "text": null },
+          { "name": "HoeheInfoschildFrontplatte4761", "text": null },
+          { "name": "BreiteInfoschildFrontplatte4762", "text": null },
+          { "name": "HoeheNamensschildtaster4763", "text": null },
+          { "name": "BreiteNamensschildtaster4764", "text": null },
+          { "name": "MaterialKlingeltasterFrontplatte4609", "selection": null },
+          { "name": "MaterialNamensschildFrontplatte4608", "selection": null },
+          { "name": "MaterialInfofeldFrontplatte4611", "selection": null },
+          { "name": "UVBestaendigkeitFrontplatte4612", "selection": null },
+          { "name": "SchutzartFrontplatte4034", "selection": null },
+          { "name": "HoeheFrontplattenausschnitt4765", "text": null },
+          { "name": "BreiteFrontplattenausschnitt4766", "text": null },
+          { "name": "AnzahlintegrierbarerModule3937", "text": null },
+          { "name": "MaterialFrontplatte4016", "selection": null },
+          { "name": "FarbeFrontplatte4688", "selection": null },
+          { "name": "FarbeInfofeldFrontplatte4689", "selection": null },
+          {
+            "name": "OberflaechenausfuehrungFrontplatte4801",
+            "selection": null
+          },
+          {
+            "name": "OberflaechenbehandlungFrontplatte4850",
+            "selection": null
+          },
+          { "name": "MINzulaessigeUmgebungstemperaturFP", "text": null },
+          { "name": "MAXzulaessigeUmgebungstemperaturFP", "text": null }
+        ]
+      }
+    ],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [
+      { "name": "AS Display Eigenschaften", "description": null }
+    ],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": null,
+    "Audio": [
+      { "features": [] },
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          {},
+          {},
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          {},
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          {},
+          { "name": "AkustischeRufunterscheidungen", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "PI135-EN/04",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör PES PDT PET/PI135-EN-04",
+    "id": "2562",
+    "TEXT": ": langlebige Beleuchtung mittels Leuchtdioden<br/>: Anschluss über Verbindungsleitung an PDS/PDT bzw. PES/PET<br/>: Infofeldgröße: 72 x 74 mm<br/>: Farbe: Aluminium eloxiert natur <br/>: Abmessungen: 90 x 135 x 20 mm<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 215,
+    "PERIODE2": 169,
+    "PERIODE3": 183,
+    "PERIODE4": 191,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "90" },
+          { "name": "BreiteGehaeuse4717", "text": "135" },
+          { "name": "TiefeGehaeuse4718", "text": "20" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "silber" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [
+      {
+        "features": [
+          { "name": "HoeheFrontplatte4756", "text": null },
+          { "name": "BreiteFrontplatte4757", "text": null },
+          { "name": "TiefeFrontplatte4758", "text": null },
+          { "name": "HoeheNamensschildFrontplatte4759", "text": null },
+          { "name": "BreiteNamensschildFrontplatte4760", "text": null },
+          { "name": "HoeheInfoschildFrontplatte4761", "text": null },
+          { "name": "BreiteInfoschildFrontplatte4762", "text": null },
+          { "name": "HoeheNamensschildtaster4763", "text": null },
+          { "name": "BreiteNamensschildtaster4764", "text": null },
+          { "name": "MaterialKlingeltasterFrontplatte4609", "selection": null },
+          { "name": "MaterialNamensschildFrontplatte4608", "selection": null },
+          { "name": "MaterialInfofeldFrontplatte4611", "selection": null },
+          { "name": "UVBestaendigkeitFrontplatte4612", "selection": null },
+          { "name": "SchutzartFrontplatte4034", "selection": null },
+          { "name": "HoeheFrontplattenausschnitt4765", "text": null },
+          { "name": "BreiteFrontplattenausschnitt4766", "text": null },
+          { "name": "AnzahlintegrierbarerModule3937", "text": null },
+          { "name": "MaterialFrontplatte4016", "selection": null },
+          { "name": "FarbeFrontplatte4688", "selection": null },
+          { "name": "FarbeInfofeldFrontplatte4689", "selection": null },
+          {
+            "name": "OberflaechenausfuehrungFrontplatte4801",
+            "selection": null
+          },
+          {
+            "name": "OberflaechenbehandlungFrontplatte4850",
+            "selection": null
+          },
+          { "name": "MINzulaessigeUmgebungstemperaturFP", "text": null },
+          { "name": "MAXzulaessigeUmgebungstemperaturFP", "text": null }
+        ]
+      }
+    ],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [
+      { "name": "AS Display Eigenschaften", "description": null }
+    ],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6695",
+      "assetThumb": "/Marketing/Zubehoer/PI/Freisteller/Perspektive/6695/image-thumb__6695__Konfigurator/PI135-EN_persp_frei.eb1bb0c9.png"
+    },
+    "Audio": [
+      { "features": [] },
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          {},
+          {},
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          {},
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          {},
+          { "name": "AkustischeRufunterscheidungen", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "ZAU4001-0002",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör AMI/ZAU4001-0002",
+    "id": "3552",
+    "TEXT": "Set für die Serien PUK und AVU, bestehend aus <br/>4 Stück Montagewinkel;<br/>4 Stück Senkkopfschrauben M3x8 mit Innensechskant;<br/>4 Stück Sperrzahnmuttern<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": true,
+    "Unterputz": true,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 75,
+    "PERIODE2": 59,
+    "PERIODE3": 64,
+    "PERIODE4": 67,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6816",
+      "assetThumb": "/Marketing/Zubehoer/ZAU/Freisteller/Perspektive/6816/image-thumb__6816__Konfigurator/ZAU4001-0002_persp_frei.7918cebc.png"
+    },
+    "Audio": [
+      { "features": [] },
+      {
+        "features": [
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
+        ]
+      },
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          {},
+          {},
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          {},
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          {},
+          { "name": "AkustischeRufunterscheidungen", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "ZAM1102-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör PAK/ZAM1102-0010",
+    "id": "3511",
+    "TEXT": null,
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 126,
+    "PERIODE2": 101,
+    "PERIODE3": 109,
+    "PERIODE4": 113,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6840",
+      "assetThumb": "/Marketing/Zubehoer/ZAM/Freisteller/Perspektive/6840/image-thumb__6840__Konfigurator/ZAM1102-0010_persp_frei.c6ae6994.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAM1101-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör PAK/ZAM1101-0010",
+    "id": "3510",
+    "TEXT": "Montageplatte für die Außenstation PAK01-04-EN<br/>Plattenmaße H 247 x Breit 170 mm<br/>Materia: aluminium eloxiert natur<br/>Farbe:  silber<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 121,
+    "PERIODE2": 96,
+    "PERIODE3": 104,
+    "PERIODE4": 108,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "247" },
+          { "name": "BreiteGehaeuse4717", "text": "170" },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "silber" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6836",
+      "assetThumb": "/Marketing/Zubehoer/ZAM/Freisteller/Perspektive/6836/image-thumb__6836__Konfigurator/ZAM1101-0010_persp_frei.f3ac1fba.png"
+    },
+    "Audio": [
+      { "features": [] },
+      {
+        "features": [
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
+        ]
+      },
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          {},
+          {},
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          {},
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          {},
+          { "name": "AkustischeRufunterscheidungen", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "ZAM1103-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör PAK/ZAM1103-0010",
+    "id": "3512",
+    "TEXT": "Montageplatte für die Außenstation PAK01-06-EN<br/>: Plattenmaße H 338 x Breit 170 mm<br/>: Material / Farbe: aluminium eloxiert natur, silber<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 131,
+    "PERIODE2": 106,
+    "PERIODE3": 114,
+    "PERIODE4": 118,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6863",
+      "assetThumb": "/Marketing/Zubehoer/ZAM/Freisteller/Perspektive/6863/image-thumb__6863__Konfigurator/ZAM1103-0010_persp_frei.d9dc427a.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZAM1104-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör PAK/ZAM1104-0010",
+    "id": "3513",
+    "TEXT": null,
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 136,
+    "PERIODE2": 111,
+    "PERIODE3": 119,
+    "PERIODE4": 123,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6760",
+      "assetThumb": "/Marketing/Zubehoer/ZAM/Freisteller/Perspektive/6760/image-thumb__6760__Konfigurator/ZAM1104-0010_persp_frei.c8d8c111.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZIT24340",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör Serie 30/ZIT24340",
+    "id": "3572",
+    "TEXT": "10 Abdeckplatten zur Montage hinter Innenstationen; B 120 mm x H 250 mm x T 3 mm<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": true,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 44,
+    "PERIODE2": 35,
+    "PERIODE3": 38,
+    "PERIODE4": 40,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "120" },
+          { "name": "BreiteGehaeuse4717", "text": "250" },
+          { "name": "TiefeGehaeuse4718", "text": "3" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Kunststoff" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "weiß" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": null,
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZIT3030-0010",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör Serie 30/ZIT3030-0010",
+    "id": "3573",
+    "TEXT": ": Tischfuß aus Aluminium<br />: 3 m Anschlusskabel mit 6-poligem Modularstecker<br />: bauseitige Anschlussdose UAE8 oder RJ45<br />: Farbe: Aluminium eloxiert natur (EN)<br />: Maße: H 168 mm x B 86 mm x T 27 mm<br /><br /><br />",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2025-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 66,
+    "PERIODE2": 52,
+    "PERIODE3": 57,
+    "PERIODE4": 60,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "168" },
+          { "name": "BreiteGehaeuse4717", "text": "86" },
+          { "name": "TiefeGehaeuse4718", "text": "27" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Aluminium" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "silber" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "eloxiert"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6767",
+      "assetThumb": "/Marketing/Zubehoer/ZIT/Freisteller/Perspektive/6767/image-thumb__6767__Konfigurator/ZIT3030-0010_persp_frei.015ca6bb.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "MEH7000-0140",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör Senso PRO/MEH7000-0140",
+    "id": "16302",
+    "TEXT": null,
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": null,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": null,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2025-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 18,
+    "PERIODE2": 0,
+    "PERIODE3": 0,
+    "PERIODE4": 0,
+    "parent": { "MNR": "Zubehör Senso PRO" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": null },
+          { "name": "BreiteGehaeuse4717", "text": null },
+          { "name": "TiefeGehaeuse4718", "text": null },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": null },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": [{ "id": "16251" }],
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "9420",
+      "assetThumb": "/Marketing/Frontalansicht%20freigestellt/9420/image-thumb__9420__Konfigurator/MEH70000140.b93cd0c8.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZIT5000-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör TASTA/ZIT5000-0030",
+    "id": "3575",
+    "TEXT": "Tischfuss für Innenstationen TASTA Audio und Video 3,5 Zoll<br />Material Edelstahl 3mm, zweiseitig geschliffen<br />Neigungswinkel 60 Grad<br />Netzwerkkabel RJ45/Cat5 FTP 2,5m ",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": true,
+    "V2D": true,
+    "TCSBUS": true,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 161,
+    "PERIODE2": 129,
+    "PERIODE3": 140,
+    "PERIODE4": 146,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "134" },
+          { "name": "BreiteGehaeuse4717", "text": "85" },
+          { "name": "TiefeGehaeuse4718", "text": "132" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Edelstahl" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "Edelstahl" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [{ "id": "13411" }, { "id": "5979" }],
+    "FrontalAnsichtFrei": {
+      "id": "6765",
+      "assetThumb": "/Marketing/Zubehoer/ZIT/Freisteller/Perspektive/6765/image-thumb__6765__Konfigurator/ZIT5000-0030_persp_frei.86ccfced.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZIA5005-0145",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör TASTA/ZIA5005-0145",
+    "id": "3559",
+    "TEXT": "TASTA Montageschale 5pol. AP<br/>für Innenstation ISW5030, ISW5031 und IVW5211<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZIA5005-0145<br/><br/>Produktmerkmale<br/>Geräteart: TASTA Montageschale 5pol. AP<br/>Kommunikationstechnologie: TCS:BUS Audio / Video-2-Draht:BUS (V2D)<br/>Montageform: AP<br/><br/>Technische Daten<br/>Abmessungen HxBxT (mm): H 189,25 mm x B 88 mm x T 17,2 mm<br/>Material / Farbe: ASA / Farbe Weiß, ähnlich RAL 9003<br/><br/>Hinweis<br/>5-polige Anschlussklemme<br/>Verwendung für ISW5030-0145, ISW5031-0145 und IVW5211-0145<br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": true,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 14,
+    "PERIODE2": 10,
+    "PERIODE3": 11,
+    "PERIODE4": 12,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "189,25" },
+          { "name": "BreiteGehaeuse4717", "text": "88" },
+          { "name": "TiefeGehaeuse4718", "text": "17,2" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Kunststoff" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "weiß" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6800",
+      "assetThumb": "/Marketing/Zubehoer/ZIA/Freisteller/Frontal/6800/image-thumb__6800__Konfigurator/ZIA5005-0145_frontal_frei.d83f0698.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZIA5003-0145",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör TASTA/ZIA5003-0145",
+    "id": "3557",
+    "TEXT": "AP-Montageplatte für ISW5010 bei vorhandener UP-Dose<br/>Anwendung anstelle Montageschale<br/>Inklusive Anschlussklemme<br/>Farbe Weiß, ähnlich RAL 9003<br/>Maße: H 99,3 mm x B 85 mm  x T 11,7  mm<br/><br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": false,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 9.58,
+    "PERIODE2": 8.32,
+    "PERIODE3": 8.32,
+    "PERIODE4": 8.32,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "99,3" },
+          { "name": "BreiteGehaeuse4717", "text": "85" },
+          { "name": "TiefeGehaeuse4718", "text": "11,7" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Kunststoff" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "weiß" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6846",
+      "assetThumb": "/Marketing/Zubehoer/ZIA/Freisteller/Frontal/6846/image-thumb__6846__Konfigurator/ZIA5003-0145_frontal_frei.9b07bfaf.png"
+    },
+    "Audio": [{ "features": [] }]
+  },
+  {
+    "MNR": "ZIA5001-0145",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör TASTA/ZIA5001-0145",
+    "id": "3555",
+    "TEXT": "TCS AP-Montageschale <br/>für Innenstation ISW5010-0145<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZIA5001-0145<br/><br/>ANWENDUNGSBEREICH<br/>Zur Unterbringung der Anschlusskabel der Innenstation, wenn keine UP-Dose verfügbar.<br/>Optional anstelle Montageplatte. <br/>Inklusive Anschlussklemme.<br/><br/>TECHNISCHE DATEN <br/>Farbe: weiss, ähnlich RAL 9003<br/>Abmessung HxBxT mm: 100 x 88 x 16,3<br/><br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 14,
+    "PERIODE2": 8.32,
+    "PERIODE3": 11,
+    "PERIODE4": 12,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": " 100" },
+          { "name": "BreiteGehaeuse4717", "text": "88" },
+          { "name": "TiefeGehaeuse4718", "text": "16,3" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Kunststoff" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "weiß" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6733",
+      "assetThumb": "/Marketing/Zubehoer/ZIA/Freisteller/Frontal/6733/image-thumb__6733__Konfigurator/ZIA5001-0145_frontal_frei.220701a5.png"
+    },
+    "Audio": [
+      { "features": [] },
+      {
+        "features": [
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
+        ]
+      },
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          {},
+          {},
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          {},
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          {},
+          { "name": "AkustischeRufunterscheidungen", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "FFI0002-0000",
+    "fullpath": "/Produktdaten/Türkommunikation IP/Funktionserweiterung IP/SmartStick/FFI0002-0000",
+    "id": "13259",
+    "TEXT": "Rufweiterleitung des Türruf über Netzwerk- via SIP-zur snipdoo HOME APP für iOS oder Android <br />Sprachnachricht bei eingehenden Etagenruf<br />Automatische Firmware-Updates<br />Konfiguration via QR code und der snipdoo HOME APP<br /><br />Technische Voraussetzungen:<br />TCS Türsprechanlage mit installierter Innenstation z.B. ISW6031-0145 oder ISW6010-0145<br />Anschluss in 3 Draht Technik a/b und P<br />Heimnetzwerk mit angeschlossenem WLAN Router und Internetanbindung<br />max. 15m Abstand zwischen Router und TCS-Innenstation<br />aktiviertes WLAN<br />WLAN802.11 b/g/n (802.11n bis zu 150 Mbps) Frequenz 2.4 ~ 2.5 GHz<br />Betriebsspannung / Spannungsversorgung 5.0 V ~ 5.2 V versorgt über die Innensprechstelle<br />Abmaße H 35 x B 26 x T 8 mm integriert in der Innensprechstelle<br />",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2025-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 41.93,
+    "PERIODE2": null,
+    "PERIODE3": null,
+    "PERIODE4": null,
+    "parent": { "MNR": "Funktionserweiterung IP" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "35" },
+          { "name": "BreiteGehaeuse4717", "text": "26" },
+          { "name": "TiefeGehaeuse4718", "text": "8" },
+          { "name": "HoeheNamensschildGehaeuse4719", "text": null },
+          { "name": "BreiteNamensschildGehaeuse4720", "text": null },
+          { "name": "Bauform4606", "selection": "Leiterplatte (integrierbar)" },
+          { "name": "MaterialGehaeuse4017", "selection": "Kunststoff" },
+          { "name": "MaterialKlingeltasterGehaeuse4025", "selection": null },
+          { "name": "MaterialNamensschildGehaeuse4027", "selection": null },
+          { "name": "UVBestaendigkeitGehaeuse4283", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "weiß" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null },
+          { "name": "MINzulaessigeUmgebungstemperaturG", "text": "-5" },
+          { "name": "MAXzulaessigeUmgebungstemperaturG", "text": "40" }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": [
+      { "id": "5979" },
+      { "id": "2097" },
+      { "id": "16251" },
+      { "id": "16252" }
+    ],
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "9419",
+      "assetThumb": "/Marketing/Frontalansicht%20freigestellt/9419/image-thumb__9419__Konfigurator/FFI00020000.016ce7f9.png"
+    },
+    "Audio": [
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          { "name": "AnzahlakustischerRufunterscheidungen3933", "text": null },
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "AnzahlParallelrufe3892", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "FFI0001-0000",
+    "fullpath": "/Produktdaten/Türkommunikation IP/Funktionserweiterung IP/SmartStick/FFI0001-0000",
+    "id": "1847",
+    "TEXT": "Peer-to-Peer-Rufumleitung über lokales Netzwerk- SIP-Rufumleitung über einen SIP-Server- SIP-Server-Einrichtungsoptionen (Fritz!Box, snipdoo CLOUD, andere)<br />Sprachnachricht bei eingehenden Etagenruf<br />Automatische Firmware-Updates<br />Konfiguration über Webschnittstelle<br /><br />Technische Voraussetzungen:<br />TCS Türsprechanlage mit installierter Innenstation z.B. ISW6031-0145 oder ISW6010-0145<br />Heimnetzwerk mit angeschlossenem Router z.B. Fritzbox<br />max. 15m Abstand zwischen Router und TCS-Innenstation<br />SIP Server (z.B. Fritzbox, oder Sonstiges)<br />aktiviertes WLAN<br />zur Konfiguration ein angeschlossener PC, Tablett oder Smartphone am Heimnetzwerk<br /><br />WLAN802.11 b/g/n (802.11n bis zu 150 Mbps) Frequenz 2.4 ~ 2.5 GHz<br />Bluetooth Protokolle: Bluetooth V4.2 BR/EDR und Bluetooth LE<br />Spezifikation Radio: NZIF-Empfänger mit -97 dBm Empfindlichkeit<br />Integrierter Flash-Speicher 8 MB<br />Betriebsspannung / Spannungsversorgung 5.0 V ~ 5.2 V<br />zulässige Umgebungstemperatur -5 °C bis &#43;40 °C<br />Abmaße H 35 x B 26 x T 8 mm<br />",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": null,
+    "TCSBUS": true,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2025-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 41.93,
+    "PERIODE2": null,
+    "PERIODE3": null,
+    "PERIODE4": null,
+    "parent": { "MNR": "Funktionserweiterung IP" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "35" },
+          { "name": "BreiteGehaeuse4717", "text": "26" },
+          { "name": "TiefeGehaeuse4718", "text": "8" },
+          { "name": "HoeheNamensschildGehaeuse4719", "text": null },
+          { "name": "BreiteNamensschildGehaeuse4720", "text": null },
+          { "name": "Bauform4606", "selection": "Leiterplatte (integrierbar)" },
+          { "name": "MaterialGehaeuse4017", "selection": "Kunststoff" },
+          { "name": "MaterialKlingeltasterGehaeuse4025", "selection": null },
+          { "name": "MaterialNamensschildGehaeuse4027", "selection": null },
+          { "name": "UVBestaendigkeitGehaeuse4283", "selection": null },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "weiß" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": null },
+          { "name": "MINzulaessigeUmgebungstemperaturG", "text": "-5" },
+          { "name": "MAXzulaessigeUmgebungstemperaturG", "text": "40" }
+        ]
+      }
+    ],
+    "Frontplatte": [
+      {
+        "features": [
+          { "name": "HoeheFrontplatte4756", "text": null },
+          { "name": "BreiteFrontplatte4757", "text": null },
+          { "name": "TiefeFrontplatte4758", "text": null },
+          { "name": "HoeheNamensschildFrontplatte4759", "text": null },
+          { "name": "BreiteNamensschildFrontplatte4760", "text": null },
+          { "name": "MaterialKlingeltasterFrontplatte4609", "selection": null },
+          { "name": "MaterialNamensschildFrontplatte4608", "selection": null },
+          { "name": "UVBestaendigkeitFrontplatte4612", "selection": null },
+          { "name": "SchutzartFrontplatte4034", "selection": null },
+          { "name": "MaterialFrontplatte4016", "selection": null },
+          { "name": "FarbeFrontplatte4688", "selection": null }
+        ]
+      }
+    ],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": [
+      { "id": "5979" },
+      { "id": "2097" },
+      { "id": "16251" },
+      { "id": "16252" }
+    ],
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": null,
+    "Audio": [
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          { "name": "AnzahlakustischerRufunterscheidungen3933", "text": null },
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "AnzahlParallelrufe3892", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "ZIT3222-0030",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör Serie 30/ZIT3222-0030",
+    "id": "3574",
+    "TEXT": "TCS Tischfuss für die Video-Türtelefone IVH3222-0140 und IVH4222-0140<br/><br/>Hersteller: TCS TürControlSysteme AG<br/>Produktion: Made in Germany<br/>Artikelnummer: ZIT3222-0030<br/><br/>Material Edelstahl 3mm, zweiseitig geschliffen<br/>Neigungswinkel 60 Grad<br/>Netzwerkkabel RJ45/Cat5 FTP 2,5m, 15cm <ftp://FTP 2,5m, 15cm> abgesetzt<br/>Befestigung IVH3222 bzw. IVH4222 mittels Linsenschrauben 1x M4x5 und 2x M4x6 für bauseitige Anschlussdose UAE8 oder RJ45<br/>Gewicht inkl. Anschlusskabel: 1250 g<br/>Maße: HxBxT (mm) 248x89x152<br/><br/>",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": null,
+    "V2D": true,
+    "TCSBUS": true,
+    "Aufputz": null,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2024-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 150,
+    "PERIODE2": 130,
+    "PERIODE3": 130,
+    "PERIODE4": 136,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "248" },
+          { "name": "BreiteGehaeuse4717", "text": "89" },
+          { "name": "TiefeGehaeuse4718", "text": "152" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Edelstahl" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "Edelstahl" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          {
+            "name": "OberflaechenbehandlungGehaeuse4849",
+            "selection": "geschliffen"
+          }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": null,
+    "Audio": [
+      { "features": [] },
+      {
+        "features": [
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
+        ]
+      },
+      {
+        "features": [
+          { "name": "AnzahlKlingeltasten3938", "text": null },
+          {},
+          {},
+          {},
+          {},
+          { "name": "Mikrofonabsetzbarin4292", "text": null },
+          {},
+          { "name": "LautstaerkeGespraech4008", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          {},
+          { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
+          { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
+          {},
+          { "name": "AkustischeRufunterscheidungen", "text": null },
+          {},
+          {},
+          {},
+          {},
+          {}
+        ]
+      }
+    ]
+  },
+  {
+    "MNR": "ZIA5006-0145",
+    "fullpath": "/Produktdaten/Türkommunikation TCS:BUS/Zubehör TCS:BUS/Zubehör TASTA/ZIA5006-0145",
+    "id": "3560",
+    "TEXT": "TASTA Montageschale 8pol. AP<br />für Innenstation IVW5110, IVW5111, IVW5410 und ISW5410<br /><br />Hersteller: TCS TürControlSysteme AG<br />Produktion: Made in Germany<br />Artikelnummer: ZIA5006-0145<br /><br />Produktmerkmale<br />Geräteart: TASTA Montageschale 8pol. AP<br />Kommunikationstechnologie: TCS:BUS Video / IP<br />Montageform: AP<br /><br />Technische Daten<br />Abmessungen HxBxT (mm): H 189,25 mm x B 88 mm x T 17,2 mm<br />Material / Farbe: ASA / Farbe Weiß, ähnlich RAL 9003<br /><br />Hinweis<br />8-polige Anschlussklemme<br />Verwendung für IVW5110-0145, IVW5111-0145, IVW5410-0145 und ISW5410-0145<br />",
+    "Geraeteart4077": "",
+    "Kommunikationstechnologie4164": "",
+    "Audio1": true,
+    "Video2": true,
+    "V2D": true,
+    "TCSBUS": true,
+    "Aufputz": true,
+    "Unterputz": null,
+    "VON1": "2022-10-01 00:00:00",
+    "VON2": "2021-04-01 00:00:00",
+    "VON3": "2021-10-01 00:00:00",
+    "VON4": "2022-04-01 00:00:00",
+    "BIS1": "2025-12-31 00:00:00",
+    "BIS2": "2021-09-30 00:00:00",
+    "BIS3": "2022-03-31 00:00:00",
+    "BIS4": "2022-09-30 00:00:00",
+    "PERIODE1": 13.87,
+    "PERIODE2": 10,
+    "PERIODE3": 11,
+    "PERIODE4": 12,
+    "parent": { "MNR": "Zubehör TCS:BUS" },
+    "Gehaeuse": [
+      {
+        "features": [
+          { "name": "HoeheGehaeuse4716", "text": "189,25" },
+          { "name": "BreiteGehaeuse4717", "text": "88" },
+          { "name": "TiefeGehaeuse4718", "text": "17,2" },
+          { "name": "HoeheMontagemassGehaeuse4723", "text": null },
+          { "name": "BreiteMontagemassGehaeuse4724", "text": null },
+          { "name": "MaterialGehaeuse4017", "selection": "Kunststoff" },
+          { "name": "SchutzartGehaeuse4270", "selection": null },
+          { "name": "FarbeGehaeuse4686", "selection": "weiß" },
+          { "name": "AusfuehrungOberflaecheGehaeuse4802", "selection": null },
+          { "name": "OberflaechenbehandlungGehaeuse4849", "selection": "ASA" }
+        ]
+      }
+    ],
+    "Frontplatte": [],
+    "NotwendigesZubehoerAudio": null,
+    "NotwendigesZubehoerVideo": null,
+    "Erweiterung": null,
+    "DisplayEigenschaften": [],
+    "HatZubehoer": [],
+    "FrontalAnsichtFrei": {
+      "id": "6785",
+      "assetThumb": "/Marketing/Zubehoer/ZIA/Freisteller/Frontal/6785/image-thumb__6785__Konfigurator/ZIA5006-0145_frontal_frei.e8a180e1.png"
+    },
+    "Audio": [{ "features": [] }]
+  }
+]

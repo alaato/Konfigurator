@@ -7,10 +7,10 @@
         <Wohnungen v-model="numberApartments" />
         <OutdoorStationInput v-model="numberOutdoorStation" />
       </div>
-      <div class="funktion-and-technologie-container flex flex-col gap-1 bg-transparent">
+      <!-- <div class="funktion-and-technologie-container flex flex-col gap-1 bg-transparent">
         <Funktion v-model="funktion" />
         <Technologie :funktion="funktion" v-model="technologie" />
-      </div>
+      </div> -->
       <Button class="bg-arapawa-950 text-white text-center hover:bg-arapawa-900" type="submit">
         bestätigen
       </Button>
@@ -30,6 +30,7 @@ import Wohnungen from '@/components/SimpleConfigurator/StageOne/FormComponents/W
 import Funktion from '@/components/SimpleConfigurator/StageOne/FormComponents/Funktion.vue'
 import Technologie from '@/components/SimpleConfigurator/StageOne/FormComponents/Technologie.vue'
 import steuer from '@/data/steuer.json'
+import NumberInputBox from '@/components/SimpleConfigurator/StageOne/FormComponents/NumberInputBox.vue'
 
 
 // variables

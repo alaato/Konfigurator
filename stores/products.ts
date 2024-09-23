@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-
+import { type DeviceData } from '~/utils/interfaces'
 
 export const useSelectedProductsStore = defineStore({
   id: 'SelectedProductsStore',
@@ -7,33 +7,31 @@ export const useSelectedProductsStore = defineStore({
     filter: {
       funktion: "",
       technologie: "",
-      Video: false
+      Video: false,
+      Audio: false
     },
     selectedProducts: {
       indoorProducts: {
         neededQuantity: 0,
         SelectedQuantity: 0,
-        products: []
+        products : [] as DeviceData[]
       },
       outdoorProducts: {
         neededQuantity: 1,
         SelectedQuantity: 0,
-        products: []
+        products: []  as DeviceData[]
       },
       accessories: {
         quantity: 0,
-        products: []
+        products: []  as DeviceData[],
+        SelectedQuantity: 0,
       },
-      controlUnit:
-      {
-        quantity: 1,
-        product: null
-      }
+      controlUnit: null as DeviceData | null
     },
   }),
   getters: {
     getAllSelectedProducts: (state) => {
-      const products: any = []
+      const products: DeviceData[] = []
       Object.values(state.selectedProducts).forEach((category) => {
         if(category.products){
           products.push(...category.products)
@@ -83,14 +81,12 @@ export const useSelectedProductsStore = defineStore({
         this.selectedProducts.outdoorProducts.products.push(product);
         this.selectedProducts.outdoorProducts.SelectedQuantity += product.quantity;
       },
-      addAccessories(product, quantity) {
-        for (let i = 0; i < quantity; i++) {
-          this.selectedProducts.accessories.products.push(product);
-        }
-        this.selectedProducts.accessories.quantity += quantity;
+      addAccessories(product) {
+        this.selectedProducts.accessories.products.push(product);
+        this.selectedProducts.accessories.quantity += product.quantity;
       },
       addControlUnit(product) {
-        this.selectedProducts.controlUnit = product
+        this.selectedProducts.controlUnit = {...product, quantity: 1}
       },
       removeIndoorProducts(product) {
         const index = this.selectedProducts.indoorProducts.products.indexOf(product);
@@ -115,7 +111,7 @@ export const useSelectedProductsStore = defineStore({
         }
       },
       resetControlUnit() {
-        this.selectedProducts.controlUnit.product = null;
+        this.selectedProducts.controlUnit = null;
       },
       resetIndoorProducts() {
         this.selectedProducts.indoorProducts.products = [];
@@ -132,7 +128,7 @@ export const useSelectedProductsStore = defineStore({
         this.selectedProducts.outdoorProducts.SelectedQuantity = 0;
         this.selectedProducts.accessories.products = [];
         this.selectedProducts.accessories.quantity = 0;
-        this.selectedProducts.controlUnit.product = null;
+        this.selectedProducts.controlUnit = null;
       },
     }
   })

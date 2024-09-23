@@ -1,5 +1,5 @@
 <template>
-	<div class="my-10 max-w-[960px]">
+	<div class="my-2 max-w-[960px]">
 		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center">
 			<!-- <WiringCount v-model="wiringCount"></WiringCount> -->
 
@@ -10,7 +10,7 @@
 
 			<div class="funktion-and-technologie-container gap-1">
 				<Funktion v-model="funktion" />
-				<Technologie v-if="funktion == 'Video' || funktion == 'beide'"
+				<Technologie v-if="funktion == 'Video' || funktion == 'Beide'"
 					v-model="technologie" :number-outdoor-stations="numberOutdoorStation" :numeber-indoor-stations="numberIndoorStation" />
 			</div>
 
@@ -42,7 +42,7 @@ const form = ref<InstanceType<typeof HTMLFormElement> | null>(null);
 const numberIndoorStation = useState("numberIndoorStation", () => 1);
 const numberOutdoorStation = useState("numberOutdoorStation", () => 1);
 const wiringCount = ref(2);
-const showTech = computed(()=> (funktion.value == 'Video' || funktion.value == "beide" ) 
+const showTech = computed(()=> (funktion.value == 'Video' || funktion.value == "Beide" ) 
 && numberIndoorStation.value <= 24 && 
 numberOutdoorStation.value == 1 )
 
@@ -58,13 +58,17 @@ const goToStage: Function = inject('goToStage')
 function setFilter() {
 
 	filter.value.funktion = funktion.value
-	funktion.value == "Video" ? filter.value.Video = true : filter.value.Video = null;
-
-	if ((technologie.value == "Video-6-Draht" && funktion.value == "Video" || funktion.value == "beide") || numberIndoorStation.value > 24) {
+	funktion.value == "Video"? filter.value.Video = true : filter.value.Video = null;
+	funktion.value == "Audio"? filter.value.Audio = true : filter.value.Audio = null;
+	if(funktion.value == "Beide")
+		filter.value.Audio = filter.value.Video = true
+	if (technologie.value == "Video-6-Draht" && (funktion.value == "Video" || funktion.value == "Beide") || numberIndoorStation.value > 24) {
 		filter.value.technologie = "TCS:BUS"
 	}
 	else
 		filter.value.technologie = "Video-2-Draht"
+
+	console.log(filter.value)
 }
 
 function setControlUnit() {
@@ -78,6 +82,8 @@ function setControlUnit() {
 }
 
 const submitConfig = async () => {
+	if(numberIndoorStation.value > 24) numberIndoorStation.value = 24
+	if(numberOutdoorStation.value > 4) numberOutdoorStation.value = 4
 	setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
 	setFilter()
 	resetAllProducts();

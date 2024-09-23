@@ -1,6 +1,6 @@
 <template>
     <div class="bg-background text-left rounded-lg shadow-lg overflow-hidden min-w-[360px] max-w-sm">
-      <img :src="`https://devpim.tcs-apps.de/admin/asset/get-image-thumbnail?id=${product?.FrontalAnsichtFrei?.id}&treepreview=1&_dc=1722247817`" alt="Product Image" width="150" height="150" class="w-full h-64 object-scale-down" />
+      <img :src="`https://pim.tcs-apps.de/admin/asset/get-image-thumbnail?id=${product?.FrontalAnsichtFrei?.id}&treepreview=1&_dc=1722247817`" alt="Product Image" width="150" height="150" class="w-full h-64 object-scale-down" />
       <div class="p-6 flex flex-col">
         <h3 class="text-xl font-bold mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
         <h3 class=" MNR text-l font-bold mb-2">Article : {{product.MNR}}</h3>
