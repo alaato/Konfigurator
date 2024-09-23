@@ -1,6 +1,11 @@
 import ExcelJS from 'exceljs';
 import fs from 'fs';
 import { resolve } from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export default defineEventHandler(async (event) => {
   try {
@@ -13,7 +18,7 @@ export default defineEventHandler(async (event) => {
     headerFooter:{firstHeader: "Stückliste", firstFooter: "TCS TürControlSysteme AG"},
     pageSetup:{paperSize: 9, orientation:'portrait'}
   });
-  const filePath = resolve(`public/TCS_Logo_RGB.jpg`);
+  const filePath = resolve(__dirname + `/assests/TCS_Logo_RGB.jpg`);
   if(filePath){
     const imageId1 = workbook.addImage({
       buffer: fs.readFileSync(filePath),
