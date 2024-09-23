@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
     headerFooter:{firstHeader: "Stückliste", firstFooter: "TCS TürControlSysteme AG"},
     pageSetup:{paperSize: 9, orientation:'portrait'}
   });
-  const filePath = resolve(__dirname + `/assests/TCS_Logo_RGB.jpg`);
+  const filePath = resolve(`assets/TCS_Logo_RGB.jpg`);
   if(filePath){
     const imageId1 = workbook.addImage({
       buffer: fs.readFileSync(filePath),
