@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
   workbook.creator = 'TCS TürControlSysteme AG';
   const sheet = workbook.addWorksheet('Stückliste', {
     properties:{tabColor:{argb:'040372'}},
-    headerFooter:{firstHeader: "Stückliste", firstFooter: "TCS TürControlSysteme AG"},
+    headerFooter:{firstHeader: "Stuckliste", firstFooter: "TCS TürControlSysteme AG"},
     pageSetup:{paperSize: 9, orientation:'portrait'}
   });
   if(logo.base64){
@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
   });
   sheet.getColumn(1).width = 30
   const buffer = await workbook.xlsx.writeBuffer();
-  event.node.res.setHeader('Content-Disposition', 'attachment; filename="Stückliste.xlsx"');
+  event.node.res.setHeader('Content-Disposition', 'attachment; filename="Stuckliste.xlsx"');
   event.node.res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
   send(event, buffer)
   return {message: buffer, status:200, buffer}
