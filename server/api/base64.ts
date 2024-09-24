@@ -2,7 +2,7 @@ import fs from 'fs';
 import { resolve } from 'path';
 
 export default defineEventHandler(async (event) => {
-  const filePath = resolve(process.cwd()+ `/public/TCS_Logo_RGB.jpg`);
+  const filePath = resolve(`public/TCS_Logo_RGB.jpg`);
   if(filePath)
     console.log(filePath)
   try {  

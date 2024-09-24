@@ -1,11 +1,6 @@
 import ExcelJS from 'exceljs';
-import fs from 'fs';
-import { resolve } from 'path';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import logo from "@/data/logo.json"
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 export default defineEventHandler(async (event) => {
   try {
@@ -18,10 +13,9 @@ export default defineEventHandler(async (event) => {
     headerFooter:{firstHeader: "Stückliste", firstFooter: "TCS TürControlSysteme AG"},
     pageSetup:{paperSize: 9, orientation:'portrait'}
   });
-  const filePath = resolve(process.cwd()+ `/public/TCS_Logo_RGB.jpg`);
-  if(filePath){
+  if(logo.base64){
     const imageId1 = workbook.addImage({
-      buffer: fs.readFileSync(filePath),
+      base64: logo.base64,
       extension: 'jpeg',
     });
     sheet.addImage(imageId1, 'A1:C6');
@@ -29,7 +23,7 @@ export default defineEventHandler(async (event) => {
 
   const Stückliste = sheet.addTable({
     name: 'Stückliste',
-    ref: 'F7',
+    ref: 'A8',
     style: {
       showRowStripes: true,
     },
@@ -42,7 +36,7 @@ export default defineEventHandler(async (event) => {
     rows: body,
 
   });
-  sheet.getColumn(6).width = 30
+  sheet.getColumn(1).width = 30
   const buffer = await workbook.xlsx.writeBuffer();
   event.node.res.setHeader('Content-Disposition', 'attachment; filename="Stückliste.xlsx"');
   event.node.res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');

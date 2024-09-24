@@ -2,6 +2,7 @@ import { toast } from "vue-sonner";
 import { utils } from "xlsx";
 import jsPDF from "jspdf";
 import { applyPlugin } from "jspdf-autotable";
+import logo from "@/data/logo.json"
 applyPlugin(jsPDF);
 
 const toDataURL = (url: string) =>
@@ -21,9 +22,7 @@ const toDataURL = (url: string) =>
     );
 
 export async function generatePDF() {
-  const res = await fetch("/api/base64");
-  const dataURI = await res.json().then((data) => data.base64);
-  console.log(dataURI);
+  const dataURI = logo.base64
   const doc = new jsPDF();
   doc.setProperties({
     title: "Stückliste",
@@ -31,7 +30,7 @@ export async function generatePDF() {
   doc.setFont("times", "normal");
 
   //ADD IMAGE
-  if (dataURI) doc.addImage(dataURI, "JPEG", 183, 10, 20, 15);
+  if (dataURI) doc.addImage(dataURI, "JPEG", 160, 10, 40, 20);
   // Sender section
   doc.setFontSize(10);
   // doc.text("TCS TürControlSysteme AG · Geschwister-Scholl-Str. 7 · 39307 Genthin", 20, 40, { align: 'left' });

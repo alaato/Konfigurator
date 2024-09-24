@@ -5,7 +5,7 @@
     <DeleteButton @click="handleDeleteHouse"></DeleteButton>
   </div>
 
-  <div class="flex">
+  <div class="flex ">
     <FloorsContainer :floors="house.floors"></FloorsContainer>
     <OutdoorContainer :outdoor-stations="house.outdoorStations"></OutdoorContainer>
   </div>
