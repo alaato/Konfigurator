@@ -1,5 +1,5 @@
 <template>
-  <Card class="Outdoor-container w-1/2 h-[500px] 2xl:h-[600px]">
+  <Card class="Outdoor-container w-full h-[500px] 2xl:h-[600px]">
     <CardContent class="p-3 pt-0">
       <div class="container-action flex justify-start">
         <Button id="increment-btn" @click="add"
@@ -11,8 +11,8 @@
           <RotateCcw class="w-5 h-5" />
         </Button>
       </div>
-      <div class="flex m-auto gap-1 content-start overflow-y-auto w-full h-[400px] 2xl:h-[500px] flex-wrap">
-        <OutdoorStation v-for="(station, index) in outdoorStations" :index="index" :key="index">
+      <div class="flex flex-wrap justify-center content-center m-auto gap-1 overflow-y-auto sm:w-[400px] md:w-[600px] lg:w-[1000px] h-[400px] 2xl:h-[500px]">
+        <OutdoorStation v-for="(station, index) in outdoorStations" :index="index" :key="index" >
         </OutdoorStation>
       </div>
     </CardContent>

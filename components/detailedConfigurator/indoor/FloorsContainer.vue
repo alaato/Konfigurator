@@ -1,5 +1,5 @@
 <template>
-  <Card class="floors-container w-1/2 h-[500px] 2xl:h-[600px]">
+  <Card class="floors-container w-full h-[500px] 2xl:h-[600px]">
     <CardContent>
       <div class="floors-action flex justify-start baseline w-full">
         <Button class="my-5 mx-1 h-12" @click="router.push('/requirements')">back</Button>
@@ -13,8 +13,8 @@
         </Button>
       </div>
       <div class="top-0 overflow-scroll h-[400px] 2xl:h-[500px] p-2">
-        <div class="flex flex-col-reverse">
-          <Floor v-for="(floor, index) in floors" :key="index" :floorIndex="index" :apartments="floor.apartments"/>
+        <div class="flex flex-col-reverse gap-2">
+          <Floor v-for="(floor, index) in floors" :key="index" :floorIndex="index" :floor="floor"/>
         </div>
       </div>
     </CardContent>

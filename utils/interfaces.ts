@@ -1,32 +1,37 @@
 export interface House {
   floors?: Floor[];
-  outdoorStations: {}[];
+  outdoorStations: Station[] | any[];
 }
 export interface Floor {
   apartments: Apartment[];
+  outdoorStations: Station[] | any[];
 }
 
 export interface Apartment {
-  indoorStations: any[];
+  indoorStations: Station[];
+}
+export interface Station {
+  station: DeviceData;
+  accsessories: DeviceData[];
 }
 export interface SelectedProducts {
   indoorProducts: {
     neededQuantity: number;
     SelectedQuantity: number;
-    products: Array<any>;
+    products: Array<DeviceData>;
   };
   outdoorProducts: {
     neededQuantity: number;
     SelectedQuantity: number;
-    products: Array<any>;
+    products: Array<DeviceData>;
   };
   accessories: {
     quantity: number;
-    products: Array<any>;
+    products: Array<DeviceData>;
   };
   controlUnit: {
     quantity: number;
-    product: any;
+    product: DeviceData;
   };
 }
 export type Product = {

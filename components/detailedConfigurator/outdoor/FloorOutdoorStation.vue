@@ -2,7 +2,7 @@
   <Card class="apartment-card shadow-transparent w-[302px] px-6 h-44 text-center">
     
     <CardHeader>
-      <CardTitle>Aussenstation {{ index + 1 }}</CardTitle>
+      <CardTitle>Etage Aussenstation {{ index + 1 }}</CardTitle>
     </CardHeader>
 
     <CardContent class="apartment-actions flex justify-center items-center">
@@ -26,18 +26,19 @@ const { decrementOutdoorNeededQuantity, incrementOutdoorNeededQuantity } = Produ
 const props = defineProps<{
   index: number
   outdoorStation?: Station
+  floorIndex?: number
 }>()
 const houseStore = useHousesStore();
-const { deleteOutdoorStation, duplicateOutdoorStation} = houseStore
+const { deleteFloorOutdoorStation, duplicateFloorOutdoorStation} = houseStore
 const houseIndex: number = inject('houseIndex')
 
 //funktions
 function handleDeleteOutdoorStation() {
   decrementOutdoorNeededQuantity(1)
-  deleteOutdoorStation(houseIndex, props.index)
+  deleteFloorOutdoorStation(houseIndex,props.floorIndex, props.index)
 }
 function handleDuplicateOutdoorStation() {
   incrementOutdoorNeededQuantity(1)
-  duplicateOutdoorStation(houseIndex, props.index)
+  duplicateFloorOutdoorStation(houseIndex,props.floorIndex, props.index)
 }
 </script>

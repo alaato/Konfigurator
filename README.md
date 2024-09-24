@@ -86,7 +86,7 @@
 ### 19.09
 ### found out how to fetch images and display them correctly
 - fetch thumbnail from pimcore because images are too big
-- add images loccaly in case failed attempt to fetch from pimcore
+- add images locally in case failed attempt to fetch from pimcore
 
 ### 20.09
 ### finshed sugar template
@@ -101,3 +101,11 @@
 - check if the selected products have accssories
 - if selected products have accssories, look for a matching Id and display A card
 - add function to acssories 
+### fixed logo issue on production
+
+### 24.09
+
+### adding a flooroutdoor station
+-added functions to add delete
+- added flooroutdoor station to structure
+-changed the UI for the new strucure

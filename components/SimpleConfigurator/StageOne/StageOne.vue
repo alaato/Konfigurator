@@ -31,8 +31,6 @@ import IndoorStationInput from './FormComponents/IndoorStationInput.vue';
 import OutdoorStationInput from './FormComponents/OutdoorStationInput.vue';
 import Funktion from './FormComponents/Funktion.vue'
 import Technologie from './FormComponents/Technologie.vue'
-import steuer from '@/data/steuer.json'
-import WiringCount from './FormComponents/WiringCount.vue';
 
 // variables
 const funktion = defineModel<string>("funktion")
@@ -49,45 +47,20 @@ numberOutdoorStation.value == 1 )
 // stores
 const visitedStore = useVisitedStore();
 const selectedProductsStore = useSelectedProductsStore()
-const { setNeededProductsQuantity, resetAllProducts } = selectedProductsStore
+const { setNeededProductsQuantity, resetAllProducts, addControlUnit } = selectedProductsStore
 const { filter } = storeToRefs(selectedProductsStore)
-
+import { setFilter, setControlUnit } from '~/utils/ConfiguratorUtils/RequirementsUtils'
 // functions
 const goToStage: Function = inject('goToStage')
 
-function setFilter() {
-
-	filter.value.funktion = funktion.value
-	funktion.value == "Video"? filter.value.Video = true : filter.value.Video = null;
-	funktion.value == "Audio"? filter.value.Audio = true : filter.value.Audio = null;
-	if(funktion.value == "Beide")
-		filter.value.Audio = filter.value.Video = true
-	if (technologie.value == "Video-6-Draht" && (funktion.value == "Video" || funktion.value == "Beide") || numberIndoorStation.value > 24) {
-		filter.value.technologie = "TCS:BUS"
-	}
-	else
-		filter.value.technologie = "Video-2-Draht"
-
-	console.log(filter.value)
-}
-
-function setControlUnit() {
-	let mnr: string;
-	if (filter.value.funktion == "Audio") mnr = "BVS20-SG"
-	else if (filter.value.technologie == "Video-2-Draht") mnr = "NVV1000-0400"
-	else if (filter.value.technologie == "TCS:BUS") mnr = "NBV2600-0400"
-
-	const { node } = steuer.data.getProductListing.edges.find(product => product.node.MNR == mnr)
-	selectedProductsStore.addControlUnit(node)
-}
 
 const submitConfig = async () => {
 	if(numberIndoorStation.value > 24) numberIndoorStation.value = 24
 	if(numberOutdoorStation.value > 4) numberOutdoorStation.value = 4
 	setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
-	setFilter()
+	setFilter(filter.value, funktion.value, technologie.value, numberIndoorStation.value)
 	resetAllProducts();
-	setControlUnit()
+	setControlUnit(filter.value, addControlUnit)
 	goToStage(stages[1])
 	if (!visitedStore.visited.includes(stages[1]))
 		visitedStore.visited.push(stages[1])

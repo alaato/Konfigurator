@@ -7,10 +7,10 @@
 					<InfoIcon class="w-5 h-5cursor-pointer transition-transform hover:scale-110" />
 				</button>
 	            <img  :src="imgsrc" alt="Elegant Watch" class="w-full h-40 object-cover" />
-	            <h3 class="text-xl border-b pb-2 font-bold my-2"> Serie: {{ product.node.parent?.MNR }}</h3>
-	            <h3 class=" MNR text-l font-bold mb-2">Article : {{ product.node.MNR }}</h3>
-	            <p class="text-muted-foreground mb-2">{{ product.node.Geraeteart4077 }}</p>
-	            <p class=" mb-2 font-bold">Preis: {{ product.node?.PERIODE1 }}€</p>
+	            <h3 class="text-xl border-b pb-2 font-bold my-2"> Serie: {{ product.parent?.MNR }}</h3>
+	            <h3 class=" MNR text-l font-bold mb-2">Article : {{ product.MNR }}</h3>
+	            <p class="text-muted-foreground mb-2">{{ product.Geraeteart4077 }}</p>
+	            <p class=" mb-2 font-bold">Preis: {{ product.PERIODE1 }}€</p>
 	          </Card>
 </template>
 
