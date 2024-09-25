@@ -1,5 +1,6 @@
 import ExcelJS from 'exceljs';
-import fs from 'fs';
+import logo from "@/data/logo.json"
+
 
 export default defineEventHandler(async (event) => {
   try {
@@ -9,18 +10,20 @@ export default defineEventHandler(async (event) => {
   workbook.creator = 'TCS TürControlSysteme AG';
   const sheet = workbook.addWorksheet('Stückliste', {
     properties:{tabColor:{argb:'040372'}},
-    headerFooter:{firstHeader: "Stückliste", firstFooter: "TCS TürControlSysteme AG"},
+    headerFooter:{firstHeader: "Stuckliste", firstFooter: "TCS TürControlSysteme AG"},
     pageSetup:{paperSize: 9, orientation:'portrait'}
   });
+  if(logo.base64){
+    const imageId1 = workbook.addImage({
+      base64: logo.base64,
+      extension: 'jpeg',
+    });
+    sheet.addImage(imageId1, 'A1:C6');
+  }
 
-  const imageId1 = workbook.addImage({
-    buffer: fs.readFileSync('public/TCS_Logo_RGB.jpg'),
-    extension: 'jpeg',
-  });
-  sheet.addImage(imageId1, 'A1:C6');
   const Stückliste = sheet.addTable({
     name: 'Stückliste',
-    ref: 'F7',
+    ref: 'A8',
     style: {
       showRowStripes: true,
     },
@@ -33,16 +36,16 @@ export default defineEventHandler(async (event) => {
     rows: body,
 
   });
-  sheet.getColumn(6).width = 30
+  sheet.getColumn(1).width = 30
   const buffer = await workbook.xlsx.writeBuffer();
-  event.node.res.setHeader('Content-Disposition', 'attachment; filename="Stückliste.xlsx"');
+  event.node.res.setHeader('Content-Disposition', 'attachment; filename="Stuckliste.xlsx"');
   event.node.res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
   send(event, buffer)
-  const string = JSON.stringify(buffer)
-  return {buffer: string, status: 200, message: 'ok'}
+  return {message: buffer, status:200, buffer}
 }
   catch (error) {
-    return {message: error, status: 500}
+    console.log(error.message)
+    return {message: error.message, status: 500}
   }
 });
 

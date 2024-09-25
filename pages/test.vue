@@ -1,7 +1,7 @@
 <template>
-  <div>
+
     <HausContainer></HausContainer>
-  </div>
+
 </template>
 
 <script lang="ts" setup>

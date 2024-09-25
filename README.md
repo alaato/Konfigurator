@@ -65,3 +65,47 @@
 ### working on the Sugar angebot template
 - added a table of the products and formatted the template and now it looks better
 
+### 13.09.2024 
+### finished The template
+
+
+### 16.09.2024
+### Sugar Api Produkte
+
+### resaerching the Sugar Api
+- how to interact
+- what are the possiblties
+- what data do we need
+
+### 17.09
+### changing the logic according to the Program Flow of Ralf
+- V2D when only One Station
+- both Audio and Video
+- changed the filter for searching the products
+
+### 19.09
+### found out how to fetch images and display them correctly
+- fetch thumbnail from pimcore because images are too big
+- add images locally in case failed attempt to fetch from pimcore
+
+### 20.09
+### finshed sugar template
+
+
+### 23.09
+
+### Fecthed accsseories
+- check all the products and what accsssories they have
+- fetch them from pim core
+- map the feilds and extract Data
+- check if the selected products have accssories
+- if selected products have accssories, look for a matching Id and display A card
+- add function to acssories 
+### fixed logo issue on production
+
+### 24.09
+
+### adding a flooroutdoor station
+-added functions to add delete
+- added flooroutdoor station to structure
+-changed the UI for the new strucure

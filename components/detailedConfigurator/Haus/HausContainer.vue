@@ -2,7 +2,6 @@
 //imports
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
 import Haus from './Haus.vue';
-import emblaCarouselVue from 'embla-carousel-vue';
 
 //consts
 const router = useRouter()
@@ -33,11 +32,10 @@ function handleAddHuas() {
   })
 
 }
-
 </script>
 
 <template>
-  <div class="haus-container min-w-[1280px] max-w-screen-xl h-[600px] 2xl:h-[720px] justify-end flex flex-col">
+  <div class="haus-container max-w-screen-xl min-w-[300px] justify-end flex flex-col">
     
     <Carousel ref="carouselContainerRef" v-if="houses.length > 0" class="relative text-center ">
       <CarouselContent>

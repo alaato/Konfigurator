@@ -17,13 +17,26 @@ const remainingIndoorProducts = computed(() => {
 
 const productsFilter = {
   technologie: filter.value.technologie,
-  video: filter.value.Video
+  video: filter.value.Video,
+  Audio: filter.value.Audio
 }
-const products = indoorStations.data?.getProductListing.edges.filter(product => {
-  if (productsFilter.video && product.node.Video2 && product.node.PERIODE1)
+  
+const products = indoorStations.filter(product => {
+  if(product.parent.MNR == "Innenstation TCS:BUS"|| product.parent.MNR == "Innenstation V2D") return false
+  if(productsFilter.video && product.Video2 && filter.value.technologie == "TCS:BUS" && product.TCSBUS)
     return true
-  else if (!productsFilter.video && !product.node.Video2 && product.node.PERIODE1)
+  else if (productsFilter.video && product.Video2 && filter.value.technologie == "Video-2-Draht" && product.V2D)
     return true
+  else if (productsFilter.Audio && product.Audio1 && !product.Video2)
+    return true
+}).sort((a, b) => {
+  if(a.Video2 && !b.Video2) return -1
+  if(!a.Video2 && b.Video2) return 1
+  if(a.Video2 && b.Video2) return 0
+  
+})
+onMounted(() => {
+  console.log(productsFilter)
 })
 // functions
 function reset() {

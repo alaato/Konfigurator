@@ -4,7 +4,7 @@ import { useQuery } from "@vue/apollo-composable";
 const fetchIndoorStations = (filter) => {
 
     const query = gql`
-query getProductListing($filter: String!, $first: Int) {
+query getProductListing($filter: String! defaultLanguage: "de", $first: Int) {
   getProductListing(first: $first, filter: $filter) {
     totalCount
     edges {

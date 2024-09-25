@@ -4,11 +4,22 @@
   <h2 class="text-2xl font-bold">Haus {{ houseindex + 1 }}</h2>
     <DeleteButton @click="handleDeleteHouse"></DeleteButton>
   </div>
-
-  <div class="flex">
-    <FloorsContainer :floors="house.floors"></FloorsContainer>
-    <outdoorContainer :outdoor-stations="house.outdoorStations"></outdoorContainer>
-  </div>
+  <Tabs default-value="Innen" >
+    <TabsList>
+      <TabsTrigger value="Innen">
+        Innen
+      </TabsTrigger>
+      <TabsTrigger value="Aussen">
+        Aussen
+      </TabsTrigger>
+    </TabsList>
+    <TabsContent value="Innen">
+      <FloorsContainer :floors="house.floors"></FloorsContainer>
+    </TabsContent>
+    <TabsContent value="Aussen">
+    <OutdoorContainer :outdoor-stations="house.outdoorStations"></OutdoorContainer>
+  </TabsContent>
+  </Tabs>
 </div>
 
 </template>
@@ -17,8 +28,13 @@
 import DeleteButton from '../general/DeleteButton.vue';
 
 import FloorsContainer from '@/components/detailedConfigurator/indoor/FloorsContainer.vue';
-import outdoorContainer from '~/components/detailedConfigurator/outdoor/OutdoorContainer.vue';
-
+import OutdoorContainer from '@/components/detailedConfigurator/outdoor/OutdoorContainer.vue';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@/components/ui/tabs'
 const props = defineProps(['houseindex', 'house'])
 provide('houseIndex', props.houseindex)
 

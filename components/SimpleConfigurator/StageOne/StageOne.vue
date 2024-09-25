@@ -1,7 +1,7 @@
 <template>
-	<div class="my-10 max-w-[960px]">
+	<div class="my-2 max-w-[960px]">
 		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center">
-			<WiringCount v-model="wiringCount"></WiringCount>
+			<!-- <WiringCount v-model="wiringCount"></WiringCount> -->
 
 			<div class="number-of-apartments flex justify-center my-1 gap-1">
 				<IndoorStationInput v-model="numberIndoorStation" />
@@ -10,8 +10,8 @@
 
 			<div class="funktion-and-technologie-container gap-1">
 				<Funktion v-model="funktion" />
-				<Technologie v-if="funktion == 'Video' && numberIndoorStation <= 24 && wiringCount > 4"
-					v-model="technologie" />
+				<Technologie v-if="funktion == 'Video' || funktion == 'Beide'"
+					v-model="technologie" :number-outdoor-stations="numberOutdoorStation" :numeber-indoor-stations="numberIndoorStation" />
 			</div>
 
 			<Button class="bg-arapawa-950 justify-center text-white hover:bg-arapawa-800 min-w-1/2 my-1" type="submit">
@@ -31,8 +31,6 @@ import IndoorStationInput from './FormComponents/IndoorStationInput.vue';
 import OutdoorStationInput from './FormComponents/OutdoorStationInput.vue';
 import Funktion from './FormComponents/Funktion.vue'
 import Technologie from './FormComponents/Technologie.vue'
-import steuer from '@/data/steuer.json'
-import WiringCount from './FormComponents/WiringCount.vue';
 
 // variables
 const funktion = defineModel<string>("funktion")
@@ -42,43 +40,27 @@ const form = ref<InstanceType<typeof HTMLFormElement> | null>(null);
 const numberIndoorStation = useState("numberIndoorStation", () => 1);
 const numberOutdoorStation = useState("numberOutdoorStation", () => 1);
 const wiringCount = ref(2);
+const showTech = computed(()=> (funktion.value == 'Video' || funktion.value == "Beide" ) 
+&& numberIndoorStation.value <= 24 && 
+numberOutdoorStation.value == 1 )
 
 // stores
 const visitedStore = useVisitedStore();
 const selectedProductsStore = useSelectedProductsStore()
-const { setNeededProductsQuantity, resetAllProducts } = selectedProductsStore
+const { setNeededProductsQuantity, resetAllProducts, addControlUnit } = selectedProductsStore
 const { filter } = storeToRefs(selectedProductsStore)
-
+import { setFilter, setControlUnit } from '~/utils/ConfiguratorUtils/RequirementsUtils'
 // functions
 const goToStage: Function = inject('goToStage')
 
-function setFilter() {
-
-	filter.value.funktion = funktion.value
-	funktion.value == "Video" ? filter.value.Video = true : filter.value.Video = null;
-
-	if ((technologie.value == "Video-6-Draht" && funktion.value == "Video") || numberIndoorStation.value > 24) {
-		filter.value.technologie = "TCS:BUS"
-	}
-	else
-		filter.value.technologie = "Video-2-Draht"
-}
-
-function setControlUnit() {
-	let mnr: string;
-	if (filter.value.funktion == "Audio") mnr = "BVS20-SG"
-	else if (filter.value.technologie == "Video-2-Draht") mnr = "NVV1000-0400"
-	else if (filter.value.technologie == "TCS:BUS") mnr = "NBV2600-0400"
-
-	const { node } = steuer.data.getProductListing.edges.find(product => product.node.MNR == mnr)
-	selectedProductsStore.addControlUnit(node)
-}
 
 const submitConfig = async () => {
+	if(numberIndoorStation.value > 24) numberIndoorStation.value = 24
+	if(numberOutdoorStation.value > 4) numberOutdoorStation.value = 4
 	setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
-	setFilter()
+	setFilter(filter.value, funktion.value, technologie.value, numberIndoorStation.value)
 	resetAllProducts();
-	setControlUnit()
+	setControlUnit(filter.value, addControlUnit)
 	goToStage(stages[1])
 	if (!visitedStore.visited.includes(stages[1]))
 		visitedStore.visited.push(stages[1])
