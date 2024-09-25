@@ -71,7 +71,6 @@ h1 {
   max-width: 1366px;
   display: flex;
   justify-content: center;
-  height: 100%;
 }
 
 .dark .logo{

@@ -1,5 +1,5 @@
 <template>
-	<div class="zubehör flex justify-center items-center flex-col gap-2 max-h-32">
+	<div class="zubehör flex justify-center items-center flex-col gap-2">
 		<div class=" flex gap-1">
 			<p v-if="!(umSchalterNeeded && doorOpener)">Keine Zubehör verfügbar</p>
 			<ZubehörCard v-if="Umtauscher" :product="Umtauscher.node"></ZubehörCard>
@@ -24,9 +24,9 @@ const doorOpenerNeeded = umSchalterNeeded;
 
 const Umtauscher = umSchalterNeeded ? funktionErweiterungen.data.getProductListing.edges.find(product => product.node.MNR.includes("FVU1401-0400")) : null
 const doorOpener = doorOpenerNeeded ? funktionErweiterungen.data.getProductListing.edges.find(product => product.node.MNR.includes("FAA1200-0400")) : null
-if(Umtauscher && selectedProducts.value.accessories.products.length == 0)
+if (Umtauscher && selectedProducts.value.accessories.products.length == 0)
 	selectedProductsStore.addAccessories(Umtauscher.node, 1)
-if(doorOpener && selectedProducts.value.accessories.products.length < 2)
+if (doorOpener && selectedProducts.value.accessories.products.length < 2)
 	selectedProductsStore.addAccessories(doorOpener.node, 1)
 
 //functions
