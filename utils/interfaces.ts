@@ -43,6 +43,7 @@ export type Product = {
   Video2: string;
   IP1: string;
   TEXT: string;
+  KTXT: string;
   V2D: boolean;
   TCSBUS: boolean;
   PERIODE1: string;
@@ -91,6 +92,7 @@ export interface DeviceData {
   id: string;
   MNR: string;
   TEXT: string;
+  KTXT: string;
   Geraeteart4077: string;
   Kommunikationstechnologie4164: string;
   Audio1: boolean;

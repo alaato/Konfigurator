@@ -2,32 +2,31 @@ import { toast } from "vue-sonner";
 import { utils } from "xlsx";
 import jsPDF from "jspdf";
 import { applyPlugin } from "jspdf-autotable";
-import logo from "@/data/logo.json"
+import logo from "@/data/logo.json";
+import { font } from "~/fonts/BAHNSCHRIFT-normal";
 applyPlugin(jsPDF);
+// load the *.ttf font file as binary string
 
-const toDataURL = (url: string) =>
-  fetch(url, {
-    mode: "no-cors",
-    method: "GET",
-  })
-    .then((response) => response.blob())
-    .then(
-      (blob) =>
-        new Promise((resolve, reject) => {
-          const reader = new FileReader();
-          reader.onloadend = () => resolve(reader.result);
-          reader.onerror = reject;
-          reader.readAsDataURL(blob);
-        })
-    );
+// add the font to jsPDF
 
+const toDataURL = async (url: string) => {
+  const res = await $fetch("/api/base64", {
+    method: "POST",
+    body: {
+      url: url,
+    },
+  });
+  return res.base64;
+};
 export async function generatePDF() {
-  const dataURI = logo.base64
+  const dataURI = logo.base64;
   const doc = new jsPDF();
   doc.setProperties({
     title: "Stückliste",
   });
-  doc.setFont("times", "normal");
+  doc.addFileToVFS("BAHNSCHRIFT-normal.ttf", font);
+  doc.addFont("BAHNSCHRIFT-normal.ttf", "BAHNSCHRIFT", "normal");
+  doc.setFont("BAHNSCHRIFT", "normal");
 
   //ADD IMAGE
   if (dataURI) doc.addImage(dataURI, "JPEG", 160, 10, 40, 20);
@@ -53,50 +52,51 @@ export async function generatePDF() {
 
   // main body- table
   const headStyles = {
-    font: "courier",
-    fontSize: 12,
+    font: "BAHNSCHRIFT",
+    fontSize: 10,
     fontStyle: "bold",
     fillColor: [18, 11, 160],
     textColor: [255, 255, 255],
     lineColor: [0, 0, 0],
   };
   const bodyStyles = {
-    font: "courier",
+    font: "BAHNSCHRIFT",
+    fontSize: 10,
   };
   doc.autoTable({
     startY: 100,
     html: "#stückliste",
-    theme: "grid",
-    headStyles: headStyles,
+    headStyles: { ...headStyles },
     bodyStyles: bodyStyles,
+    theme: "plain",
     margin: { left: 20, right: 20 },
-    didDrawCell: (data) => {
+    didDrawCell: async (data) => {
       if (data.section === "body" && data.column.index === 0) {
         var td = data.cell.raw;
         var img = td.getElementsByTagName("img")[0];
         var dim = data.cell.height - data.cell.padding("vertical");
         var x = data.cell.x;
         var y = data.cell.y;
-        toDataURL(img.src).then((dataUrl : string) => {
-          doc.addImage(dataUrl, "JPEG", x+2, y+2, 20, 20);
-        });
+        const bas64 = await toDataURL(img.src);
+        doc.addImage(bas64, "png", 40, 40, 40, 40);
       }
     },
+    useCss: true,
   });
 
   let finalY = (doc.lastAutoTable.finalY += 10);
   doc.autoTable({
     startY: finalY,
-    bodyStyles: { ...bodyStyles, cellWidth: 35 },
+    bodyStyles: { ...bodyStyles, cellWidth: 35, lineWidth: 0 },
     html: "#total",
-    theme: "grid",
     margin: { left: 120, right: 20 },
+    useCss: true,
   });
 
   // footer
   doc.line(15, 275, 200, 275, "F");
   doc.setFontSize(6);
-  doc.setFont("times", "normal");
+  doc.setFont("BAHNSCHRIFT", "normal");
   doc.text(
     "TCS TürControlSysteme AG\nGeschwister-Scholl-Str. 7\n39307 Genthin\nE-Mail: info@tcsag.de\nInternet: www.tcsag.de",
     20,
@@ -109,7 +109,7 @@ export async function generatePDF() {
   );
   doc.text(
     "Spk MagdeBurg\nIBAN: DE07 8105 3272 0711 0006 89\nBIC | SWIFT: NOLADE21MDG",
-    85,
+    90,
     280
   );
   doc.text(

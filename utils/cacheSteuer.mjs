@@ -29,6 +29,7 @@ async function getOutdoor() {
                 Steuergeraet
                 PERIODE1
                 TEXT
+				KTXT
                 FrontalAnsichtFrei {
                       id
                       ... on asset {

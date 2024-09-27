@@ -6,6 +6,7 @@
 				<TableHeader>
 					<TableRow>
 						<TableHead> Article </TableHead>
+						<TableHead> Bezeichnung </TableHead>
 						<TableHead class="text-center">Menge</TableHead>
 						<TableHead>Preis</TableHead>
 						<TableHead class="text-right"> Total </TableHead>
