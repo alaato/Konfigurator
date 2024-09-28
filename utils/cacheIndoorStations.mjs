@@ -15,6 +15,7 @@ async function getInnenstation() {
             id
             MNR
             TEXT
+			KTXT
             Geraeteart4077
             Kommunikationstechnologie4164
             Audio1

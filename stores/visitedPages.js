@@ -1,6 +1,14 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
-export const useVisitedStore = defineStore('visited', () => {
-    const visited = ref(["Anforderungen"])
-    return { visited }
-})
+export const useVisitedStore = defineStore(
+  "visited",
+  () => {
+    const visited = ref(["Anforderungen"]);
+    return { visited };
+  },
+  {
+    persist: {
+      storage: piniaPluginPersistedstate.sessionStorage(),
+    },
+  }
+);

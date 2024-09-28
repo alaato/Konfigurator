@@ -1,0 +1,18 @@
+{
+  "lang": "de",
+  "dir": "ltr",
+  "name": "TCS Sprechanlage Konfigurator",
+  "short_name": "Konfigurator",
+  "description": "Ein TCS-Sprechanlagen-Konfigurator für Ihr Objekt",
+  "icons": [
+    {
+      "src": "Square44x44Logo.altform-lightunplated_targetsize-256.png",
+      "sizes": "256x256"
+    }
+  ],
+  "id": "TCSKonfigurator",
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "theme_color": "aliceblue"
+}

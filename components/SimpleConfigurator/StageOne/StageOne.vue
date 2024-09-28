@@ -10,8 +10,8 @@
 
 			<div class="funktion-and-technologie-container gap-1">
 				<Funktion v-model="funktion" />
-				<Technologie v-if="funktion == 'Video' || funktion == 'Beide'"
-					v-model="technologie" :number-outdoor-stations="numberOutdoorStation" :numeber-indoor-stations="numberIndoorStation" />
+				<Technologie v-if="funktion == 'Video' || funktion == 'Beide'" v-model="technologie"
+					:number-outdoor-stations="numberOutdoorStation" :numeber-indoor-stations="numberIndoorStation" />
 			</div>
 
 			<Button class="bg-arapawa-950 justify-center text-white hover:bg-arapawa-800 min-w-1/2 my-1" type="submit">
@@ -40,9 +40,9 @@ const form = ref<InstanceType<typeof HTMLFormElement> | null>(null);
 const numberIndoorStation = useState("numberIndoorStation", () => 1);
 const numberOutdoorStation = useState("numberOutdoorStation", () => 1);
 const wiringCount = ref(2);
-const showTech = computed(()=> (funktion.value == 'Video' || funktion.value == "Beide" ) 
-&& numberIndoorStation.value <= 24 && 
-numberOutdoorStation.value == 1 )
+const showTech = computed(() => (funktion.value == 'Video' || funktion.value == "Beide")
+	&& numberIndoorStation.value <= 24 &&
+	numberOutdoorStation.value == 1)
 
 // stores
 const visitedStore = useVisitedStore();
@@ -52,11 +52,10 @@ const { filter } = storeToRefs(selectedProductsStore)
 import { setFilter, setControlUnit } from '~/utils/ConfiguratorUtils/RequirementsUtils'
 // functions
 const goToStage: Function = inject('goToStage')
-
-
+console.log(selectedProductsStore.selectedProducts)
+console.log(selectedProductsStore.filter)
 const submitConfig = async () => {
-	if(numberIndoorStation.value > 24) numberIndoorStation.value = 24
-	if(numberOutdoorStation.value > 4) numberOutdoorStation.value = 4
+	if (numberOutdoorStation.value > 4) numberOutdoorStation.value = 4
 	setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
 	setFilter(filter.value, funktion.value, technologie.value, numberIndoorStation.value)
 	resetAllProducts();
