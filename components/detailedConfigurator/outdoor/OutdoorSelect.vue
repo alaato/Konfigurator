@@ -16,9 +16,9 @@
 import ProductsModal from '../general/ProductsModal.vue';
 import OutdoorForm from './OutdoorForm.vue'
 import outdoorStations from '@/data/aussenstationen.json'
-import ProductsGrid from '../general/ProductGrid.vue';
-import FilterBar from '~/components/general/FilterBar.vue';
-import { type Station } from '~/utils/interfaces';
+import ProductsGrid from '../general/ModalProductGrid.vue';
+import FilterBar from '@/components/general/FilterBar.vue';
+import { type Station } from '@/utils/interfaces';
 //consts
 const props = defineProps<{
 	outdoorStation: Station

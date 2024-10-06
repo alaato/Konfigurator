@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import selectInput from './selectInput.vue'
-import { setFilter, setControlUnit } from '~/utils/ConfiguratorUtils/RequirementsUtils'
+import { setFilter, setControlUnit } from '@/utils/ConfiguratorUtils/RequirementsUtils'
 
 const emit = defineEmits(['handleSubmit'])
 const numberButtons = defineModel("numberButtons", {default: 1, })

@@ -1,7 +1,7 @@
 <template>
 	<Card :class="props.class"
-		class="bg-background text-left rounded-lg shadow-lg bg-white overflow-hidden min-w-[360px] max-w-sm">
-		<NuxtImg :src="imgsrc" alt="Product Image" width="150" height="150"
+		class="bg-background text-left rounded-lg shadow-lg bg-white overflow-hidden min-w-[250px] max-w-sm">
+		<NuxtImg :src="imgsrc" alt="Product Image" width="250" height="250"
 			class="w-full h-64 object-scale-down border-b pb-2" />
 		<div class="p-6 flex flex-col">
 			<h3 class="text-xl font-bold mb-2 border-b pb-2"> Serie: {{ product?.parent?.MNR }}</h3>
@@ -20,7 +20,6 @@ const props = defineProps<{
 	class?: string
 }>()
 const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/ProductImages" + props.product.id
-console.log()
 //function
 </script>
 

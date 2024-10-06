@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import { describe, it, expect, vi } from 'vitest';
-import FormComponent from '~/components/SimpleConfigurator/StageOne/StageOne.vue';
+import FormComponent from '@/components/SimpleConfigurator/StageOne/StageOne.vue';
 
 describe('FormComponent', () => {
   it('renders correctly', () => {

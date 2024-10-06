@@ -3,7 +3,7 @@
 </template>
 
 <script lang="ts" setup>
-import MainPage from '~/components/SimpleConfigurator/MainPage.vue';
+import MainPage from '@/components/SimpleConfigurator/MainPage.vue';
 
 </script>
 

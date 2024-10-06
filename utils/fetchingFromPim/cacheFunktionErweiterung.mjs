@@ -1,22 +1,30 @@
-import fs from "fs";
-
-import { addAnzahlTastenToObject, cleanEmptyObjects, extractAudioFeatures } from "./cacheUtils.mjs";
+import fs from 'fs';
 const FilterOptions = {
-  Aussenstation: true,
-  Anlagenkonfigurator: "Ja",
-};
-
+  Funktionserweiterung: true,
+}
+function cleanEmptyObjects(obj) {
+  for (let key in obj) {
+    if (typeof obj[key] === 'object' && obj[key] !== null) {
+      if (Object.keys(obj[key]).length === 0) {
+        delete obj[key];
+      } else {
+        cleanEmptyObjects(obj[key]);
+      }
+    }
+  }
+  return obj;
+}
 async function getOutdoor() {
   const data = JSON.stringify({
-    query: `query getProductListing($defaultLanguage: String! $filter: String!) {
-              getProductListing(defaultLanguage: $defaultLanguage filter: $filter) {
-                totalCount
-                edges {
-                  node {
-                    id
+    query:  `query getProductListing($filter: String!) {
+      getProductListing(filter: $filter defaultLanguage: "de") {
+        totalCount
+        edges {
+          node {
+           id
                     MNR
                     TEXT
-					KTXT
+					          KTXT
                     Geraeteart4077
                     Kommunikationstechnologie4164
                     Audio1
@@ -39,6 +47,14 @@ async function getOutdoor() {
                     PERIODE4
                     PIWebsiteLink
                     DBWebsiteLink
+                    TexteTK {
+                      features {
+                          ... on csFeatureTextarea {
+                          name
+                          text
+                          }
+                      }
+                    }
                     parent{
                               ... on object_Product{
                             MNR
@@ -100,44 +116,32 @@ async function getOutdoor() {
                         assetThumb: fullpath(thumbnail: "Konfigurator")
                       }
                     }
-                      Audio {
-                      ... on csGroup {
-                        features {
-                          ... on csFeatureInput {
-                            name
-                            text
-                          }
-                       }
-                    }
-                }
-              }
-            }
           }
-        }`,
+        }
+      }
+    }`,
     variables: {
       filter: JSON.stringify(FilterOptions),
-      defaultLanguage: "de",
-    },
+defaultLanguage: "de"
+    }
   });
 
   const response = await fetch(
     "https://pim.tcsapps.de/pimcore-graphql-webservices/konfigurator?apikey=90b00841d18f9f914d5584ae8d0e7793",
     {
-      method: "post",
+      method: 'post',
       body: data,
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
     }
   );
 
   const json = await response.json();
-  const clean = cleanEmptyObjects(json);
-  extractAudioFeatures(clean);
-  addAnzahlTastenToObject(clean);
+  const clean = cleanEmptyObjects(json)
   const products = clean.data.getProductListing.edges.map((edge) => edge.node);
-  const jsonProducts = JSON.stringify(products);
-  fs.writeFileSync("./data/aussenstationen.json", jsonProducts);
+  const jsonData = JSON.stringify(products)
+ fs.writeFileSync('./data/Funktionserweiterung.json', jsonData);
 }
 
-getOutdoor();
+getOutdoor()

@@ -1,8 +1,8 @@
 <template>
 	<Card :key="product.id"
-		class="flex-grow p-3 w-50 lg:w-60 bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transition-transform hover:scale-105">
+		class="p-3 w-50 lg:w-60 bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transition-transform hover:scale-105">
 		<button @click="$emit('handleProductClick', product)">
-			<InfoIcon class="w-5 h-5cursor-pointer transition-transform hover:scale-110" />
+			<InfoIcon class="w-5 h-5 cursor-pointer transition-transform hover:scale-110" />
 		</button>
 		<img :src="imgsrc" class="w-full h-40 object-cover" />
 		<h3 class="text-xl border-b pb-2 font-bold my-2"> Serie: {{ product.parent?.MNR }}</h3>

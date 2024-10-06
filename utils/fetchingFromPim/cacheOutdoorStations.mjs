@@ -1,10 +1,11 @@
 import fs from "fs";
-import out from "../data/aussenstationen.json" with { type: "json" }
+
 import { addAnzahlTastenToObject, cleanEmptyObjects, extractAudioFeatures } from "./cacheUtils.mjs";
 const FilterOptions = {
-	MNR: {'$like' :'%AVA%'},
-	TCSBUS: true
+  Aussenstation: true,
+  Anlagenkonfigurator: "Ja",
 };
+
 async function getOutdoor() {
   const data = JSON.stringify({
     query: `query getProductListing($defaultLanguage: String! $filter: String!) {
@@ -15,7 +16,7 @@ async function getOutdoor() {
                     id
                     MNR
                     TEXT
-					KTXT
+					          KTXT
                     Geraeteart4077
                     Kommunikationstechnologie4164
                     Audio1
@@ -38,6 +39,14 @@ async function getOutdoor() {
                     PERIODE4
                     PIWebsiteLink
                     DBWebsiteLink
+                    TexteTK {
+                      features {
+                          ... on csFeatureTextarea {
+                          name
+                          text
+                          }
+                      }
+                    }
                     parent{
                               ... on object_Product{
                             MNR
@@ -136,21 +145,7 @@ async function getOutdoor() {
   addAnzahlTastenToObject(clean);
   const products = clean.data.getProductListing.edges.map((edge) => edge.node);
   const jsonProducts = JSON.stringify(products);
-  fs.writeFileSync("./data/PesPro.json", jsonProducts);
+  fs.writeFileSync("./data/aussenstationen.json", jsonProducts);
 }
 
-function cleanDuplicateEntries(arr) {
-    const uniqueObjects = {};
-    arr.forEach(obj => {
-        if (obj.MNR in uniqueObjects) {
-            // If duplicate found, remove the object
-            delete arr[arr.indexOf(obj)];
-        } else {
-            uniqueObjects[obj.MNR] = obj;
-        }
-    });
-    return arr.filter(obj => obj); // Remove any empty slots left after deleting duplicates
-}
-const clean = cleanDuplicateEntries(out)
-const jsonProducts = JSON.stringify(clean);
-fs.writeFileSync("./data/aussenstationen.json", jsonProducts);
+getOutdoor();

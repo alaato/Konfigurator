@@ -15,7 +15,7 @@
 
 <script setup>
 import Zubehör from '../SimpleConfigurator/Zubehör.vue'
-import SideCard from '../SimpleConfigurator/general/SideCard.vue';
+import SideCard from '../SimpleConfigurator/general/sideCard/SideCard.vue';
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
 const { currentStage } = storeToRefs(currentStageStore)
@@ -23,7 +23,6 @@ const trackerRef = ref()
 //functions
 const goToStage = (targetStage) => {
   if (!stages.value.includes(targetStage)) {
-    console.log("Invalid stage:", targetStage);
     return;
   }
   currentStage.value = targetStage;

@@ -41,7 +41,9 @@ const addProduct = (product) => {
 			visitedStore.visited.push("Zubehör")
 	}
 }
-
+watchEffect(() => {
+	if(productQuantity.value > remainingIndoorProducts.value) productQuantity.value = remainingIndoorProducts.value
+})
 </script>
 
 <style></style>

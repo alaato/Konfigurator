@@ -8,11 +8,9 @@ useHead({ link: [{ rel: "manifest", href: "/TcsSpreschanlageKonfigurator.webmani
 
 
 <template>
-	<div id="app" class="h-screen flex flex-col">
+	<div id="app" class="h-screen">
 		<Navbar></Navbar>
-		<div class="main-page m-auto">
 			<NuxtPage />
-		</div>
 	</div>
 </template>
 <style>

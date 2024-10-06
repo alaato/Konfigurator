@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { type DeviceData } from "~/utils/interfaces";
+import { type DeviceData } from "@/utils/interfaces";
 
 export const useSelectedProductsStore = defineStore({
   id: "SelectedProductsStore",
@@ -99,15 +99,21 @@ export const useSelectedProductsStore = defineStore({
       this.selectedProducts.outdoorProducts.SelectedQuantity += quantity;
     },
     addExtension(product, quantity) {
-      for (let i = 0; i < quantity; i++) {
-        this.selectedProducts.extensions.products.push(product);
+      const AddedProduct = this.selectedProducts.extensions.products.find((p) => p.MNR === product.MNR)
+      if (AddedProduct) AddedProduct.quantity += quantity;
+      else{
+        for (let i = 0; i < quantity; i++) {
+          this.selectedProducts.extensions.products.push(product);
+        }
       }
+
       this.selectedProducts.extensions.SelectedQuantity += quantity;
     },
     addOneOutdoorProduct(product) {
-      this.selectedProducts.outdoorProducts.products.push(product);
-      this.selectedProducts.outdoorProducts.SelectedQuantity +=
-        product.quantity;
+      const AddedProduct = this.selectedProducts.outdoorProducts.products.find((p) => p.MNR === product.MNR)
+      if (AddedProduct) AddedProduct.quantity++;
+      else this.selectedProducts.outdoorProducts.products.push(product);
+      this.selectedProducts.outdoorProducts.SelectedQuantity++;
     },
     addAccessories(product) {
       this.selectedProducts.accessories.products.push(product);
@@ -119,15 +125,15 @@ export const useSelectedProductsStore = defineStore({
     removeIndoorProducts(product) {
       const index =
         this.selectedProducts.indoorProducts.products.indexOf(product);
-      if (index) {
-        this.selectedProducts.indoorProducts.products.splice(index, 1);
+      if (index !== -1) {
         this.selectedProducts.indoorProducts.SelectedQuantity -=
-          product.quantity;
+        product.quantity;
+        this.selectedProducts.indoorProducts.products.splice(index, 1);
       }
     },
     removeExtension(product) {
       const index = this.selectedProducts.extensions.products.indexOf(product);
-      if (index) {
+      if (index !== -1) {
         this.selectedProducts.extensions.products.splice(index, 1);
         this.selectedProducts.extensions.SelectedQuantity -= product.quantity;
       }
@@ -136,16 +142,15 @@ export const useSelectedProductsStore = defineStore({
       const index: number =
         this.selectedProducts.outdoorProducts.products.indexOf(product);
       console.log(index, this.selectedProducts.outdoorProducts);
-      if (index) {
+      if (index !== -1) {
         this.selectedProducts.outdoorProducts.products.splice(index, 1);
         this.selectedProducts.outdoorProducts.SelectedQuantity -=
           product.quantity;
       }
-      console.log(index, this.selectedProducts.outdoorProducts);
     },
     removeAccessories(product) {
       const index = this.selectedProducts.accessories.products.indexOf(product);
-      if (index) {
+      if (index !== -1) {
         this.selectedProducts.accessories.products.splice(index, 1);
       }
     },
@@ -156,6 +161,10 @@ export const useSelectedProductsStore = defineStore({
       this.selectedProducts.indoorProducts.products = [];
       this.selectedProducts.indoorProducts.SelectedQuantity = 0;
     },
+    resetAccessories() {
+      this.selectedProducts.accessories.products = [];
+      this.selectedProducts.accessories.quantity = 0;
+    }, 
     resetOutdoorProducts() {
       this.selectedProducts.outdoorProducts.products = [];
       this.selectedProducts.outdoorProducts.SelectedQuantity = 0;
@@ -165,13 +174,12 @@ export const useSelectedProductsStore = defineStore({
       this.selectedProducts.extensions.SelectedQuantity = 0;
     },
     resetAllProducts() {
-      this.selectedProducts.indoorProducts.products = [];
-      this.selectedProducts.indoorProducts.SelectedQuantity = 0;
-      this.selectedProducts.outdoorProducts.products = [];
-      this.selectedProducts.outdoorProducts.SelectedQuantity = 0;
-      this.selectedProducts.accessories.products = [];
-      this.selectedProducts.accessories.quantity = 0;
-      this.selectedProducts.controlUnit = null;
+      this.resetIndoorProducts();
+      this.resetOutdoorProducts();
+      this.resetControlUnit();
+      this.resetExtension();
+      this.resetAccessories();
+      this.resetControlUnit();
     },
   },
   persist: {

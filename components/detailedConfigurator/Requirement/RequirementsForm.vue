@@ -23,7 +23,7 @@
 <script lang="ts" setup>
 
 //imports and props
-import { useSelectedProductsStore } from '~/stores/products';
+import { useSelectedProductsStore } from '@/stores/products';
 import steuer from '@/data/steuer.json'
 import NumberInputBox from '@/components/SimpleConfigurator/StageOne/FormComponents/NumberInputBox.vue'
 

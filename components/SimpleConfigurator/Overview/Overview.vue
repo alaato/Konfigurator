@@ -16,6 +16,7 @@
 					<ProductRow :products="selectedProducts.indoorProducts.products" />
 					<ProductRow :products="selectedProducts.outdoorProducts.products" />
 					<ProductRow :products="selectedProducts.accessories.products" />
+					<ProductRow :products="selectedProducts.extensions.products" />
 					<ProductRow :products="[controlUnit]" />
 				</TableBody>
 			</Table>
@@ -53,7 +54,7 @@ import {
 } from "@/components/ui/table";
 import { Toaster } from "@/components/ui/sonner";
 import ProductRow from "./ProductRow.vue";
-import { generateEXCEL, generatePDF } from "~/utils/generates";
+import { generateEXCEL, generatePDF } from "@/utils/ConfiguratorUtils/generatingExcelAndPDF";
 // Function to update the theme based on the <html> class
 function updateToasterTheme() {
 	const isDarkTheme = document.documentElement.classList.contains("dark");
@@ -72,8 +73,11 @@ onMounted(() => {
 //consts
 const toasterTheme = ref("light");
 const selectedProductsStore = useSelectedProductsStore();
-const { selectedProducts } = storeToRefs(selectedProductsStore);
+const { selectedProducts, getAllSelectedProducts } = storeToRefs(selectedProductsStore);
 const controlUnit = selectedProducts.value.controlUnit;
+const totalSum = getAllSelectedProducts.value.reduce((sum, product) => {
+	return sum + (product.PERIODE1 * product.quantity);
+}, 0)
 const total = computed(() => {
 	let sum = 0;
 	selectedProducts.value.outdoorProducts.products.forEach((product) => {

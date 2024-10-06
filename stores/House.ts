@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { type House } from "~/utils/interfaces";
+import { type House } from "@/utils/interfaces";
 export const useHousesStore = defineStore({
   id: "HousesStore",
   state: () => ({

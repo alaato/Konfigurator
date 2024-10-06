@@ -1,22 +1,13 @@
-import fs from 'fs';
+import fs from "fs";
+import { cleanEmptyObjects, cleanNullValues } from "./cacheUtils.mjs";
 const FilterOptions = {
-  Funktionserweiterung: true,
-}
-function cleanEmptyObjects(obj) {
-  for (let key in obj) {
-    if (typeof obj[key] === 'object' && obj[key] !== null) {
-      if (Object.keys(obj[key]).length === 0) {
-        delete obj[key];
-      } else {
-        cleanEmptyObjects(obj[key]);
-      }
-    }
-  }
-  return obj;
-}
-async function getOutdoor() {
+  Innenstation: true,
+  Anlagenkonfigurator: "Ja",
+};
+
+async function getInnenstation() {
   const data = JSON.stringify({
-    query:  `query getProductListing($filter: String!) {
+    query: `query getProductListing($filter: String!) {
       getProductListing(filter: $filter defaultLanguage: "de") {
         totalCount
         edges {
@@ -24,6 +15,7 @@ async function getOutdoor() {
             id
             MNR
             TEXT
+			      KTXT
             Geraeteart4077
             Kommunikationstechnologie4164
             Audio1
@@ -50,6 +42,18 @@ async function getOutdoor() {
                       ... on object_Product{
                     MNR
                     }
+                }
+            TexteTK {
+                name
+                description
+                features {
+                    __typename
+                    ... on csFeatureTextarea {
+                    name
+                    text
+                    id
+                    }
+                }
                 }
             Gehaeuse{
                 ... on csGroup{
@@ -113,26 +117,26 @@ async function getOutdoor() {
     }`,
     variables: {
       filter: JSON.stringify(FilterOptions),
-defaultLanguage: "de"
-    }
+      defaultLanguage: "de",
+    },
   });
 
   const response = await fetch(
     "https://pim.tcsapps.de/pimcore-graphql-webservices/konfigurator?apikey=90b00841d18f9f914d5584ae8d0e7793",
     {
-      method: 'post',
+      method: "post",
       body: data,
       headers: {
-        'Content-Type': 'application/json',
+        "Content-Type": "application/json",
       },
     }
   );
 
   const json = await response.json();
-  const clean = cleanEmptyObjects(json)
+  const clean = cleanEmptyObjects(json);
   const products = clean.data.getProductListing.edges.map((edge) => edge.node);
-  const jsonData = JSON.stringify(products)
- fs.writeFileSync('./data/Funktionserweiterung.json', jsonData);
+  const jsonProducts = JSON.stringify(products);
+  fs.writeFileSync("./data/innenestationen.json", jsonProducts);
 }
 
-getOutdoor()
+getInnenstation();

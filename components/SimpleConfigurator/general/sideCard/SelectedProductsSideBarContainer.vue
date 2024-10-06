@@ -8,7 +8,7 @@
 </template>
 
 <script setup lang="ts">
-import Card from '~/components/ui/card/Card.vue';
+import Card from '@/components/ui/card/Card.vue';
 import SideCart from './SideCart.vue';
 const props = defineProps<{
 	selectedProducts?: { neededQuantity: number; SelectedQuantity: number; products: any[]}

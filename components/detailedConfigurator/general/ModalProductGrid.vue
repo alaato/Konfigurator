@@ -21,7 +21,7 @@ import { ChevronLeft } from 'lucide-vue-next'
 import { Button } from '@/components/ui/button'
 import ProductGridCard from './ProductGridCard.vue'
 import pagination from './pagination.vue'
-import ProductInformation from './ProductInformation.vue'
+import ProductInformation from '../../general/ProductInformation.vue'
 
 //consts
 const emit = defineEmits(['resetSelection'])
@@ -39,7 +39,6 @@ const handlePageChange = (newPage: number) => {
 	currentPage.value = newPage
 }
 const handleProductClick = (product) => {
-  console.log(product, "clicked")
   selectedProduct.value = product
 }
 

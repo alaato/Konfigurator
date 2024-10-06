@@ -5,7 +5,7 @@
 	            <CardDescription>Wählen Sie aus, wie viele Innenstationen</CardDescription>
 	          </CardHeader>
 	          <CardContent>
-	            <NumberField v-model="numberIndoorStaions" :required="true" :default-value="1" :min="1" :max="100">
+	            <NumberField v-model="numberIndoorStaions" :required="true" :default-value="1" :min="1" :max="40">
 	              <NumberFieldContent>
 	                <NumberFieldDecrement />
 	                <NumberFieldInput />

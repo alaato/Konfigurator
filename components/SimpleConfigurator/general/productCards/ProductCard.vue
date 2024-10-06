@@ -1,20 +1,21 @@
 <template>
-	<Card
-		class="bg-white font-body flex flex-col text-left rounded-lg drop-shadow-sm overflow-hidden min-w-[360px] max-w-sm">
-		<NuxtImg ref="ProductImage" loading="lazy" format="webp" :src="imgsrc" alt="Product Image" width="300"
-			height="300" class="w-full h-64 object-scale-down" />
+	<Card class="bg-white font-body flex flex-col text-left rounded-lg drop-shadow-sm overflow-hidden w-[325px]">
+		<div class="bg-white">
+			<ProductInformation :product="product"></ProductInformation>
+			<NuxtImg ref="ProductImage" :src="imgsrc" @error="onImgError" alt="Product Image"
+				class="w-full h-52 object-scale-down" />
+		</div>
 		<div class="pt-4 px-4">
 			<h3 class="text-xl font-bold border-b mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
 			<h3 class=" MNR text-l font-bold mb-2">Article : {{ product.MNR }}</h3>
-			<p class="text-muted-foreground mb-2 h-6">{{ product.Geraeteart4077 }}</p>
-			<p class="text-muted-foreground mb-2 h-6">{{ product.Kommunikationstechnologie4164 }}</p>
+			<p class="text-muted-foreground mb-2 h-6">{{ product?.KTXT }}</p>
 			<p class="text-muted-foreground mb-2 h-6">{{ product.Aufputz ? "Aufputz" : "" || product.Unterputz ?
 				"Unterputz"
 				: "" }}</p>
-			<p class=" mb-2 font-bold">Preis: {{ product?.PERIODE1 }}€</p>
+			<p class="font-bold">Preis: {{ product?.PERIODE1 }}€</p>
 			<div class="flex flex-col p-2">
-				<Card class="h-24 font-body text-sm shadow-none border-none">
-					<CardHeader class="py-4">
+				<Card class="h-20 font-body text-sm shadow-none border-none">
+					<CardHeader class="p-1">
 						<CardDescription class="text-center">Wählen Sie aus, wie viele {{ productType }}
 						</CardDescription>
 					</CardHeader>
@@ -28,12 +29,10 @@
 						</NumberField>
 					</CardContent>
 				</Card>
-				<Button class=" disabled:bg-slate-500 my-2 font-body dark:bg-neutral-950  dark:hover:bg-neutral-300"
+				<Button class=" disabled:bg-slate-500 font-body dark:bg-neutral-950  dark:hover:bg-neutral-250"
 					:disabled="remainingProducts == 0" @click="$emit('addProduct', product)">
 					hinzufügen
 				</Button>
-				<p v-if="productQuantity > remainingProducts" class="text-red-900"> max : {{
-					remainingProducts }}</p>
 			</div>
 		</div>
 	</Card>
@@ -41,6 +40,7 @@
 
 <script setup lang="ts">
 import { type DeviceData } from '@/utils/interfaces.js'
+import ProductInformation from '@/components/general/ProductInformation.vue';
 const emit = defineEmits(['addProduct'])
 const props = defineProps<{
 	product: DeviceData;
@@ -53,4 +53,5 @@ const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsa
 const onImgError = () => {
 	productImage.value.src = '/' + props.product.id
 }
+const handleProductClick = (product) => { }
 </script>

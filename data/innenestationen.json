@@ -827,7 +827,7 @@
     "PERIODE4": 72,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "parent": { "MNR": "TASTA" },
+    "parent": { "MNR": "TASTA PRO" },
     "Gehaeuse": [
       {
         "features": [
@@ -1352,7 +1352,7 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "parent": { "MNR": "TASTA" },
+    "parent": { "MNR": "TASTA PRO" },
     "Gehaeuse": [
       {
         "features": [

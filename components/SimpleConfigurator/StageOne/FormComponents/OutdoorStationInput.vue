@@ -1,5 +1,5 @@
 <template>
-	<NumberInputBox title="Aussenstationen" v-model="numberOutdoorStaions" />
+	<NumberInputBox title="Aussenstationen" v-model="numberOutdoorStaions" :max="4"/>
 </template>
 
 <script setup lang="ts">

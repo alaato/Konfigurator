@@ -1,7 +1,7 @@
 <template>
 	<div class="configurator">
 		<StageTracker :current-stage="currentStage" :stages="stages" @goToStage="goToStage" />
-		<div class="main-section w-full">
+		<div class="main-section">
 			<StageOne v-if="currentStage === 'Anforderungen'" :stages="stages" />
 			<StageTwo v-if="currentStage === 'Aussenstation'" />
 			<StageThree v-if="currentStage === 'Innenstation'" />
@@ -17,7 +17,7 @@ import StageOne from './StageOne/StageOne.vue';
 import StageThree from './StageThree/StageThree.vue';
 import StageTwo from './StageTwo/StageTwo.vue';
 import Zubehör from './Zubehör/Zubehör.vue'
-import SideCard from './general/SideCard.vue';
+import SideCard from './general/sideCard/SideCard.vue';
 import StageTracker from './general/StageTracker.vue';
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
@@ -26,7 +26,6 @@ const { currentStage } = storeToRefs(currentStageStore)
 //functions
 const goToStage = (targetStage) => {
 	if (!stages.value.includes(targetStage)) {
-		console.log("Invalid stage:", targetStage);
 		return;
 	}
 	currentStage.value = targetStage;
@@ -39,9 +38,8 @@ provide("goToStage", goToStage);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 1200px;
-	gap: 16px;
+	gap: 14px;
 	justify-content: center;
-	margin: 16px auto;
+	margin: 0 auto;
 }
 </style>

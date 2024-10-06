@@ -12,7 +12,6 @@ export function setFilter(filter, funktion:string, technologie:string, numberInd
 	}
 	else
 		filter.technologie = "Video-2-Draht"
-  console.log(filter)
 }
 
 export function setControlUnit(filter, addControlUnit:Function) {
@@ -21,6 +20,6 @@ export function setControlUnit(filter, addControlUnit:Function) {
 	else if (filter.technologie == "Video-2-Draht") mnr = "NVV1000-0400"
 	else if (filter.technologie == "TCS:BUS") mnr = "NBV2600-0400"
 
-	const { node } = steuer.data.getProductListing.edges.find(product => product.node.MNR == mnr)
-	addControlUnit(node)
+	const unit = steuer.find(product => product.MNR == mnr)
+	addControlUnit(unit)
 }

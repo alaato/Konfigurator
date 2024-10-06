@@ -66,7 +66,7 @@ interface DeviceFeature {
 }
 
 interface DeviceModule {
-  features: DeviceFeature[];
+  features?: DeviceFeature[];
 }
 
 interface FrontalAnsicht {
@@ -92,7 +92,7 @@ export interface DeviceData {
   id: string;
   MNR: string;
   TEXT: string;
-  KTXT: string;
+  KTXT?: string;
   Geraeteart4077: string;
   Kommunikationstechnologie4164: string;
   Audio1: boolean;
@@ -125,5 +125,12 @@ export interface DeviceData {
   FrontalAnsichtFrei?: FrontalAnsicht;
   Audio?: DeviceModule[];
   HatZubehoer?:{ id: string; }[];
-  AnzhalTatsen?: string;
+  AnzhalTatsen?: number;
+  TexteTK?: DeviceModule
+}
+export interface Pack {
+  camera?: DeviceData;
+  controlUnit?: any
+  station: DeviceData
+  extension: DeviceData
 }

@@ -20,7 +20,7 @@ export default defineEventHandler(async (event) => {
         base64: logo.base64,
         extension: "jpeg",
       });
-      sheet.addImage(imageId1, "C1:G6");
+      sheet.addImage(imageId1, "A1:A6");
     }
 
     const Stückliste = sheet.addTable({
@@ -38,7 +38,7 @@ export default defineEventHandler(async (event) => {
       ],
       rows: body,
     });
-    sheet.getColumn(1).width = 30;
+    sheet.getColumn(1).width = 40;
     sheet.getColumn(2).width = 50;
     const buffer = await workbook.xlsx.writeBuffer();
     event.node.res.setHeader(

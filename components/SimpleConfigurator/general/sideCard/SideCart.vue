@@ -24,7 +24,7 @@ const {selectedProducts} = storeToRefs(selectedProductsStore)
         <SheetTitle>Ihre Stückliste</SheetTitle>
       </SheetHeader>
       <ScrollArea class="flex-grow">
-          <div v-if="getAllSelectedProducts.length === 0" class="text-center text-muted-foreground mt-8">
+          <div v-if="getAllSelectedProducts?.length === 0" class="text-center text-muted-foreground mt-8">
             empty
           </div>
           <ul v-else class="space-y-4 p-4">

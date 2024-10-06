@@ -141,3 +141,25 @@
 
 - icons for PWA
 - continued working on the tool
+
+
+### 30th
+- meeting mit Fillipo 
+- meeting mit Ralf Usenerus
+- set the logic for up to 40 apartments
+  * #### Audio
+    * pes
+    * pes pro
+    * asi
+- changed side bar 
+
+### 01.10
+- product info page
+- adding a pack (for more than 24)
+- limit accssesories only to the amount of stations
+- a tur opener for every outdoor station
+
+### 2.10
+- product info finising
+- add pack for more than 1 outdoor station
+- add pack for video

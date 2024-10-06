@@ -1,13 +1,53 @@
 import { toast } from "vue-sonner";
 import { utils } from "xlsx";
 import jsPDF from "jspdf";
-import { applyPlugin } from "jspdf-autotable";
+import autoTable from "jspdf-autotable";
+import {applyPlugin} from "jspdf-autotable";
 import logo from "@/data/logo.json";
-import { font } from "~/fonts/BAHNSCHRIFT-normal";
+import { font } from "@/fonts/BAHNSCHRIFT-normal";
+import { responsePathAsArray } from "graphql";
 applyPlugin(jsPDF);
-// load the *.ttf font file as binary string
 
-// add the font to jsPDF
+const addFooters = doc => {
+  const pageCount = doc.internal.getNumberOfPages()
+  let finalY = (doc.lastAutoTable.finalY += 10);
+  for (var i = 1; i <= pageCount; i++) {
+    doc.setFontSize(6);
+    doc.setFont("BAHNSCHRIFT", "normal");
+    doc.setPage(i)
+    doc.text('seite ' + String(i) + ' of ' + String(pageCount), doc.internal.pageSize.width / 2, 270, {
+      align: 'center'
+    })
+    doc.line(15, 275, 200, 275, "F");
+
+    doc.text(
+      "TCS TürControlSysteme AG\nGeschwister-Scholl-Str. 7\n39307 Genthin\nE-Mail: info@tcsag.de\nInternet: www.tcsag.de",
+      20,
+      280
+    );
+    doc.text(
+      "Vorstand:\nDipl.-Ing. Otto Duffner (Vorsitzender)\nJohannes Duffner",
+      50,
+      280
+    );
+    doc.text(
+      "Spk MagdeBurg\nIBAN: DE07 8105 3272 0711 0006 89\nBIC | SWIFT: NOLADE21MDG",
+      90,
+      280
+    );
+    doc.text(
+      "Commerzbank Potsdam\nIBAN: DE37 1604 0000 0259 0495 00\nBIC | SWIFT: COBADEFFXXX",
+      130,
+      280
+    );
+    doc.text(
+      "Sitz der Gesellschaft Genthin\nAmtsgericht Stendal\nHRB 3909\nSteuernummer: 10311116806 \nUSt-ID-Nr: DE 811838548 \n",
+      170,
+      280
+    );
+  }
+ 
+}
 
 const toDataURL = async (url: string) => {
   const res = await $fetch("/api/base64", {
@@ -18,6 +58,7 @@ const toDataURL = async (url: string) => {
   });
   return res.base64;
 };
+
 export async function generatePDF() {
   const dataURI = logo.base64;
   const doc = new jsPDF();
@@ -94,35 +135,7 @@ export async function generatePDF() {
   });
 
   // footer
-  doc.line(15, 275, 200, 275, "F");
-  doc.setFontSize(6);
-  doc.setFont("BAHNSCHRIFT", "normal");
-  doc.text(
-    "TCS TürControlSysteme AG\nGeschwister-Scholl-Str. 7\n39307 Genthin\nE-Mail: info@tcsag.de\nInternet: www.tcsag.de",
-    20,
-    280
-  );
-  doc.text(
-    "Vorstand:\nDipl.-Ing. Otto Duffner (Vorsitzender)\nJohannes Duffner",
-    50,
-    280
-  );
-  doc.text(
-    "Spk MagdeBurg\nIBAN: DE07 8105 3272 0711 0006 89\nBIC | SWIFT: NOLADE21MDG",
-    90,
-    280
-  );
-  doc.text(
-    "Commerzbank Potsdam\nIBAN: DE37 1604 0000 0259 0495 00\nBIC | SWIFT: COBADEFFXXX",
-    130,
-    280
-  );
-  doc.text(
-    "Sitz der Gesellschaft Genthin\nAmtsgericht Stendal\nHRB 3909\nSteuernummer: 10311116806 \nUSt-ID-Nr: DE 811838548 \n",
-    170,
-    280
-  );
-
+  addFooters(doc);
   const savedPdf = doc.output("dataurlnewwindow");
 
   if (savedPdf) {
@@ -158,8 +171,7 @@ export async function generateEXCEL() {
     body: completeJson,
   });
 
-  if (response.type) {
-    console.log(response);
+  if (response) {
     const url = window.URL.createObjectURL(response);
     const a = document.createElement("a");
     a.href = url;

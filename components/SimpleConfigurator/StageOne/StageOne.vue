@@ -1,9 +1,9 @@
 <template>
 	<div class="my-2 max-w-[960px]">
-		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center">
+		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center mx-5">
 			<!-- <WiringCount v-model="wiringCount"></WiringCount> -->
 
-			<div class="number-of-apartments flex justify-center my-1 gap-1">
+			<div class="number-of-apartments flex justify-center my-1 gap-1 flex-col md:flex-row">
 				<IndoorStationInput v-model="numberIndoorStation" />
 				<OutdoorStationInput v-model="numberOutdoorStation" />
 			</div>
@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 //imports and props
 const { stages } = defineProps(['stages'])
-import { useSelectedProductsStore } from '~/stores/products';
+import { useSelectedProductsStore } from '@/stores/products';
 import IndoorStationInput from './FormComponents/IndoorStationInput.vue';
 import OutdoorStationInput from './FormComponents/OutdoorStationInput.vue';
 import Funktion from './FormComponents/Funktion.vue'
@@ -49,12 +49,12 @@ const visitedStore = useVisitedStore();
 const selectedProductsStore = useSelectedProductsStore()
 const { setNeededProductsQuantity, resetAllProducts, addControlUnit } = selectedProductsStore
 const { filter } = storeToRefs(selectedProductsStore)
-import { setFilter, setControlUnit } from '~/utils/ConfiguratorUtils/RequirementsUtils'
+import { setFilter, setControlUnit } from '@/utils/ConfiguratorUtils/RequirementsUtils'
 // functions
 const goToStage: Function = inject('goToStage')
-console.log(selectedProductsStore.selectedProducts)
-console.log(selectedProductsStore.filter)
+
 const submitConfig = async () => {
+	const numberExtension = numberOutdoorStation.value > 24? numberOutdoorStation.value : 0
 	if (numberOutdoorStation.value > 4) numberOutdoorStation.value = 4
 	setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
 	setFilter(filter.value, funktion.value, technologie.value, numberIndoorStation.value)

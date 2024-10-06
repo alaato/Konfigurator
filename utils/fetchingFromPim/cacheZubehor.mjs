@@ -1,6 +1,6 @@
 import fs from "fs";
-import out from "../data/aussenstationen.json" with { type: "json" }
-import indoor from "../data/innenestationen.json" with { type: "json" }
+import out from "../../data/aussenstationen.json" with { type: "json" }
+import indoor from "../../data/innenestationen.json" with { type: "json" }
 
 const products = out.concat(indoor)
 const FilterOptions = {
@@ -107,6 +107,14 @@ async function getZubehör(id) {
                   id
                 }
               }
+              TexteTK {
+                features {
+                    ... on csFeatureTextarea {
+                    name
+                    text
+                    }
+                }
+              }
               FrontalAnsichtFrei {
                 id
                 ... on asset {
@@ -158,7 +166,6 @@ array.forEach((elem)=>{
 return NoDuplicateArray
 }
 const idArray =  makeArray()
-// console.log(idArray)
 const neededIds = RemoveSameValues(idArray)
 
 async function getAllZube(neededIds) {
@@ -173,7 +180,6 @@ async function getAllZube(neededIds) {
 
 
 const zubehors = await getAllZube(neededIds)
-console.log(zubehors)
 const jsonData = JSON.stringify(zubehors);
 
 fs.writeFileSync("./data/Zubehoer.json", jsonData);

@@ -25,7 +25,6 @@ function addProduct(product) {
 		AddedProduct.quantity += productQuantity.value
 		selectedProducts.value.outdoorProducts.SelectedQuantity += productQuantity.value
 		productQuantity.value = 0;
-		console.log(AddedProduct)
 	}
 	else if (!AddedProduct && productQuantity.value > 0 && productQuantity.value <= remainingOutdoorProducts.value) {
 		selectedProductsStore.addOneOutdoorProduct({ ...product, quantity: productQuantity.value });
