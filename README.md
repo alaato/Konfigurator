@@ -163,3 +163,11 @@
 - product info finising
 - add pack for more than 1 outdoor station
 - add pack for video
+
+
+### 07.10
+
+- fixed issue with accsssories not showing when going back from overview
+- added the texts to indoorstation for product information window
+- fixed an issue with outdoor station added quantity
+- landing page added

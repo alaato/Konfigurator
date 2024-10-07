@@ -35,7 +35,7 @@ export default function extractInfo(product: DeviceData) {
 
 	const technologie: string =  product.V2D && "V2D " || product.TCSBUS && " TCS:BUS" || product.V2D && product.TCSBUS && "V2D + TCS:BUS" || "";
 
-	const anzahlTasten: string =
+	const anzahlTasten: string|number =
 		product.Audio?.[0]?.features?.find(
 			(f) => f.name === "AnzahlKlingeltasten3938"
 		)?.text ||

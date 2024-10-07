@@ -7,7 +7,7 @@
       <changeCameraModel :products="products" @setCamera="setCamera" />
     </PackageProductCard>
     <PackageProductCard v-if="pack.controlUnit" :product="pack.controlUnit" />
-    <Button @click="addProducts" class="w-full col-span-full dark:border border-white">Paket hinzufügen</Button>
+    <Button @click="addProducts" class="w-full col-span-full dark:border border-white mb-1">Paket hinzufügen</Button>
   </div>
 </template>
 

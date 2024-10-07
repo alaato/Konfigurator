@@ -42,18 +42,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "8754",
       "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8754/image-thumb__8754__Konfigurator/ZAU2004-0030_frontal_frei.ce885845.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAU2008-0030",
@@ -98,18 +94,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "8752",
       "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8752/image-thumb__8752__Konfigurator/ZAU2008-0030_frontal_frei.1f6a099a.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAU2003-0030",
@@ -154,18 +146,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "8577",
       "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8577/image-thumb__8577__Konfigurator/ZAU2003-0030_frontal_frei.9fcde481.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAU2007-0030",
@@ -210,18 +198,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "8558",
       "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8558/image-thumb__8558__Konfigurator/ZAU2007-0030_frontal_frei.3fdf2fa1.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAU2002-0030",
@@ -266,18 +250,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "8586",
       "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8586/image-thumb__8586__Konfigurator/ZAU2002-0030_frontal_frei.6fc62574.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAU2006-0030",
@@ -322,18 +302,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "8751",
       "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8751/image-thumb__8751__Konfigurator/ZAU2006-0030_frontal_frei.9f00cde6.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAU2001-0030",
@@ -378,18 +354,15 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
     "HatZubehoer": [{ "id": "11375" }],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "8575",
       "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8575/image-thumb__8575__Konfigurator/ZAU2001-0030_frontal_frei.1aa2a387.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAU2005-0030",
@@ -434,18 +407,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "8753",
       "assetThumb": "/Marketing/Aussenstationen/Serie_AMI/ZAU/Freisteller/Frontal/8753/image-thumb__8753__Konfigurator/ZAU2005-0030_frontal_frei.aa5f9330.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAS1312-0010",
@@ -474,6 +443,15 @@
     "PERIODE3": 65,
     "PERIODE4": 68,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -493,55 +471,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6740",
       "assetThumb": "/Marketing/Zubehoer/ZAS/Freisteller/Perspektive/6740/image-thumb__6740__Konfigurator/ZAS1312-0010_persp_frei.db5afa6b.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAS1334-0010",
@@ -570,6 +507,15 @@
     "PERIODE3": 65,
     "PERIODE4": 68,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -589,55 +535,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6773",
       "assetThumb": "/Marketing/Zubehoer/ZAS/Freisteller/Perspektive/6773/image-thumb__6773__Konfigurator/ZAS1334-0010_persp_frei.fadbfd18.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAS1356-0010",
@@ -666,6 +571,15 @@
     "PERIODE3": 65,
     "PERIODE4": 68,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -685,55 +599,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6762",
       "assetThumb": "/Marketing/Zubehoer/ZAS/Freisteller/Perspektive/6762/image-thumb__6762__Konfigurator/ZAS1356-0010_persp_frei.fadbfd18.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAA2010-0010",
@@ -784,15 +657,11 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": null,
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAA2009-0030",
@@ -843,15 +712,11 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": null,
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "PAKDA-EN",
@@ -880,6 +745,15 @@
     "PERIODE3": 63,
     "PERIODE4": 66,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -941,56 +815,17 @@
     "DisplayEigenschaften": [
       { "name": "AS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6696",
       "assetThumb": "/Marketing/Zubehoer/PAKDA/Freisteller/Frontal/6696/image-thumb__6696__Konfigurator/PAKDA-EN_frontal_frei.9840d1f4.png"
     },
     "Audio": [
-      { "features": [] },
+      {},
       {
         "features": [
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
           { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
@@ -999,36 +834,36 @@
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
-          {},
+          null,
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
-          {},
+          null,
           { "name": "AkustischeRufunterscheidungen", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -1060,6 +895,15 @@
     "PERIODE3": 226,
     "PERIODE4": 236,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1121,81 +965,42 @@
     "DisplayEigenschaften": [
       { "name": "AS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": null,
     "Audio": [
-      { "features": [] },
+      {},
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
-          {},
+          null,
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
-          {},
+          null,
           { "name": "AkustischeRufunterscheidungen", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -1227,6 +1032,15 @@
     "PERIODE3": 183,
     "PERIODE4": 191,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1288,84 +1102,45 @@
     "DisplayEigenschaften": [
       { "name": "AS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6695",
       "assetThumb": "/Marketing/Zubehoer/PI/Freisteller/Perspektive/6695/image-thumb__6695__Konfigurator/PI135-EN_persp_frei.eb1bb0c9.png"
     },
     "Audio": [
-      { "features": [] },
+      {},
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
-          {},
+          null,
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
-          {},
+          null,
           { "name": "AkustischeRufunterscheidungen", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -1397,6 +1172,15 @@
     "PERIODE3": 258,
     "PERIODE4": 269,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1458,81 +1242,42 @@
     "DisplayEigenschaften": [
       { "name": "AS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": null,
     "Audio": [
-      { "features": [] },
+      {},
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
-          {},
+          null,
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
-          {},
+          null,
           { "name": "AkustischeRufunterscheidungen", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -1564,6 +1309,15 @@
     "PERIODE3": 64,
     "PERIODE4": 67,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1580,61 +1334,20 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6816",
       "assetThumb": "/Marketing/Zubehoer/ZAU/Freisteller/Perspektive/6816/image-thumb__6816__Konfigurator/ZAU4001-0002_persp_frei.7918cebc.png"
     },
     "Audio": [
-      { "features": [] },
+      {},
       {
         "features": [
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
           { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
@@ -1643,36 +1356,36 @@
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
-          {},
+          null,
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
-          {},
+          null,
           { "name": "AkustischeRufunterscheidungen", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -1704,6 +1417,15 @@
     "PERIODE3": 104,
     "PERIODE4": 108,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1723,61 +1445,20 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6836",
       "assetThumb": "/Marketing/Zubehoer/ZAM/Freisteller/Perspektive/6836/image-thumb__6836__Konfigurator/ZAM1101-0010_persp_frei.f3ac1fba.png"
     },
     "Audio": [
-      { "features": [] },
+      {},
       {
         "features": [
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
           { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
@@ -1786,36 +1467,36 @@
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
-          {},
+          null,
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
-          {},
+          null,
           { "name": "AkustischeRufunterscheidungen", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -1863,18 +1544,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "6840",
       "assetThumb": "/Marketing/Zubehoer/ZAM/Freisteller/Perspektive/6840/image-thumb__6840__Konfigurator/ZAM1102-0010_persp_frei.c6ae6994.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAM1103-0010",
@@ -1919,18 +1596,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "6863",
       "assetThumb": "/Marketing/Zubehoer/ZAM/Freisteller/Perspektive/6863/image-thumb__6863__Konfigurator/ZAM1103-0010_persp_frei.d9dc427a.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZAM1104-0010",
@@ -1975,18 +1648,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "6760",
       "assetThumb": "/Marketing/Zubehoer/ZAM/Freisteller/Perspektive/6760/image-thumb__6760__Konfigurator/ZAM1104-0010_persp_frei.c8d8c111.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZIT24340",
@@ -2015,6 +1684,15 @@
     "PERIODE3": 38,
     "PERIODE4": 40,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2031,52 +1709,11 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": null,
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZIT3030-0010",
@@ -2105,6 +1742,15 @@
     "PERIODE3": 57,
     "PERIODE4": 60,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2124,55 +1770,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6767",
       "assetThumb": "/Marketing/Zubehoer/ZIT/Freisteller/Perspektive/6767/image-thumb__6767__Konfigurator/ZIT3030-0010_persp_frei.015ca6bb.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "MEH7000-0140",
@@ -2217,18 +1822,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": [{ "id": "16251" }],
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [],
     "FrontalAnsichtFrei": {
       "id": "9420",
       "assetThumb": "/Marketing/Frontalansicht%20freigestellt/9420/image-thumb__9420__Konfigurator/MEH70000140.b93cd0c8.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZIT5000-0030",
@@ -2257,6 +1858,15 @@
     "PERIODE3": 140,
     "PERIODE4": 146,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2273,55 +1883,15 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
     "HatZubehoer": [{ "id": "5979" }, { "id": "13411" }],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6765",
       "assetThumb": "/Marketing/Zubehoer/ZIT/Freisteller/Perspektive/6765/image-thumb__6765__Konfigurator/ZIT5000-0030_persp_frei.86ccfced.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZIA5005-0145",
@@ -2350,6 +1920,15 @@
     "PERIODE3": 11,
     "PERIODE4": 12,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2366,55 +1945,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6800",
       "assetThumb": "/Marketing/Zubehoer/ZIA/Freisteller/Frontal/6800/image-thumb__6800__Konfigurator/ZIA5005-0145_frontal_frei.d83f0698.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZIA5003-0145",
@@ -2443,6 +1981,15 @@
     "PERIODE3": 8.32,
     "PERIODE4": 8.32,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2459,55 +2006,14 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6846",
       "assetThumb": "/Marketing/Zubehoer/ZIA/Freisteller/Frontal/6846/image-thumb__6846__Konfigurator/ZIA5003-0145_frontal_frei.9b07bfaf.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   },
   {
     "MNR": "ZIA5001-0145",
@@ -2536,6 +2042,15 @@
     "PERIODE3": 11,
     "PERIODE4": 12,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2552,61 +2067,20 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6733",
       "assetThumb": "/Marketing/Zubehoer/ZIA/Freisteller/Frontal/6733/image-thumb__6733__Konfigurator/ZIA5001-0145_frontal_frei.220701a5.png"
     },
     "Audio": [
-      { "features": [] },
+      {},
       {
         "features": [
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
           { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
@@ -2615,36 +2089,36 @@
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
-          {},
+          null,
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
-          {},
+          null,
           { "name": "AkustischeRufunterscheidungen", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -2676,6 +2150,15 @@
     "PERIODE3": null,
     "PERIODE4": null,
     "parent": { "MNR": "Funktionserweiterung IP" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2698,7 +2181,6 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": [
@@ -2706,46 +2188,6 @@
       { "id": "2097" },
       { "id": "16251" },
       { "id": "16252" }
-    ],
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
     ],
     "FrontalAnsichtFrei": {
       "id": "9419",
@@ -2756,38 +2198,38 @@
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
           { "name": "AnzahlakustischerRufunterscheidungen3933", "text": null },
-          {},
-          {},
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "AnzahlParallelrufe3892", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -2819,6 +2261,15 @@
     "PERIODE3": null,
     "PERIODE4": null,
     "parent": { "MNR": "Funktionserweiterung IP" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2866,84 +2317,44 @@
       { "id": "16251" },
       { "id": "16252" }
     ],
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": null,
     "Audio": [
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
           { "name": "AnzahlakustischerRufunterscheidungen3933", "text": null },
-          {},
-          {},
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "AnzahlParallelrufe3892", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -2975,6 +2386,15 @@
     "PERIODE3": 130,
     "PERIODE4": 136,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -2994,58 +2414,17 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": null,
     "Audio": [
-      { "features": [] },
+      {},
       {
         "features": [
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
           { "name": "MAXmoeglicheLasteinheitenAUDIO", "text": null }
@@ -3054,36 +2433,36 @@
       {
         "features": [
           { "name": "AnzahlKlingeltasten3938", "text": null },
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
           { "name": "Mikrofonabsetzbarin4292", "text": null },
-          {},
+          null,
           { "name": "LautstaerkeGespraech4008", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
-          {},
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           { "name": "VerwendungbeiAnzahl Wohneinheitenvon4938", "text": null },
           { "name": "VerwendungbeiAnzahlWohneinheitenbis4939", "text": null },
-          {},
+          null,
           { "name": "AkustischeRufunterscheidungen", "text": null },
-          {},
-          {},
-          {},
-          {},
-          {}
+          null,
+          null,
+          null,
+          null,
+          null
         ]
       }
     ]
@@ -3115,6 +2494,15 @@
     "PERIODE3": 11,
     "PERIODE4": 12,
     "parent": { "MNR": "Zubehör TCS:BUS" },
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -3131,54 +2519,13 @@
         ]
       }
     ],
-    "Frontplatte": [],
     "NotwendigesZubehoerAudio": null,
     "NotwendigesZubehoerVideo": null,
     "Erweiterung": null,
-    "DisplayEigenschaften": [],
-    "HatZubehoer": [],
-    "TexteTK": [
-      {
-        "name": "TexteTK",
-        "description": null,
-        "features": [
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Kurzbeschreibung4386",
-            "text": null,
-            "id": 464
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Produktbeschreibungstext4918",
-            "text": null,
-            "id": 465
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "Geraetebeschreibung",
-            "text": null,
-            "id": 466
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "KeyFeatures",
-            "text": null,
-            "id": 467
-          },
-          {
-            "__typename": "csFeatureTextarea",
-            "name": "LeistungsmerkmaleKurzform",
-            "text": null,
-            "id": 587
-          }
-        ]
-      }
-    ],
     "FrontalAnsichtFrei": {
       "id": "6785",
       "assetThumb": "/Marketing/Zubehoer/ZIA/Freisteller/Frontal/6785/image-thumb__6785__Konfigurator/ZIA5006-0145_frontal_frei.e8a180e1.png"
     },
-    "Audio": [{ "features": [] }]
+    "Audio": [{}]
   }
 ]

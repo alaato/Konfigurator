@@ -29,7 +29,7 @@
 						</NumberField>
 					</CardContent>
 				</Card>
-				<Button class=" disabled:bg-slate-500 font-body dark:bg-neutral-950  dark:hover:bg-neutral-250"
+				<Button class=" disabled:bg-slate-500 font-body dark:bg-neutral-950 dark:text-white my-2 justify-self-center"
 					:disabled="remainingProducts == 0" @click="$emit('addProduct', product)">
 					hinzufügen
 				</Button>
@@ -45,9 +45,10 @@ const emit = defineEmits(['addProduct'])
 const props = defineProps<{
 	product: DeviceData;
 	productType?: string;
+	remainingProducts?: number
 }>()
 const productQuantity = defineModel<number>('productQuantity', { required: true })
-const remainingProducts = defineModel<number>('remainingProducts')
+// const remainingProducts = defineModel<number>('remainingProducts')
 const productImage = useTemplateRef<HTMLImageElement>('ProductImage')
 const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/ProductImages" + props.product.id
 const onImgError = () => {

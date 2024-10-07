@@ -9,7 +9,11 @@ export function addAnzahlTastenToJson(jsonPath) {
     const data = JSON.stringify(object);
     fs.writeFileSync(jsonPath, data);
 }
-
+export function removeArrayFromTKtext(arr){
+  if(!arr)
+    return 
+  return arr[0]
+}
 export function addAnzahlTastenToObject(object) {
     object.data.getProductListing.edges = object.data.getProductListing.edges.map(edge => {
         const AnzhalTatsen  = edge.node?.Audio[0]?.features[0]?.text || edge.node?.Audio[0]?.features[4]?.text || null ;

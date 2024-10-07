@@ -8,8 +8,7 @@
 			<DialogHeader class="max-w-2xl">
 				<div class="flex flex-col md:flex-row gap-4 py-4 items-center ">
 					<NuxtImg :src="imgsrc" :alt="product?.MNR" 
-						class="object-scale-down rounded-md" />
-						<p class="whitespace-pre-line my-1"><b> {{product?.TexteTK?.features[0]?.text}}</b></p>
+						class="object-scale-down rounded-md max-h-72" />
 				</div>
 				<infoSection :imgsrc="imgsrc" :product="product" />
 			</DialogHeader>

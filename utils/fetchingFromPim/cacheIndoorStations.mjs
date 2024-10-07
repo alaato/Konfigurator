@@ -1,5 +1,5 @@
 import fs from "fs";
-import { cleanEmptyObjects, cleanNullValues } from "./cacheUtils.mjs";
+import { cleanEmptyObjects, removeArrayFromTKtext } from "./cacheUtils.mjs";
 const FilterOptions = {
   Innenstation: true,
   Anlagenkonfigurator: "Ja",
@@ -134,7 +134,10 @@ async function getInnenstation() {
 
   const json = await response.json();
   const clean = cleanEmptyObjects(json);
-  const products = clean.data.getProductListing.edges.map((edge) => edge.node);
+  const products = clean.data.getProductListing.edges.map((edge) => {
+    edge.node.TexteTK = removeArrayFromTKtext(edge.node.TexteTK);
+    return edge.node
+  });
   const jsonProducts = JSON.stringify(products);
   fs.writeFileSync("./data/innenestationen.json", jsonProducts);
 }

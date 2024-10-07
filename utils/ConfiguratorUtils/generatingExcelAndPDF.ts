@@ -1,11 +1,9 @@
 import { toast } from "vue-sonner";
 import { utils } from "xlsx";
 import jsPDF from "jspdf";
-import autoTable from "jspdf-autotable";
 import {applyPlugin} from "jspdf-autotable";
 import logo from "@/data/logo.json";
 import { font } from "@/fonts/BAHNSCHRIFT-normal";
-import { responsePathAsArray } from "graphql";
 applyPlugin(jsPDF);
 
 const addFooters = doc => {
@@ -106,11 +104,12 @@ export async function generatePDF() {
   };
   doc.autoTable({
     startY: 100,
+    pageBrake : "auto",
     html: "#stückliste",
     headStyles: { ...headStyles },
     bodyStyles: bodyStyles,
     theme: "plain",
-    margin: { left: 20, right: 20 },
+    margin: { left: 20, right: 20, bottom:30 },
     didDrawCell: async (data) => {
       if (data.section === "body" && data.column.index === 0) {
         var td = data.cell.raw;
@@ -122,7 +121,6 @@ export async function generatePDF() {
         doc.addImage(bas64, "png", 40, 40, 40, 40);
       }
     },
-    useCss: true,
   });
 
   let finalY = (doc.lastAutoTable.finalY += 10);
@@ -131,7 +129,6 @@ export async function generatePDF() {
     bodyStyles: { ...bodyStyles, cellWidth: 35, lineWidth: 0 },
     html: "#total",
     margin: { left: 120, right: 20 },
-    useCss: true,
   });
 
   // footer

@@ -11,7 +11,7 @@
     <div class="px-4 py-2 flex flex-col">
       <h3 class="text-xl font-bold mb-2"> Serie: {{ product?.parent?.MNR.slice(0, 20) }}</h3>
       <h3 class=" MNR text-l font-bold mb-2">Article : {{ product?.MNR }}</h3>
-      <h3 class=" MNR text-l font-bold mb-2">Article : {{ product?.PERIODE1}}</h3>
+      <h3 class=" MNR text-l font-bold mb-2">Preis : {{ product?.PERIODE1}}€</h3>
     </div>
   </Card>
 </template>

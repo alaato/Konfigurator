@@ -20,7 +20,7 @@ import { Button } from '@/components/ui/button'
 const props = defineProps(['products', 'max', 'title', 'selectedQuantity'])
 
 const selectedProductsStore = useSelectedProductsStore()
-const {removeIndoorProducts, removeOutdoorProducts, removeAccessories} = selectedProductsStore
+const {removeIndoorProducts, removeOutdoorProducts, removeAccessories, removeExtension} = selectedProductsStore
 function removeItem(product) {
   
   if (props.title == 'Innenstationen') {
@@ -30,6 +30,8 @@ function removeItem(product) {
   }
   else if (props.title == 'Zubehör')
     removeAccessories(product)
+  else if (props.title == 'Erweiterungen')
+    removeExtension(product)
 }
 </script>
 

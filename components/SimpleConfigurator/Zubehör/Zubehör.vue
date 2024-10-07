@@ -19,10 +19,14 @@ import { type DeviceData } from '@/utils/interfaces.js'
 const selectedProductsStore = useSelectedProductsStore()
 const { selectedProducts, getAllSelectedProducts } = storeToRefs(selectedProductsStore)
 const umSchalterNeeded = selectedProducts.value.outdoorProducts.neededQuantity > 1 ? true : false
-const neededZube = getAllSelectedProducts.value.map((product: DeviceData) => {
-	const ids = product.HatZubehoer?.map(elem => elem?.id)
-	const quantity = product.quantity;
-	return {ids, quantity}
+const neededZube = []
+getAllSelectedProducts.value.forEach((product: DeviceData) => {
+	product.HatZubehoer?.forEach((elem )=>{
+		const exists = neededZube.find(zube=> zube.id == elem.id)
+		const quantity = product.quantity;
+		if(exists)  exists.quantity += quantity
+		else neededZube.push({id: elem.id, quantity: quantity})
+	})
 })
 const doorOpenerNeeded = umSchalterNeeded;
 const Umtauscher: DeviceData = umSchalterNeeded ? funktionErweiterungen.find(product => product.MNR.includes("FVU1401-0400")) : null
@@ -34,12 +38,13 @@ if (doorOpener && selectedProducts.value.accessories.products.length < 2)
 	selectedProductsStore.addAccessories({ ...doorOpener, quantity: selectedProducts.value.outdoorProducts.neededQuantity })
 
 const products = []  as DeviceData[]
+console.log(neededZube)
 neededZube.forEach((zubehör) => {
-	zubehör?.ids?.forEach((id) => {
-		if(!id) return
-		const zube : DeviceData = zubehörs.find((zubehörs) => zubehörs.id == id) as DeviceData
-		zube.quantity = zubehör?.quantity
+		if(!zubehör.id) return
+		const zube : DeviceData = zubehörs.find((zube) => zube.id == zubehör.id) as DeviceData
+		if(!zube) return
+		zube.quantity = zubehör.quantity || 0
 		products.push(zube)
-	})
 })
+console.log(products)
 </script>

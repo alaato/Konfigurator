@@ -113,7 +113,7 @@ export const useSelectedProductsStore = defineStore({
       const AddedProduct = this.selectedProducts.outdoorProducts.products.find((p) => p.MNR === product.MNR)
       if (AddedProduct) AddedProduct.quantity++;
       else this.selectedProducts.outdoorProducts.products.push(product);
-      this.selectedProducts.outdoorProducts.SelectedQuantity++;
+      this.selectedProducts.outdoorProducts.SelectedQuantity += product.quantity ;
     },
     addAccessories(product) {
       this.selectedProducts.accessories.products.push(product);

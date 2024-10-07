@@ -27,6 +27,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISx3x30-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Tuertelefon-Freisprecher.pdf",
     "parent": { "MNR": "Serie 30" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Audio-Türtelefon mit Basisfunktionen, Aufputzmontage, weiß",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Einfach eindeutige Türkommunikation für alle Anwendungsbereiche\nDie einfache Steuerung der Innenstation ermöglicht einen bequemen und schnellen Zutritt Ihrer Gäste bei hervorragender Tonqualität. Die Bedienung ist eindeutig und intuitiv. So einfach kann Türkommunikation sein.\n\n• Einfache Bedienung, robust und langlebig\n• Individuelle Ruftöne wählbar\n• Ruftonlautstärke einstellbar\n• Gesprächslautstärke einstellbar\n• Magnetische Höreraufhängung",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Hörergerät",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": "• Einbau-Ruf-Relais und Funksendeplatine des Funksignalgerätes sind zusätzlich integrierbar",
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -115,6 +151,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISx3x30-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Tuertelefon-Freisprecher.pdf",
     "parent": { "MNR": "Serie 30" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Audio-Türtelefon mit Komfortfunktionen, Aufputzmontage, weiß",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Einfach eindeutige Türkommunikation für alle Anwendungsbereiche\nDie einfache Steuerung der Innenstation ermöglicht einen bequemen und schnellen Zutritt Ihrer Gäste bei hervorragender Tonqualität. Die Bedienung ist eindeutig und intuitiv. So einfach kann Türkommunikation sein.\n\n• Einfache Bedienung, robust und langlebig\n• Individuelle Ruftöne wählbar\n• Ruftonlautstärke einstellbar\n• Gesprächslautstärke einstellbar\n• Magnetische Höreraufhängung\n• Bequeme Türöffnerautomatik\n• Interner Türruf von Innenstation zu Innenstation\n• Rufumleitung auf andere Station möglich",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Hörergerät",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": "•Einbau-Ruf-Relais und Funksendeplatine des Funksignalgerätes sind zusätzlich integrierbar",
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -203,6 +275,42 @@
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
     "parent": { "MNR": "Serie 70" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": null,
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": null,
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprechgerät",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -367,6 +475,42 @@
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
     "parent": { "MNR": "Serie 70" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": null,
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": null,
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": null,
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -477,6 +621,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISx3x30-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Tuertelefon-Freisprecher.pdf",
     "parent": { "MNR": "Serie 30" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Audio-Innenstation zum Freisprechen mit Basisfunktionen, Auputzmontage, weiß",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Einfach eindeutige Türkommunikation für alle Anwendungsbereiche\nDie einfache Steuerung der Innenstation ermöglicht einen bequemen und schnellen Zutritt Ihrer Gäste bei hervorragender Tonqualität. Die Bedienung ist eindeutig und intuitiv. So einfach kann Türkommunikation sein.\n\n• Einfache Bedienung, robust und langlebig\n• Individuelle Ruftöne wählbar\n• Ruftonlautstärke einstellbar\n• Gesprächslautstärke einstellbar",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -565,6 +745,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISx3x30-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Tuertelefon-Freisprecher.pdf",
     "parent": { "MNR": "Serie 30" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Audio-Innenstation zum Freisprechen mit Komfortfunktionen, Aufputzmontage, weiß",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Einfach eindeutige Türkommunikation für alle Anwendungsbereiche\nDie einfache Steuerung der Innenstation ermöglicht einen bequemen und schnellen Zutritt Ihrer Gäste bei hervorragender Tonqualität. Die Bedienung ist eindeutig und intuitiv. So einfach kann Türkommunikation sein.\n\n• Einfache Bedienung, robust und langlebig\n• Individuelle Ruftöne wählbar\n• Ruftonlautstärke einstellbar\n• Gesprächslautstärke einstellbar\n• Bequeme Türöffnerautomatik\n• Interner Türruf von Innenstation zu Innenstation\n• Rufumleitung auf andere Station möglich",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": "•Einbau-Ruf-Relais und Funksendeplatine des Funksignalgerätes sind zusätzlich integrierbar",
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -653,6 +869,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISW50xx-0145_Serie_TASTA-Audio.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Serie-TASTA-Audio.pdf",
     "parent": { "MNR": "TASTA" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Audio-Innenstation TASTA zum Freisprechen, Aufputzmontage, weiß",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Klein & Kompakt\n\nMit unserem ISW5010 aus der Serie TASTA haben Sie die perfekte Wahl getroffen. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Sichere und einfache Bedienung dank großer Tastflächen und taktiler Rückmeldung. Optisch ein passender Begleiter zu allen Schaltern im Haus. \n\n• Montageform: Aufputz\n• Wählbare Ruftöne\n• Rufton- und Gesprächslautstärke variabel anpassbar\n• Optische Signalisierung des Türrufs über Ambientebeleuchtung möglich\n• Ambientebeleuchtung als Orientierungshilfe\n• Rufton abstellbar\n",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -705,10 +957,10 @@
       { "name": "IS Display Eigenschaften", "description": null }
     ],
     "HatZubehoer": [
-      { "id": "3575" },
       { "id": "3559" },
       { "id": "3557" },
-      { "id": "3555" }
+      { "id": "3555" },
+      { "id": "3575" }
     ],
     "FrontalAnsichtFrei": {
       "id": "8307",
@@ -743,6 +995,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISW50xx-0145_Serie_TASTA-Audio.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_TASTA_AudioPlus_ISW5031-0145.pdf",
     "parent": { "MNR": "TASTA" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": null,
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Smart & Funktional\n\nMit unserem ISW5031 aus der Serie TASTA haben Sie die perfekte Wahl getroffen. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Sichere und einfache Bedienung dank großer Tastflächen und taktiler Rückmeldung.\n\n• Montageform: Aufputz\n• Wählbare Ruftöne\n• Rufton- und Gesprächslautstärke variabel anpassbar\n• Optische Signalisierung des Türrufs über Ambientebeleuchtung möglich\n• Ambientebeleuchtung als Orientierungshilfe\n• Rufton abstellbar",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -827,7 +1115,43 @@
     "PERIODE4": 72,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "parent": { "MNR": "TASTA PRO" },
+    "parent": { "MNR": "TASTA" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": null,
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Klein & Funktional\n\nMit unserer Serie TASTA als Innensprechstelle haben Sie das Gefühl garantiert die perfekte Wahl getroffen zu haben. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Die hochwertig und präzise verarbeiteten Bauteile sorgen für optimale Funktionsqualität und machen die Bedienung damit einfach und komfortabel. \n\n•Montageform: Aufputz\n•Intuitives Freisprechen durch klare Funktionstasten\n•13 wählbare Ruftöne\n•Rufton- und Gesprächslautstärke variabel anpassbar\n•Angenehme Ambientebeleuchtung – auch als Orientierungshilfe\n•Zusätzliche Signalisierung des Türrufs über Ambientebeleuchtung möglich\n•Abstellung des Ruftons einstellbar",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher\n",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": "Artikelnummer: ISW6031-0145\nHersteller: TürControlSysteme AG\nProduktion: Made in Germany\nTASTA Freisprecher AUDIO PLUS WS SDI\nKommunikationstechnologie: TCS:BUS und Video-2-Draht:BUS\nVorbereitet für die mobile Tür- und Gebäudekommunikation z.B. mit SmartPhone\nAnrufbeantworter \nSprachsteuerung: Voll-Duplex\nMithörsperre\nLautstärke Gespräch: einstellbar\nLautstärke Rufton: einstellbar\nAkustische Rufunterscheidungen: zwischen 2 Haustür-, Wohnungstür- und Internruf\nKomfortfunktionen: Steuerfunktion 8, Internruf, Türöffnerautomatik, Rufumleitung\nEtagentüröffnerfunktion: aktivierbar\nInbetriebnahme: manuell, mit Servicegerät, mit Konfigurationssoftware\nAufputzgehäuse \nHöhe (mm): 195\nBreite (mm): 94\nTiefe (mm): 21\n",
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -916,6 +1240,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVH3222.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Video-Tuertelefon.pdf",
     "parent": { "MNR": "Serie 30" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Video-Türtelefon mit Hörer, Aufputzmontage, weiß",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Einfach eindeutige Türkommunikation für alle Anwendungsbereiche\nDie einfache Steuerung der Innenstation ermöglicht einen bequemen und schnellen Zutritt Ihrer Gäste bei hervorragender Tonqualität. Die Bedienung ist eindeutig und intuitiv. So einfach kann Türkommunikation sein.\n\n• Einfache Bedienung, robust und langlebig\n• Individuelle Ruftöne wählbar\n• Ruftonlautstärke einstellbar\n• Gesprächslautstärke einstellbar\n• Bildaufschaltung oder Concierge-Ruf oder Lichtschalten mit der Funktionstaste",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Hörergerät",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": "•Einbau-Ruf-Relais und Funksendeplatine des Funksignalgerätes sind zusätzlich integrierbar",
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1004,6 +1364,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVH4222-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Video-2-Draht/TCS_Datenblatt_V2D_Tuertelefon.pdf",
     "parent": { "MNR": "Serie 30 V2D" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": null,
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Einfach eindeutige Türkommunikation für alle Anwendungsbereiche\nDie einfache Steuerung der Innenstation ermöglicht einen bequemen und schnellen Zutritt Ihrer Gäste bei hervorragender Tonqualität. Die Bedienung ist eindeutig und intuitiv. So einfach kann Türkommunikation sein.\n\n• Einfache Bedienung, robust und langlebig\n• Individuelle Ruftöne wählbar\n• Ruftonlautstärke einstellbar\n• Gesprächslautstärke einstellbar\n• Bildaufschaltung oder Concierge-Ruf oder Lichtschalten mit der Funktionstaste",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Hörergerät",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": "•Einbau-Ruf-Relais und Funksendeplatine des Funksignalgerätes sind zusätzlich integrierbar",
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1092,6 +1488,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVW511x-0145.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Serie-TASTA-Video.pdf",
     "parent": { "MNR": "TASTA" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Video-Innenstation zum Freisprechen Serie TASTA, Aufputzmontage, Passepartout schwarz",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Klein & Funktional mit Video\n\nMit unserem ISW5110 aus der Serie TASTA haben Sie die perfekte Wahl getroffen. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Sichere und einfache Bedienung dank großer Tastflächen und taktiler Rückmeldung.\n\n• Montageform: Aufputz\n• Wählbare Ruftöne\n• Rufton- und Gesprächslautstärke variabel anpassbar\n• Optische Signalisierung des Türrufs über Ambientebeleuchtung möglich\n• Ambientebeleuchtung als Orientierungshilfe\n• Rufton abstellbar\n• 3,5‘‘ Display mit schwarzem Displayrahmen\n• Videobildeinstellungen erfolgt über Sensortasten\n• Bildauf- und Bildumschaltung zwischen verschiedenen Kameras möglich",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1180,6 +1612,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVW511x-0145.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Serie-TASTA-Video.pdf",
     "parent": { "MNR": "TASTA" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS-Video-Innenstation zum Freisprechen \nSerie TASTA, Aufputzmontage Passepartout weiß",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Klein & Funktional mit Video\n\nMit unserem ISW5111 aus der Serie TASTA haben Sie die perfekte Wahl getroffen. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Sichere und einfache Bedienung dank großer Tastflächen und taktiler Rückmeldung.\n\n• Montageform: Aufputz\n• Wählbare Ruftöne\n• Rufton- und Gesprächslautstärke variabel anpassbar\n• Optische Signalisierung des Türrufs über Ambientebeleuchtung möglich\n• Ambientebeleuchtung als Orientierungshilfe\n• Rufton abstellbar\n• 3,5‘‘ Display mit weißem Displayrahmen\n• Videobildeinstellungen erfolgt über Sensortasten\n• Bildauf- und Bildumschaltung zwischen verschiedenen Kameras möglich",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1268,6 +1736,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVW5211-0145.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Video-2-Draht/TCS_Datenblatt_V2D_TASTA-Video.pdf",
     "parent": { "MNR": "TASTA V2D" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": null,
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Klein & Funktional mit Video\n\nMit unserem IVW5211 mit Video-2-Draht-Technologie aus der Serie TASTA haben Sie die perfekte Wahl getroffen. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Sichere und einfache Bedienung dank großer Tastflächen und taktiler Rückmeldung.\n\n• Montageform: Aufputz\n• Wählbare Ruftöne\n• Rufton- und Gesprächslautstärke variabel anpassbar\n• Optische Signalisierung des Türrufs über Ambientebeleuchtung möglich\n• Ambientebeleuchtung als Orientierungshilfe\n• Rufton abstellbar\n• 3,5‘‘ Display mit weißem Displayrahmen\n• Videobildeinstellungen erfolgt über Sensortasten\n• Bildauf- und Bildumschaltung zwischen verschiedenen Kameras möglich",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1352,7 +1856,43 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "parent": { "MNR": "TASTA PRO" },
+    "parent": { "MNR": "TASTA" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": null,
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Klein & Funktional\n\nMit unserer Serie TASTA als Innensprechstelle haben Sie das Gefühl garantiert die perfekte Wahl getroffen zu haben. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Die hochwertig und präzise verarbeiteten Bauteile sorgen für optimale Funktionsqualität und machen die Bedienung damit einfach und komfortabel. \n\n•Montageform: Aufputz\n•Intuitives Freisprechen durch klare Funktionstasten\n•13 wählbare Ruftöne\n•Rufton- und Gesprächslautstärke variabel anpassbar\n•Angenehme Ambientebeleuchtung – auch als Orientierungshilfe\n•Zusätzliche Signalisierung des Türrufs über Ambientebeleuchtung möglich\n•Abstellung des Ruftons einstellbar",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher\n",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": "Artikelnummer: ISW6010-0145\nHersteller: TürControlSysteme AG\nProduktion: Made in Germany\nTASTA Freisprecher AP WS SDI\nKommunikationstechnologie: TCS:BUS und Video-2-Draht:BUS\nVorbereitet für die mobile Tür- und Gebäudekommunikation z.B. mit SmartPhone\nAnrufbeantworter \nSprachsteuerung: Voll-Duplex\nMithörsperre\nLautstärke Gespräch: einstellbar\nLautstärke Rufton: einstellbar\nAkustische Rufunterscheidungen: zwischen 2 Haustür-, Wohnungstür- und Internruf\nKomfortfunktionen: Steuerfunktion 8, Internruf, Türöffnerautomatik, Rufumleitung\nEtagentüröffnerfunktion: aktivierbar\nInbetriebnahme: manuell, mit Servicegerät, mit Konfigurationssoftware\nAufputzgehäuse \nHöhe (mm): 105\nBreite (mm): 94\nTiefe (mm): 21\n",
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1441,6 +1981,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISW50xx-0145_Serie_TASTA-Audio.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Serie-TASTA-Audio.pdf",
     "parent": { "MNR": "TASTA" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Audio-Innenstation TASTA zum Freisprechen, Aufputzmontage, weiß",
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Klein & Kompakt\n\nMit unserem ISW5010 aus der Serie TASTA haben Sie die perfekte Wahl getroffen. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Sichere und einfache Bedienung dank großer Tastflächen und taktiler Rückmeldung. Optisch ein passender Begleiter zu allen Schaltern im Haus. \n\n• Montageform: Aufputz\n• Wählbare Ruftöne\n• Rufton- und Gesprächslautstärke variabel anpassbar\n• Optische Signalisierung des Türrufs über Ambientebeleuchtung möglich\n• Ambientebeleuchtung als Orientierungshilfe\n• Rufton abstellbar\n",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [
@@ -1525,6 +2101,42 @@
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISW50xx-0145_Serie_TASTA-Audio.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_TASTA_AudioPlus_ISW5031-0145.pdf",
     "parent": { "MNR": "TASTA" },
+    "TexteTK": {
+      "name": "TexteTK",
+      "description": null,
+      "features": [
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Kurzbeschreibung4386",
+          "text": null,
+          "id": 464
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Produktbeschreibungstext4918",
+          "text": "Modern. Smart & Funktional\n\nMit unserem ISW5031 aus der Serie TASTA haben Sie die perfekte Wahl getroffen. Durch ihre Hochglanzoberfläche sieht sie wunderbar modern aus und wird durch ihre azurblaue Ambientebeleuchtung nochmal zusätzlich ins rechte Licht gerückt. Sichere und einfache Bedienung dank großer Tastflächen und taktiler Rückmeldung.\n\n• Montageform: Aufputz\n• Wählbare Ruftöne\n• Rufton- und Gesprächslautstärke variabel anpassbar\n• Optische Signalisierung des Türrufs über Ambientebeleuchtung möglich\n• Ambientebeleuchtung als Orientierungshilfe\n• Rufton abstellbar",
+          "id": 465
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "Geraetebeschreibung",
+          "text": "Freisprecher",
+          "id": 466
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "KeyFeatures",
+          "text": null,
+          "id": 467
+        },
+        {
+          "__typename": "csFeatureTextarea",
+          "name": "LeistungsmerkmaleKurzform",
+          "text": null,
+          "id": 587
+        }
+      ]
+    },
     "Gehaeuse": [
       {
         "features": [

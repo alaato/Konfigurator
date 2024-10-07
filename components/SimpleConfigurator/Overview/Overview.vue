@@ -1,6 +1,6 @@
 <template>
-	<div class="w-full flex flex-col justify-end items-end gap-1 overflow-y-scroll">
-		<Card class="px-4 py-3 h-max shadow-sm overflow-y-scroll w-full max-h-[500px]">
+	<div class="w-full flex flex-col justify-end items-end gap-1 overflow-y-scroll py-4">
+		<Card class="px-4 py-3 h-max shadow-sm overflow-y-scroll w-screen max-w-screen-md max-h-[500px]">
 			<Table class="" id="stückliste">
 				<TableCaption class="self-start">Ihre Stückliste</TableCaption>
 				<TableHeader>
@@ -35,7 +35,7 @@
 		</Card>
 	</div>
 
-	<div class="cart-actions flex gap-1 mt-2">
+	<div class="cart-actions flex gap-1 my-2">
 		<Button class="bg-arapawa-950 hover:bg-arapawa-900" @click="generatePDF">Stückliste als PDF</Button>
 		<Button class="bg-arapawa-950 hover:bg-arapawa-900" @click="generateEXCEL">Stückliste als Excel</Button>
 		<Toaster :theme="toasterTheme" />

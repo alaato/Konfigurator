@@ -1,24 +1,12 @@
 import fs from "fs";
 import out from "../../data/aussenstationen.json" with { type: "json" }
 import indoor from "../../data/innenestationen.json" with { type: "json" }
+import { cleanEmptyObjects, removeArrayFromTKtext } from "./cacheUtils.mjs";
 
 const products = out.concat(indoor)
 const FilterOptions = {
   id: true,
 };
-
-function cleanEmptyObjects(obj) {
-  for (let key in obj) {
-    if (typeof obj[key] === "object" && obj[key] !== null) {
-      if (Object.keys(obj[key]).length === 0) {
-        delete obj[key];
-      } else {
-        cleanEmptyObjects(obj[key]);
-      }
-    }
-  }
-  return obj;
-}
 
 async function getZubehör(id) {
   const data = JSON.stringify({
@@ -55,6 +43,14 @@ async function getZubehör(id) {
                   MNR
                 }
               }
+              TexteTK {
+                      features {
+                          ... on csFeatureTextarea {
+                          name
+                          text
+                          }
+                      }
+                    }
               Gehaeuse {
                 ... on csGroup {
                   features {
@@ -180,6 +176,10 @@ async function getAllZube(neededIds) {
 
 
 const zubehors = await getAllZube(neededIds)
-const jsonData = JSON.stringify(zubehors);
+const clean = cleanEmptyObjects(zubehors);
+clean.map((zubehor) => {
+  zubehor.TexteTK = removeArrayFromTKtext(zubehor.TexteTK)
+})
+const jsonData = JSON.stringify(clean);
 
 fs.writeFileSync("./data/Zubehoer.json", jsonData);
