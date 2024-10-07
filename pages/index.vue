@@ -1,7 +1,7 @@
 <template>
 	<main>
 
-		<section ref="main" class="flex landing-page-main flex-col items-center justify-center md:h-screen py-2 gap-4">
+		<section ref="main" class="flex landing-page-main flex-col items-center justify-center md:h-screen  gap-4">
 			<h1 class="text-center text-2xl sm:text-7xl text-white">Sprechanlagen</h1>
 			<h1 class="text-center text-2xl sm:text-7xl text-white">Konfigurator</h1>
 			<div class="versions flex gap-2">
@@ -27,7 +27,7 @@
 				<div class="mx-auto grid max-w-5xl items-center gap-6 lg:grid-cols-3">
 					<div v-for="feature in features" :key="feature.title"
 						class="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
-						<div class="p-2 bg-primary rounded-full bg-arapawa-950">
+						<div class="p-2 bg-primary rounded-full bg-arapawa-950 dark:bg-black">
 							<CheckCircleIcon class="h-6 w-6 text-white" />
 						</div>
 						<h3 class="text-xl font-bold">{{ feature.title }}</h3>
@@ -37,7 +37,8 @@
 			</div>
 		</section>
 
-		<section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100" ref="howItWorksSection">
+		<section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-neutral-950 text-black dark:text-white"
+			ref="howItWorksSection">
 			<div class="container px-4 md:px-6">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
@@ -53,7 +54,7 @@
 					<div v-for="(step, index) in visibleSteps" :key="step.title"
 						class="flex flex-col items-center space-y-2 border border-gray-200 dark:border-gray-800 p-6 rounded-lg relative">
 						<div
-							class="absolute -top-4 left-4 bg-primary text-white rounded-full w-8 h-8 flex items-center justify-center font-bold">
+							class="absolute -top-4 left-4 bg-primary bg-arapawa-950 dark:bg-white text-white dark:text-black rounded-full w-8 h-8 flex items-center justify-center font-bold">
 							{{ index + 1 }}
 						</div>
 						<component :is="step.icon" class="h-12 w-12 text-primary" />
@@ -68,7 +69,8 @@
 			<div class="container px-4 md:px-6">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
-						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-arapawa-950">Noch Fragen?</h2>
+						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl text-arapawa-950 dark:text-white">
+							Noch Fragen?</h2>
 						<p
 							class="max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
 							erreichen Sie uns unter +49 4194 9881-166
@@ -154,7 +156,7 @@ const checkScroll = () => {
 	}
 }
 onMounted(() => {
-	main.value.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" })
+	main.value.scrollIntoView({ behavior: "smooth", block: "center" })
 	window.addEventListener('scroll', checkScroll)
 	checkScroll()
 })
