@@ -1,7 +1,7 @@
 <template>
 	<main>
 
-		<section ref="main" class="flex landing-page-main flex-col items-center justify-center md:h-screen  gap-4">
+		<section ref="main" class="flex landing-page-main flex-col items-center justify-center md:h-screen gap-2">
 			<h1 class="text-center text-2xl sm:text-7xl text-white">Sprechanlagen</h1>
 			<h1 class="text-center text-2xl sm:text-7xl text-white">Konfigurator</h1>
 			<div class="versions flex gap-2">
@@ -42,10 +42,10 @@
 			<div class="container px-4 md:px-6">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
-						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">How It Works</h2>
+						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">So funktioniert es</h2>
 						<p
 							class="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
-							Get started with our platform in six simple steps
+							Beginnen Sie mit unserer Tool in 5 einfachen Schritten
 						</p>
 					</div>
 				</div>
@@ -156,7 +156,7 @@ const checkScroll = () => {
 	}
 }
 onMounted(() => {
-	main.value.scrollIntoView({ behavior: "smooth", block: "center" })
+	main.value.scrollIntoView({ behavior: "smooth",inline: 'center', block: 'end' })
 	window.addEventListener('scroll', checkScroll)
 	checkScroll()
 })
