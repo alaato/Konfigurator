@@ -54,15 +54,15 @@ import { setFilter, setControlUnit } from '@/utils/ConfiguratorUtils/Requirement
 const goToStage: Function = inject('goToStage')
 
 const submitConfig = async () => {
-	const numberExtension = numberOutdoorStation.value > 24? numberOutdoorStation.value : 0
 	if (numberOutdoorStation.value > 4) numberOutdoorStation.value = 4
 	setNeededProductsQuantity(numberIndoorStation.value, numberOutdoorStation.value)
 	setFilter(filter.value, funktion.value, technologie.value, numberIndoorStation.value)
 	resetAllProducts();
 	setControlUnit(filter.value, addControlUnit)
-	goToStage(stages[1])
+	visitedStore.resetVisited()
 	if (!visitedStore.visited.includes(stages[1]))
 		visitedStore.visited.push(stages[1])
+	goToStage(stages[1])
 };
 
 watchEffect(() => {

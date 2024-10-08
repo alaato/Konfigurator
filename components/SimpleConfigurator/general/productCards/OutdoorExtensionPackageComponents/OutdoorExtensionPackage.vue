@@ -23,7 +23,8 @@ const props = defineProps<{
 const goToStage: Function = inject(`goToStage`);
 
 const selectedProductsStore = useSelectedProductsStore();
-const { addExtension, addOutdoorProducts, replaceExtension } = selectedProductsStore;
+const visitedStore = useVisitedStore();
+const { addExtension, addOutdoorProducts } = selectedProductsStore;
 const { getRemainingOutdoorNeeded } = storeToRefs(selectedProductsStore);
 const camera = ref(props.pack.camera)
 
@@ -51,8 +52,10 @@ function addProducts (){
     addExtension(props.pack.controlUnit, 1);
   addExtension(props.pack.extension, 1);
   addOutdoorProducts(props.pack.station, 1);
-  if (getRemainingOutdoorNeeded.value <= 0) goToStage("Innenstation");
-  console.log(getRemainingOutdoorNeeded.value);
+  if (getRemainingOutdoorNeeded.value <= 0) {
+    goToStage("Innenstation");
+    visitedStore.visited.push("Innenstation");
+  }
 };
 provide("replaceCamera", replaceCamera);
 </script>

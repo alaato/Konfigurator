@@ -108,10 +108,14 @@ export function findOutDoorProductsWithEtexensions(productsFilter: ProductsFilte
 
 	const products = [] as Pack[]
 	console.log(productsFilter)
-	if(productsFilter.funktion == "Beide" || productsFilter.funktion == "Video")
+	if(productsFilter.funktion == "Video")
 		addAsiPack(products, true);
-	else
+	else if  (productsFilter.funktion == "Beide"){
+		addAsiPack(products, true);
 		addAsiPack(products, false);
+	}
+	else 
+	addAsiPack(products, false);
 	if (parseInt(productsFilter.AnzhalTatsen) > 20 && parseInt(productsFilter.AnzhalTatsen) <= 32 && productsFilter.funktion == "Audio") addPesPackAudio(12,  productsFilter, products);
 	else if (parseInt(productsFilter.AnzhalTatsen) > 20 && parseInt(productsFilter.AnzhalTatsen) <= 32 && productsFilter.funktion == "Video") addPesPackVideo(12,  productsFilter, products);
 	else if (parseInt(productsFilter.AnzhalTatsen) > 32 && parseInt(productsFilter.AnzhalTatsen) <= 48  && productsFilter.funktion == "Audio") addPesPackAudio(28,  productsFilter, products);

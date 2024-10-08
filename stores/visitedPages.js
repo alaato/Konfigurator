@@ -4,7 +4,10 @@ export const useVisitedStore = defineStore(
   "visited",
   () => {
     const visited = ref(["Anforderungen"]);
-    return { visited };
+    function resetVisited() {
+      visited.value = ["Anforderungen"];
+    }
+    return { visited, resetVisited };
   },
   {
     persist: {

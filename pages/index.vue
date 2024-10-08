@@ -37,7 +37,7 @@
 			</div>
 		</section>
 
-		<section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-neutral-950 text-black dark:text-white"
+		<section class="w-full  py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-neutral-950 text-black dark:text-white"
 			ref="howItWorksSection">
 			<div class="container px-4 md:px-6">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
@@ -80,11 +80,9 @@
 							oder</p>
 						<p
 							class="max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
-							angebote@tcsag.de</p>
+							<a href="mailto:angebote@tcsag.de" class="hover:underline">angebote@tcsag.de</a></p>
 					</div>
-					<div class="w-full max-w-sm space-y-2">
 
-					</div>
 				</div>
 			</div>
 		</section>
@@ -145,7 +143,7 @@ const howItWorks = [
 const checkScroll = () => {
 	if (howItWorksSection.value) {
 		const rect = howItWorksSection.value.getBoundingClientRect()
-		const triggerPoint = window.innerHeight * 0.7
+		const triggerPoint = window.innerHeight * 0.8
 
 		if (rect.top <= triggerPoint) {
 			const stepsToShow = Math.ceil((triggerPoint - rect.top) / (rect.height / howItWorks.length))
