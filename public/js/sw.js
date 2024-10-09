@@ -7,7 +7,6 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/simple",
-  "/app.vue",
   "/manifest.json",
   "/favicon.ico",
   "/assets/css/main.css",

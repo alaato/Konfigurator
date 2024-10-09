@@ -3,7 +3,7 @@
 import Navbar from './components/general/Navbar.vue';
 useHead({ link: [{ rel: "manifest", href: "/TcsSpreschanlageKonfigurator.webmanifest" }] })
 if ("serviceWorker" in navigator) {
-	navigator.serviceWorker.register("./sw.js");
+	navigator.serviceWorker.register("/js/sw.js");
 }
 
 //consts
