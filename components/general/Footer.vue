@@ -1,5 +1,5 @@
 <template>
-	<footer class="bg-gray-100 dark:bg-neutral-950 py-6 px-4 md:px-6 text-sm">
+	<footer class="bg-slate-100 dark:bg-neutral-950 py-6 px-4 md:px-6 text-sm">
 		<div class="container mx-auto">
 			<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 				<div>
@@ -7,9 +7,12 @@
 					<ul class="space-y-1">
 						<li><a href="https://www.tcsag.de" class="hover:underline">www.tcsag.de</a></li>
 						<li><a href="https://www.facebook.com/tcsag" class="hover:underline">TCS@Facebook</a></li>
-						<li><a href="https://www.youtube.com/channel/UCvHNqF6wPnq-FmZLo3rv0uQ?navid=1" class="hover:underline">TCS@Youtube</a></li>
-						<li><a href="https://apps.apple.com/ch/app/snipdoo-home/id1468782514" class="hover:underline">snipdoo® HOME (iOS)</a></li>
-						<li><a href="https://play.google.com/store/apps/details?id=de.tcsag.tcsphone&hl=de&gl=US" class="hover:underline">snipdoo® HOME (Android)</a></li>
+						<li><a href="https://www.youtube.com/channel/UCvHNqF6wPnq-FmZLo3rv0uQ?navid=1"
+								class="hover:underline">TCS@Youtube</a></li>
+						<li><a href="https://apps.apple.com/ch/app/snipdoo-home/id1468782514"
+								class="hover:underline">snipdoo® HOME (iOS)</a></li>
+						<li><a href="https://play.google.com/store/apps/details?id=de.tcsag.tcsphone&hl=de&gl=US"
+								class="hover:underline">snipdoo® HOME (Android)</a></li>
 					</ul>
 				</div>
 				<div>
@@ -24,9 +27,11 @@
 				<div>
 					<h4 class="font-semibold mb-2">Rechtliches</h4>
 					<ul class="space-y-1">
-						<li><a href="https://www.tcsag.de/rechtliches/datenschutzerklaerung/" class="hover:underline">Datenschutzerklärung</a></li>
+						<li><a href="https://www.tcsag.de/rechtliches/datenschutzerklaerung/"
+								class="hover:underline">Datenschutzerklärung</a></li>
 						<li><a href="https://www.tcsag.de/service/agb/" class="hover:underline">AGB</a></li>
-						<li><a href="https://www.tcsag.de/rechtliches/impressum/" class="hover:underline">Impressum</a></li>
+						<li><a href="https://www.tcsag.de/rechtliches/impressum/" class="hover:underline">Impressum</a>
+						</li>
 					</ul>
 				</div>
 				<div>

@@ -1,15 +1,15 @@
 <template>
 	<div class="zubehör flex justify-center items-center flex-col gap-2">
 		<p v-if="(!umSchalterNeeded && doorOpener && products.length <= 0)">Keine Zubehör verfügbar</p>
-		<ProductSelection :selectedProducts="selectedProducts.outdoorProducts" :products="products" >
-			<ZubehörCard v-if="umSchalterNeeded" :product="Umtauscher" />
-			<ZubehörCard v-if="umSchalterNeeded" :product="doorOpener" />
+		<ProductSelection :selectedProducts="selectedProducts.outdoorProducts" :products="products">
+			<RequiredZubehörCard v-if="umSchalterNeeded" :product="Umtauscher" />
+			<RequiredZubehörCard v-if="umSchalterNeeded" :product="doorOpener" />
 		</ProductSelection>
 	</div>
 </template>
 
 <script setup lang="ts">
-import ZubehörCard from './RequiredCard.vue'
+import RequiredZubehörCard from './RequiredCard.vue'
 import zubehörs from '@/data/Zubehoer.json'
 import ProductSelection from '@/components/SimpleConfigurator/general/productCards/ProductSelectionGrid.vue';
 import funktionErweiterungen from '@/data/Funktionserweiterung.json'
@@ -21,11 +21,11 @@ const { selectedProducts, getAllSelectedProducts } = storeToRefs(selectedProduct
 const umSchalterNeeded = selectedProducts.value.outdoorProducts.neededQuantity > 1 ? true : false
 const neededZube = []
 getAllSelectedProducts.value.forEach((product: DeviceData) => {
-	product.HatZubehoer?.forEach((elem )=>{
-		const exists = neededZube.find(zube=> zube.id == elem.id)
+	product.HatZubehoer?.forEach((elem) => {
+		const exists = neededZube.find(zube => zube.id == elem.id)
 		const quantity = product.quantity;
-		if(exists)  exists.quantity += quantity
-		else neededZube.push({id: elem.id, quantity: quantity})
+		if (exists) exists.quantity += quantity
+		else neededZube.push({ id: elem.id, quantity: quantity })
 	})
 })
 const doorOpenerNeeded = umSchalterNeeded;
@@ -37,14 +37,14 @@ if (Umtauscher && selectedProducts.value.accessories.products.length == 0)
 if (doorOpener && selectedProducts.value.accessories.products.length < 2)
 	selectedProductsStore.addAccessories({ ...doorOpener, quantity: selectedProducts.value.outdoorProducts.neededQuantity })
 
-const products = []  as DeviceData[]
+const products = [] as DeviceData[]
 console.log(neededZube)
 neededZube.forEach((zubehör) => {
-		if(!zubehör.id) return
-		const zube : DeviceData = zubehörs.find((zube) => zube.id == zubehör.id) as DeviceData
-		if(!zube) return
-		zube.quantity = zubehör.quantity || 0
-		products.push(zube)
+	if (!zubehör.id) return
+	const zube: DeviceData = zubehörs.find((zube) => zube.id == zubehör.id) as DeviceData
+	if (!zube) return
+	zube.quantity = zubehör.quantity || 0
+	products.push(zube)
 })
 console.log(products)
 </script>

@@ -1,19 +1,17 @@
-import { Body } from "#build/components"
-
-const animate = require("tailwindcss-animate")
+const animate = require("tailwindcss-animate");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{ts,tsx,vue}',
-    './components/**/*.{ts,tsx,vue}',
-    './app/**/*.{ts,tsx,vue}',
-    './src/**/*.{ts,tsx,vue}',
+    "./pages/**/*.{ts,tsx,vue}",
+    "./components/**/*.{ts,tsx,vue}",
+    "./app/**/*.{ts,tsx,vue}",
+    "./src/**/*.{ts,tsx,vue}",
   ],
   prefix: "",
   theme: {
     fontFamily: {
-      body: ['"PT Sans"', "sans-serif"],
+      body: ['"DM Sans"', "sans-serif"],
       button: ['"Inter"', "sans-serif"],
       heading: ['"Domine"', "serif"],
     },
@@ -27,17 +25,17 @@ module.exports = {
     extend: {
       colors: {
         arapawa: {
-          '50': '#f1f3ff',
-          '100': '#e6eaff',
-          '200': '#d0d7ff',
-          '300': '#aab3ff',
-          '400': '#7a83ff',
-          '500': '#4446ff',
-          '600': '#281fff',
-          '700': '#180df4',
-          '800': '#130acd',
-          '900': '#120ba7',
-          '950': '#040372',
+          "50": "#f1f3ff",
+          "100": "#e6eaff",
+          "200": "#d0d7ff",
+          "300": "#aab3ff",
+          "400": "#7a83ff",
+          "500": "#4446ff",
+          "600": "#281fff",
+          "700": "#180df4",
+          "800": "#130acd",
+          "900": "#120ba7",
+          "950": "#040372",
         },
       },
       keyframes: {
@@ -57,4 +55,4 @@ module.exports = {
     },
   },
   plugins: [animate],
-}
+};

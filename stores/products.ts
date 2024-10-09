@@ -92,10 +92,12 @@ export const useSelectedProductsStore = defineStore({
       }
       this.selectedProducts.indoorProducts.SelectedQuantity += quantity;
     },
-    addOutdoorProducts(product : DeviceData, quantity: number) {
-      const AddedProduct = this.selectedProducts.outdoorProducts.products.find((p) => p.MNR === product.MNR)
+    addOutdoorProducts(product: DeviceData, quantity: number) {
+      const AddedProduct = this.selectedProducts.outdoorProducts.products.find(
+        (p) => p.MNR === product.MNR
+      );
       if (AddedProduct) AddedProduct.quantity += quantity;
-      else{
+      else {
         for (let i = 0; i < quantity; i++) {
           this.selectedProducts.outdoorProducts.products.push(product);
         }
@@ -130,12 +132,30 @@ export const useSelectedProductsStore = defineStore({
     addControlUnit(product) {
       this.selectedProducts.controlUnit = { ...product, quantity: 1 };
     },
-    removeIndoorProducts(product) {
+    removeIndoorProducts(indoorStation: DeviceData) {
       const index =
-        this.selectedProducts.indoorProducts.products.indexOf(product);
+        this.selectedProducts.indoorProducts.products.indexOf(indoorStation);
       if (index !== -1) {
+        const indoor = this.selectedProducts.indoorProducts.products[index];
+        const ZubeIsSelected = indoor.HatZubehoer.forEach((zube) => {
+          const zubeIndex =
+            this.selectedProducts.accessories.products.findIndex(
+              (product) => product.id === zube.id
+            );
+          if (zubeIndex == -1) return;
+          const foundZube =
+            this.selectedProducts.accessories.products[zubeIndex];
+          if (foundZube && foundZube.quantity >= indoorStation.quantity) {
+            foundZube.quantity -= indoorStation.quantity;
+          } else if (foundZube && foundZube.quantity < indoorStation.quantity) {
+            foundZube.quantity = 0;
+          }
+          if (foundZube && foundZube.quantity == 0) {
+            this.selectedProducts.accessories.products.splice(zubeIndex, 1);
+          }
+        });
         this.selectedProducts.indoorProducts.SelectedQuantity -=
-          product.quantity;
+          indoorStation.quantity;
         this.selectedProducts.indoorProducts.products.splice(index, 1);
       }
     },
@@ -149,7 +169,6 @@ export const useSelectedProductsStore = defineStore({
     removeOutdoorProducts(product) {
       const index: number =
         this.selectedProducts.outdoorProducts.products.indexOf(product);
-      console.log(index, this.selectedProducts.outdoorProducts);
       if (index !== -1) {
         this.selectedProducts.outdoorProducts.products.splice(index, 1);
         this.selectedProducts.outdoorProducts.SelectedQuantity -=
@@ -163,11 +182,14 @@ export const useSelectedProductsStore = defineStore({
       }
     },
     replaceExtension(oldProduct, newProduct) {
-      const indexOld = this.selectedProducts.extensions.products.indexOf(oldProduct);
+      const indexOld =
+        this.selectedProducts.extensions.products.indexOf(oldProduct);
       if (indexOld !== -1) {
-        this.selectedProducts.extensions.SelectedQuantity -= oldProduct.quantity;
+        this.selectedProducts.extensions.SelectedQuantity -=
+          oldProduct.quantity;
         this.selectedProducts.extensions.products[indexOld] = newProduct;
-        this.selectedProducts.extensions.SelectedQuantity += newProduct.quantity;
+        this.selectedProducts.extensions.SelectedQuantity +=
+          newProduct.quantity;
       }
     },
     resetControlUnit() {
@@ -189,15 +211,19 @@ export const useSelectedProductsStore = defineStore({
       this.selectedProducts.extensions.products = [];
       this.selectedProducts.extensions.SelectedQuantity = 0;
     },
+    resetSelectedProducts() {
+      this.resetIndoorProducts();
+      this.resetOutdoorProducts();
+      this.resetExtension();
+      this.resetAccessories();
+    },
     resetAllProducts() {
       this.resetIndoorProducts();
       this.resetOutdoorProducts();
       this.resetControlUnit();
       this.resetExtension();
       this.resetAccessories();
-      this.resetControlUnit();
     },
-
   },
   persist: {
     storage: piniaPluginPersistedstate.sessionStorage(),

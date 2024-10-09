@@ -1,15 +1,21 @@
 <template>
+	<section class="flex justify-center flex-col px-6 items-center ">
+		<div class="flex flex-col  gap-1 md:flex-row flex-wrap max-w-[800px]">
+			<PackageProductCard v-if="pack.station" :product="pack.station" />
+			<PackageProductCard v-if="pack.extension" :product="pack.extension" />
+			<PackageProductCard v-if="camera" :product="camera">
+				<changeCameraModel :products="products" @replaceCamera="replaceCamera" />
+			</PackageProductCard>
+			<PackageProductCard v-if="pack.controlUnit" :product="pack.controlUnit" />
+			<div v-else class="bg-neutral-200 dark:bg-neutral-700  w-80"></div>
+		</div>
+		<div class="w-full max-w-[800px]">
+			<Button @click="addProducts" class="dark:border grow-0 w-fit justify-self-center border-white mb-1">Paket
+				hinzufügen</Button>
+		</div>
 
-	<div class="flex flex-col items-center gap-1 md:grid md:grid-cols-2">
-		<PackageProductCard v-if="pack.station" :product="pack.station" />
-		<PackageProductCard v-if="pack.extension" :product="pack.extension" />
-		<PackageProductCard v-if="camera" :product="camera">
-			<changeCameraModel :products="products" @replaceCamera="replaceCamera" />
-		</PackageProductCard>
-		<PackageProductCard v-if="pack.controlUnit" :product="pack.controlUnit" />
-		<Button @click="addProducts" class="w-full col-span-full dark:border border-white mb-1">Paket
-			hinzufügen</Button>
-	</div>
+	</section>
+
 </template>
 
 <script lang="ts" setup>

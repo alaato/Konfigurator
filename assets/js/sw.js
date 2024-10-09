@@ -6,15 +6,31 @@ const CACHE_NAME = "my-pwa-cache-v1";
 const urlsToCache = [
   "/",
   "/index.html",
-  "/styles.css",
-  "/app.js",
-  "/images/logo.png", // Add essential images here
-  "/images/image1.jpg", // Add all images here
-  "/images/image2.jpg",
-  "/images/image3.jpg",
-  // ... add more images as needed
+  "/simple",
+  "/app.vue",
+  "/manifest.json",
+  "/favicon.ico",
+  "/assets/css/main.css",
+  "/assets/img/icons/Square44x44Logo.altform-lightunplated_targetsize-256.png",
+  "/assets/img/icons/icon-512x512.png",
+  "/assets/fonts/inter-var-latin.woff2",
+  "/assets/fonts/dm-sans-var-latin.woff2",
+  "/assets/fonts/domine.woff2",
+  "/fonts/inter-var-latin.woff2",
+  "/fonts/dm-sans-var-latin.woff2",
+  "/fonts/domine.woff2",
+  "/lib/tailwind.css",
+  "/lib/lucide-vue-next.umd.js",
+  "/lib/lucide-vue-next.umd.css",
+  "/components/ui/**/*.{js,css}",
+  "/stores/**/*.{js,ts}",
+  "/utils/**/*.{js,ts}",
+  "/assets/**/*.{js,css,svg,png,json}",
+  "/components/**/*.{js,css,svg,png,json}",
+  "/pages/**/*.{js,ts,vue}",
+  "/app.vue",
+  "/nuxt.config.{js,ts}",
 ];
-
 // Install Service Worker and Pre-cache All Assets
 self.addEventListener("install", (event) => {
   event.waitUntil(

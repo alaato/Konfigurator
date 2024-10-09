@@ -103,7 +103,6 @@ function resetSelection() {
 	showGrid.value = false
 }
 
-console.log(products)
 
 </script>
 

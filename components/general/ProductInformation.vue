@@ -1,14 +1,14 @@
 <template>
 	<Dialog>
 		<DialogTrigger asChild>
-			<InfoIcon class="w-5 h-5 text-neutral-400 cursor-pointer transition-transform hover:scale-110 hover:text-black" />
+			<InfoIcon
+				class="w-5 h-5  text-neutral-400 cursor-pointer transition-transform hover:scale-110 hover:text-black dark:hover:text-white" />
 		</DialogTrigger>
 		<DialogContent class="max-w-2xl">
 			<DialogTitle>Article :{{ product?.MNR }}</DialogTitle>
 			<DialogHeader class="max-w-2xl">
 				<div class="flex flex-col md:flex-row gap-4 py-4 items-center ">
-					<NuxtImg :src="imgsrc" :alt="product?.MNR" 
-						class="object-scale-down rounded-md max-h-72" />
+					<NuxtImg :src="imgsrc" :alt="product?.MNR" class="object-scale-down rounded-md max-h-72" />
 				</div>
 				<infoSection :imgsrc="imgsrc" :product="product" />
 			</DialogHeader>
@@ -28,6 +28,5 @@ import {
 } from '@/components/ui/dialog'
 import infoSection from './infoSection.vue'
 const props = defineProps(['product'])
-console.log(props.product)
-const imgsrc = computed(()=>props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/" + props.product.id) 
+const imgsrc = computed(() => props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/" + props.product.id) 
 </script>

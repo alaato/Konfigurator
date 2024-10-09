@@ -29,10 +29,13 @@ function addProduct(product) {
 		selectedProductsStore.addOneOutdoorProduct({ ...product, quantity: productQuantity.value }, productQuantity.value);
 		productQuantity.value = 0;
 	}
-	if (!visitedStore.visited.includes('Innenstation'))
-		visitedStore.visited.push('Innenstation')
-	if (remainingOutdoorProducts.value == 0)
+
+	if (remainingOutdoorProducts.value == 0) {
+		if (!visitedStore.visited.includes('Innenstation'))
+			visitedStore.visited.push('Innenstation')
 		goToStage('Innenstation')
+	}
+
 }
 </script>
 

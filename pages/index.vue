@@ -1,7 +1,7 @@
 <template>
-	<main >
+	<main>
 
-		<section ref="hero" class="flex landing-page-main flex-col items-center justify-center md:h-screen gap-2">
+		<section ref="hero" class="flex landing-page-main flex-col items-center justify-center h-screen gap-2">
 			<h1 class="text-center text-2xl sm:text-7xl text-white">Sprechanlagen</h1>
 			<h1 class="text-center text-2xl sm:text-7xl text-white">Konfigurator</h1>
 			<div class="versions flex gap-2">
@@ -37,7 +37,8 @@
 			</div>
 		</section>
 
-		<section class="w-full  py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-neutral-950 text-black dark:text-white"
+		<section
+			class="w-full min-h-[750px] py-12 md:py-24 lg:py-32 bg-slate-100 dark:bg-neutral-950 text-black dark:text-white"
 			ref="howItWorksSection">
 			<div class="container px-4 md:px-6">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
@@ -80,7 +81,8 @@
 							oder</p>
 						<p
 							class="max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
-							<a href="mailto:angebote@tcsag.de" class="hover:underline">angebote@tcsag.de</a></p>
+							<a href="mailto:angebote@tcsag.de" class="hover:underline">angebote@tcsag.de</a>
+						</p>
 					</div>
 
 				</div>
@@ -143,16 +145,17 @@ const howItWorks = [
 const checkScroll = () => {
 	if (howItWorksSection.value) {
 		const rect = howItWorksSection.value.getBoundingClientRect()
-		const triggerPoint = window.innerHeight * 0.8
-
+		const triggerPoint = window.innerHeight * 0.7
+		console.log(triggerPoint, rect.top)
 		if (rect.top <= triggerPoint) {
-			const stepsToShow = Math.ceil((triggerPoint - rect.top) / (rect.height / howItWorks.length))
+			const stepsToShow = Math.ceil((triggerPoint - rect.top + 25) / (rect.height / howItWorks.length))
+			console.log(stepsToShow)
 			visibleSteps.value = howItWorks.slice(0, Math.min(stepsToShow, howItWorks.length))
 		}
 	}
 }
 onMounted(() => {
-	hero.value.scrollIntoView({ behavior: "instant",inline: 'center', block: 'start' })
+	hero.value.scrollIntoView({ behavior: "instant", inline: 'center', block: 'start' })
 	window.addEventListener('scroll', checkScroll)
 	checkScroll()
 })
