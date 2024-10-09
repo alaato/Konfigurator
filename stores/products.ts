@@ -99,9 +99,11 @@ export const useSelectedProductsStore = defineStore({
       this.selectedProducts.outdoorProducts.SelectedQuantity += quantity;
     },
     addExtension(product, quantity) {
-      const AddedProduct = this.selectedProducts.extensions.products.find((p) => p.MNR === product.MNR)
+      const AddedProduct = this.selectedProducts.extensions.products.find(
+        (p) => p.MNR === product.MNR
+      );
       if (AddedProduct) AddedProduct.quantity += quantity;
-      else{
+      else {
         for (let i = 0; i < quantity; i++) {
           this.selectedProducts.extensions.products.push(product);
         }
@@ -109,11 +111,13 @@ export const useSelectedProductsStore = defineStore({
 
       this.selectedProducts.extensions.SelectedQuantity += quantity;
     },
-    addOneOutdoorProduct(product) {
-      const AddedProduct = this.selectedProducts.outdoorProducts.products.find((p) => p.MNR === product.MNR)
+    addOneOutdoorProduct(product, quantity) {
+      const AddedProduct = this.selectedProducts.outdoorProducts.products.find(
+        (p) => p.MNR === product.MNR
+      );
       if (AddedProduct) AddedProduct.quantity++;
       else this.selectedProducts.outdoorProducts.products.push(product);
-      this.selectedProducts.outdoorProducts.SelectedQuantity += product.quantity ;
+      this.selectedProducts.outdoorProducts.SelectedQuantity += quantity;
     },
     addAccessories(product) {
       this.selectedProducts.accessories.products.push(product);
@@ -127,7 +131,7 @@ export const useSelectedProductsStore = defineStore({
         this.selectedProducts.indoorProducts.products.indexOf(product);
       if (index !== -1) {
         this.selectedProducts.indoorProducts.SelectedQuantity -=
-        product.quantity;
+          product.quantity;
         this.selectedProducts.indoorProducts.products.splice(index, 1);
       }
     },
@@ -164,7 +168,7 @@ export const useSelectedProductsStore = defineStore({
     resetAccessories() {
       this.selectedProducts.accessories.products = [];
       this.selectedProducts.accessories.quantity = 0;
-    }, 
+    },
     resetOutdoorProducts() {
       this.selectedProducts.outdoorProducts.products = [];
       this.selectedProducts.outdoorProducts.SelectedQuantity = 0;
