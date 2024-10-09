@@ -28,5 +28,6 @@ import {
 } from '@/components/ui/dialog'
 import infoSection from './infoSection.vue'
 const props = defineProps(['product'])
-const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/" + props.product.id
+console.log(props.product)
+const imgsrc = computed(()=>props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/" + props.product.id) 
 </script>

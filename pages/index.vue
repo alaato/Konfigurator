@@ -1,7 +1,7 @@
 <template>
-	<main>
+	<main >
 
-		<section ref="main" class="flex landing-page-main flex-col items-center justify-center md:h-screen  gap-4">
+		<section ref="hero" class="flex landing-page-main flex-col items-center justify-center md:h-screen gap-2">
 			<h1 class="text-center text-2xl sm:text-7xl text-white">Sprechanlagen</h1>
 			<h1 class="text-center text-2xl sm:text-7xl text-white">Konfigurator</h1>
 			<div class="versions flex gap-2">
@@ -13,7 +13,7 @@
 		</section>
 
 		<section
-			class="w-full py-6 md:py-0 md:min-h-screen flex justify-center items-center bg-zinc-50 dark:bg-zinc-900">
+			class="w-fullw-full py-12 md:py-24 lg:py-32 flex justify-center items-center bg-zinc-50 dark:bg-zinc-900">
 			<div class="container px-4 md:px-6">
 				<div class="flex flex-col items-center justify-center text-center">
 					<div class="space-y-6">
@@ -24,7 +24,7 @@
 							fertigen Made in Germany und liefern innerhalb von 24 Stunden an den Elektro-Großhandel </p>
 					</div>
 				</div>
-				<div class="mx-auto grid max-w-5xl items-center gap-6 lg:grid-cols-3">
+				<div class="mx-auto space-y-6 grid max-w-5xl items-center gap-6 lg:grid-cols-3">
 					<div v-for="feature in features" :key="feature.title"
 						class="flex flex-col items-center space-y-2 border-gray-800 p-4 rounded-lg">
 						<div class="p-2 bg-primary rounded-full bg-arapawa-950 dark:bg-black">
@@ -37,15 +37,15 @@
 			</div>
 		</section>
 
-		<section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-neutral-950 text-black dark:text-white"
+		<section class="w-full  py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-neutral-950 text-black dark:text-white"
 			ref="howItWorksSection">
 			<div class="container px-4 md:px-6">
 				<div class="flex flex-col items-center justify-center space-y-4 text-center">
 					<div class="space-y-2">
-						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">How It Works</h2>
+						<h2 class="text-3xl font-bold tracking-tighter sm:text-5xl">So funktioniert es</h2>
 						<p
 							class="max-w-[900px] text-zinc-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
-							Get started with our platform in six simple steps
+							Beginnen Sie mit unserer Tool in 5 einfachen Schritten
 						</p>
 					</div>
 				</div>
@@ -80,11 +80,9 @@
 							oder</p>
 						<p
 							class="max-w-[600px] text-black md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-zinc-400">
-							angebote@tcsag.de</p>
+							<a href="mailto:angebote@tcsag.de" class="hover:underline">angebote@tcsag.de</a></p>
 					</div>
-					<div class="w-full max-w-sm space-y-2">
 
-					</div>
 				</div>
 			</div>
 		</section>
@@ -98,12 +96,10 @@
 <script lang="ts" setup>
 import { CheckCircleIcon } from "lucide-vue-next"
 import Footer from "@/components/general/Footer.vue"
-const main = ref(null)
+const hero = useTemplateRef('hero')
 const d = new Date();
 let year = d.getFullYear();
 
-const mobileMenuOpen = ref(false)
-const email = ref('')
 const howItWorksSection = ref(null)
 const visibleSteps = ref([])
 
@@ -113,12 +109,12 @@ const features = [
 		description: "Audio- und Video-Sprechanlagen in vielen Design- und Montagevarianten auswählen",
 	},
 	{
-		title: "Scalable",
+		title: "Mehr Möglichkeiten",
 		description: "bis zum 4 Aussenstationen und 40 Innenstationen",
 	},
 	{
-		title: "Developer Friendly",
-		description: "Intuitive tools and APIs designed with developers in mind.",
+		title: "Benutzerfreundlich",
+		description: "Stellen Sie Ihr individuelles System ganz einfach mit dem intuitiven Tool zusammen",
 	},
 ]
 const howItWorks = [
@@ -147,7 +143,7 @@ const howItWorks = [
 const checkScroll = () => {
 	if (howItWorksSection.value) {
 		const rect = howItWorksSection.value.getBoundingClientRect()
-		const triggerPoint = window.innerHeight * 0.7
+		const triggerPoint = window.innerHeight * 0.8
 
 		if (rect.top <= triggerPoint) {
 			const stepsToShow = Math.ceil((triggerPoint - rect.top) / (rect.height / howItWorks.length))
@@ -156,7 +152,7 @@ const checkScroll = () => {
 	}
 }
 onMounted(() => {
-	main.value.scrollIntoView({ behavior: "smooth", block: "center" })
+	hero.value.scrollIntoView({ behavior: "instant",inline: 'center', block: 'start' })
 	window.addEventListener('scroll', checkScroll)
 	checkScroll()
 })
@@ -169,7 +165,7 @@ onUnmounted(() => {
 <style>
 .landing-page-main {
 	position: relative;
-	background: url("landingPageBG.jpg") no-repeat center center fixed;
+	background: url("public/landingPageBG.jpg") no-repeat center center fixed;
 	background-size: fit-content;
 	box-shadow: 0px 4px 4px 0px #00000040, inset 0 0 0 1000px rgba(0, 0, 0, .4);
 }

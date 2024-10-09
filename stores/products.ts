@@ -92,9 +92,13 @@ export const useSelectedProductsStore = defineStore({
       }
       this.selectedProducts.indoorProducts.SelectedQuantity += quantity;
     },
-    addOutdoorProducts(product, quantity) {
-      for (let i = 0; i < quantity; i++) {
-        this.selectedProducts.outdoorProducts.products.push(product);
+    addOutdoorProducts(product : DeviceData, quantity: number) {
+      const AddedProduct = this.selectedProducts.outdoorProducts.products.find((p) => p.MNR === product.MNR)
+      if (AddedProduct) AddedProduct.quantity += quantity;
+      else{
+        for (let i = 0; i < quantity; i++) {
+          this.selectedProducts.outdoorProducts.products.push(product);
+        }
       }
       this.selectedProducts.outdoorProducts.SelectedQuantity += quantity;
     },
@@ -158,6 +162,14 @@ export const useSelectedProductsStore = defineStore({
         this.selectedProducts.accessories.products.splice(index, 1);
       }
     },
+    replaceExtension(oldProduct, newProduct) {
+      const indexOld = this.selectedProducts.extensions.products.indexOf(oldProduct);
+      if (indexOld !== -1) {
+        this.selectedProducts.extensions.SelectedQuantity -= oldProduct.quantity;
+        this.selectedProducts.extensions.products[indexOld] = newProduct;
+        this.selectedProducts.extensions.SelectedQuantity += newProduct.quantity;
+      }
+    },
     resetControlUnit() {
       this.selectedProducts.controlUnit = null;
     },
@@ -185,6 +197,7 @@ export const useSelectedProductsStore = defineStore({
       this.resetAccessories();
       this.resetControlUnit();
     },
+
   },
   persist: {
     storage: piniaPluginPersistedstate.sessionStorage(),

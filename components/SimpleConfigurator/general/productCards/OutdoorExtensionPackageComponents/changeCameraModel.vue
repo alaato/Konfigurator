@@ -7,8 +7,8 @@
     <DialogContent class="max-w-7xl overflow-y-scroll">
       <DialogTitle>choose camera</DialogTitle>
       <DialogHeader class="max-w-7xl overflow-x-scroll">
-        <div class="flex flex-wrap flex-col  lg:flex-row p-4 max-h-[500px]">
-          <PackageProductCard v-for="product in products" :product="product" />
+        <div class="flex flex-wrap flex-col gap-4 lg:flex-row justify-center p-4 max-h-[500px]">
+          <PackageProductCard v-for="product in products" :camera="true":product="product" />
         </div>
       </DialogHeader>
     </DialogContent>
@@ -29,5 +29,4 @@ import PackageProductCard from './PackageProductCard.vue';
 const props = defineProps<{
   products: DeviceData[]
 }>()
-const emit = defineEmits(['setCamera'])
 </script>

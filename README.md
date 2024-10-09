@@ -171,3 +171,7 @@
 - added the texts to indoorstation for product information window
 - fixed an issue with outdoor station added quantity
 - landing page added
+
+### 08.10
+
+- Camera chnage for Video Pack
