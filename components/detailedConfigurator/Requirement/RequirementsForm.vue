@@ -1,7 +1,6 @@
 <template>
-  <div class="my-10 max-w-[960px] h-full">
-    <form  ref="form" @submit.prevent="submitConfig"
-     class="gap-1 flex text-center flex-col content-center items-center justify-center">
+  <div class="my-10 w-screen justify-center flex h-full">
+    <form  ref="form" @submit.prevent="submitConfig" class="max-w-[960px] gap-1 flex text-center flex-col content-center items-center justify-center">
       <div class="number-of-apartments flex flex-wrap justify-center gap-1 bg-transparent">
         <NumberInputBox title="Etage" v-model="numberFloors" />
         <NumberInputBox title="Wohnungen pro Etage" v-model="numberApartments" />

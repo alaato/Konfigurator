@@ -1,6 +1,7 @@
 <template>
-
-    <HausContainer></HausContainer>
+    <section class="w-full flex justify-center">
+        <HausContainer></HausContainer>
+    </section>
 
 </template>
 
@@ -10,6 +11,4 @@ import HausContainer from '@/components/detailedConfigurator/Haus/HausContainer.
 
 </script>
 
-<style>
-
-</style>
+<style></style>

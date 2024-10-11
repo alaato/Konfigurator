@@ -175,3 +175,6 @@
 ### 08.10
 
 - Camera chnage for Video Pack
+- mixed paket  
+- Xml gaeb
+- minor fixes for landing page
