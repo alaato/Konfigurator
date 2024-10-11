@@ -16,16 +16,19 @@
 	</li>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { TrashIcon } from 'lucide-vue-next';
 import { Button } from '@/components/ui/button'
 const props = defineProps(['products', 'max', 'title', 'selectedQuantity'])
 
 const selectedProductsStore = useSelectedProductsStore()
-const { removeIndoorProducts, removeOutdoorProducts, removeAccessories, removeExtension, resetSelectedProducts } = selectedProductsStore
-function removeItem(product) {
-
-	if (props.title == 'Innenstationen') {
+const { removeIndoorProducts, removeOutdoorProducts, removeAccessories, removeExtension, resetSelectedProducts, removePack } = selectedProductsStore
+function removeItem(product: DeviceData) {
+	if (product.packID) {
+		console.log(product.packID)
+		removePack(product.packID)
+	}
+	else if (props.title == 'Innenstationen') {
 		removeIndoorProducts(product)
 	} else if (props.title == 'Aussenstationen') {
 		removeOutdoorProducts(product)

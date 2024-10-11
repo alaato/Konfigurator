@@ -8,9 +8,9 @@
 		{{ product.KTXT }}
 	</TableCell>
 	<TableCell class="text-center">{{ quantity ? quantity : 1 }}</TableCell>
-	<TableCell>{{ product?.PERIODE1 }}€</TableCell>
+	<TableCell>{{ !noPrice ? product?.PERIODE1 + "€" : "" }}</TableCell>
 	<TableCell class="text-right">
-		{{ quantity ? quantity * product?.PERIODE1 : product?.PERIODE1 }}€
+		{{ noPrice ? "" : product?.PERIODE1 * quantity + "€" }}
 	</TableCell>
 </template>
 <script setup lang="ts">
@@ -18,6 +18,7 @@ import { type DeviceData } from '@/utils/interfaces.js'
 const props = defineProps<{
 	product: DeviceData;
 	quantity?: number;
+	noPrice?: boolean;
 }>()
 const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/ProductImages" + props.product.id
 

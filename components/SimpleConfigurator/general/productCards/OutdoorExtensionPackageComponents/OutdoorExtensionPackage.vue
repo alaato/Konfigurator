@@ -6,7 +6,6 @@
 			<PackageProductCard v-if="camera" :product="camera">
 				<changeCameraModel :products="products" @replaceCamera="replaceCamera" />
 			</PackageProductCard>
-			<PackageProductCard v-if="pack.controlUnit" :product="pack.controlUnit" />
 			<div v-else class="bg-neutral-200 dark:bg-neutral-700  w-80"></div>
 		</div>
 		<div class="w-full max-w-[800px]">
@@ -25,13 +24,13 @@ import { type Pack, type DeviceData } from "@/utils/interfaces";
 import extensions from "@/data/Funktionserweiterung.json"
 import changeCameraModel from "./changeCameraModel.vue";
 const props = defineProps<{
-	pack: Pack;
+	pack: Pack<DeviceData>;
 }>();
 const goToStage: Function = inject(`goToStage`);
 
 const selectedProductsStore = useSelectedProductsStore();
 const visitedStore = useVisitedStore();
-const { addExtension, addOutdoorProducts } = selectedProductsStore;
+const { addExtension, addOutdoorProducts, addPack } = selectedProductsStore;
 const { getRemainingOutdoorNeeded } = storeToRefs(selectedProductsStore);
 const camera = ref(props.pack.camera)
 
@@ -53,12 +52,7 @@ function replaceCamera(newCamera: DeviceData) {
 	camera.value = { ...newCamera, quantity: camera.value.quantity }
 }
 function addProducts() {
-	if (props.pack.camera)
-		addExtension(camera.value, 1);
-	if (props.pack.controlUnit)
-		addExtension(props.pack.controlUnit, 1);
-	addExtension(props.pack.extension, 1);
-	addOutdoorProducts(props.pack.station, 1);
+	addPack(props.pack);
 	if (getRemainingOutdoorNeeded.value <= 0) {
 		goToStage("Innenstation");
 		visitedStore.visited.push("Innenstation");

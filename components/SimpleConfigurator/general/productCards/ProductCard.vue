@@ -2,14 +2,13 @@
 	<Card class="bg-white font-body flex flex-col text-left rounded-lg drop-shadow-sm overflow-hidden w-[325px]">
 		<div class="bg-white dark:bg-neutral-950">
 			<ProductInformation :product="product"></ProductInformation>
-			<NuxtImg ref="ProductImage" :src="imgsrc" @error="onImgError" alt="Product Image"
-				class="w-full h-52 object-scale-down" />
+			<NuxtImg ref="ProductImage" :src="imgsrc" alt="Product Image" class="w-full h-52 object-scale-down" />
 		</div>
 		<div class="pt-4 px-4">
 			<h3 class="text-xl font-bold border-b mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
 			<h3 class=" MNR text font-bold mb-2">Article : {{ product.MNR }}</h3>
 			<p class="text-muted-foreground mb-2 h-6 text-sm">{{ product?.KTXT }}</p>
-			<p class="text-muted-foreground mb-2 h-6 text-sm">{{ product.Aufputz && "Aufputz" || product.Unterputz ?
+			<p class="text-muted-foreground mb-2 h-6 text-sm">{{ product?.Aufputz && "Aufputz" || product.Unterputz ?
 				"Unterputz"
 				: "" }}</p>
 			<p class="font-bold">Preis: {{ product?.PERIODE1 }}€</p>
@@ -40,6 +39,7 @@
 </template>
 
 <script setup lang="ts">
+import fs from 'fs'
 import { type DeviceData } from '@/utils/interfaces.js'
 import ProductInformation from '@/components/general/ProductInformation.vue';
 const emit = defineEmits(['addProduct'])
@@ -51,9 +51,6 @@ const props = defineProps<{
 const productQuantity = defineModel<number>('productQuantity', { required: true })
 // const remainingProducts = defineModel<number>('remainingProducts')
 const productImage = useTemplateRef<HTMLImageElement>('ProductImage')
-const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/ProductImages" + props.product.id
-const onImgError = () => {
-	productImage.value.src = '/' + props.product.id
-}
-const handleProductClick = (product) => { }
+const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb && `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}`
+
 </script>

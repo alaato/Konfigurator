@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { type DeviceData } from "@/utils/interfaces";
+import { type DeviceData, type Pack } from "@/utils/interfaces";
 
 export const useSelectedProductsStore = defineStore({
   id: "SelectedProductsStore",
@@ -34,6 +34,7 @@ export const useSelectedProductsStore = defineStore({
         },
         controlUnit: null as DeviceData | null,
       },
+      packs: [] as Pack<string>[],
     };
   },
   getters: {
@@ -42,7 +43,35 @@ export const useSelectedProductsStore = defineStore({
       Object.values(state.selectedProducts).forEach((category) => {
         if (category.products) {
           products.push(...category.products);
-        }
+        } else products.push(category as DeviceData);
+      });
+      return products;
+    },
+
+    getAllOutdoorProducts: (state) => {
+      const products: DeviceData[] = [];
+      state.selectedProducts.outdoorProducts.products.forEach((product) => {
+        products.push(product);
+      });
+    },
+    getAllIndoorProducts: (state) => {
+      const products: DeviceData[] = [];
+      state.selectedProducts.indoorProducts.products.forEach((product) => {
+        products.push(product);
+      });
+    },
+    getAllExtensions: (state) => {
+      const products: DeviceData[] = [];
+
+      state.selectedProducts.extensions.products.forEach((product) => {
+        products.push(product);
+      });
+      return products;
+    },
+    getAllAccessories: (state) => {
+      const products: DeviceData[] = [];
+      state.selectedProducts.accessories.products.forEach((product) => {
+        products.push(product);
       });
       return products;
     },
@@ -132,6 +161,79 @@ export const useSelectedProductsStore = defineStore({
     addControlUnit(product) {
       this.selectedProducts.controlUnit = { ...product, quantity: 1 };
     },
+    addPack(pack: Pack<DeviceData>, quantity?: number) {
+      const foundPack = this.packs.find(
+        (thisPack) => thisPack.station === pack.station.id
+      );
+      let id;
+      if (foundPack) {
+        id = foundPack.id;
+        foundPack.quantity += quantity || 1;
+      } else {
+        id = this.packs.length.toString();
+        const packToAdd: Pack<string> = {
+          id: id,
+          quantity: quantity ? quantity : 1,
+          station: pack.station.id || null,
+          extension: pack.extension.id || null,
+          camera: pack?.camera?.id || null,
+        };
+        this.packs.push(packToAdd);
+      }
+
+      if (pack.camera) {
+        pack.camera.packID = id;
+        this.addExtension(pack.camera, quantity || 1);
+      }
+      if (pack.extension) {
+        pack.extension.packID = id;
+        this.addExtension(pack.extension, quantity || 1);
+      }
+      if (pack.station) {
+        pack.station.packID = id;
+        this.addOutdoorProducts(pack.station, quantity || 1);
+      }
+    },
+    removePack(id: string) {
+      const pack = this.packs.find((pack) => pack.id === id);
+      console.log(
+        pack.quantity,
+        this.selectedProducts.outdoorProducts.SelectedQuantity
+      );
+      if (pack) {
+        const outdoorIndex =
+          this.selectedProducts.outdoorProducts.products.findIndex(
+            (product) => product.id === pack.station
+          );
+        const extensionIndex =
+          this.selectedProducts.extensions.products.findIndex(
+            (product) => product.id === pack.extension
+          );
+        const cameraIndex =
+          this.selectedProducts.indoorProducts.products.findIndex(
+            (product) => product.id === pack.camera
+          );
+        this.selectedProducts.outdoorProducts.products.splice(
+          outdoorIndex,
+          pack.quantity
+        );
+        this.selectedProducts.outdoorProducts.SelectedQuantity -= pack.quantity;
+
+        this.selectedProducts.extensions.products.splice(
+          extensionIndex,
+          pack.quantity
+        );
+        this.selectedProducts.extensions.SelectedQuantity -= pack.quantity;
+
+        this.selectedProducts.extensions.products.splice(
+          cameraIndex,
+          pack.quantity
+        );
+        this.selectedProducts.extensions.SelectedQuantity -= pack.quantity;
+
+        this.packs = this.packs.filter((pack) => pack.id !== id);
+      }
+    },
     removeIndoorProducts(indoorStation: DeviceData) {
       const index =
         this.selectedProducts.indoorProducts.products.indexOf(indoorStation);
@@ -192,6 +294,9 @@ export const useSelectedProductsStore = defineStore({
           newProduct.quantity;
       }
     },
+    replaceControlUnit(unit) {
+      this.selectedProducts.controlUnit = unit;
+    },
     resetControlUnit() {
       this.selectedProducts.controlUnit = null;
     },
@@ -216,6 +321,7 @@ export const useSelectedProductsStore = defineStore({
       this.resetOutdoorProducts();
       this.resetExtension();
       this.resetAccessories();
+      this.packs = [];
     },
     resetAllProducts() {
       this.resetIndoorProducts();
@@ -223,6 +329,7 @@ export const useSelectedProductsStore = defineStore({
       this.resetControlUnit();
       this.resetExtension();
       this.resetAccessories();
+      this.packs = [];
     },
   },
   persist: {

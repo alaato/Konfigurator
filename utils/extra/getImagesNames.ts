@@ -1,8 +1,8 @@
 const fs = require("fs");
 const path = require("path");
 
-export default function getImagesNames() {
-  const folderPath = path.resolve(__dirname, "../public/images");
+function getImagesNames() {
+  const folderPath = path.resolve(__dirname, "../../public/ProductImages");
 
   const imagesNames = fs.readdirSync(folderPath).filter((file) => {
     const ext = path.extname(file).toLowerCase();
@@ -15,6 +15,10 @@ export default function getImagesNames() {
       ext === ".svg"
     );
   });
-
+  const imagesNamesWithQuotes = imagesNames.map((name) => `"${name}"`);
+  const writePath = path.resolve(__dirname, "./imageNames.txt");
+  fs.writeFileSync(writePath, imagesNames.join("\n"));
   return imagesNames;
 }
+
+getImagesNames();

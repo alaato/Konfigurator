@@ -120,17 +120,19 @@ export interface DeviceData {
   Frontplatte?: DeviceModule[];
   NotwendigesZubehoerAudio?: NecessaryAccessory[];
   NotwendigesZubehoerVideo?: NecessaryAccessory[] | null;
-  Erweiterung?: { id: string; }[] | null;
+  Erweiterung?: { id: string }[] | null;
   DisplayEigenschaften?: DisplayProperty[];
   FrontalAnsichtFrei?: FrontalAnsicht;
   Audio?: DeviceModule[];
-  HatZubehoer?:{ id: string; }[];
+  HatZubehoer?: { id: string }[];
   AnzhalTatsen?: number;
-  TexteTK?: DeviceModule
+  TexteTK?: DeviceModule;
+  packID?: string;
 }
-export interface Pack {
-  camera?: DeviceData;
-  controlUnit?: any
-  station: DeviceData
-  extension: DeviceData
+export interface Pack<type> {
+  id?: string;
+  quantity?: number;
+  camera?: type;
+  station: type;
+  extension: type;
 }

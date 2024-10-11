@@ -146,10 +146,8 @@ const checkScroll = () => {
 	if (howItWorksSection.value) {
 		const rect = howItWorksSection.value.getBoundingClientRect()
 		const triggerPoint = window.innerHeight * 0.7
-		console.log(triggerPoint, rect.top)
 		if (rect.top <= triggerPoint) {
 			const stepsToShow = Math.ceil((triggerPoint - rect.top + 25) / (rect.height / howItWorks.length))
-			console.log(stepsToShow)
 			visibleSteps.value = howItWorks.slice(0, Math.min(stepsToShow, howItWorks.length))
 		}
 	}

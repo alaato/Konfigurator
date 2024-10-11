@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="ts" type="module">
 //imports
 import Navbar from './components/general/Navbar.vue';
 useHead({ link: [{ rel: "manifest", href: "/TcsSpreschanlageKonfigurator.webmanifest" }] })
