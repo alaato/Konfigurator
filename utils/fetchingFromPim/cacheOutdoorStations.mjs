@@ -1,6 +1,11 @@
 import fs from "fs";
 
-import { addAnzahlTastenToObject, cleanEmptyObjects, extractAudioFeatures } from "./cacheUtils.mjs";
+import {
+  addAnzahlTastenToObject,
+  cleanEmptyObjects,
+  extractAudioFeatures,
+  extractNodes,
+} from "./cacheUtils.mjs";
 const FilterOptions = {
   Aussenstation: true,
   Anlagenkonfigurator: "Ja",
@@ -143,7 +148,7 @@ async function getOutdoor() {
   const clean = cleanEmptyObjects(json);
   extractAudioFeatures(clean);
   addAnzahlTastenToObject(clean);
-  const products = clean.data.getProductListing.edges.map((edge) => edge.node);
+  const products = extractNodes(clean);
   const jsonProducts = JSON.stringify(products);
   fs.writeFileSync("./data/aussenstationen.json", jsonProducts);
 }

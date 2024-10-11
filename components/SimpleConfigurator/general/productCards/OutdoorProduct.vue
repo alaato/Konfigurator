@@ -1,7 +1,6 @@
 <template>
 	<ProductCard :product="product" :productType="'Aussenstation'" @addProduct="addProduct"
-		v-model:productQuantity="productQuantity"
-		v-model:remainingProducts="remainingOutdoorProducts" />
+		v-model:productQuantity="productQuantity" v-model:remainingProducts="remainingOutdoorProducts" />
 </template>
 
 <script lang="ts" setup>
@@ -27,13 +26,16 @@ function addProduct(product) {
 		productQuantity.value = 0;
 	}
 	else if (!AddedProduct && productQuantity.value > 0 && productQuantity.value <= remainingOutdoorProducts.value) {
-		selectedProductsStore.addOneOutdoorProduct({ ...product, quantity: productQuantity.value });
+		selectedProductsStore.addOneOutdoorProduct({ ...product, quantity: productQuantity.value }, productQuantity.value);
 		productQuantity.value = 0;
 	}
-	if (!visitedStore.visited.includes('Innenstation'))
-		visitedStore.visited.push('Innenstation')
-	if (remainingOutdoorProducts.value == 0)
+
+	if (remainingOutdoorProducts.value == 0) {
+		if (!visitedStore.visited.includes('Innenstation'))
+			visitedStore.visited.push('Innenstation')
 		goToStage('Innenstation')
+	}
+
 }
 </script>
 

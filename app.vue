@@ -1,7 +1,11 @@
-<script setup lang="ts">
+<script setup lang="ts" type="module">
 //imports
 import Navbar from './components/general/Navbar.vue';
 useHead({ link: [{ rel: "manifest", href: "/TcsSpreschanlageKonfigurator.webmanifest" }] })
+if ("serviceWorker" in navigator) {
+	navigator.serviceWorker.register("/js/sw.js");
+}
+
 //consts
 
 </script>
@@ -10,7 +14,7 @@ useHead({ link: [{ rel: "manifest", href: "/TcsSpreschanlageKonfigurator.webmani
 <template>
 	<div id="app" class="h-screen">
 		<Navbar></Navbar>
-			<NuxtPage />
+		<NuxtPage />
 	</div>
 </template>
 <style>

@@ -13,11 +13,12 @@
 					</TableRow>
 				</TableHeader>
 				<TableBody>
-					<ProductRow :products="selectedProducts.indoorProducts.products" />
-					<ProductRow :products="selectedProducts.outdoorProducts.products" />
+					<ProductRow v-if="paket" :isPack="true" :products="[paket]" />
+					<ProductRow :products="selectedProducts.outdoorProducts.products" :noPrice="paket ? true : false" />
+					<ProductRow :noPrice="paket ? true : false" :products="selectedProducts.indoorProducts.products" />
+					<ProductRow :noPrice="paket ? true : false" :products="[controlUnit]" />
 					<ProductRow :products="selectedProducts.accessories.products" />
 					<ProductRow :products="selectedProducts.extensions.products" />
-					<ProductRow :products="[controlUnit]" />
 				</TableBody>
 			</Table>
 		</Card>
@@ -54,12 +55,60 @@ import {
 } from "@/components/ui/table";
 import { Toaster } from "@/components/ui/sonner";
 import ProductRow from "./ProductRow.vue";
-import { generateEXCEL, generatePDF } from "@/utils/ConfiguratorUtils/generatingExcelAndPDF";
+import {
+	generateEXCEL,
+	generatePDF,
+} from "@/utils/ConfiguratorUtils/generatingExcelAndPDF";
+import Pakets from "@/data/pakets.json";
+import Steuer from "@/data/steuer.json";
 // Function to update the theme based on the <html> class
 function updateToasterTheme() {
 	const isDarkTheme = document.documentElement.classList.contains("dark");
 	toasterTheme.value = isDarkTheme ? "dark" : "light";
 }
+
+//consts
+const toasterTheme = ref("light");
+const selectedProductsStore = useSelectedProductsStore();
+const { replaceControlUnit } = selectedProductsStore
+const { selectedProducts } = storeToRefs(
+	selectedProductsStore
+);
+const controlUnit = computed(() => selectedProducts.value.controlUnit);
+
+const paket = computed(() => {
+	if (
+		selectedProducts.value.outdoorProducts.SelectedQuantity == 1 &&
+		selectedProducts.value.indoorProducts.SelectedQuantity <= 20
+	) {
+		const packet = findPacket() as any
+		packet.quantity = 1;
+		return packet
+	} else null;
+});
+const total = computed(() => {
+	let sum = 0;
+	if (paket.value) sum += paket.value.PERIODE1;
+	else {
+		selectedProducts.value.outdoorProducts.products.forEach((product) => {
+			sum +=
+				product.PERIODE1 *
+				selectedProducts.value.outdoorProducts.SelectedQuantity;
+		});
+		selectedProducts.value.indoorProducts.products.forEach((product) => {
+			sum += product.quantity * product?.PERIODE1;
+		});
+		sum += controlUnit?.value.PERIODE1 * selectedProducts.value.controlUnit.quantity;
+	}
+	selectedProducts.value.accessories.products.forEach((product) => {
+		sum += product.quantity * product?.PERIODE1;
+	})
+	selectedProducts.value.extensions.products.forEach((product) => {
+		sum += product.quantity * product?.PERIODE1;
+	})
+	return sum;
+});
+
 onMounted(() => {
 	updateToasterTheme();
 	const observer = new MutationObserver(updateToasterTheme);
@@ -67,32 +116,25 @@ onMounted(() => {
 		attributes: true,
 		attributeFilter: ["class"],
 	});
-
 	onUnmounted(() => observer.disconnect());
+	if (paket.value.Paket[2].MNR !== controlUnit.value.MNR) {
+		const newUnit = Steuer.find((unit) => unit.MNR == paket.value.Paket[2].MNR);
+		replaceControlUnit(newUnit);
+	}
 });
-//consts
-const toasterTheme = ref("light");
-const selectedProductsStore = useSelectedProductsStore();
-const { selectedProducts, getAllSelectedProducts } = storeToRefs(selectedProductsStore);
-const controlUnit = selectedProducts.value.controlUnit;
-const totalSum = getAllSelectedProducts.value.reduce((sum, product) => {
-	return sum + (product.PERIODE1 * product.quantity);
-}, 0)
-const total = computed(() => {
-	let sum = 0;
-	selectedProducts.value.outdoorProducts.products.forEach((product) => {
-		sum +=
-			product.PERIODE1 *
-			selectedProducts.value.outdoorProducts.SelectedQuantity;
-	});
-	selectedProducts.value.indoorProducts.products.forEach((product) => {
-		sum += product.quantity * product?.PERIODE1;
-	});
-	sum += controlUnit?.PERIODE1 * selectedProducts.value.controlUnit.quantity;
-	return sum;
-});
-
 //functions
-
-
+function findPacket() {
+	const packet = Pakets.find((paket) => {
+		if (
+			paket.AnzahlISPaket ==
+			selectedProducts.value.indoorProducts.SelectedQuantity.toString() &&
+			paket.Paket[0].MNR ==
+			selectedProducts.value.outdoorProducts.products[0].MNR &&
+			paket.Paket[1].MNR == selectedProducts.value.indoorProducts.products[0]?.MNR
+		)
+			return true;
+	});
+	if (!packet) return null;
+	return packet
+}
 </script>

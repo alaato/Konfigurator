@@ -21,6 +21,5 @@ const props = defineProps<{
 const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb ? `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}` : "/ProductImages" + props.product.id
 
 onMounted(() => {
-	console.log(props.product)
 })
 </script>
