@@ -1,21 +1,26 @@
 import { toast } from "vue-sonner";
 import { utils } from "xlsx";
 import jsPDF from "jspdf";
-import {applyPlugin} from "jspdf-autotable";
+import { applyPlugin } from "jspdf-autotable";
 import logo from "@/data/logo.json";
 import { font } from "@/fonts/BAHNSCHRIFT-normal";
 applyPlugin(jsPDF);
 
-const addFooters = doc => {
-  const pageCount = doc.internal.getNumberOfPages()
+const addFooters = (doc) => {
+  const pageCount = doc.internal.getNumberOfPages();
   let finalY = (doc.lastAutoTable.finalY += 10);
   for (var i = 1; i <= pageCount; i++) {
     doc.setFontSize(6);
     doc.setFont("BAHNSCHRIFT", "normal");
-    doc.setPage(i)
-    doc.text('seite ' + String(i) + ' of ' + String(pageCount), doc.internal.pageSize.width / 2, 270, {
-      align: 'center'
-    })
+    doc.setPage(i);
+    doc.text(
+      "seite " + String(i) + " of " + String(pageCount),
+      doc.internal.pageSize.width / 2,
+      270,
+      {
+        align: "center",
+      }
+    );
     doc.line(15, 275, 200, 275, "F");
 
     doc.text(
@@ -44,8 +49,7 @@ const addFooters = doc => {
       280
     );
   }
- 
-}
+};
 
 const toDataURL = async (url: string) => {
   const res = await $fetch("/api/base64", {
@@ -104,12 +108,12 @@ export async function generatePDF() {
   };
   doc.autoTable({
     startY: 100,
-    pageBrake : "auto",
+    pageBrake: "auto",
     html: "#stückliste",
     headStyles: { ...headStyles },
     bodyStyles: bodyStyles,
     theme: "plain",
-    margin: { left: 20, right: 20, bottom:30 },
+    margin: { left: 20, right: 20, bottom: 30 },
     didDrawCell: async (data) => {
       if (data.section === "body" && data.column.index === 0) {
         var td = data.cell.raw;

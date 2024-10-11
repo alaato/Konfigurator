@@ -128,6 +128,7 @@ export interface DeviceData {
   AnzhalTatsen?: number;
   TexteTK?: DeviceModule;
   packID?: string;
+  Paket?: { MNR: string }[];
 }
 export interface Pack<type> {
   id?: string;

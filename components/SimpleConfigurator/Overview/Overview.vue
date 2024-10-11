@@ -13,7 +13,7 @@
 					</TableRow>
 				</TableHeader>
 				<TableBody>
-					<ProductRow v-if="paket" :products="[paket]" />
+					<ProductRow v-if="paket" :isPack="true" :products="[paket]" />
 					<ProductRow :products="selectedProducts.outdoorProducts.products" :noPrice="paket ? true : false" />
 					<ProductRow :noPrice="paket ? true : false" :products="selectedProducts.indoorProducts.products" />
 					<ProductRow :noPrice="paket ? true : false" :products="[controlUnit]" />

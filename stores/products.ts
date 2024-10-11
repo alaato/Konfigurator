@@ -300,6 +300,34 @@ export const useSelectedProductsStore = defineStore({
     resetControlUnit() {
       this.selectedProducts.controlUnit = null;
     },
+    editOutdoorProduct(property, value, outdoorProduct?, Index?) {
+      let index;
+      if (!Index)
+        index =
+          this.selectedProducts.outdoorProducts.products.indexOf(
+            outdoorProduct
+          );
+      else index = Index;
+
+      if (index !== -1) {
+        this.selectedProducts.outdoorProducts.products[index][property] = value;
+      }
+    },
+    editIndoorProduct(property, value, indoorProduct?, Index?) {
+      let index;
+      if (!Index)
+        index =
+          this.selectedProducts.indoorProducts.products.indexOf(indoorProduct);
+      else index = Index;
+      if (index !== -1) {
+        this.selectedProducts.indoorProducts.products[index][property] = value;
+      }
+    },
+    editControlUnit(property, value) {
+      if (this.selectedProducts.controlUnit) {
+        this.selectedProducts.controlUnit[property] = value;
+      }
+    },
     resetIndoorProducts() {
       this.selectedProducts.indoorProducts.products = [];
       this.selectedProducts.indoorProducts.SelectedQuantity = 0;
