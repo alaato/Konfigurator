@@ -6,6 +6,7 @@ export default defineEventHandler(async (event) => {
     // Convert the image buffer to base64
     const base64 = Buffer.from(buffer).toString("base64");
     const mimeType = "image/jpg";
+    console.log(base64)
     return {
       base64: `data:${mimeType};base64,${base64}`,
     };

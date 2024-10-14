@@ -1,12 +1,16 @@
 <template>
-	<TableCell class="font-medium w-[200px]">
+		<TableCell class="font-medium w-[200px]">
 		<NuxtImg :src="imgsrc" alt="Kein Bild vorhanden" densities="x1 x2"
 			class="object-scale-down w-10 max-h-[50px] mr-2" />
+	</TableCell>
+	<TableCell class="font-medium w-[200px]">
 		<span>{{ product?.MNR }}</span>
 	</TableCell>
 	<TableCell>
 		{{ product.KTXT }}
 	</TableCell>
+	<TableCell> {{ product.PREISKNZ? product.PREISKNZ - 200 : "" }}</TableCell>
+
 	<TableCell class="bg-transparent w-fit text-center" v-if="isPack">
 		<input class="w-5 text-center" v-model="packQuantity">
 		</input>
@@ -33,12 +37,11 @@ console.log(props.product.quantity)
 const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb && `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}`
 
 watch(packQuantity, () => {
-	console.log(packQuantity.value)
 	if (props.isPack) {
 		props.product.quantity = packQuantity.value
 		editControlUnit("quantity", packQuantity.value)
-		editIndoorProduct("quantity", selectedProducts.value.indoorProducts.SelectedQuantity * packQuantity.value)
-		editOutdoorProduct("quantity", selectedProducts.value.outdoorProducts.SelectedQuantity * packQuantity.value)
+		editIndoorProduct("quantity", selectedProducts.value.indoorProducts.SelectedQuantity * packQuantity.value, null,0)
+		editOutdoorProduct("quantity", selectedProducts.value.outdoorProducts.SelectedQuantity * packQuantity.value, null, 0)
 	}
 })
 </script>

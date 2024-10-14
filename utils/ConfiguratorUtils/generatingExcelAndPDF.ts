@@ -51,16 +51,6 @@ const addFooters = (doc) => {
   }
 };
 
-const toDataURL = async (url: string) => {
-  const res = await $fetch("/api/base64", {
-    method: "POST",
-    body: {
-      url: url,
-    },
-  });
-  return res.base64;
-};
-
 export async function generatePDF() {
   const dataURI = logo.base64;
   const doc = new jsPDF();
@@ -105,6 +95,9 @@ export async function generatePDF() {
   const bodyStyles = {
     font: "BAHNSCHRIFT",
     fontSize: 10,
+    minCellWidth: 10,
+    minCellHeight: 10,
+    valign: "center",
   };
   doc.autoTable({
     startY: 100,
@@ -114,15 +107,17 @@ export async function generatePDF() {
     bodyStyles: bodyStyles,
     theme: "plain",
     margin: { left: 20, right: 20, bottom: 30 },
-    didDrawCell: async (data) => {
+    didDrawCell: (data) => {
       if (data.section === "body" && data.column.index === 0) {
         var td = data.cell.raw;
         var img = td.getElementsByTagName("img")[0];
+        const url = img?.src
+          ? "https://corsproxy.io/?" + encodeURIComponent(img.src)
+          : null;
         var dim = data.cell.height - data.cell.padding("vertical");
         var x = data.cell.x;
-        var y = data.cell.y;
-        const bas64 = await toDataURL(img.src);
-        doc.addImage(bas64, "png", 40, 40, 40, 40);
+        const y = data.cell.y;
+        if (url) doc.addImage(url, x - 2, y, data.cell.height, data.cell.width);
       }
     },
   });
@@ -130,7 +125,11 @@ export async function generatePDF() {
   let finalY = (doc.lastAutoTable.finalY += 10);
   doc.autoTable({
     startY: finalY,
-    bodyStyles: { ...bodyStyles, cellWidth: 35, lineWidth: 0 },
+    bodyStyles: {
+      ...headStyles,
+      cellWidth: 35,
+      lineWidth: 0,
+    },
     html: "#total",
     margin: { left: 120, right: 20 },
   });

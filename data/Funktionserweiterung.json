@@ -26,17 +26,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -116,23 +115,22 @@
     "PERIODE4": 112,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Sensor mit Binäreingang, zweifach"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Ausführen von Melde- und/oder Schaltfunktionen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Sensor mit Binäreingang, zweifach"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Ausführen von Melde- und/oder Schaltfunktionen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -281,23 +279,22 @@
     "PERIODE4": 117,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Kombigerät mit Binäreingang/-ausgang, einfach"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Ausführen von Melde- und/oder Schaltfunktionen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Kombigerät mit Binäreingang/-ausgang, einfach"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Ausführen von Melde- und/oder Schaltfunktionen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -446,23 +443,22 @@
     "PERIODE4": 117,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Kombigerät mit Binäreingang/-ausgang, einfach"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Ausführen von Melde- und/oder Schaltfunktionen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Kombigerät mit Binäreingang/-ausgang, einfach"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Ausführen von Melde- und/oder Schaltfunktionen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -611,23 +607,22 @@
     "PERIODE4": 45,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Einbau-Türöffner-Relais"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Türöffner-Relais für gezieltes Türöffnen bei mehr als einer Außenstation"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Einbau-Türöffner-Relais"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Türöffner-Relais für gezieltes Türöffnen bei mehr als einer Außenstation"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -1078,20 +1073,19 @@
     "PERIODE4": 81,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Funktionserweiterungen/PI_FAA1200.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Funktionserweiterungen/TCS_Datenblatt_FAA12x0.pdf",
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS Türöffner-Relais" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Türöffner-Relais für gezieltes Türöffnen bei mehr als einer Außenstation"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Türöffner-Relais" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Türöffner-Relais für gezieltes Türöffnen bei mehr als einer Außenstation"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -1498,20 +1492,19 @@
     "PERIODE4": 100,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS Türöffner-Relais" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Selektives Türöffner-Relais für gezieltes Türöffnen bei einer Außenstation"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Türöffner-Relais" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Selektives Türöffner-Relais für gezieltes Türöffnen bei einer Außenstation"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -1959,17 +1952,16 @@
     "PERIODE4": 135,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": "Etagentaster" },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 204,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": "Etagentaster" },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -2124,17 +2116,16 @@
     "PERIODE4": 142,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": "Etagentaster" },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 204,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": "Etagentaster" },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -2289,17 +2280,16 @@
     "PERIODE4": 328,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": "Zentralbuskoppler" },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": "Zentralbuskoppler" },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -2448,17 +2438,16 @@
     "PERIODE4": 94,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": "Strangtrenner" },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 204,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": "Strangtrenner" },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -2607,17 +2596,16 @@
     "PERIODE4": 499,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": "Multistrangtrenner" },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 204,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": "Multistrangtrenner" },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -2766,20 +2754,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS PTZ-Interface" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Interface für PTZ-Kameras"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS PTZ-Interface" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": "Interface für PTZ-Kameras" },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -2928,20 +2912,19 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Interface für TK-Anlagen für bis zu 64 Rufziele"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Interface für TK-Anlagen für bis zu 64 Rufziele"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -3090,17 +3073,16 @@
     "PERIODE4": 383,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -3337,17 +3319,16 @@
     "PERIODE4": 1068,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -3532,20 +3513,19 @@
     "PERIODE4": 77,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Sensor mit Binäreingang, einfach"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Sensor mit Binäreingang, einfach"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -3920,23 +3900,22 @@
     "PERIODE4": 77,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Einbau-Türöffnersender, einfach"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Sensor zum Auslösen eines Türöffners / von Steuerfunktionen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Einbau-Türöffnersender, einfach"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Sensor zum Auslösen eines Türöffners / von Steuerfunktionen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -4413,17 +4392,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 206,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung IP" },
     "Gehaeuse": [
       {
@@ -4501,23 +4479,19 @@
     "PERIODE4": 69,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Einbau-Sender RTS17E"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Einbau-Sender zum Einbau in die Funksignalgeräte FFL2000-0 und FFL2100-0"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Einbau-Sender RTS17E" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Einbau-Sender zum Einbau in die Funksignalgeräte FFL2000-0 und FFL2100-0"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -4690,23 +4664,22 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Steckdosen-Funkgong RCP09 mit Quittierung"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Steckdosen-Funkgong zur optischen und akustischen Signalisierung eines eingehenden Türrüfs"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Steckdosen-Funkgong RCP09 mit Quittierung"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Steckdosen-Funkgong zur optischen und akustischen Signalisierung eines eingehenden Türrüfs"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -4855,20 +4828,19 @@
     "PERIODE4": 102,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Einschub-Sender zum Einbau in Geräte der Serien TASTA und 70"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Einschub-Sender zum Einbau in Geräte der Serien TASTA und 70"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -5028,17 +5000,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -5187,17 +5158,16 @@
     "PERIODE4": 67.32,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -5351,23 +5321,22 @@
     "PERIODE4": 97,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Läutewerk für den TCS:BUS"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "optisch-akustische Zusatzsignalisierung von Tür- und Internrufen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Läutewerk für den TCS:BUS"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "optisch-akustische Zusatzsignalisierung von Tür- und Internrufen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -5523,20 +5492,19 @@
     "PERIODE4": 89,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS Etagenruf-Generator" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "für den Anschluss von bis zu 4 Etagentastern / Ausführen von Steuer- und Schaltfunktionen / Umrüstung von Klingelanlagen auf TCS:BUS-Anlagen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Etagenruf-Generator" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "für den Anschluss von bis zu 4 Etagentastern / Ausführen von Steuer- und Schaltfunktionen / Umrüstung von Klingelanlagen auf TCS:BUS-Anlagen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -5654,23 +5622,22 @@
     "PERIODE4": 103,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Treppenlicht-Zeitschalter"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Multifunktionsgerät mit 10 wählbaren Funktionen Lichtschaltzeit stufenlos einstellbar"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Treppenlicht-Zeitschalter"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Multifunktionsgerät mit 10 wählbaren Funktionen Lichtschaltzeit stufenlos einstellbar"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -5743,20 +5710,19 @@
     "PERIODE4": 524,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Variofokuskamera zur Aufputzmontage"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Variofokuskamera zur Aufputzmontage"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -5860,20 +5826,19 @@
     "PERIODE4": 385,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Einbaukamera, horizontal"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Einbaukamera, horizontal"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -5978,20 +5943,19 @@
     "PERIODE4": 385,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Einbaukamera, vertikal"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Einbaukamera, vertikal"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -6095,17 +6059,16 @@
     "PERIODE4": 437,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -6209,20 +6172,19 @@
     "PERIODE4": 425,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Zylinderkamera mit Weitwinkelobjektiv"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Zylinderkamera mit Weitwinkelobjektiv"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -6326,20 +6288,19 @@
     "PERIODE4": 425,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Zylinderkamera mit Standardobjektiv"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Zylinderkamera mit Standardobjektiv"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -6443,20 +6404,19 @@
     "PERIODE4": 425,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Zylinderkamera mit Teleobjektiv"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Zylinderkamera mit Teleobjektiv"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -6560,20 +6520,19 @@
     "PERIODE4": 425,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Zylinderkamera mit Superteleobjektiv"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Zylinderkamera mit Superteleobjektiv"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -6677,17 +6636,16 @@
     "PERIODE4": 524,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -6788,17 +6746,16 @@
     "PERIODE4": 608,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -6896,23 +6853,22 @@
     "PERIODE4": 175,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Etagen-Videoumschalter, Unterputz"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zur gezielten Umschaltung zwischen Etagen-Video-Außenstation und Haupt-Video-Außenstation auf eine Video-Innenstation"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Etagen-Videoumschalter, Unterputz"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zur gezielten Umschaltung zwischen Etagen-Video-Außenstation und Haupt-Video-Außenstation auf eine Video-Innenstation"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -7002,23 +6958,22 @@
     "PERIODE4": 175,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Videoumschalter, zweifach, Unterputz"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zur gezielten Auswahl von 1 aus bis zu 2 Kameras"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Videoumschalter, zweifach, Unterputz"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zur gezielten Auswahl von 1 aus bis zu 2 Kameras"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -7105,23 +7060,22 @@
     "PERIODE4": 445,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Videoumschalter, vierfach"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zur gezielten Auswahl von 1 aus bis zu 64 Kameras"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Videoumschalter, vierfach"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zur gezielten Auswahl von 1 aus bis zu 64 Kameras"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -7211,23 +7165,22 @@
     "PERIODE4": 225,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Videozweidrahtempfänger, Unterputz"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zum Umwandeln eines symmetrischen Videosignals in ein asymmetrischen Videosignals"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Videozweidrahtempfänger, Unterputz"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zum Umwandeln eines symmetrischen Videosignals in ein asymmetrischen Videosignals"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -7376,20 +7329,19 @@
     "PERIODE4": 147,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Videozweidrahtsender, Unterputz"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Videozweidrahtsender, Unterputz"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -7490,20 +7442,19 @@
     "PERIODE4": 109,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zur Anschaltung von Video-6-Draht Außenstationen an Video-2-Draht-Anlagen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zur Anschaltung von Video-6-Draht Außenstationen an Video-2-Draht-Anlagen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung V2D" },
     "Gehaeuse": [
       {
@@ -7593,20 +7544,19 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zur Anschaltung von alten TCS:BUS-Audio-Innenstationen an Video-2-Draht-Anlagen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zur Anschaltung von alten TCS:BUS-Audio-Innenstationen an Video-2-Draht-Anlagen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung V2D" },
     "Gehaeuse": [
       {
@@ -7682,23 +7632,22 @@
     "PERIODE4": 109,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Videoverteiler, zweifach"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zur Aufsplittung von Videosträngen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Videoverteiler, zweifach"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zur Aufsplittung von Videosträngen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -7859,23 +7808,22 @@
     "PERIODE4": 109,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Videoverteiler, zweifach, Unterputz"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zur Aufsplittung von Videosträngen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Videoverteiler, zweifach, Unterputz"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zur Aufsplittung von Videosträngen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -7957,23 +7905,22 @@
     "PERIODE4": 202,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Videoverteiler, vierfach"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "zur Aufsplittung von Videosträngen"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Videoverteiler, vierfach"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "zur Aufsplittung von Videosträngen"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -8131,17 +8078,16 @@
     "PERIODE4": 109,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung V2D" },
     "Gehaeuse": [
       {
@@ -8223,17 +8169,16 @@
     "PERIODE4": 1620,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -8289,17 +8234,16 @@
     "PERIODE4": 392.7,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": "Außenstationskoppler" },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": "Außenstationskoppler" },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -8431,23 +8375,22 @@
     "PERIODE4": 81,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Türöffner-Relais, Unterputz"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Türöffner-Relais für gezieltes Türöffnen bei mehr als einer Außenstation"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Türöffner-Relais, Unterputz"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Türöffner-Relais für gezieltes Türöffnen bei mehr als einer Außenstation"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -8925,23 +8868,22 @@
     "PERIODE4": 45,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Einbau-Ruf-Relais für Innenstationen"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Einbau-Ruf-Relais für TCS-Innenstationen zur gezielten Ansteuerung von bauseitigen Signalgeräten"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Einbau-Ruf-Relais für Innenstationen"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Einbau-Ruf-Relais für TCS-Innenstationen zur gezielten Ansteuerung von bauseitigen Signalgeräten"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -9014,23 +8956,22 @@
     "PERIODE4": 81,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Ruf-Relais für den TCS:BUS"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Ruf-Relais zur Ansteuerung von bauseitigen Signalgeräten Auswertung von Sonderfunktionen einer Innenstation möglich"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Ruf-Relais für den TCS:BUS"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Ruf-Relais zur Ansteuerung von bauseitigen Signalgeräten Auswertung von Sonderfunktionen einer Innenstation möglich"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -9428,17 +9369,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -9518,17 +9458,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -9584,17 +9523,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -9650,17 +9588,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -9716,17 +9653,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -9782,20 +9718,19 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Interface für TK-Anlagen mit mehr als 64 Rufzielen"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Interface für TK-Anlagen mit mehr als 64 Rufzielen"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -9944,17 +9879,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -10103,23 +10037,22 @@
     "PERIODE4": 79,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Steckdosen-Funkgong RCP04E"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Steckdosen-Funkgong zur optischen und akustischen Signalisierung eines eingehenden Türrüfs"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Steckdosen-Funkgong RCP04E"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Steckdosen-Funkgong zur optischen und akustischen Signalisierung eines eingehenden Türrüfs"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -10268,17 +10201,16 @@
     "PERIODE4": 150,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -10351,17 +10283,16 @@
     "PERIODE4": 160,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -10510,17 +10441,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -10669,17 +10599,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": null,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -10752,23 +10681,22 @@
     "PERIODE4": 188,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          {
-            "name": "Kurzbeschreibung4386",
-            "text": "TCS Steckdosen-Funkgong RCP24E"
-          },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Steckdosen-Funkgong zur optischen und akustischen Signalisierung eines eingehenden Türrüfs"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        {
+          "name": "Kurzbeschreibung4386",
+          "text": "TCS Steckdosen-Funkgong RCP24E"
+        },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Steckdosen-Funkgong zur optischen und akustischen Signalisierung eines eingehenden Türrüfs"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -10851,20 +10779,19 @@
     "PERIODE4": 210,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Gerätekombination aus Einbau-Sender, Steckdosen-Funkgong und Einbau-Ruf-Relais zur \noptisch-akustische Signalisierung eines Türrüfs"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Gerätekombination aus Einbau-Sender, Steckdosen-Funkgong und Einbau-Ruf-Relais zur \noptisch-akustische Signalisierung eines Türrüfs"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -10946,20 +10873,19 @@
     "PERIODE4": 210,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Gerätekombination aus Einbau-Sender, Steckdosen-Funkgong und Einbau-Ruf-Relais zur \noptisch-akustische Signalisierung eines Türrüfs"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Gerätekombination aus Einbau-Sender, Steckdosen-Funkgong und Einbau-Ruf-Relais zur \noptisch-akustische Signalisierung eines Türrüfs"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -11046,20 +10972,19 @@
     "PERIODE4": 210,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          {
-            "name": "Geraetebeschreibung",
-            "text": "Gerätekombination aus Einschub-Funksendeplatine RTS9004E und Steckdosen-Funkgong RCP24E zur optisch-akustische Signalisierung eines Türrüfs"
-          },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": "TCS Funksignalgerät" },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        {
+          "name": "Geraetebeschreibung",
+          "text": "Gerätekombination aus Einschub-Funksendeplatine RTS9004E und Steckdosen-Funkgong RCP24E zur optisch-akustische Signalisierung eines Türrüfs"
+        },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -11148,17 +11073,16 @@
     "PERIODE4": 1029,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 206,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung IP" },
     "Gehaeuse": [
       {
@@ -11214,17 +11138,16 @@
     "PERIODE4": 0,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 201,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -11356,17 +11279,16 @@
     "PERIODE4": 0,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 206,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -11464,17 +11386,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 206,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {
@@ -11530,17 +11451,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 206,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung IP" },
     "Gehaeuse": [
       {
@@ -11604,17 +11524,16 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
-    "TexteTK": 
-      {
-        "features": [
-          { "name": "Kurzbeschreibung4386", "text": null },
-          { "name": "Produktbeschreibungstext4918", "text": null },
-          { "name": "Geraetebeschreibung", "text": null },
-          { "name": "KeyFeatures", "text": null },
-          { "name": "LeistungsmerkmaleKurzform", "text": null }
-        ]
-      }
-    ,
+    "PREISKNZ": 202,
+    "TexteTK": {
+      "features": [
+        { "name": "Kurzbeschreibung4386", "text": null },
+        { "name": "Produktbeschreibungstext4918", "text": null },
+        { "name": "Geraetebeschreibung", "text": null },
+        { "name": "KeyFeatures", "text": null },
+        { "name": "LeistungsmerkmaleKurzform", "text": null }
+      ]
+    },
     "parent": { "MNR": "Funktionserweiterung TCS:BUS" },
     "Gehaeuse": [
       {

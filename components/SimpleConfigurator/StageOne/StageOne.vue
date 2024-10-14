@@ -39,10 +39,7 @@ const funktionRef = ref<InstanceType<typeof HTMLDivElement> | null>(null);
 const form = ref<InstanceType<typeof HTMLFormElement> | null>(null);
 const numberIndoorStation = useState("numberIndoorStation", () => 1);
 const numberOutdoorStation = useState("numberOutdoorStation", () => 1);
-const wiringCount = ref(2);
-const showTech = computed(() => (funktion.value == 'Video' || funktion.value == "Beide")
-	&& numberIndoorStation.value <= 24 &&
-	numberOutdoorStation.value == 1)
+
 
 // stores
 const visitedStore = useVisitedStore();

@@ -38,6 +38,7 @@ async function getInnenstation() {
             PERIODE4
             PIWebsiteLink
             DBWebsiteLink
+            PREISKNZ
             parent{
                       ... on object_Product{
                     MNR

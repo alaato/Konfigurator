@@ -15,7 +15,7 @@
 //imports
 
 import ProductSelection from "../general/productCards/ProductSelectionGrid.vue";
-import { type Pack } from "@/utils/interfaces"
+import { type DeviceData, type Pack } from "@/utils/interfaces"
 import { FindOutdoorProducts, SetSearchFilters, findOutDoorProductsWithEtexensions } from '@/utils/ConfiguratorUtils/fecthOutdoorProducts.js'
 //consts
 const selectedProductsStore = useSelectedProductsStore();
@@ -29,7 +29,7 @@ const remainingoutdoorProducts = computed(() => {
 });
 
 const productsFilter = SetSearchFilters(selectedProducts, filter);
-const products: DeviceData[] | Pack[] = parseInt(productsFilter.AnzhalTatsen) >= 24 ? findOutDoorProductsWithEtexensions(productsFilter) : FindOutdoorProducts(productsFilter, filter)
+const products: DeviceData[] | Pack<DeviceData>[] = parseInt(productsFilter.AnzhalTatsen) >= 24 ? findOutDoorProductsWithEtexensions(productsFilter) : FindOutdoorProducts(productsFilter, filter)
 
 //functions
 

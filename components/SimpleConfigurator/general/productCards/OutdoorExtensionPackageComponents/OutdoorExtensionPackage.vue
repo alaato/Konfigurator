@@ -6,9 +6,9 @@
 			<PackageProductCard v-if="camera" :product="camera">
 				<changeCameraModel :products="products" @replaceCamera="replaceCamera" />
 			</PackageProductCard>
-			<div v-else class="bg-neutral-200 dark:bg-neutral-700  w-80"></div>
+			<div class="bg-neutral-200 dark:bg-neutral-800 w-80"></div>
 		</div>
-		<div class="w-full max-w-[800px]">
+		<div class="w-full max-w-[800px] mt-1">
 			<Button @click="addProducts" class="dark:border grow-0 w-fit justify-self-center border-white mb-1">Paket
 				hinzufügen</Button>
 		</div>
@@ -30,7 +30,7 @@ const goToStage: Function = inject(`goToStage`);
 
 const selectedProductsStore = useSelectedProductsStore();
 const visitedStore = useVisitedStore();
-const { addExtension, addOutdoorProducts, addPack } = selectedProductsStore;
+const { addExtension, addOutdoorProducts, addPack, replaceExtension} = selectedProductsStore;
 const { getRemainingOutdoorNeeded } = storeToRefs(selectedProductsStore);
 const camera = ref(props.pack.camera)
 
@@ -39,7 +39,7 @@ const camera = ref(props.pack.camera)
 const products = fetchCameras();
 
 function fetchCameras() {
-	const cameras = ["FVK2202", "FVK3220", "FVK4224", "AMI10620"];
+	const cameras = ["FVK220", "FVK3220", "FVK4224", "AMI10620", "FVK4214", "FVK4225", "FVK2201", "FVK2202"];
 	const products: DeviceData[] = []
 	cameras.forEach((camera) => {
 		const found = extensions.find((extension) => extension.MNR.includes(camera))
@@ -50,9 +50,10 @@ function fetchCameras() {
 
 function replaceCamera(newCamera: DeviceData) {
 	camera.value = { ...newCamera, quantity: camera.value.quantity }
+	replaceExtension(props.pack.camera, camera.value)
 }
 function addProducts() {
-	addPack(props.pack);
+	addPack({...props.pack, camera: camera.value});
 	if (getRemainingOutdoorNeeded.value <= 0) {
 		goToStage("Innenstation");
 		visitedStore.visited.push("Innenstation");

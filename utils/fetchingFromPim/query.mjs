@@ -3,6 +3,7 @@ import {
   cleanEmptyObjects,
   cleanNullValues,
   extractNodes,
+  removeArrayFromTKtext
 } from "./cacheUtils.mjs";
 export default async function getProducts(FilterOptions, query) {
   const data = JSON.stringify({
@@ -27,7 +28,9 @@ export default async function getProducts(FilterOptions, query) {
   const json = await response.json();
   const clean = cleanEmptyObjects(json);
   const products = extractNodes(clean);
-  console.log(products);
-
+  products.forEach((product) => {
+    product.TexteTK = removeArrayFromTKtext(product.TexteTK);
+    return product
+  });
   return products;
 }

@@ -15,6 +15,7 @@ const query = `query getProductListing($defaultLanguage: String! $filter: String
        				  MNR
 					  KTXT
 					  PERIODE1
+					  PREISKNZ
 					  Paket {
           		  	... on object_Product {
 					  MNR

@@ -26,7 +26,7 @@ import RadioInput from './RadioInput.vue'
 const technologie = defineModel({ type: String })
 const props = defineProps(['numeberIndoorStations', 'numberOutdoorStations'])
 
-const disableV2D = computed(()=> props.numeberIndoorStations > 24 || props.numberOutdoorStations > 1)
+const disableV2D = computed(()=> props.numeberIndoorStations >= 24 || props.numberOutdoorStations > 1)
 watchEffect(() => {
 	if (props.numeberIndoorStations > 24 || props.numberOutdoorStations > 1) {
 		technologie.value = 'Video-6-Draht'

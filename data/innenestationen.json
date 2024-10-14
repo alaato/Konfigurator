@@ -26,6 +26,7 @@
     "PERIODE4": 82,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISx3x30-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Tuertelefon-Freisprecher.pdf",
+    "PREISKNZ": 201,
     "parent": { "MNR": "Serie 30" },
     "TexteTK": {
       "name": "TexteTK",
@@ -117,7 +118,7 @@
     "DisplayEigenschaften": [
       { "name": "IS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [{ "id": "3572" }, { "id": "3573" }],
+    "HatZubehoer": [{ "id": "3573" }, { "id": "3572" }],
     "FrontalAnsichtFrei": {
       "id": "8425",
       "assetThumb": "/Marketing/Innenstationen/IxH/ISH/ISH3030/Freisteller/Frontal/8425/image-thumb__8425__Konfigurator/ISH3030-0140_frontal_frei.e5aaae30.png"
@@ -150,6 +151,7 @@
     "PERIODE4": 92,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISx3x30-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Tuertelefon-Freisprecher.pdf",
+    "PREISKNZ": 201,
     "parent": { "MNR": "Serie 30" },
     "TexteTK": {
       "name": "TexteTK",
@@ -241,7 +243,7 @@
     "DisplayEigenschaften": [
       { "name": "IS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [{ "id": "3572" }, { "id": "3573" }],
+    "HatZubehoer": [{ "id": "3573" }, { "id": "3572" }],
     "FrontalAnsichtFrei": {
       "id": "8427",
       "assetThumb": "/Marketing/Innenstationen/IxH/ISH/ISH3130/Frontal/Freisteller/Frontal/8427/image-thumb__8427__Konfigurator/ISH3130-0140_frontal_frei.cbcedb98.png"
@@ -274,6 +276,7 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
+    "PREISKNZ": 206,
     "parent": { "MNR": "Serie 70" },
     "TexteTK": {
       "name": "TexteTK",
@@ -474,6 +477,7 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
+    "PREISKNZ": 206,
     "parent": { "MNR": "Serie 70" },
     "TexteTK": {
       "name": "TexteTK",
@@ -620,6 +624,7 @@
     "PERIODE4": 82,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISx3x30-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Tuertelefon-Freisprecher.pdf",
+    "PREISKNZ": 201,
     "parent": { "MNR": "Serie 30" },
     "TexteTK": {
       "name": "TexteTK",
@@ -744,6 +749,7 @@
     "PERIODE4": 92,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISx3x30-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Tuertelefon-Freisprecher.pdf",
+    "PREISKNZ": 201,
     "parent": { "MNR": "Serie 30" },
     "TexteTK": {
       "name": "TexteTK",
@@ -868,6 +874,7 @@
     "PERIODE4": 94.5,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISW50xx-0145_Serie_TASTA-Audio.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Serie-TASTA-Audio.pdf",
+    "PREISKNZ": 201,
     "parent": { "MNR": "TASTA" },
     "TexteTK": {
       "name": "TexteTK",
@@ -957,10 +964,10 @@
       { "name": "IS Display Eigenschaften", "description": null }
     ],
     "HatZubehoer": [
-      { "id": "3559" },
       { "id": "3557" },
       { "id": "3555" },
-      { "id": "3575" }
+      { "id": "3575" },
+      { "id": "3559" }
     ],
     "FrontalAnsichtFrei": {
       "id": "8307",
@@ -994,6 +1001,7 @@
     "PERIODE4": 89,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISW50xx-0145_Serie_TASTA-Audio.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_TASTA_AudioPlus_ISW5031-0145.pdf",
+    "PREISKNZ": 201,
     "parent": { "MNR": "TASTA" },
     "TexteTK": {
       "name": "TexteTK",
@@ -1082,7 +1090,7 @@
     "DisplayEigenschaften": [
       { "name": "IS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [{ "id": "3559" }, { "id": "3575" }],
+    "HatZubehoer": [{ "id": "3575" }, { "id": "3559" }],
     "FrontalAnsichtFrei": {
       "id": "8318",
       "assetThumb": "/Marketing/Innenstationen/Serie_TASTA/TCS_BUS/Audio/Freisteller/Frontal/8318/image-thumb__8318__Konfigurator/ISW5031-0145_frontal_frei.48db9906.png"
@@ -1115,6 +1123,7 @@
     "PERIODE4": 72,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
+    "PREISKNZ": 206,
     "parent": { "MNR": "TASTA" },
     "TexteTK": {
       "name": "TexteTK",
@@ -1206,7 +1215,7 @@
     "DisplayEigenschaften": [
       { "name": "IS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [{ "id": "13259" }, { "id": "1847" }, { "id": "3575" }],
+    "HatZubehoer": [{ "id": "1847" }, { "id": "13259" }, { "id": "3575" }],
     "FrontalAnsichtFrei": {
       "id": "9248",
       "assetThumb": "/Marketing/Innenstationen/Serie_TASTA/TCS_BUS/Audio/Freisteller/Frontal/9248/image-thumb__9248__Konfigurator/ISW6031-0145_frontal_frei.753c1012.png"
@@ -1239,6 +1248,7 @@
     "PERIODE4": 314,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVH3222.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Video-Tuertelefon.pdf",
+    "PREISKNZ": 202,
     "parent": { "MNR": "Serie 30" },
     "TexteTK": {
       "name": "TexteTK",
@@ -1363,6 +1373,7 @@
     "PERIODE4": 314,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVH4222-0140.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Video-2-Draht/TCS_Datenblatt_V2D_Tuertelefon.pdf",
+    "PREISKNZ": 202,
     "parent": { "MNR": "Serie 30 V2D" },
     "TexteTK": {
       "name": "TexteTK",
@@ -1487,6 +1498,7 @@
     "PERIODE4": 418,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVW511x-0145.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Serie-TASTA-Video.pdf",
+    "PREISKNZ": 202,
     "parent": { "MNR": "TASTA" },
     "TexteTK": {
       "name": "TexteTK",
@@ -1611,6 +1623,7 @@
     "PERIODE4": 418,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVW511x-0145.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Serie-TASTA-Video.pdf",
+    "PREISKNZ": 202,
     "parent": { "MNR": "TASTA" },
     "TexteTK": {
       "name": "TexteTK",
@@ -1735,6 +1748,7 @@
     "PERIODE4": 418,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_IVW5211-0145.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Video-2-Draht/TCS_Datenblatt_V2D_TASTA-Video.pdf",
+    "PREISKNZ": 202,
     "parent": { "MNR": "TASTA V2D" },
     "TexteTK": {
       "name": "TexteTK",
@@ -1856,6 +1870,7 @@
     "PERIODE4": null,
     "PIWebsiteLink": null,
     "DBWebsiteLink": null,
+    "PREISKNZ": 206,
     "parent": { "MNR": "TASTA" },
     "TexteTK": {
       "name": "TexteTK",
@@ -1947,7 +1962,7 @@
     "DisplayEigenschaften": [
       { "name": "IS Display Eigenschaften", "description": null }
     ],
-    "HatZubehoer": [{ "id": "13259" }, { "id": "1847" }, { "id": "3575" }],
+    "HatZubehoer": [{ "id": "1847" }, { "id": "13259" }, { "id": "3575" }],
     "FrontalAnsichtFrei": {
       "id": "9245",
       "assetThumb": "/Marketing/Innenstationen/Serie_TASTA/TCS_BUS/Audio/Freisteller/Frontal/9245/image-thumb__9245__Konfigurator/ISW6010_0145_frontal_frei.694d5e38.png"
@@ -1980,6 +1995,7 @@
     "PERIODE4": 94.5,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISW50xx-0145_Serie_TASTA-Audio.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_Serie-TASTA-Audio.pdf",
+    "PREISKNZ": 201,
     "parent": { "MNR": "TASTA" },
     "TexteTK": {
       "name": "TexteTK",
@@ -2100,6 +2116,7 @@
     "PERIODE4": 89,
     "PIWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktinformationen/Innenstationen/PI_ISW50xx-0145_Serie_TASTA-Audio.pdf",
     "DBWebsiteLink": "https://www.tcsag.de/fileadmin/user_upload/TCS_DE/Metanavigation/Downloads/Produktdatenblaetter/Innenstationen/TCS_Datenblatt_TASTA_AudioPlus_ISW5031-0145.pdf",
+    "PREISKNZ": 201,
     "parent": { "MNR": "TASTA" },
     "TexteTK": {
       "name": "TexteTK",

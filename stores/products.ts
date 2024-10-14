@@ -300,9 +300,9 @@ export const useSelectedProductsStore = defineStore({
     resetControlUnit() {
       this.selectedProducts.controlUnit = null;
     },
-    editOutdoorProduct(property, value, outdoorProduct?, Index?) {
+    editOutdoorProduct(property:string, value: number, outdoorProduct?: DeviceData, Index?:number) {
       let index;
-      if (!Index)
+      if (outdoorProduct)
         index =
           this.selectedProducts.outdoorProducts.products.indexOf(
             outdoorProduct
@@ -310,16 +310,19 @@ export const useSelectedProductsStore = defineStore({
       else index = Index;
 
       if (index !== -1) {
+        console.log(this.selectedProducts.outdoorProducts.products[index][property])
         this.selectedProducts.outdoorProducts.products[index][property] = value;
       }
     },
     editIndoorProduct(property, value, indoorProduct?, Index?) {
       let index;
-      if (!Index)
+      if (indoorProduct)
         index =
           this.selectedProducts.indoorProducts.products.indexOf(indoorProduct);
       else index = Index;
+      console.log(index)
       if (index !== -1) {
+        console.log(this.selectedProducts.outdoorProducts.products[index][property])
         this.selectedProducts.indoorProducts.products[index][property] = value;
       }
     },

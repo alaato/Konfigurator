@@ -1,5 +1,7 @@
 <template>
-	<Card class="text-left rounded-lg shadow-lg overflow-hidden w-[325px] h-80 max-w-sm">
+	<Card :class="camera ? 'hover:scale-105 cursor-pointer' : ''"
+			class="text-left rounded-lg shadow-lg overflow-hidden w-[325px] h-[340px] max-w-sm" 
+			@click="camera? replaceCamera(product) : null">
 		<div class="bg-white dark:bg-neutral-950 relative top-0">
 			<div class="flex justify-between p-1">
 				<ProductInformation :product="product" />
@@ -8,14 +10,11 @@
 			<NuxtImg ref="ProductImage" :src="imgsrc" @error="onImgError" alt="Product Image"
 				class="w-full h-44 object-scale-down" />
 		</div>
-		<div @click="replaceCamera(product)" class="px-4 py-2 flex flex-col">
-			<h3 class="text-xl font-bold mb-2"> Serie : {{ product?.parent?.MNR.slice(0, 20) }}</h3>
-			<h3 class=" MNR text-l font-bold mb-2">Article : {{ product?.MNR }}</h3>
-			<h3 class=" MNR text-l font-bold mb-2">Preis : {{ product?.PERIODE1 }}€</h3>
+		<div class="px-4 py-2 flex flex-col">
+			<h3 class="text-md font-bold mb-2"> {{ product?.KTXT }}</h3>
+			<h3 class=" MNR text-mdfont-bold mb-2">Article : {{ product?.MNR }}</h3>
+			<h3 class=" MNR text-mdfont-bold mb-2">Preis : {{ product?.PERIODE1 }}€</h3>
 		</div>
-		<CardFooter>
-			<Button @Click="replaceCamera(product)" v-if="props.camera">auswaehlen</Button>
-		</CardFooter>
 	</Card>
 </template>
 

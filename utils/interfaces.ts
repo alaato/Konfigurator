@@ -91,16 +91,16 @@ export interface DeviceData {
   quantity?: number;
   id: string;
   MNR: string;
-  TEXT: string;
+  TEXT?: string;
   KTXT?: string;
-  Geraeteart4077: string;
-  Kommunikationstechnologie4164: string;
-  Audio1: boolean;
-  Video2: boolean | null;
-  V2D: boolean;
-  TCSBUS: boolean;
-  Aufputz: boolean;
-  Unterputz: boolean | null;
+  Geraeteart4077?: string;
+  Kommunikationstechnologie4164?: string;
+  Audio1?: boolean;
+  Video2?: boolean | null;
+  V2D?: boolean;
+  TCSBUS?: boolean;
+  Aufputz?: boolean;
+  Unterputz?: boolean | null;
   VON1: string;
   VON2?: string;
   VON3?: string;
@@ -129,6 +129,7 @@ export interface DeviceData {
   TexteTK?: DeviceModule;
   packID?: string;
   Paket?: { MNR: string }[];
+  PREISKNZ?: number
 }
 export interface Pack<type> {
   id?: string;

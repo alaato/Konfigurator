@@ -6,8 +6,8 @@ export interface ProductsFilter {
   funktion: string;
   technologie: string | null;
 }
-function addAsiPack(products: Pack[], video: boolean = false) {
-  const packTCU: Pack = {
+function addAsiPack(products: Pack<DeviceData>[], video: boolean = false) {
+  const packTCU: Pack<DeviceData> = {
     station: {
       ...outdoorsStations.find((product) => product.MNR.includes(`ASI12000`)),
       quantity: 1,
@@ -21,7 +21,7 @@ function addAsiPack(products: Pack[], video: boolean = false) {
   };
   if (video) {
     packTCU.camera = {
-      ...extensions.find((zubehoer) => zubehoer.MNR.includes(`FVK2202`)),
+      ...extensions.find((ext) => ext.MNR.includes(`FVK2202`)),
       quantity: 1,
     } as DeviceData;
   }
@@ -31,7 +31,7 @@ function addAsiPack(products: Pack[], video: boolean = false) {
 function addPesPackAudio(
   extButtonNumber,
   productsFilter: ProductsFilter,
-  products: Pack[]
+  products: Pack<DeviceData>[]
 ) {
   const PETPES = outdoorsStations.find(
     (product) => product.MNR == `PET${extButtonNumber}-EN/04`
@@ -53,11 +53,11 @@ function addPesPackAudio(
         product.MNR.includes(`${pesModel}`) && product.parent.MNR == "PES PRO"
     ) as DeviceData);
 
-  const packPES: Pack = {
+  const packPES: Pack<DeviceData> = {
     station: { ...PES, quantity: 1 },
     extension: { ...PETPES, quantity: 1 },
   };
-  const packPESPRO: Pack = {
+  const packPESPRO: Pack<DeviceData> = {
     station: PESPRO,
     extension: PETPESPRO,
   };
@@ -68,7 +68,7 @@ function addPesPackAudio(
 function addPesPackVideo(
   extButtonNumber,
   productsFilter: ProductsFilter,
-  products: Pack[]
+  products: Pack<DeviceData>[]
 ) {
   const PETPESPRO = outdoorsStations.find((product) =>
     product.MNR.includes(`AEA5302${extButtonNumber}`)
@@ -85,7 +85,7 @@ function addPesPackVideo(
         product.parent.MNR == "PES PRO"
     ) as DeviceData);
 
-  const packPESPRO: Pack = {
+  const packPESPRO: Pack<DeviceData> = {
     station: PESPRO,
     extension: PETPESPRO,
   };
@@ -143,7 +143,7 @@ export function FindOutdoorProducts(productsFilter: ProductsFilter, filter) {
 export function findOutDoorProductsWithEtexensions(
   productsFilter: ProductsFilter
 ) {
-  const products = [] as Pack[];
+  const products = [] as Pack<DeviceData>[];
 
   if (productsFilter.funktion == "Video") addAsiPack(products, true);
   else if (productsFilter.funktion == "Beide") {

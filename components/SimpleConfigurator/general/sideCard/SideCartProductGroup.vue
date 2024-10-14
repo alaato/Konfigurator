@@ -9,7 +9,7 @@
 		</div>
 		<p>{{ product?.quantity }}X</p>
 		<div>{{ product?.PERIODE1 }}€</div>
-		<Button @click="removeItem(product)" variant="ghost" size="icon">
+		<Button v-if="product.MNR !== 'FVU1401-0400' || product.MNR !== 'FAA1200-0400'" @click="removeItem(product)" variant="ghost" size="icon">
 			<TrashIcon class="h-4 w-4" />
 		</Button>
 
@@ -35,7 +35,7 @@ function removeItem(product: DeviceData) {
 		if (selectedProductsStore.selectedProducts.outdoorProducts.SelectedQuantity == 0)
 			resetSelectedProducts()
 	}
-	else if (props.title == 'Zubehör')
+	else if (props.title == 'Zubehör' && product.MNR !== "FVU1401-0400" && product.MNR !== "FAA1200-0400")
 		removeAccessories(product)
 	else if (props.title == 'Erweiterungen')
 		removeExtension(product)

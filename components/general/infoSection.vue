@@ -17,7 +17,8 @@
 			</TabsList>
 
 			<TabsContent value="Info">
-				<p class="whitespace-pre-line my-1">{{ product?.TexteTK?.features[1]?.text }}</p>
+				<p v-if=" product?.TexteTK?.features[1]?.text" class="whitespace-pre-line my-1">{{ product?.TexteTK?.features[1]?.text }}</p>
+				<p v-else v-html=" product?.TEXT"></p>
 			</TabsContent>
 			<TabsContent value="characteristics">
 				<p v-for="(key, value) in characterstics" v-html="value + ': ' + '<b>'+key +'</b>'" class="whitespace-pre-line my-1" :key="value">

@@ -197,3 +197,14 @@
 - check if the selected products are a pack
 - add the pack, show the price
 - hide the proces of the other products
+
+
+### 14.10 
+
+- meeting mt Herr Usnerus and Duffner
+
+- New Kameras
+
+- fixing cache
+
+- some fixes

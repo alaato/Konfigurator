@@ -5,6 +5,7 @@ import {
   cleanEmptyObjects,
   extractAudioFeatures,
   extractNodes,
+  removeArrayFromTKtext
 } from "./cacheUtils.mjs";
 const FilterOptions = {
   Aussenstation: true,
@@ -44,6 +45,7 @@ async function getOutdoor() {
                     PERIODE4
                     PIWebsiteLink
                     DBWebsiteLink
+                    PREISKNZ
                     TexteTK {
                       features {
                           ... on csFeatureTextarea {
@@ -149,6 +151,10 @@ async function getOutdoor() {
   extractAudioFeatures(clean);
   addAnzahlTastenToObject(clean);
   const products = extractNodes(clean);
+  products.forEach((product) => {
+    product.TexteTK = removeArrayFromTKtext(product.TexteTK);
+    return product
+  });
   const jsonProducts = JSON.stringify(products);
   fs.writeFileSync("./data/aussenstationen.json", jsonProducts);
 }
