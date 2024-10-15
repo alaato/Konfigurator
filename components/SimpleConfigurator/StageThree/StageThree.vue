@@ -9,7 +9,9 @@ import ProductSelection from '../general/productCards/ProductSelectionGrid.vue'
 import indoorStations from '@/data/innenestationen.json'
 //variables
 const selectedProductsStore = useSelectedProductsStore();
-const { selectedProducts, filter } = storeToRefs(selectedProductsStore)
+const filterStore = useFilterStore();
+const { filter } = storeToRefs(filterStore);
+const { selectedProducts } = storeToRefs(selectedProductsStore)
 const remainingIndoorProducts = computed(() => {
 	return selectedProducts.value.indoorProducts.neededQuantity - selectedProducts.value.indoorProducts.SelectedQuantity
 })

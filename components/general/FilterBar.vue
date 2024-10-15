@@ -1,52 +1,47 @@
 <template>
-  <div class="w-full bg-inherit p-4 rounded-lg ">
-    <div class="flex flex-wrap gap-4 items-center">
-      <h2 class="text-lg font-semibold mr-4">Filters:</h2>
-      <div v-for="(options, category) in filters" :key="category" class="relative">
-        <Button
-          @click="toggleDropdown(category)"
-          class="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-black rounded-md transition-colors duration-200"
-        >
-          {{ category }}
-          <ChevronDown :class="{ 'transform rotate-180': openDropdown === category }" class="h-4 w-4 transition-transform duration-200" />
-        </Button>
-        <div
-          v-if="openDropdown === category"
-          class="absolute z-10 mt-2 w-56 bg-white dark:bg-neutral-900 rounded-md shadow-lg p-2"
-        >
-          <div class="grid grid-cols-2 gap-2">
-            <div v-for="option in options" :key="option" class="flex items-center space-x-2">
-              <input
-                type="checkbox"
-                :id="`${category}-${option.toLowerCase()}`"
-                v-model="selectedFilters[category][option]"
-                class="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
-              />
-              <label :for="`${category}-${option.toLowerCase()}`" class="text-sm">{{ option }}</label>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="w-full bg-inherit rounded-lg">
+		<div class="flex flex-wrap justify-center gap-2 items-center mb-1">
+			<h2 class="text-lg font-semibold mr-4">Filters:</h2>
+			<div v-for="(options, category) in filters" :key="category" class="relative">
+				<FilterBox :options="options" :category="category" />
+			</div>
+			<slot />
+		</div>
+	</div>
 </template>
 
-<script setup>
-import { ChevronDown } from 'lucide-vue-next'
+<script lang="ts" setup>
 
+import FilterBox from './FilterBox.vue'
+const array = Array(40).fill(0).map((_, index) => (index + 1).toString());
 const filters = {
-  Color: ["white", "Black", "Silver"],
-  Material: ["Kunststoff", "Aluminium"],
+	Color: ["white", "Black", "Silver"],
+	Material: ["Kunststoff", "Aluminium"],
+	number: array
+}
+const selectedProductsStore = useSelectedProductsStore();
+const currentStageStore = useCurrentStageStore();
+const visitedStore = useVisitedStore()
+const { currentStage } = storeToRefs(currentStageStore)
+const { getRemainingIndoorNeeded, getRemainingOutdoorNeeded } = storeToRefs(selectedProductsStore)
+
+const gotoStage: Function = inject(`goToStage`)
+
+const canGo = computed(() => {
+	return (getRemainingIndoorNeeded.value == 0 && getRemainingOutdoorNeeded.value == 0)
+})
+
+function weiter() {
+	if (getRemainingIndoorNeeded.value == 0 && getRemainingOutdoorNeeded.value == 0) {
+		gotoStage("Übersicht")
+		if (!visitedStore.visited.includes("Übersicht"))
+			visitedStore.visited.push("Übersicht")
+	}
 }
 
-const openDropdown = ref(null)
-const selectedFilters = reactive(Object.fromEntries(
-  Object.keys(filters).map(category => [category, {}])
-))
-
-const toggleDropdown = (category) => {
-  openDropdown.value = openDropdown.value === category ? null : category
-}
+watchEffect(() => {
+	console.log(filters)
+})
 </script>
 
 <style scoped>

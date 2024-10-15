@@ -1,6 +1,6 @@
 <template>
 	<div class="my-2 max-w-[960px]">
-		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center mx-5">
+		<form ref="form" @submit.prevent="submitConfig" class="flex text-center flex-col justify-center content-center">
 			<!-- <WiringCount v-model="wiringCount"></WiringCount> -->
 
 			<div class="number-of-apartments flex justify-center my-1 gap-1 flex-col md:flex-row">
@@ -43,10 +43,12 @@ const numberOutdoorStation = useState("numberOutdoorStation", () => 1);
 
 // stores
 const visitedStore = useVisitedStore();
-const selectedProductsStore = useSelectedProductsStore()
+const filterStore = useFilterStore();
+const selectedProductsStore = useSelectedProductsStore();
 const { setNeededProductsQuantity, resetAllProducts, addControlUnit } = selectedProductsStore
-const { filter } = storeToRefs(selectedProductsStore)
+const { filter } = storeToRefs(filterStore)
 import { setFilter, setControlUnit } from '@/utils/ConfiguratorUtils/RequirementsUtils'
+import { useFilterStore } from '~/stores/filter';
 // functions
 const goToStage: Function = inject('goToStage')
 

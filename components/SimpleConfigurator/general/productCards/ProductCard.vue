@@ -1,19 +1,23 @@
 <template>
 	<Card class="bg-white font-body flex flex-col text-left rounded-lg drop-shadow-sm overflow-hidden w-[325px]">
-		<div class="bg-white dark:bg-neutral-950">
+		<div class="bg-white dark:bg-neutral-950 relative top-0">
+			<Badge v-if="product.parent.MNR == 'PES PRO'"
+				class="bg-arapawa-950 dark:bg-neutral-500 top-0 right-0 fixed">Unsere
+				Empfehlung</Badge>
 			<ProductInformation :product="product"></ProductInformation>
-			<NuxtImg ref="ProductImage" :src="imgsrc" alt="Product Image" class="w-full h-52 object-scale-down" />
+			<NuxtImg ref="ProductImage" :src="imgsrc" alt="Product Image"
+				class="w-full h-52 object-contain object-center" />
 		</div>
 		<div class="pt-4 px-4">
 			<h3 class="text-xl font-bold border-b mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
 			<h3 class=" MNR text font-bold mb-2">Article : {{ product.MNR }}</h3>
 			<p class="text-muted-foreground mb-2 h-6 text-sm">{{ product?.KTXT }}</p>
-			<p class="text-muted-foreground mb-2 h-6 text-sm">{{ product?.Aufputz && "Aufputz" || product.Unterputz ?
+			<p class="text-muted-foreground mb-1 h-6 text-sm">{{ product?.Aufputz ? "Aufputz" : product.Unterputz ?
 				"Unterputz"
-				: "" }}</p>
-			<p class="font-bold">Preis: {{ product?.PERIODE1 }}€</p>
+				: "Einbau" }}</p>
+			<p class="font-bold" :class="remainingProducts == 1 ? 'mb-1' : ''">Preis: {{ product?.PERIODE1 }}€</p>
 			<div class="flex flex-col">
-				<Card class="h-[70px] text-sm shadow-none border-none mb-0">
+				<Card v-if="remainingProducts !== 1" class="h-[70px] text-sm shadow-none border-none mb-0">
 					<CardHeader class="p-1">
 						<CardDescription class="text-center">Wählen Sie aus, wie viele {{ productType }}
 						</CardDescription>
@@ -42,6 +46,7 @@
 import fs from 'fs'
 import { type DeviceData } from '@/utils/interfaces.js'
 import ProductInformation from '@/components/general/ProductInformation.vue';
+import Badge from '@/components/ui/badge/Badge.vue';
 const emit = defineEmits(['addProduct'])
 const props = defineProps<{
 	product: DeviceData;
@@ -49,6 +54,9 @@ const props = defineProps<{
 	remainingProducts?: number
 }>()
 const productQuantity = defineModel<number>('productQuantity', { required: true })
+watchEffect(() => {
+	if (props.remainingProducts == 1) productQuantity.value = 1
+})
 // const remainingProducts = defineModel<number>('remainingProducts')
 const productImage = useTemplateRef<HTMLImageElement>('ProductImage')
 const imgsrc = props.product?.FrontalAnsichtFrei?.assetThumb && `https://pim.tcsapps.de${props.product.FrontalAnsichtFrei.assetThumb}`

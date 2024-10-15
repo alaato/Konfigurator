@@ -176,7 +176,7 @@
 ### 08.10
 
 - Camera chnage for Video Pack
-- mixed paket  
+- mixed paket
 - Xml gaeb
 - minor fixes for landing page
 
@@ -198,8 +198,7 @@
 - add the pack, show the price
 - hide the proces of the other products
 
-
-### 14.10 
+### 14.10
 
 - meeting mt Herr Usnerus and Duffner
 
@@ -208,3 +207,11 @@
 - fixing cache
 
 - some fixes
+
+### 15.10
+
+- new badge on new products
+- pes pro alaways first
+- added a camera to Asi
+- fixed UI for mobile
+- filter Bar

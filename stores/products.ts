@@ -5,12 +5,6 @@ export const useSelectedProductsStore = defineStore({
   id: "SelectedProductsStore",
   state: () => {
     return {
-      filter: {
-        funktion: "",
-        technologie: "",
-        Video: false,
-        Audio: false,
-      },
       selectedProducts: {
         indoorProducts: {
           neededQuantity: 0,
@@ -175,7 +169,7 @@ export const useSelectedProductsStore = defineStore({
           id: id,
           quantity: quantity ? quantity : 1,
           station: pack.station.id || null,
-          extension: pack.extension.id || null,
+          extension: pack?.extension?.id || null,
           camera: pack?.camera?.id || null,
         };
         this.packs.push(packToAdd);
@@ -300,7 +294,12 @@ export const useSelectedProductsStore = defineStore({
     resetControlUnit() {
       this.selectedProducts.controlUnit = null;
     },
-    editOutdoorProduct(property:string, value: number, outdoorProduct?: DeviceData, Index?:number) {
+    editOutdoorProduct(
+      property: string,
+      value: number,
+      outdoorProduct?: DeviceData,
+      Index?: number
+    ) {
       let index;
       if (outdoorProduct)
         index =
@@ -310,7 +309,9 @@ export const useSelectedProductsStore = defineStore({
       else index = Index;
 
       if (index !== -1) {
-        console.log(this.selectedProducts.outdoorProducts.products[index][property])
+        console.log(
+          this.selectedProducts.outdoorProducts.products[index][property]
+        );
         this.selectedProducts.outdoorProducts.products[index][property] = value;
       }
     },
@@ -320,9 +321,11 @@ export const useSelectedProductsStore = defineStore({
         index =
           this.selectedProducts.indoorProducts.products.indexOf(indoorProduct);
       else index = Index;
-      console.log(index)
+      console.log(index);
       if (index !== -1) {
-        console.log(this.selectedProducts.outdoorProducts.products[index][property])
+        console.log(
+          this.selectedProducts.outdoorProducts.products[index][property]
+        );
         this.selectedProducts.indoorProducts.products[index][property] = value;
       }
     },

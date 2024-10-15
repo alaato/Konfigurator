@@ -17,7 +17,6 @@ import StageOne from './StageOne/StageOne.vue';
 import StageThree from './StageThree/StageThree.vue';
 import StageTwo from './StageTwo/StageTwo.vue';
 import Zubehör from './Zubehör/Zubehör.vue'
-import SideCard from './general/sideCard/SideCard.vue';
 import StageTracker from './general/StageTracker.vue';
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
 const currentStageStore = useCurrentStageStore();
@@ -41,5 +40,7 @@ provide("goToStage", goToStage);
 	gap: 14px;
 	justify-content: center;
 	margin: 0 auto;
+	padding: 0 16px;
+	box-sizing: content-box;
 }
 </style>

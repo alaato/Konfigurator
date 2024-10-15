@@ -1,7 +1,7 @@
 <template>
-	<Card :class="camera ? 'hover:scale-105 cursor-pointer' : ''"
-			class="text-left rounded-lg shadow-lg overflow-hidden w-[325px] h-[340px] max-w-sm" 
-			@click="camera? replaceCamera(product) : null">
+	<div :class="camera ? 'border hover:scale-105 cursor-pointer ease-in transition-transform' : ''"
+		class="text-left rounded-lg overflow-hidden w-[325px] h-[340px] max-w-sm"
+		@click="camera ? replaceCamera(product) : null">
 		<div class="bg-white dark:bg-neutral-950 relative top-0">
 			<div class="flex justify-between p-1">
 				<ProductInformation :product="product" />
@@ -15,7 +15,7 @@
 			<h3 class=" MNR text-mdfont-bold mb-2">Article : {{ product?.MNR }}</h3>
 			<h3 class=" MNR text-mdfont-bold mb-2">Preis : {{ product?.PERIODE1 }}€</h3>
 		</div>
-	</Card>
+	</div>
 </template>
 
 <script lang="ts" setup>

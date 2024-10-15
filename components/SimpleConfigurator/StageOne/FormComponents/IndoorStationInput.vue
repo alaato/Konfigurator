@@ -1,23 +1,12 @@
 <template>
-	<Card class="grow w-96">
-	          <CardHeader>
-	            <CardTitle>Innenstationen</CardTitle>
-	            <CardDescription>Wählen Sie aus, wie viele Innenstationen</CardDescription>
-	          </CardHeader>
-	          <CardContent>
-	            <NumberField v-model="numberIndoorStaions" :required="true" :default-value="1" :min="1" :max="40">
-	              <NumberFieldContent>
-	                <NumberFieldDecrement />
-	                <NumberFieldInput />
-	                <NumberFieldIncrement />
-	              </NumberFieldContent>
-	            </NumberField>
-	          </CardContent>
-	        </Card>
+	<NumberInputBox title="Innenstationen" v-model="numberIndoorStaions" :max="40" />
+
 </template>
 
 <script setup lang="ts">
+import NumberInputBox from './NumberInputBox.vue';
 
-const numberIndoorStaions = defineModel({type: Number, default: 1})
+
+const numberIndoorStaions = defineModel({ type: Number, default: 1 })
 
 </script>

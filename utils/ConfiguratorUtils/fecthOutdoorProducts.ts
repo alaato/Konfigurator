@@ -2,23 +2,30 @@ import outdoorsStations from "@/data/aussenstationen.json";
 import extensions from "@/data/Funktionserweiterung.json";
 import units from "@/data/steuer.json";
 export interface ProductsFilter {
-  AnzhalTatsen: string;
+  AnzhalTatsen: number;
   funktion: string;
   technologie: string | null;
 }
-function addAsiPack(products: Pack<DeviceData>[], video: boolean = false) {
+function addAsiPack(
+  products: Pack<DeviceData>[],
+  video: boolean = false,
+  extension: boolean = false
+) {
   const packTCU: Pack<DeviceData> = {
     station: {
       ...outdoorsStations.find((product) => product.MNR.includes(`ASI12000`)),
       quantity: 1,
     } as DeviceData,
-    extension: {
+    extension: null,
+  };
+  if (extension) {
+    packTCU.extension = {
       ...outdoorsStations.find((product) =>
         product.MNR.includes(`ASI21000-0000`)
       ),
       quantity: 1,
-    } as DeviceData,
-  };
+    } as DeviceData;
+  }
   if (video) {
     packTCU.camera = {
       ...extensions.find((ext) => ext.MNR.includes(`FVK2202`)),
@@ -29,7 +36,7 @@ function addAsiPack(products: Pack<DeviceData>[], video: boolean = false) {
 }
 
 function addPesPackAudio(
-  extButtonNumber,
+  extButtonNumber: number,
   productsFilter: ProductsFilter,
   products: Pack<DeviceData>[]
 ) {
@@ -39,7 +46,7 @@ function addPesPackAudio(
   const PETPESPRO = outdoorsStations.find((product) =>
     product.MNR.includes(`AEA5302${extButtonNumber}`)
   ) as DeviceData;
-  const pesButtons = parseInt(productsFilter.AnzhalTatsen) - extButtonNumber;
+  const pesButtons = productsFilter.AnzhalTatsen - extButtonNumber;
   const evenPesButtons = pesButtons + (pesButtons % 2);
   const pesModel = evenPesButtons < 10 ? `0${evenPesButtons}` : evenPesButtons;
 
@@ -66,14 +73,14 @@ function addPesPackAudio(
 }
 
 function addPesPackVideo(
-  extButtonNumber,
+  extButtonNumber: number,
   productsFilter: ProductsFilter,
   products: Pack<DeviceData>[]
 ) {
   const PETPESPRO = outdoorsStations.find((product) =>
     product.MNR.includes(`AEA5302${extButtonNumber}`)
   ) as DeviceData;
-  const pesButtons = parseInt(productsFilter.AnzhalTatsen) - extButtonNumber;
+  const pesButtons = productsFilter.AnzhalTatsen - extButtonNumber;
   const evenPesButtons = pesButtons + (pesButtons % 2);
   const pesModel = evenPesButtons < 10 ? `0${evenPesButtons}` : evenPesButtons;
 
@@ -97,13 +104,14 @@ export function FindOutdoorProducts(productsFilter: ProductsFilter, filter) {
     ?.filter((product) => {
       if (product.parent.MNR == "PET") return false;
       if (
-        product.AnzhalTatsen >= productsFilter.AnzhalTatsen &&
-        product.MNR == "ASI12000-0000"
+        parseInt(product.AnzhalTatsen) >= productsFilter.AnzhalTatsen &&
+        product.MNR == "ASI12000-0000" &&
+        productsFilter.funktion == "Audio"
       )
         return true;
       if (
         filter.value.funktion == "Video" &&
-        product.AnzhalTatsen == productsFilter.AnzhalTatsen &&
+        product.AnzhalTatsen == productsFilter.AnzhalTatsen.toString() &&
         product.Video2
       ) {
         if (filter.value.technologie == "TCS:BUS" && product.TCSBUS)
@@ -113,33 +121,40 @@ export function FindOutdoorProducts(productsFilter: ProductsFilter, filter) {
       }
       if (
         filter.value.funktion == "Audio" &&
-        product.AnzhalTatsen == productsFilter.AnzhalTatsen &&
+        product.AnzhalTatsen == productsFilter.AnzhalTatsen.toString() &&
         !product.Video2
       )
         return true;
       if (
         filter.value.funktion == "Beide" &&
-        product.AnzhalTatsen == productsFilter.AnzhalTatsen &&
+        product.AnzhalTatsen == productsFilter.AnzhalTatsen.toString() &&
         !product.Video2 &&
         product.Audio1
       )
         return true;
       if (
         filter.value.funktion == "Beide" &&
-        product.AnzhalTatsen == productsFilter.AnzhalTatsen &&
+        product.AnzhalTatsen == productsFilter.AnzhalTatsen.toString() &&
         (product.Video2 || product.Audio1)
       )
         return true;
     })
     .sort((a, b) => {
       if (a.parent.MNR == "PES PRO") return -1;
+      if (b.parent.MNR == "PES PRO") return 1;
       if (a.Video2 && !b.Video2) return -1;
       if (!a.Video2 && b.Video2) return 1;
-      if (a.Video2 && b.Video2) return 0;
+      if ((a.Video2 && b.Video2) || (a.Audio1 && b.Audio1))
+        return a.PERIODE1 - b.PERIODE1;
     }) as DeviceData[];
+
   return products;
 }
-
+export function findPackNoextensions() {
+  const pack = [] as Pack<DeviceData>[];
+  addAsiPack(pack, true, false);
+  return pack;
+}
 export function findOutDoorProductsWithEtexensions(
   productsFilter: ProductsFilter
 ) {
@@ -147,31 +162,31 @@ export function findOutDoorProductsWithEtexensions(
 
   if (productsFilter.funktion == "Video") addAsiPack(products, true);
   else if (productsFilter.funktion == "Beide") {
-    addAsiPack(products, true);
-    addAsiPack(products, false);
+    addAsiPack(products, true, true);
+    addAsiPack(products, false, true);
   } else addAsiPack(products, false);
 
   if (
-    parseInt(productsFilter.AnzhalTatsen) > 20 &&
-    parseInt(productsFilter.AnzhalTatsen) <= 32 &&
+    productsFilter.AnzhalTatsen > 20 &&
+    productsFilter.AnzhalTatsen <= 32 &&
     productsFilter.funktion == "Audio"
   )
     addPesPackAudio(12, productsFilter, products);
   else if (
-    parseInt(productsFilter.AnzhalTatsen) > 20 &&
-    parseInt(productsFilter.AnzhalTatsen) <= 32 &&
+    productsFilter.AnzhalTatsen > 20 &&
+    productsFilter.AnzhalTatsen <= 32 &&
     productsFilter.funktion == "Video"
   )
     addPesPackVideo(12, productsFilter, products);
   else if (
-    parseInt(productsFilter.AnzhalTatsen) > 32 &&
-    parseInt(productsFilter.AnzhalTatsen) <= 48 &&
+    productsFilter.AnzhalTatsen > 32 &&
+    productsFilter.AnzhalTatsen <= 48 &&
     productsFilter.funktion == "Audio"
   )
     addPesPackAudio(28, productsFilter, products);
   else if (
-    parseInt(productsFilter.AnzhalTatsen) > 32 &&
-    parseInt(productsFilter.AnzhalTatsen) <= 48 &&
+    productsFilter.AnzhalTatsen > 32 &&
+    productsFilter.AnzhalTatsen <= 48 &&
     productsFilter.funktion == "Video"
   )
     addPesPackVideo(28, productsFilter, products);

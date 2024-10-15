@@ -1,19 +1,17 @@
 <template>
-	<section class="flex justify-center flex-col px-6 items-center ">
-		<div class="flex flex-col  gap-1 md:flex-row flex-wrap max-w-[800px]">
+	<Card class="mt-1 flex flex-col gap-1 justify-center items-center w-fit max-w-[800px]">
+		<CardContent class="flex flex-col md:flex-row gap-1 p-0 py-0 px-0">
 			<PackageProductCard v-if="pack.station" :product="pack.station" />
 			<PackageProductCard v-if="pack.extension" :product="pack.extension" />
 			<PackageProductCard v-if="camera" :product="camera">
 				<changeCameraModel :products="products" @replaceCamera="replaceCamera" />
 			</PackageProductCard>
-			<div class="bg-neutral-200 dark:bg-neutral-800 w-80"></div>
-		</div>
-		<div class="w-full max-w-[800px] mt-1">
-			<Button @click="addProducts" class="dark:border grow-0 w-fit justify-self-center border-white mb-1">Paket
-				hinzufügen</Button>
-		</div>
+			<div v-if="pack.camera && pack.extension" class="bg-neutral-200 dark:bg-neutral-800 w-80"></div>
+		</CardContent>
+		<Button @click="addProducts" class="dark:border my-1 grow-0 w-fit justify-self-center border-white">Paket
+			hinzufügen</Button>
 
-	</section>
+	</Card>
 
 </template>
 
@@ -30,7 +28,7 @@ const goToStage: Function = inject(`goToStage`);
 
 const selectedProductsStore = useSelectedProductsStore();
 const visitedStore = useVisitedStore();
-const { addExtension, addOutdoorProducts, addPack, replaceExtension} = selectedProductsStore;
+const { addExtension, addOutdoorProducts, addPack, replaceExtension } = selectedProductsStore;
 const { getRemainingOutdoorNeeded } = storeToRefs(selectedProductsStore);
 const camera = ref(props.pack.camera)
 
@@ -53,7 +51,7 @@ function replaceCamera(newCamera: DeviceData) {
 	replaceExtension(props.pack.camera, camera.value)
 }
 function addProducts() {
-	addPack({...props.pack, camera: camera.value});
+	addPack({ ...props.pack, camera: camera.value });
 	if (getRemainingOutdoorNeeded.value <= 0) {
 		goToStage("Innenstation");
 		visitedStore.visited.push("Innenstation");

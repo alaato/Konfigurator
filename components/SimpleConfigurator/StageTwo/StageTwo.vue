@@ -1,7 +1,7 @@
 <template>
 
 	<ProductSelection :selectedProducts="selectedProducts.outdoorProducts" @resetSelection="reset" :products="products"
-		v-model="remainingoutdoorProducts" />
+		:packs="packs" v-model="remainingoutdoorProducts" />
 
 	<p v-if="products?.length == 0">
 		Keine Aussenstation verfügbar. versuchen Sie eine mit
@@ -16,11 +16,13 @@
 
 import ProductSelection from "../general/productCards/ProductSelectionGrid.vue";
 import { type DeviceData, type Pack } from "@/utils/interfaces"
-import { FindOutdoorProducts, SetSearchFilters, findOutDoorProductsWithEtexensions } from '@/utils/ConfiguratorUtils/fecthOutdoorProducts.js'
+import { FindOutdoorProducts, SetSearchFilters, findOutDoorProductsWithEtexensions, findPackNoextensions } from '@/utils/ConfiguratorUtils/fecthOutdoorProducts.js'
 //consts
 const selectedProductsStore = useSelectedProductsStore();
+const filterStore = useFilterStore();
+const { filter } = storeToRefs(filterStore);
 const { setNeededExtensions } = selectedProductsStore
-const { selectedProducts, filter } = storeToRefs(selectedProductsStore);
+const { selectedProducts } = storeToRefs(selectedProductsStore);
 const remainingoutdoorProducts = computed(() => {
 	return (
 		selectedProducts.value.outdoorProducts.neededQuantity -
@@ -29,8 +31,8 @@ const remainingoutdoorProducts = computed(() => {
 });
 
 const productsFilter = SetSearchFilters(selectedProducts, filter);
-const products: DeviceData[] | Pack<DeviceData>[] = parseInt(productsFilter.AnzhalTatsen) >= 24 ? findOutDoorProductsWithEtexensions(productsFilter) : FindOutdoorProducts(productsFilter, filter)
-
+const products: DeviceData[] = FindOutdoorProducts(productsFilter, filter)
+const packs = productsFilter.AnzhalTatsen >= 24 ? findOutDoorProductsWithEtexensions(productsFilter) : findPackNoextensions()
 //functions
 
 

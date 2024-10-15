@@ -35,7 +35,6 @@ export default defineNuxtConfig({
     "@nuxtjs/apollo",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
-    "@nuxt/test-utils/module",
     "@nuxt/content",
   ],
 

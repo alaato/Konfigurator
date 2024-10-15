@@ -125,16 +125,16 @@ export interface DeviceData {
   FrontalAnsichtFrei?: FrontalAnsicht;
   Audio?: DeviceModule[];
   HatZubehoer?: { id: string }[];
-  AnzhalTatsen?: number;
+  AnzhalTatsen?: string | number;
   TexteTK?: DeviceModule;
   packID?: string;
   Paket?: { MNR: string }[];
-  PREISKNZ?: number
+  PREISKNZ?: number;
 }
 export interface Pack<type> {
   id?: string;
   quantity?: number;
   camera?: type;
   station: type;
-  extension: type;
+  extension?: type;
 }
