@@ -1,12 +1,12 @@
 <template>
-	<div class="flex lg:hidden">
-		<SideCartModal :selectedProducts="selectedProducts" />
-		<Button :disabled="!canGo" v-if="currentStage === 'Zubehör'" class="ml-4 border border-white" @click="weiter">
+	<div class="side-cart-mobile-bar flex justify-center gap-4 md:hidden">
+		<SideCartModal />
+		<Button :disabled="!canGo" v-if="currentStage === 'Zubehör'" class=" border border-white" @click="weiter">
 			weiter
 		</Button>
 	</div>
 
-	<aside class="hidden lg:block sm:w-3/4 lg:w-full">
+	<aside class="side-cart hidden md:block sm:w-3/4 md:w-full">
 		<Card class="overflow-hidden shadow-sm sm:rounded-lg sticky top-6">
 			<div class="p-6">
 				<h2 class="text-2xl font-semibold mb-4">Ihre Auswahl</h2>
@@ -23,6 +23,7 @@
 <script lang="ts" setup>
 import SideCartModal from './SideCartModal.vue'
 import SideCardItemList from './SideCardItemList.vue'
+import StageTrackerMobile from '../stageTracker/stageTrackerMobile.vue';
 
 
 // Mock data for demonstration

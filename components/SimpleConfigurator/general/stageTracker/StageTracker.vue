@@ -1,5 +1,5 @@
 <template>
-	<ol class="tracker w-full max-w-[1560px] flex flex-wrap justify-center gap-2 px-1 mt-3 ">
+	<ol class=" hidden tracker w-full max-w-[1560px] md:flex flex-wrap justify-center gap-2 px-1 ">
 		<li class="gap-1 stage-item flex flex-col items-center" v-for="stage in stages" :key="stage"
 			:class="{ 'completed': completed(stage) }">
 			<div

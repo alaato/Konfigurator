@@ -12,6 +12,7 @@ export const useFilterStore = defineStore(
       Audio: false,
       color: "",
       material: "",
+      anzahlTasten: 1,
     });
     function resetMyFilter() {
       filter.value = {
@@ -21,6 +22,7 @@ export const useFilterStore = defineStore(
         Audio: false,
         color: "",
         material: "",
+        anzahlTasten: 1,
       };
     }
 
@@ -45,7 +47,22 @@ export const useFilterStore = defineStore(
     function setMaterial(material: string) {
       filter.value.material = material;
     }
-    return { filter, resetMyFilter };
+    function setAnzahl(anzahlTasten: number) {
+      filter.value.anzahlTasten = anzahlTasten;
+    }
+
+    return {
+      filter,
+      resetMyFilter,
+      setFilter,
+      setFunktion,
+      setTechnologie,
+      setVideo,
+      setAudio,
+      setColor,
+      setMaterial,
+      setAnzahl,
+    };
   },
   {
     persist: {

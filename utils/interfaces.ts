@@ -138,3 +138,13 @@ export interface Pack<type> {
   station: type;
   extension?: type;
 }
+
+export interface Packet {
+  AnzahlISPaket: string;
+  MNR: string;
+  KTXT: string;
+  PERIODE1: number;
+  PREISKNZ: number;
+  quantity: number;
+  Paket: { MNR: string }[];
+}

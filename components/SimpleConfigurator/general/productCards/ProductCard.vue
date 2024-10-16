@@ -1,14 +1,13 @@
 <template>
 	<Card class="bg-white font-body flex flex-col text-left rounded-lg drop-shadow-sm overflow-hidden w-[325px]">
-		<div class="bg-white dark:bg-neutral-950 relative top-0">
-			<Badge v-if="product.parent.MNR == 'PES PRO'"
-				class="bg-arapawa-950 dark:bg-neutral-500 top-0 right-0 fixed">Unsere
-				Empfehlung</Badge>
+		<div class="bg-white dark:bg-neutral-950 relative top-0 p-1">
+			<Badge  variant="outline" v-if="product.parent.MNR == 'PES PRO'"
+				class="bg-arapawa-950 text-white dark:bg-neutral-800 top-0 right-0 fixed">Unsere Empfehlung</Badge>
 			<ProductInformation :product="product"></ProductInformation>
 			<NuxtImg ref="ProductImage" :src="imgsrc" alt="Product Image"
-				class="w-full h-52 object-contain object-center" />
+				class="w-full h-[200px] object-contain object-center" />
 		</div>
-		<div class="pt-4 px-4">
+		<div class="pt-2 px-4">
 			<h3 class="text-xl font-bold border-b mb-2"> Serie: {{ product?.parent?.MNR }}</h3>
 			<h3 class=" MNR text font-bold mb-2">Article : {{ product.MNR }}</h3>
 			<p class="text-muted-foreground mb-2 h-6 text-sm">{{ product?.KTXT }}</p>
@@ -43,7 +42,6 @@
 </template>
 
 <script setup lang="ts">
-import fs from 'fs'
 import { type DeviceData } from '@/utils/interfaces.js'
 import ProductInformation from '@/components/general/ProductInformation.vue';
 import Badge from '@/components/ui/badge/Badge.vue';

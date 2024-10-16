@@ -1,7 +1,7 @@
 <template>
 	<section>
-		<div v-if="currentStage == 'Aussenstation' && products.length > 0" class="flex flex-wrap gap-1 justify-center">
-			<OutdoorProduct :class="index == 2 ? 'order-1' : ''" v-for="(product, index) in products" :product="product"
+		<div v-if="currentStage == 'Aussenstation' && products.length > 0 || packs?.length > 0" class="flex flex-wrap gap-1 justify-center">
+			<OutdoorProduct :class="showLast(index, products.length) ? 'order-1' : ''" v-for="(product, index) in products" :product="product"
 				:key="product.id" />
 			<OutdoorExtensionPackage v-for="pack in packs" :pack="pack" />
 		</div>
@@ -31,7 +31,12 @@ const props = defineProps<{
 	products: DeviceData[]
 	packs: Pack<DeviceData>[]
 }>()
+console.log(props.packs)
+function showLast(index: number, length: number){
+	if(length % 2 == 1 && index == length - 1)
+		return true
 
+}
 </script>
 
 <style></style>

@@ -1,5 +1,6 @@
 <template>
 	<div class="configurator">
+		<StageTrackerMobile/>
 		<StageTracker :current-stage="currentStage" :stages="stages" @goToStage="goToStage" />
 		<div class="main-section">
 			<StageOne v-if="currentStage === 'Anforderungen'" :stages="stages" />
@@ -17,8 +18,10 @@ import StageOne from './StageOne/StageOne.vue';
 import StageThree from './StageThree/StageThree.vue';
 import StageTwo from './StageTwo/StageTwo.vue';
 import Zubehör from './Zubehör/Zubehör.vue'
-import StageTracker from './general/StageTracker.vue';
+import StageTracker from './general/stageTracker/StageTracker.vue';
+import StageTrackerMobile from './general/stageTracker/stageTrackerMobile.vue';
 const stages = ref(["Anforderungen", "Aussenstation", "Innenstation", "Zubehör", "Übersicht"]);
+provide("stages", stages);
 const currentStageStore = useCurrentStageStore();
 const { currentStage } = storeToRefs(currentStageStore)
 
@@ -40,7 +43,7 @@ provide("goToStage", goToStage);
 	gap: 14px;
 	justify-content: center;
 	margin: 0 auto;
-	padding: 0 16px;
+	padding: 16px 16px;
 	box-sizing: content-box;
 }
 </style>

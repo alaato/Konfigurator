@@ -3,6 +3,7 @@
 		<DropdownMenuTrigger as-child>
 			<Button variant="outline">
 				{{ category }}
+				<ChevronDown/>
 			</Button>
 		</DropdownMenuTrigger>
 		<DropdownMenuContent class="w-56 max-h-56 overflow-y-scroll">
@@ -32,9 +33,13 @@ const props = defineProps<{
 	category: string;
 	options: string[]
 }>()
+
 const model = defineModel()
+const filterStore = useFilterStore()
+if(props.category == 'Anzahl Tasten')
+	model.value = filterStore.filter.anzahlTasten
 watchEffect(() => {
-	if (props.category == 'Color')
-		console.log(model.value)
+	if (props.category == 'Anzahl Tasten')
+		filterStore.setAnzahl(model.value as number)
 })
 </script>

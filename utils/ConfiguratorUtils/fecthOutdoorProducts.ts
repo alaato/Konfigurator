@@ -1,10 +1,13 @@
 import outdoorsStations from "@/data/aussenstationen.json";
 import extensions from "@/data/Funktionserweiterung.json";
-import units from "@/data/steuer.json";
-export interface ProductsFilter {
-  AnzhalTatsen: number;
+interface Filter {
   funktion: string;
-  technologie: string | null;
+  technologie: string;
+  Video: boolean;
+  Audio: boolean;
+  color: string;
+  material: string;
+  anzahlTasten: number;
 }
 function addAsiPack(
   products: Pack<DeviceData>[],
@@ -37,7 +40,7 @@ function addAsiPack(
 
 function addPesPackAudio(
   extButtonNumber: number,
-  productsFilter: ProductsFilter,
+  filter: Filter,
   products: Pack<DeviceData>[]
 ) {
   const PETPES = outdoorsStations.find(
@@ -46,7 +49,7 @@ function addPesPackAudio(
   const PETPESPRO = outdoorsStations.find((product) =>
     product.MNR.includes(`AEA5302${extButtonNumber}`)
   ) as DeviceData;
-  const pesButtons = productsFilter.AnzhalTatsen - extButtonNumber;
+  const pesButtons = filter.anzahlTasten - extButtonNumber;
   const evenPesButtons = pesButtons + (pesButtons % 2);
   const pesModel = evenPesButtons < 10 ? `0${evenPesButtons}` : evenPesButtons;
 
@@ -74,13 +77,13 @@ function addPesPackAudio(
 
 function addPesPackVideo(
   extButtonNumber: number,
-  productsFilter: ProductsFilter,
+  filter: Filter,
   products: Pack<DeviceData>[]
 ) {
   const PETPESPRO = outdoorsStations.find((product) =>
     product.MNR.includes(`AEA5302${extButtonNumber}`)
   ) as DeviceData;
-  const pesButtons = productsFilter.AnzhalTatsen - extButtonNumber;
+  const pesButtons = filter.anzahlTasten - extButtonNumber;
   const evenPesButtons = pesButtons + (pesButtons % 2);
   const pesModel = evenPesButtons < 10 ? `0${evenPesButtons}` : evenPesButtons;
 
@@ -99,42 +102,43 @@ function addPesPackVideo(
   if (packPESPRO.extension) products.push(packPESPRO);
 }
 
-export function FindOutdoorProducts(productsFilter: ProductsFilter, filter) {
-  let products: DeviceData[] = outdoorsStations
+export function FindOutdoorProducts(filter : Filter) {
+  console.log(filter);
+  const products: DeviceData[] = outdoorsStations
     ?.filter((product) => {
       if (product.parent.MNR == "PET") return false;
       if (
-        parseInt(product.AnzhalTatsen) >= productsFilter.AnzhalTatsen &&
+        parseInt(product.AnzhalTatsen) >= filter.anzahlTasten &&
         product.MNR == "ASI12000-0000" &&
-        productsFilter.funktion == "Audio"
+        filter.funktion == "Audio"
       )
         return true;
       if (
-        filter.value.funktion == "Video" &&
-        product.AnzhalTatsen == productsFilter.AnzhalTatsen.toString() &&
+        filter.funktion == "Video" &&
+        parseInt(product.AnzhalTatsen) == filter.anzahlTasten &&
         product.Video2
       ) {
-        if (filter.value.technologie == "TCS:BUS" && product.TCSBUS)
+        if (filter.technologie == "TCS:BUS" && product.TCSBUS)
           return true;
-        else if (filter.value.technologie == "Video-2-Draht" && product.V2D)
+        else if (filter.technologie == "Video-2-Draht" && product.V2D)
           return true;
       }
       if (
-        filter.value.funktion == "Audio" &&
-        product.AnzhalTatsen == productsFilter.AnzhalTatsen.toString() &&
+        filter.funktion == "Audio" &&
+        parseInt(product.AnzhalTatsen) == filter.anzahlTasten &&
         !product.Video2
       )
         return true;
       if (
-        filter.value.funktion == "Beide" &&
-        product.AnzhalTatsen == productsFilter.AnzhalTatsen.toString() &&
+        filter.funktion == "Beide" &&
+        parseInt(product.AnzhalTatsen) == filter.anzahlTasten &&
         !product.Video2 &&
         product.Audio1
       )
         return true;
       if (
-        filter.value.funktion == "Beide" &&
-        product.AnzhalTatsen == productsFilter.AnzhalTatsen.toString() &&
+        filter.funktion == "Beide" &&
+        parseInt(product.AnzhalTatsen) == filter.anzahlTasten &&
         (product.Video2 || product.Audio1)
       )
         return true;
@@ -156,50 +160,51 @@ export function findPackNoextensions() {
   return pack;
 }
 export function findOutDoorProductsWithEtexensions(
-  productsFilter: ProductsFilter
+  filter : Filter
 ) {
   const products = [] as Pack<DeviceData>[];
 
-  if (productsFilter.funktion == "Video") addAsiPack(products, true);
-  else if (productsFilter.funktion == "Beide") {
+  if (filter.funktion == "Video") addAsiPack(products, true, true);
+  else if (filter.funktion == "Beide") {
     addAsiPack(products, true, true);
     addAsiPack(products, false, true);
-  } else addAsiPack(products, false);
+  } else addAsiPack(products, false, true);
 
   if (
-    productsFilter.AnzhalTatsen > 20 &&
-    productsFilter.AnzhalTatsen <= 32 &&
-    productsFilter.funktion == "Audio"
+    filter.anzahlTasten > 20 &&
+    filter.anzahlTasten <= 32 &&
+    filter.funktion == "Audio"
   )
-    addPesPackAudio(12, productsFilter, products);
+    addPesPackAudio(12, filter, products);
   else if (
-    productsFilter.AnzhalTatsen > 20 &&
-    productsFilter.AnzhalTatsen <= 32 &&
-    productsFilter.funktion == "Video"
+    filter.anzahlTasten > 20 &&
+    filter.anzahlTasten <= 32 &&
+    filter.funktion == "Video"
   )
-    addPesPackVideo(12, productsFilter, products);
+    addPesPackVideo(12, filter, products);
   else if (
-    productsFilter.AnzhalTatsen > 32 &&
-    productsFilter.AnzhalTatsen <= 48 &&
-    productsFilter.funktion == "Audio"
+    filter.anzahlTasten > 32 &&
+    filter.anzahlTasten <= 48 &&
+    filter.funktion == "Audio"
   )
-    addPesPackAudio(28, productsFilter, products);
+    addPesPackAudio(28, filter, products);
   else if (
-    productsFilter.AnzhalTatsen > 32 &&
-    productsFilter.AnzhalTatsen <= 48 &&
-    productsFilter.funktion == "Video"
+    filter.anzahlTasten > 32 &&
+    filter.anzahlTasten <= 48 &&
+    filter.funktion == "Video"
   )
-    addPesPackVideo(28, productsFilter, products);
+    addPesPackVideo(28, filter, products);
 
+    console.log(products);
   return products;
 }
 
-export function SetSearchFilters(selectedProducts, filter) {
-  const productsFilter: ProductsFilter = {
-    AnzhalTatsen: selectedProducts.value.indoorProducts.neededQuantity,
+export function SetSearchFilters(filter) {
+  const productsFilter = {
+    AnzahlTasten: filter.value.anzahlTasten,
     funktion: filter.value.funktion,
     technologie: null,
-  };
+  }
   if (filter.value.funktion != "Audio")
     productsFilter.technologie = filter.value.technologie;
   return productsFilter;

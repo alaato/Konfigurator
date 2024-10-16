@@ -1,5 +1,5 @@
 <template>
-	<ul class="space-y-4 p-4 w-full max-h-[300px] lg:max-h-[400px] lg:h-[380px]">
+	<ul class="space-y-4 p-4 w-full max-h-[600px] lg:max-h-[400px] lg:h-[380px]">
 		<SideCartProductGroup :selectedQuantity="selectedProducts.indoorProducts.SelectedQuantity"
 			title="Innenstationen" :products="selectedProducts.indoorProducts.products"
 			:max="selectedProducts.indoorProducts.neededQuantity"></SideCartProductGroup>

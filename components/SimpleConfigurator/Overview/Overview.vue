@@ -1,12 +1,14 @@
 <template>
 	<div class="w-full flex flex-col justify-end items-end gap-1 overflow-y-scroll ">
-		<Card class="px-4 py-3 h-max shadow-sm overflow-y-scroll w-screen max-w-screen-md max-h-[500px]">
+		<Card class="px-4 py-3 h-max shadow-sm overflow-scroll w-[400px] md:w-full max-w-screen-lg max-h-[500px]">
 			<Table class="" id="stückliste">
 				<TableCaption class="self-start">Ihre Stückliste</TableCaption>
 				<TableHeader>
 					<TableRow>
+						<TableHead> Bild </TableHead>
 						<TableHead> Article </TableHead>
 						<TableHead> Bezeichnung </TableHead>
+						<TableHead> PG </TableHead>
 						<TableHead class="text-center">Menge</TableHead>
 						<TableHead>Preis</TableHead>
 						<TableHead class="text-right"> Total </TableHead>
@@ -45,6 +47,7 @@
 
 <script lang="ts" setup>
 //import
+import StageTrackerMobile from "../general/stageTracker/stageTrackerMobile.vue";
 import {
 	Table,
 	TableBody,
@@ -61,6 +64,7 @@ import {
 } from "@/utils/ConfiguratorUtils/generatingExcelAndPDF";
 import Pakets from "@/data/pakets.json";
 import Steuer from "@/data/steuer.json";
+import type { Packet } from "@/utils/interfaces";
 // Function to update the theme based on the <html> class
 function updateToasterTheme() {
 	const isDarkTheme = document.documentElement.classList.contains("dark");
@@ -70,7 +74,7 @@ function updateToasterTheme() {
 //consts
 const toasterTheme = ref("light");
 const selectedProductsStore = useSelectedProductsStore();
-const { replaceControlUnit } = selectedProductsStore
+const { replaceControlUnit, addPaket } = selectedProductsStore
 const { selectedProducts } = storeToRefs(
 	selectedProductsStore
 );
@@ -81,9 +85,9 @@ const paket = computed(() => {
 		selectedProducts.value.outdoorProducts.SelectedQuantity == 1 &&
 		selectedProducts.value.indoorProducts.SelectedQuantity <= 20
 	) {
-		const packet = findPacket() as any
+		const packet : Packet = findPacket() as any
 		if (packet)
-			packet.quantity = 1;
+			packet.quantity = packet?.quantity? packet?.quantity : 1;
 		return packet
 	} else null;
 });
@@ -117,11 +121,15 @@ onMounted(() => {
 		attributes: true,
 		attributeFilter: ["class"],
 	});
-	onUnmounted(() => observer.disconnect());
 	if (paket.value && paket.value.Paket[2].MNR !== controlUnit.value.MNR) {
 		const newUnit = Steuer.find((unit) => unit.MNR == paket.value.Paket[2].MNR);
 		replaceControlUnit(newUnit);
 	}
+	if (paket.value) {
+		addPaket(paket.value);
+	}
+	onUnmounted(() => observer.disconnect());
+	
 });
 //functions
 function findPacket() {
@@ -132,6 +140,7 @@ function findPacket() {
 			paket.Paket[0].MNR ==
 			selectedProducts.value.outdoorProducts.products[0].MNR &&
 			paket.Paket[1].MNR == selectedProducts.value.indoorProducts.products[0]?.MNR
+			&& selectedProducts.value.indoorProducts.products.length < 2
 		)
 			return true;
 	});

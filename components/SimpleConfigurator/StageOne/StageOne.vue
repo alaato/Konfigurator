@@ -8,7 +8,7 @@
 				<OutdoorStationInput v-model="numberOutdoorStation" />
 			</div>
 
-			<div class="funktion-and-technologie-container gap-1">
+			<div class="funktion-and-technologie-container gap-1 w-80 md:w-full">
 				<Funktion v-model="funktion" />
 				<Technologie v-if="funktion == 'Video' || funktion == 'Beide'" v-model="technologie"
 					:number-outdoor-stations="numberOutdoorStation" :numeber-indoor-stations="numberIndoorStation" />

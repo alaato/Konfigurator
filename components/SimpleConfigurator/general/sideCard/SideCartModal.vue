@@ -1,5 +1,5 @@
 <template>
-	<Sheet class="lg:hidden">
+	<Sheet >
 		<SheetTrigger class="lg:hidden">
 			<ShoppingBag />
 		</SheetTrigger>
@@ -18,7 +18,4 @@
 import { ShoppingBag } from 'lucide-vue-next';
 import SideCardItemList from './SideCardItemList.vue';
 
-const selectedProductsStore = useSelectedProductsStore();
-
-const { selectedProducts } = storeToRefs(selectedProductsStore)
 </script>

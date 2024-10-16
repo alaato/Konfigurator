@@ -3,7 +3,7 @@
 	<ProductSelection :selectedProducts="selectedProducts.outdoorProducts" @resetSelection="reset" :products="products"
 		:packs="packs" v-model="remainingoutdoorProducts" />
 
-	<p v-if="products?.length == 0">
+	<p v-if="products?.length == 0 && packs?.length == 0">
 		Keine Aussenstation verfügbar. versuchen Sie eine mit
 		{{ selectedProducts?.indoorProducts?.neededQuantity + 1 }} tasten anstatt
 		oder Kontaktieren Sie uns
@@ -30,9 +30,16 @@ const remainingoutdoorProducts = computed(() => {
 	);
 });
 
-const productsFilter = SetSearchFilters(selectedProducts, filter);
-const products: DeviceData[] = FindOutdoorProducts(productsFilter, filter)
-const packs = productsFilter.AnzhalTatsen >= 24 ? findOutDoorProductsWithEtexensions(productsFilter) : findPackNoextensions()
+const productsFilter = SetSearchFilters(filter);
+const products = computed(() => {
+	return FindOutdoorProducts(filter.value);
+});
+
+const packs = computed(() => {
+	if (filter.value.anzahlTasten < 24 && filter.value.funktion == "Video" || filter.value.funktion == "beide") return findPackNoextensions();
+	return filter.value.anzahlTasten >= 24 ? findOutDoorProductsWithEtexensions(filter.value) : [];
+});
+console.log(packs.value);
 //functions
 
 
@@ -40,4 +47,5 @@ function reset() {
 	selectedProductsStore.resetOutdoorProducts();
 	selectedProductsStore.resetExtension();
 }
+
 </script>

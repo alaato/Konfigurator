@@ -1,10 +1,10 @@
 <template>
 	<Card class="mt-1 flex flex-col gap-1 justify-center items-center w-fit max-w-[800px]">
-		<CardContent class="flex flex-col md:flex-row gap-1 p-0 py-0 px-0">
+		<CardContent class="flex flex-col md:flex-row flex-wrap items-center justify-center gap-1 p-0 py-0 px-0">
 			<PackageProductCard v-if="pack.station" :product="pack.station" />
 			<PackageProductCard v-if="pack.extension" :product="pack.extension" />
 			<PackageProductCard v-if="camera" :product="camera">
-				<changeCameraModel :products="products" @replaceCamera="replaceCamera" />
+				<changeCameraModel :products="products" />
 			</PackageProductCard>
 			<div v-if="pack.camera && pack.extension" class="bg-neutral-200 dark:bg-neutral-800 w-80"></div>
 		</CardContent>
@@ -57,6 +57,7 @@ function addProducts() {
 		visitedStore.visited.push("Innenstation");
 	}
 };
+console.log(props.pack);
 provide("replaceCamera", replaceCamera);
 </script>
 

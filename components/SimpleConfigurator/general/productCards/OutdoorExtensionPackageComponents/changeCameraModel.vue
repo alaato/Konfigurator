@@ -1,6 +1,5 @@
 <template>
   <Dialog>
-   
     <DialogTrigger asChild>
       <ReplaceIcon
         class="w-5 h-5 text-neutral-950 dark:text-white cursor-pointer transition-transform hover:scale-110 hover:text-black" />
@@ -31,4 +30,6 @@ import PackageProductCard from './PackageProductCard.vue';
 const props = defineProps<{
   products: DeviceData[]
 }>()
+
+
 </script>

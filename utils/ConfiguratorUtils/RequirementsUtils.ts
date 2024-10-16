@@ -6,6 +6,7 @@ export function setFilter(
   technologie: string,
   numberIndoorStation: number
 ) {
+  filter.anzahlTasten = numberIndoorStation;
   filter.funktion = funktion;
   funktion == "Video" ? (filter.Video = true) : (filter.Video = null);
   funktion == "Audio" ? (filter.Audio = true) : (filter.Audio = null);
@@ -17,6 +18,7 @@ export function setFilter(
   ) {
     filter.technologie = "TCS:BUS";
   } else filter.technologie = "Video-2-Draht";
+  console.log(filter);
 }
 
 export function setControlUnit(filter, addControlUnit: Function) {

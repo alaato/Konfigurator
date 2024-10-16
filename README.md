@@ -215,3 +215,11 @@
 - added a camera to Asi
 - fixed UI for mobile
 - filter Bar
+
+### 16.10
+
+- change the anzahl tasten
+- mobile UI imporvments
+  - stage tracker
+  - filter bar 
+- fix the menge of th pack edit at the end

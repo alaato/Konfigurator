@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { type DeviceData, type Pack } from "@/utils/interfaces";
+import { type DeviceData, type Pack, type Packet } from "@/utils/interfaces";
 
 export const useSelectedProductsStore = defineStore({
   id: "SelectedProductsStore",
@@ -29,6 +29,7 @@ export const useSelectedProductsStore = defineStore({
         controlUnit: null as DeviceData | null,
       },
       packs: [] as Pack<string>[],
+      packets: [] as Packet[],
     };
   },
   getters: {
@@ -157,7 +158,7 @@ export const useSelectedProductsStore = defineStore({
     },
     addPack(pack: Pack<DeviceData>, quantity?: number) {
       const foundPack = this.packs.find(
-        (thisPack) => thisPack.station === pack.station.id
+        (thisPack) => thisPack.station === pack?.station?.id? pack.station.id : null
       );
       let id;
       if (foundPack) {
@@ -168,7 +169,7 @@ export const useSelectedProductsStore = defineStore({
         const packToAdd: Pack<string> = {
           id: id,
           quantity: quantity ? quantity : 1,
-          station: pack.station.id || null,
+          station: pack?.station.id || null,
           extension: pack?.extension?.id || null,
           camera: pack?.camera?.id || null,
         };
@@ -188,12 +189,12 @@ export const useSelectedProductsStore = defineStore({
         this.addOutdoorProducts(pack.station, quantity || 1);
       }
     },
+    addPaket(paket : Packet) {
+      this.packets.push(paket);
+    },
+
     removePack(id: string) {
       const pack = this.packs.find((pack) => pack.id === id);
-      console.log(
-        pack.quantity,
-        this.selectedProducts.outdoorProducts.SelectedQuantity
-      );
       if (pack) {
         const outdoorIndex =
           this.selectedProducts.outdoorProducts.products.findIndex(
@@ -309,9 +310,6 @@ export const useSelectedProductsStore = defineStore({
       else index = Index;
 
       if (index !== -1) {
-        console.log(
-          this.selectedProducts.outdoorProducts.products[index][property]
-        );
         this.selectedProducts.outdoorProducts.products[index][property] = value;
       }
     },
@@ -321,17 +319,22 @@ export const useSelectedProductsStore = defineStore({
         index =
           this.selectedProducts.indoorProducts.products.indexOf(indoorProduct);
       else index = Index;
-      console.log(index);
       if (index !== -1) {
-        console.log(
-          this.selectedProducts.outdoorProducts.products[index][property]
-        );
         this.selectedProducts.indoorProducts.products[index][property] = value;
       }
     },
     editControlUnit(property, value) {
       if (this.selectedProducts.controlUnit) {
         this.selectedProducts.controlUnit[property] = value;
+      }
+    },
+    editPaket(property, value, packet?, Index?) {
+      let index;
+      if (packet)
+        index = this.packets.findIndex((p) => p.MNR === packet.MNR);
+      else index = Index;
+      if (index !== -1) {
+        this.packets[index][property] = value;
       }
     },
     resetIndoorProducts() {
