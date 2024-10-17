@@ -36,7 +36,7 @@ const products = computed(() => {
 });
 
 const packs = computed(() => {
-	if (filter.value.anzahlTasten < 24 && filter.value.funktion == "Video" || filter.value.funktion == "beide") return findPackNoextensions();
+	if (filter.value.anzahlTasten < 24 && filter.value.technologie == "TCS:BUS" &&( filter.value.funktion == "Video" || filter.value.funktion == "beide" )) return findPackNoextensions();
 	return filter.value.anzahlTasten >= 24 ? findOutDoorProductsWithEtexensions(filter.value) : [];
 });
 console.log(packs.value);

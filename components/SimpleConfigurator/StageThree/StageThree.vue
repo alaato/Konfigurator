@@ -20,12 +20,16 @@ const productsFilter = {
 	video: filter.value.Video,
 	Audio: filter.value.Audio
 }
+function thereIsVideoOutdoor() {
+	if(selectedProducts.value.outdoorProducts.products.some(product => product.Video2)) return true
+	else return false
+}
 
 const products = indoorStations.filter(product => {
 	if (product.parent.MNR == "Innenstation TCS:BUS" || product.parent.MNR == "Innenstation V2D") return false
-	if (productsFilter.video && product.Video2 && filter.value.technologie == "TCS:BUS" && product.TCSBUS)
+	if (thereIsVideoOutdoor() && product.Video2 && filter.value.technologie == "TCS:BUS" && product.TCSBUS)
 		return true
-	else if (productsFilter.video && product.Video2 && filter.value.technologie == "Video-2-Draht" && product.V2D)
+	else if (thereIsVideoOutdoor() && product.Video2 && filter.value.technologie == "Video-2-Draht" && product.V2D)
 		return true
 	else if (productsFilter.Audio && product.Audio1 && !product.Video2)
 		return true
