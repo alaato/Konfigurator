@@ -5,7 +5,7 @@
 </template>
 
 <script lang="ts" setup>
-import { type DeviceData } from '@/utils/interfaces.js'
+import { type DeviceData } from '~/utils/interfaces/interfaces.js'
 
 const props = defineProps<{
   product: DeviceData;

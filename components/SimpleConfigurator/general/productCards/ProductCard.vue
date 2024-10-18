@@ -42,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import { type DeviceData } from '@/utils/interfaces.js'
+import { type DeviceData } from '~/utils/interfaces/interfaces.js'
 import ProductInformation from '@/components/general/ProductInformation.vue';
 import Badge from '@/components/ui/badge/Badge.vue';
 const emit = defineEmits(['addProduct'])

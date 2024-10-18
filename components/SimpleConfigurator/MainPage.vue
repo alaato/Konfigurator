@@ -4,8 +4,8 @@
 		<StageTracker :current-stage="currentStage" :stages="stages" @goToStage="goToStage" />
 		<div class="main-section">
 			<StageOne v-if="currentStage === 'Anforderungen'" :stages="stages" />
-			<StageTwo v-if="currentStage === 'Aussenstation'" />
-			<StageThree v-if="currentStage === 'Innenstation'" />
+			<OutdoorStage v-if="currentStage === 'Aussenstation'" />
+			<IndoorStage v-if="currentStage === 'Innenstation'" />
 			<Zubehör :goToStage="goToStage" v-if="currentStage === 'Zubehör'" :currentStage="currentStage" />
 			<Overview v-if="currentStage === 'Übersicht'" />
 		</div>
@@ -15,8 +15,8 @@
 <script setup>
 import Overview from './Overview/Overview.vue';
 import StageOne from './StageOne/StageOne.vue';
-import StageThree from './StageThree/StageThree.vue';
-import StageTwo from './StageTwo/StageTwo.vue';
+import IndoorStage from './StageThree/IndoorStage.vue';
+import OutdoorStage from './StageTwo/OutdoorStage.vue';
 import Zubehör from './Zubehör/Zubehör.vue'
 import StageTracker from './general/stageTracker/StageTracker.vue';
 import StageTrackerMobile from './general/stageTracker/stageTrackerMobile.vue';

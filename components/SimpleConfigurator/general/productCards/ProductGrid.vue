@@ -20,7 +20,7 @@ import ZubehorCard from '@/components/SimpleConfigurator/Zubehör/ZubehorCard.vu
 import IndoorProduct from './IndoorProduct.vue';
 import OutdoorProduct from './OutdoorProduct.vue';
 import OutdoorExtensionPackage from './OutdoorExtensionPackageComponents/OutdoorExtensionPackage.vue';
-import { type DeviceData } from '@/utils/interfaces';
+import { type DeviceData } from '~/utils/interfaces/interfaces';
 //stores
 
 const currentStagestore = useCurrentStageStore()

@@ -24,7 +24,7 @@
 <script lang="ts" setup>
 //imports
 import { RotateCcw } from 'lucide-vue-next';
-import type { Floor as FloorType } from '@/utils/interfaces';
+import type { Floor as FloorType } from '~/utils/interfaces/interfaces';
 import Floor from './Floor.vue';
 
 //consts

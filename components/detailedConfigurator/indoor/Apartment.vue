@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import DeleteButton from '../general/DeleteButton.vue';
-import {type Apartment} from '@/utils/interfaces'
+import {type Apartment} from '~/utils/interfaces/interfaces'
 import DuplicateButton from '../general/DuplicateButton.vue';
 const props = defineProps<{
   apartment: Apartment,

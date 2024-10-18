@@ -18,7 +18,7 @@
 <script lang="ts" setup>
 import Button from "@/components/ui/button/Button.vue";
 import PackageProductCard from "./PackageProductCard.vue";
-import { type Pack, type DeviceData } from "@/utils/interfaces";
+import { type Pack, type DeviceData } from "~/utils/interfaces/interfaces";
 import extensions from "@/data/Funktionserweiterung.json"
 import changeCameraModel from "./changeCameraModel.vue";
 const props = defineProps<{

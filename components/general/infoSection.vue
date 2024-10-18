@@ -31,9 +31,9 @@
 			</TabsContent>
 			<TabsContent value="Downloads">
 				<a class="text-blue-900 block w-fit hover:text-black hover:underline dark:text-blue-700 dark:hover:text-white "
-					:href="product.DBWebsiteLink">Dattensblatt</a>
+					:href="product.DBWebsiteLink" target="_blank" >Dattensblatt</a>
 				<a class="text-blue-900 block w-fit hover:text-black hover:underline dark:text-blue-700 dark:hover:text-white"
-					:href="product.PIWebsiteLink">info</a>
+					:href="product.PIWebsiteLink" target="_blank">Product info</a>
 			</TabsContent>
 		</Tabs>
 	</div>

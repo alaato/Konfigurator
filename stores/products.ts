@@ -1,5 +1,5 @@
 import { defineStore } from "pinia";
-import { type DeviceData, type Pack, type Packet } from "@/utils/interfaces";
+import { type DeviceData, type Pack, type Packet } from "~/utils/interfaces/interfaces";
 
 export const useSelectedProductsStore = defineStore({
   id: "SelectedProductsStore",

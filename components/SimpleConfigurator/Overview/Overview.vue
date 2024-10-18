@@ -39,8 +39,16 @@
 	</div>
 
 	<div class="cart-actions flex gap-1 my-2">
-		<Button class="bg-arapawa-950 hover:bg-arapawa-900" @click="generatePDF">Stückliste als PDF</Button>
-		<Button class="bg-arapawa-950 hover:bg-arapawa-900" @click="generateEXCEL">Stückliste als Excel</Button>
+		<Button @click="generatePDF">Stückliste als PDF</Button>
+		<Button @click="generateEXCEL">Stückliste als Excel</Button>
+		<form id="elbridge_form" @submit.prevent="submitForm()" method="POST"
+			enctype="multipart/form-data">
+			<input type="hidden" name="version" value="2.0">
+			<input type="hidden" name="country" value="DE">
+			<input type="hidden" name="language" value="deu">
+			<input type="hidden" name="result" value="">
+			<Button> Übertragen an Großhandel</Button>
+		</form>
 		<Toaster :theme="toasterTheme" />
 	</div>
 </template>
@@ -64,20 +72,22 @@ import {
 } from "@/utils/ConfiguratorUtils/generatingExcelAndPDF";
 import Pakets from "@/data/pakets.json";
 import Steuer from "@/data/steuer.json";
-import type { Packet } from "@/utils/interfaces";
+import type { Packet } from "~/utils/interfaces/interfaces";
+import type { Item } from "~/utils/interfaces/eltbridgeInterface";
 // Function to update the theme based on the <html> class
-function updateToasterTheme() {
-	const isDarkTheme = document.documentElement.classList.contains("dark");
-	toasterTheme.value = isDarkTheme ? "dark" : "light";
-}
 
 //consts
 const toasterTheme = ref("light");
 const selectedProductsStore = useSelectedProductsStore();
-const { replaceControlUnit, addPaket } = selectedProductsStore
+const { replaceControlUnit, addPaket, getAllSelectedProducts} = selectedProductsStore
 const { selectedProducts } = storeToRefs(
 	selectedProductsStore
 );
+
+const result = ref({
+	CONFIGURATION_URL: "https://konfigurator-smoky.vercel.app/",
+	ITEM: []
+});
 const controlUnit = computed(() => selectedProducts.value.controlUnit);
 
 const paket = computed(() => {
@@ -85,9 +95,9 @@ const paket = computed(() => {
 		selectedProducts.value.outdoorProducts.SelectedQuantity == 1 &&
 		selectedProducts.value.indoorProducts.SelectedQuantity <= 20
 	) {
-		const packet : Packet = findPacket() as any
+		const packet: Packet = findPacket() as any
 		if (packet)
-			packet.quantity = packet?.quantity? packet?.quantity : 1;
+			packet.quantity = packet?.quantity ? packet?.quantity : 1;
 		return packet
 	} else null;
 });
@@ -114,6 +124,12 @@ const total = computed(() => {
 	return sum;
 });
 
+/// functions 
+function updateToasterTheme() {
+	const isDarkTheme = document.documentElement.classList.contains("dark");
+	toasterTheme.value = isDarkTheme ? "dark" : "light";
+}
+
 onMounted(() => {
 	updateToasterTheme();
 	const observer = new MutationObserver(updateToasterTheme);
@@ -129,9 +145,9 @@ onMounted(() => {
 		addPaket(paket.value);
 	}
 	onUnmounted(() => observer.disconnect());
-	
+
 });
-//functions
+
 function findPacket() {
 	const packet = Pakets.find((paket) => {
 		if (
@@ -146,5 +162,27 @@ function findPacket() {
 	});
 	if (!packet) return null;
 	return packet
+}
+
+async function submitForm() {
+	result.value.ITEM = getAllSelectedProducts.map(product => {
+		const item: Item = {
+			SUPPLIER_ID_GLN: "4035138000000",
+			MANUFACTURER_PID: product.MNR,
+			DESCRIPTION_SHORT: product.KTXT,
+			PRICE_AMOUNT: product.PERIODE1.toString(),
+			CURRENCY: "EUR",
+			PRICE_QUANTITY: `1`,
+			QUANTITY: product.quantity.toString(),
+			ORDER_UNIT: "C62",
+			UDX_EDXF_DISCOUNT_GROUP_MANUFACTURER: `PG${product.PREISKNZ ? product.PREISKNZ - 200 : ""}`
+		}
+		return item
+	})
+	const data = await fetch("https://interface.elbridge2.itek.de/",{
+		method: "POST",
+		body: JSON.stringify(result.value)
+	})
+	console.log(data)
 }
 </script>

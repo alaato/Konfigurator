@@ -18,7 +18,7 @@
 import ProductGrid from './ProductGrid.vue'
 import { RotateCcw } from 'lucide-vue-next';
 import SideCard from '../sideCard/SideCard.vue';
-import { type DeviceData, type Pack, type Product } from '@/utils/interfaces.js'
+import { type DeviceData, type Pack, type Product } from '~/utils/interfaces/interfaces.js'
 const emit = defineEmits(['resetSelection'])
 const props = defineProps<{
 	selectedProducts?: { neededQuantity: number; SelectedQuantity: number; products: any[] };

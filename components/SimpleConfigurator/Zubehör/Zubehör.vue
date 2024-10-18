@@ -13,7 +13,7 @@ import RequiredZubehörCard from './RequiredCard.vue'
 import zubehörs from '@/data/Zubehoer.json'
 import ProductSelection from '@/components/SimpleConfigurator/general/productCards/ProductSelectionGrid.vue';
 import funktionErweiterungen from '@/data/Funktionserweiterung.json'
-import { type DeviceData } from '@/utils/interfaces.js'
+import { type DeviceData } from '~/utils/interfaces/interfaces.js'
 //const
 
 const selectedProductsStore = useSelectedProductsStore()

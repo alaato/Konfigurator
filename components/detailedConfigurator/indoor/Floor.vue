@@ -35,7 +35,7 @@ import { ref } from 'vue'
 import DeleteButton from '../general/DeleteButton.vue';
 import DuplicateButton from '../general/DuplicateButton.vue';
 import FloorOutdoorStation from '../outdoor/FloorOutdoorStation.vue';
-import { type Floor } from '@/utils/interfaces';
+import { type Floor } from '~/utils/interfaces/interfaces';
 const props = defineProps<{
 	floorIndex: number,
 	floor: Floor

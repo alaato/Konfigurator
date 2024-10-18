@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { Edit } from 'lucide-vue-next'
 
-import { type DeviceData } from '@/utils/interfaces.js'
+import { type DeviceData } from '~/utils/interfaces/interfaces.js'
 const props = defineProps<{
 	product: DeviceData;
 	noPrice?: boolean;
